@@ -1,0 +1,54 @@
+,id,site_name,address,coordinates,x_coordinate,y_coordinate
+0,0,BF Bremen Bahnhofsplatz (2073),Bremen Bahnhofsplatz ,"(53.082478, 8.81275593919511)",B,r
+1,1,BF Halle Große Ulrichstr (2084),Halle Große Ulrichstr ,"(51.4854086, 11.9680624)",H,a
+2,2,BF Düsseldorf Friedrichstr (1120),Düsseldorf Friedrichstr ,"(51.2085857, 6.7768842)",D,�
+3,3,BF Darmstadt Luisenplatz (1129),Darmstadt Luisenplatz ,"(49.8728175, 8.65062690796964)",D,a
+4,4,BF Kassel Obere Königsstr (1132),Kassel Obere Königsstr ,"(51.3116003, 9.4911024)",K,a
+5,5,BF Berlin Wilmersdorfer Str (1128),Berlin Wilmersdorfer Str ,"(52.5056387, 13.3070022)",B,e
+6,6,BF Salzgitter Fischzug (2007),Salzgitter Fischzug ,"(52.1529187, 10.3318089)",S,a
+7,7,BF Hamburg Schulterblatt (1069),Hamburg Schulterblatt ,"(53.5604349, 9.9633164)",H,a
+8,8,BF Erfurt Anger (1055),Erfurt Anger ,"(50.9778144, 11.0348)",E,r
+9,9,BF Bremerhaven Bürgermeister-Smidt-Str (1108),Bremerhaven Bürgermeister-Smidt-Str ,"(53.5519447, 8.572095)",B,r
+10,10,BF Frankfurt Kaiserstr (1121),Frankfurt Kaiserstr ,"(50.1118318, 8.6768338)",F,r
+11,11,BF Schleswig Stadtweg (2152),Schleswig Stadtweg ,"(54.5157723, 9.5590163)",S,c
+12,12,BF Braunschweig Bohlweg (1082),Braunschweig Bohlweg ,"(52.2621428, 10.5257133)",B,r
+13,13,BF Berlin Schönhauser Allee (2119),Berlin Schönhauser Allee ,"(52.5412984, 13.4119793)",B,e
+14,14,BF Bremen Hutfilterstr (1017),Bremen Hutfilterstr ,"(53.0786908, 8.8018719)",B,r
+15,15,BF Düsseldorf Konrad-Adenauer-Platz (1107),Düsseldorf Konrad-Adenauer-Platz ,"(51.2198462, 6.7910924)",D,�
+16,16,BF Berlin Karl-Marx-Str (1065),Berlin Karl-Marx-Str ,"(52.4769086, 13.4389366)",B,e
+17,17,BF Wildau Chausseestr (1115),Wildau Chausseestr ,"(52.3186599, 13.6084825)",W,i
+18,18,BF Hamburg Ottenser Hauptstr (1022),Hamburg Ottenser Hauptstr ,"(53.5516986, 9.926967)",H,a
+19,19,BF Mainz Lotharstr (1010),Mainz Lotharstr ,"(50.0017215, 8.2667938)",M,a
+20,20,BF Berlin Friedrichstr (1113) ,Berlin Friedrichstr ,"(52.5201744, 13.3869884)",B,e
+21,21,BF Hamburg Steindamm (1099),Hamburg Steindamm ,"(53.5542917, 10.0139075)",H,a
+22,22,BF Wismar Hegede (1092),Wismar Hegede ,"(53.8916137, 11.46502823704)",W,i
+23,23,BF Berlin Wilmersdorfer Str (1088),Berlin Wilmersdorfer Str ,"(52.5056387, 13.3070022)",B,e
+24,24,BF Neumünster Kuhberg (2089),Neumünster Kuhberg ,"(54.0755388, 9.9820578)",N,e
+25,25,BF Mannheim H 1 (1011),Mannheim H 1 ,"(49.4895914, 8.4672361)",M,a
+26,26,BF Weimar Wielandstr (2138),Weimar Wielandstr ,"(50.9806335, 11.3254726)",W,e
+27,27,BF Kiel Alter Markt (2154),Kiel Alter Markt ,"(54.3233542, 10.1394867012114)",K,i
+28,28,BF Wolfsburg Porschestr (2005),Wolfsburg Porschestr ,"(52.4270508, 10.7902599)",W,o
+29,29,BF Ulm Neue Str (2080),Ulm Neue Str ,"(48.3964102, 9.9845246)",U,l
+30,30,BF Hildesheim Schuhstr (1071),Hildesheim Schuhstr ,"(52.1508233, 9.950555)",H,i
+31,31,BF Karlsruhe Kaiserstr (1122),Karlsruhe Kaiserstr ,"(49.0092334, 8.4109233)",K,a
+32,32,BF Mannheim U 1 (1043),Mannheim U 1 ,"(49.4895914, 8.4672361)",M,a
+33,33,BF Berlin Brunnenstr (2123),Berlin Brunnenstr ,"(52.5471118, 13.3890982)",B,e
+34,34,BF Berlin Hauptstr (1056),Berlin Hauptstr ,"(52.5485208, 13.5086876)",B,e
+35,35,BF Berlin Dircksenstraße (1078),Berlin Dircksenstraße ,"(52.5234191, 13.4049165)",B,e
+36,36,BF Wiesbaden Kirchgasse (2090),Wiesbaden Kirchgasse ,"(50.0796743, 8.2380234)",W,i
+37,37,BF Bremen Gröpelinger Heerstr (1084),Bremen Gröpelinger Heerstr ,"(53.1213716, 8.7527895)",B,r
+38,38,BF Hamburg Elbgaustr (2116),Hamburg Elbgaustr ,"(53.602686, 9.8933936)",H,a
+39,39,BF Greifswald Lange Str (2018),Greifswald Lange Str ,"(54.0958446, 13.3703106)",G,r
+40,40,BF Koblenz Löhrstr (1126),Koblenz Löhrstr ,"(50.3562736, 7.5912089)",K,o
+41,41,BF Lemgo Mittelstr (1085),Lemgo Mittelstr ,"(52.0283817, 8.8958071)",L,e
+42,42,BF Plauen Postplatz (2023),Plauen Postplatz ,"(50.4963653, 12.1356421)",P,l
+43,43,BF Lübeck Holstenstr (1004),Lübeck Holstenstr ,"(53.8662612, 10.6810738)",L,�
+44,44,BF Osnabrück Große Str (1024),Osnabrück Große Str ,"(52.2745551, 8.0469191)",O,s
+45,45,BF Freiberg Obermarkt (1002),Freiberg Obermarkt ,"(50.91711895, 13.3426540079225)",F,r
+46,46,BF Schwerin Schloßstr (1006),Schwerin Schloßstr ,"(53.6262464, 11.4160744)",S,c
+47,47,BF Lübeck Breite Str (1125),Lübeck Breite Str ,"(53.8703443, 10.6880288)",L,�
+48,48,BF Berlin Gesundbrunnen (2153),Berlin Gesundbrunnen ,"(52.5486453, 13.3902169)",B,e
+49,49,BF Neumünster Großflecken (1133),Neumünster Großflecken ,"(54.070546, 9.9876073)",N,e
+50,50,BF Gütersloh Berliner Str (2011),Gütersloh Berliner Str ,"(51.9380228, 8.420923)",G,�
+51,51,BF Magdeburg Alter Markt (1114),Magdeburg Alter Markt ,"(52.1314988, 11.6392028278852)",M,a
+52,52,BF Kiel Holstenstr (2072),Kiel Holstenstr ,"(54.3216434, 10.1363247)",K,i
