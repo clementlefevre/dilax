@@ -21,11 +21,11 @@ def test_sites_query(store):
 
 
 def test_data_content(store):
-    data_day = store.data_day
-    assert data_day.shape[0] > 0
+
+    assert store.data.shape[0] > 0
 
 
 def test_geocoding(store):
-    print store.data_day.tail()
-    store.data_day.to_csv("data/test_data_store.csv")
-    assert store.data_day['region_id'].shape[0] > 0
+    print store.data.tail()
+    store.data.to_csv("data/test_data_store.csv")
+    assert store.data['region_id'].shape[0] > 0

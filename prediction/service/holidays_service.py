@@ -36,7 +36,8 @@ def add_region_id():
 
 
 def reindex_holidays():
-    df_school = pd.read_csv('data/school_holidays/holidays_germany_df.csv',parse_dates=['from_date','to_date'],date_parser=dateparse)
+    df_school = pd.read_csv('data/school_holidays/holidays_germany_df.csv',
+                            parse_dates=['from_date', 'to_date'], date_parser=dateparse)
     date_range = pd.date_range(date(2013, 1, 1), date(2017, 1, 10))
     df_school['from_date2'] = df_school.from_date
     df = df_school.groupby(['region_id']).apply(lambda x: x.set_index(
