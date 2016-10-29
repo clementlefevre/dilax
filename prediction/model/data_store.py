@@ -1,6 +1,6 @@
 from db_manager import DB_manager
 from model import pd
-from helper.data_helper import *
+
 from helper.data_merger import *
 
 
@@ -17,8 +17,6 @@ class Data_store(object):
         self.data_day = merge_with_public_holidays(self)
         self.data_day = merge_with_regions(self)
         self.data_day = merge_with_school_holidays(self)
-
-        # self.data_day = merge_with_school_holidays(self)
 
         # df['day_of_week'] = df.date.dt.dayofweek
         # df['day_of_month'] = df.date.dt.day

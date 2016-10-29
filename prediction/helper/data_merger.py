@@ -35,12 +35,13 @@ def merge_with_counts(datastore):
 
 def merge_with_public_holidays(datastore):
     df_holidays = datastore.db.public_holidays
-    df_holidays = df_holidays[['idbldsite', 'day', 'name_en']]
+    df_holidays = df_holidays[['idbldsite', 'day']]
 
     df_with_public_holidays = pd.merge(datastore.data_day, df_holidays, left_on=[
         'idbldsite', 'date'], right_on=['idbldsite', 'day'], how='left', suffixes=['_counts', '_holidays'])
     df_with_public_holidays[
-        'is_public_holiday'] = ~df_with_public_holidays.name_en.isnull() * 1
+        'is_public_holiday'] = ~df_with_public_holidays.day.isnull() * 1
+    df_with_public_holidays = df_with_public_holidays.drop('day', 1)
     return df_with_public_holidays
 
 
@@ -57,4 +58,5 @@ def merge_with_school_holidays(datastore):
 
     df_with_school_holidays = pd.merge(
         datastore.data_day, df_school_holidays, on=['region_id', 'date'], how='left', suffixes=['_data', '_school'])
+    df_with_school_holidays = df_with_school_holidays.drop('region', 1)
     return df_with_school_holidays
