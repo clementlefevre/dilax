@@ -1,6 +1,7 @@
 from model.data_store import Data_store
 import pandas as pd
 import pytest
+from service.geocoding_service import create_regions_df
 
 
 @pytest.fixture(autouse=True, scope="module")
@@ -22,6 +23,10 @@ def test_sites_query(store):
 
 def test_data_content(store):
     data_day = store.data_day
-    print data_day.columns.tolist()
-    print data_day.tail(3)
     assert data_day.shape[0] > 0
+
+
+def test_geocoding(store):
+    print store.data_day.tail()
+    store.data_day.to_csv("data/test_data_store.csv")
+    assert store.data_day['region'].shape[0] > 0

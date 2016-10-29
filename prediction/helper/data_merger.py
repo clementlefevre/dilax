@@ -1,4 +1,5 @@
 from data_helper import round_coordinates
+from service.geocoding_service import create_regions_df
 from helper import pd
 
 
@@ -36,7 +37,24 @@ def merge_with_public_holidays(datastore):
     df_holidays = datastore.db.public_holidays
     df_holidays = df_holidays[['idbldsite', 'day', 'name_en']]
 
-    df_with_holidays = pd.merge(datastore.data_day, df_holidays, left_on=[
+    df_with_public_holidays = pd.merge(datastore.data_day, df_holidays, left_on=[
         'idbldsite', 'date'], right_on=['idbldsite', 'day'], how='left', suffixes=['_counts', '_holidays'])
-    df_with_holidays['is_holiday'] = ~df_with_holidays.name_en.isnull() * 1
-    return df_with_holidays
+    df_with_public_holidays[
+        'is_public_holiday'] = ~df_with_public_holidays.name_en.isnull() * 1
+    return df_with_public_holidays
+
+
+def merge_with_regions(datastore):
+    df_regions = create_regions_df(datastore)
+    df_with_regions = pd.merge(
+        datastore.data_day, df_regions, on='idbldsite')
+    return df_with_regions
+
+
+def merge_with_school_holidays(datastore):
+    df_school_holidays = pd.read_csv(
+        'data/school_holidays/germany.csv', parse_dates=['date'])
+
+    df_with_school_holidays = pd.merge(
+        datastore.data_day, df_school_holidays, on=['region_id', 'date'], how='left', suffixes=['_data', '_school'])
+    return df_with_school_holidays
