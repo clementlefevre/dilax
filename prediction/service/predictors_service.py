@@ -1,12 +1,20 @@
+"""Summary
+
+Attributes:
+    COLUMNS_CAL (TYPE): Description
+    COLUMNS_FOR_REG (TYPE): Description
+    COLUMNS_X (TYPE): Description
+    COLUMNS_Y (list): Description
+"""
 import config
 import db_service
 import numpy as np
 import pandas as pd
 
 
-# From the count_weather_holidays data, generate a prediction and a target set.
+# From the count_weather_holidays data, generate a predictor and a target set.
 # It is important to keep the index of the data with both X and Y to check
-# the validty of predictions.
+# the validity of predictions.
 
 COLUMNS_CAL = ['day_' + str(i) for i in range(0, 7)] + \
     ['month_' + str(i) for i in range(1, 13)]
@@ -17,7 +25,17 @@ COLUMNS_X = ['index', 'idbldsite', 'holiday', 'not_holiday'] + \
 COLUMNS_Y = ['index', 'idbldsite', 'compensatedin']
 
 
-def create_predictors_and_target(dataset_reg, dataset_dict, forecasting=False):
+def create_predictors_and_target(training_set, dataset_dict, forecasting=False):
+    """Summary
+    
+    Args:
+        dataset_reg (TYPE): Description
+        dataset_dict (TYPE): Description
+        forecasting (bool, optional): Description
+    
+    Returns:
+        TYPE: Description
+    """
     for name, group in dataset_reg.groupby('idbldsite'):
         dataset_dict[name] = {'X': group[COLUMNS_X],
                               'mean': group.mean(), 'std': group.std()}
@@ -28,6 +46,17 @@ def create_predictors_and_target(dataset_reg, dataset_dict, forecasting=False):
 
 
 def regularize(title, field, idbldsite, dataset_past_dict):
+    """Summary
+    
+    Args:
+        title (TYPE): Description
+        field (TYPE): Description
+        idbldsite (TYPE): Description
+        dataset_past_dict (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     if pd.isnull(field):
         return 0
     else:
@@ -37,6 +66,15 @@ def regularize(title, field, idbldsite, dataset_past_dict):
 
 
 def regularize_forecast(df_forecast, dataset_past_dict):
+    """Summary
+    
+    Args:
+        df_forecast (TYPE): Description
+        dataset_past_dict (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_forecast = df_forecast.reset_index()
     for col in ['mintemperature', 'maxtemperature']:
 
@@ -50,6 +88,14 @@ def regularize_forecast(df_forecast, dataset_past_dict):
 
 
 def add_weather_forecasts(df):
+    """Summary
+    
+    Args:
+        df (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_weather = pd.read_csv(
         'data/weather_forecasts.csv', parse_dates=['date'])
     df = pd.merge(df, df_weather, on=['idbldsite', 'date'], how='left')
@@ -58,10 +104,27 @@ def add_weather_forecasts(df):
 
 
 def add_holidays(df):
+    """Summary
+    
+    Args:
+        df (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     pass
 
 
 def create_forecasts_data(date_from, date_to):
+    """Summary
+    
+    Args:
+        date_from (TYPE): Description
+        date_to (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_forecasts = pd.DataFrame()
     df_sites = db_service.get_sites()
     sites_id = df_sites.idbldsite.unique()
@@ -87,7 +150,3 @@ def create_forecasts_data(date_from, date_to):
     df_forecasts = add_weather_forecasts(df_forecasts)
 
     return df_forecasts
-
-
-def create_baseline(df):
-    pass

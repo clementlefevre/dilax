@@ -5,19 +5,17 @@ from config import *
 
 class DB_manager(object):
 
-    def __init__(self, name=DB_NAME, user=DB_USER, pwd=DB_PWD, url=DB_URL, port=DB_PORT):
-        self.name = name
-        self.user = user
-        self.pwd = pwd
-        self.port = port
-        self.url = url
+    def __init__(self, db_params={}):
+        self.params = db_params
         self.__create_connection()
         self.__init_data()
 
     def __db_address(self):
-        credentials = self.user + ':' + self.pwd
+
+        credentials = self.params['db_user'] + ':' + self.params['db_pwd']
         address = 'postgresql://' + credentials + '@' + \
-            self.url + ':' + self.port + '/' + self.name
+            self.params['db_url'] + ':' + \
+            self.params['db_port'] + '/' + self.params['db_name']
         return address
 
     def __create_connection(self):

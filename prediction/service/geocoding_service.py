@@ -1,12 +1,26 @@
+"""Summary
+
+Attributes:
+    MAPS_URL (TYPE): Description
+"""
 import urllib2
 import json
 import pandas as pd
 
-# 11.2742848,75.8013801
+
 MAPS_URL = "http://maps.googleapis.com/maps/api/geocode/json?latlng="
 
 
 def get_region(latitude, longitude):
+    """retrieve the local name of the region for a given coordinate.
+    
+    Args:
+        latitude (int): 
+        longitude (int): 
+    
+    Returns:
+        str: local name of the region
+    """
     coord_str = str(latitude) + "," + str(longitude)
     try:
         response = urllib2.urlopen(
@@ -20,6 +34,14 @@ def get_region(latitude, longitude):
 
 
 def create_regions_df(datastore):
+    """create a dataframe of sites with the corresponding local region name.
+    
+    Args:
+        datastore (DataFrame):
+    
+    Returns:
+        DataFrame: sites-regions
+    """
     df_sites = datastore.db.sites
     df_sites['region'] = df_sites.apply(
         lambda row: get_region(row['latitude'], row['longitude']), axis=1)

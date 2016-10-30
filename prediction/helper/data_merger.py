@@ -1,9 +1,19 @@
+"""Summary
+"""
 from data_helper import round_coordinates
 from service.geocoding_service import create_regions_df
 from helper import pd
 
 
 def merge_tables(datastore):
+    """Summary
+    
+    Args:
+        datastore (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     if datastore.period == 'day':
         datastore.data = merge_with_weather_day(datastore)
         datastore.data = merge_with_counts(datastore)
@@ -16,6 +26,14 @@ def merge_tables(datastore):
 
 
 def merge_with_weather_day(datastore):
+    """Summary
+    
+    Args:
+        datastore (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_weather_day = round_coordinates(datastore.db.weather_day)
     df_sites = round_coordinates(datastore.db.sites)
     df_weather_day = df_weather_day[['maxtemperature', 'mintemperature',
@@ -32,6 +50,14 @@ def merge_with_weather_day(datastore):
 
 
 def merge_with_counts(datastore):
+    """Summary
+    
+    Args:
+        datastore (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_counts = datastore.db.counts
 
     df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)
@@ -46,6 +72,14 @@ def merge_with_counts(datastore):
 
 
 def merge_with_public_holidays(datastore):
+    """Summary
+    
+    Args:
+        datastore (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_holidays = datastore.db.public_holidays
     df_holidays = df_holidays[['idbldsite', 'day']]
 
@@ -58,6 +92,14 @@ def merge_with_public_holidays(datastore):
 
 
 def merge_with_regions(datastore):
+    """Summary
+    
+    Args:
+        datastore (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_regions = create_regions_df(datastore)
     df_with_regions = pd.merge(
         datastore.data, df_regions, on='idbldsite')
@@ -65,6 +107,14 @@ def merge_with_regions(datastore):
 
 
 def merge_with_school_holidays(datastore):
+    """Summary
+    
+    Args:
+        datastore (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_school_holidays = pd.read_csv(
         'data/school_holidays/germany.csv', parse_dates=['date'])
 

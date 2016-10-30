@@ -1,5 +1,0 @@
-DB_USER = "dwe-closed"
-DB_NAME = "DWE_CLOSED_2013"
-DB_PORT = "5432"
-DB_PWD = "6EVAqWxOsX2Ao"
-DB_URL = "localhost"

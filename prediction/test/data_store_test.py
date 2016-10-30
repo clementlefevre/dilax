@@ -9,7 +9,6 @@ def store():
 
 
 def test_create_data_store(store):
-    print store.db.name
     assert store.db.engine is not None
 
 
@@ -21,11 +20,8 @@ def test_sites_query(store):
 
 
 def test_data_content(store):
-
     assert store.data.shape[0] > 0
 
 
 def test_geocoding(store):
-    print store.data.tail()
-    store.data.to_csv("data/test_data_store.csv")
     assert store.data['region_id'].shape[0] > 0

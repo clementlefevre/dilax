@@ -1,11 +1,30 @@
+"""Summary
+"""
 import numpy as np
 
 
 def round_coordinate(coordinate):
+    """Round a coordinate in order to match with other coordinate.
+
+
+    Args:
+        coordinate (int): latitude/longgitude
+
+    Returns:
+        TYPE: rounded coordinate
+    """
     return str(round(coordinate, 2))
 
 
 def round_coordinates(df):
+    """Summary
+
+    Args:
+        df (TYPE): Description
+
+    Returns:
+        TYPE: Description
+    """
     rounded_latitude = df.latitude.apply(
         round_coordinate)
     rounded_longitude = df.longitude.apply(round_coordinate)
@@ -14,6 +33,14 @@ def round_coordinates(df):
 
 
 def add_calendar_fields(datastore):
+    """Summary
+
+    Args:
+        datastore (TYPE): Description
+
+    Returns:
+        TYPE: Description
+    """
     data = datastore.data
 
     data['day_of_week'] = data.date.dt.dayofweek
@@ -32,14 +59,38 @@ def add_calendar_fields(datastore):
     data['not_public_holiday'] = np.where(data.is_public_holiday == 0, 1, 0)
     data['school_holiday'] = np.where(data.is_school_holiday != 0, 1, 0)
     data['not_school_holiday'] = np.where(data.is_school_holiday == 0, 1, 0)
+    data.drop(['is_public_holiday', 'is_school_holiday'], 1)
 
     return data
 
 
 def get_sites_dict(df_sites):
+    """This is useful to iterate over sites
+    and retrieve the weather data from the API.
+
+    Args:
+        df_sites (TYPE): Description
+
+    Returns:
+        TYPE: Description
+    """
     sites = df_sites
     sites = sites[['idbldsite', 'sname', 'latitude', 'longitude']]
     sites = sites.set_index('idbldsite')
     sites_dict = sites[['sname', 'latitude',
                         'longitude']].T.apply(tuple).to_dict()
     return sites_dict
+
+
+def regularize(datastore):
+    df = datastore.data
+    df = df.reset_index()
+    df.set_index(['idbldsite'])
+
+    for col in df.columns.tolist():
+        if datastore.config.features[col]:
+            df[col + "_reg"] = df.groupby('idbldsite')[col].transform(
+                lambda x: (x - x.mean()) / x.std())
+
+    df = df.fillna(0)
+    return df

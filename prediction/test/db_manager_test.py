@@ -5,12 +5,12 @@ from config import *
 
 @pytest.fixture(autouse=True, scope="module")
 def db_manager():
-    return DB_manager(DB_NAME, DB_USER, DB_PWD, DB_URL, DB_PORT)
+    db_params = {'db_user': 'dwe-closed', 'db_name': 'DWE_CLOSED_2013',
+                 'db_port': '5432', 'db_pwd': '6EVAqWxOsX2Ao', 'db_url': 'localhost'}
+    return DB_manager(db_params=db_params)
 
 
 def test_connection(db_manager):
-    assert db_manager.engine is not None
-    db_manager = DB_manager()
     assert db_manager.engine is not None
 
 
