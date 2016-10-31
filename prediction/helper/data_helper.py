@@ -32,7 +32,7 @@ def round_coordinates(df):
     return df
 
 
-def add_calendar_fields(datastore):
+def add_calendar_fields(df):
     """Summary
 
     Args:
@@ -41,7 +41,7 @@ def add_calendar_fields(datastore):
     Returns:
         TYPE: Description
     """
-    data = datastore.data
+    data = df
 
     data['day_of_week'] = data.date.dt.dayofweek
     data['day_of_month'] = data.date.dt.day

@@ -14,7 +14,7 @@ def merge_tables(datastore):
     Returns:
         TYPE: Description
     """
-    if datastore.period == 'day':
+    if datastore.period == 'D':
         datastore.data = merge_with_weather_day(datastore)
         datastore.data = merge_with_counts(datastore)
         datastore.data = merge_with_public_holidays(datastore)
