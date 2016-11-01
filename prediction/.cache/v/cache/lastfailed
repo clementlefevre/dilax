@@ -1,1 +1,7 @@
-{}
+{
+  "test/data_store_test.py::test_create_data_store": true, 
+  "test/data_store_test.py::test_data_content": true, 
+  "test/data_store_test.py::test_geocoding": true, 
+  "test/data_store_test.py::test_sites_query": true, 
+  "test/predictor_test.py::test_predictor_period": true
+}

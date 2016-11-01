@@ -1,1 +1,5 @@
-{}
+{
+  "config_manager_test.py": true, 
+  "data_store_test.py": true, 
+  "predictor_test.py": true
+}

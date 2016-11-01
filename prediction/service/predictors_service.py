@@ -11,7 +11,7 @@ Attributes:
 
 
 import pandas as pd
-from helper.data_helper import add_holidays
+from helper.data_helper import add_calendar_fields
 
 
 # From the count_weather_holidays data, generate a predictor and a target set.

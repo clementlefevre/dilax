@@ -8,20 +8,19 @@ from service.predictors_service import create_forecasts_data
 
 
 class Data_store(object):
-    def __init__(self, db_name, db_params={}, period='D', create=False):
-        print 'create', create
-        self.db_name = db_name
-        self.create = create
+    def __init__(self, predictor,db_params={}):
+        print 'create', predictor.create
+        self.db_name = predictor.db_name
         self.config = Config_manager()
         if not db_params:
             self.db_params = self.config.DB
         else:
             self.db_params = db_params
 
-        self.period = period
-        self.__training_set(self.create)
+        self.period = predictor.period
+        self._training_set_(predictor.create)
 
-    def __training_set(self, create):
+    def _training_set_(self, create):
         if create:
             print "prepare training set..."
             self.db = DB_manager(self.db_params)
