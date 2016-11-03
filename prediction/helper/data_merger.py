@@ -3,14 +3,15 @@
 from data_helper import round_coordinates
 from service.geocoding_service import create_regions_df
 from helper import pd
+from service.holidays_service import add_school_holidays
 
 
 def merge_tables(datastore):
     """Summary
-    
+
     Args:
         datastore (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
@@ -27,10 +28,10 @@ def merge_tables(datastore):
 
 def merge_with_weather_day(datastore):
     """Summary
-    
+
     Args:
         datastore (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
@@ -51,10 +52,10 @@ def merge_with_weather_day(datastore):
 
 def merge_with_counts(datastore):
     """Summary
-    
+
     Args:
         datastore (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
@@ -73,10 +74,10 @@ def merge_with_counts(datastore):
 
 def merge_with_public_holidays(datastore):
     """Summary
-    
+
     Args:
         datastore (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
@@ -93,14 +94,15 @@ def merge_with_public_holidays(datastore):
 
 def merge_with_regions(datastore):
     """Summary
-    
+
     Args:
         datastore (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
     df_regions = create_regions_df(datastore)
+
     df_with_regions = pd.merge(
         datastore.data, df_regions, on='idbldsite')
     return df_with_regions
@@ -108,17 +110,11 @@ def merge_with_regions(datastore):
 
 def merge_with_school_holidays(datastore):
     """Summary
-    
+
     Args:
         datastore (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
-    df_school_holidays = pd.read_csv(
-        'data/school_holidays/germany.csv', parse_dates=['date'])
-
-    df_with_school_holidays = pd.merge(
-        datastore.data, df_school_holidays, on=['region_id', 'date'], how='left', suffixes=['_data', '_school'])
-    df_with_school_holidays = df_with_school_holidays.drop('region', 1)
-    return df_with_school_holidays
+    return add_school_holidays(datastore.data)

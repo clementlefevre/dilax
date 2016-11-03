@@ -9,7 +9,9 @@ class Config_manager(object):
         config = configparser.ConfigParser()
         config.read('config.ini')
         self.DB = config._sections['db_settings']
+        self.data_store_settings = config._sections['data_store_settings']
         self.features = config._sections['features_settings']
+
         self.features = self.__convert_to_boolean()
 
     def __convert_to_boolean(self):

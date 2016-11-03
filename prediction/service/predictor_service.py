@@ -11,8 +11,7 @@ Attributes:
 
 
 import pandas as pd
-from helper.data_helper import add_calendar_fields
-
+from service.holidays_service import add_school_holidays
 
 # From the count_weather_holidays data, generate a predictor and a target set.
 # It is important to keep the index of the data with both X and Y to check
@@ -106,7 +105,7 @@ def add_weather_forecasts(df):
     return df
 
 
-def create_forecasts_data(datastore, date_from, date_to):
+def create_forecasts_data(predictor):
     """Summary
 
     Args:
@@ -117,20 +116,24 @@ def create_forecasts_data(datastore, date_from, date_to):
         TYPE: Description
     """
     df_forecasts = pd.DataFrame()
-    df_sites = datastore.DB.sites
-    sites_id = df_sites.idbldsite.unique()
+    df_sites_id = pd.DataFrame(
+        predictor.datastore.data.idbldsite.unique(), columns=['idbldsite'])
 
-    for site_id in sites_id:
+    sites_regions = pd.merge(
+        df_sites_id, predictor.datastore.data[['idbldsite', 'region_id']], on='idbldsite', how='left')
+    sites_regions = sites_regions.drop_duplicates()
+
+    for site_id, region_id in [tuple(x) for x in sites_regions.values]:
+        print site_id, region_id
 
         df_forecasts_site = pd.DataFrame(pd.date_range(
-            date_from, date_to, freq=period), columns=['date'])
+            predictor.date_from, predictor.date_to, freq=predictor.period), columns=['date'])
         df_forecasts_site['idbldsite'] = site_id
-        df_forecasts_site = add_holidays(df_forecasts_site)
+        df_forecasts_site['region_id'] = region_id
 
-        df_forecasts_site['holiday'] = 0
-        df_forecasts_site['not_holiday'] = 0
+        df_forecasts_site = add_school_holidays(df_forecasts_site)
 
-        df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
-    df_forecasts = add_weather_forecasts(df_forecasts)
+    df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
+    #df_forecasts = add_weather_forecasts(df_forecasts)
 
-    return df_forecasts
+    predictor.forecasts = df_forecasts

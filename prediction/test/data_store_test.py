@@ -1,11 +1,12 @@
 from model.data_store import Data_store
+from model.predictor import Predictor
 import pandas as pd
 import pytest
 
 
 @pytest.fixture(autouse=True, scope="module")
 def store():
-    return Data_store("test datastore")
+    return Data_store(Predictor("DWE_CLOSED"))
 
 
 def test_create_data_store(store):

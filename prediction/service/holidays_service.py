@@ -49,3 +49,14 @@ def reindex_holidays():
     df = df[['date', 'is_holiday']]
 
     df.to_csv('data/school_holidays/germany.csv')
+
+
+def add_school_holidays(df):
+
+    df_school_holidays = pd.read_csv(
+        'data/school_holidays/germany.csv', parse_dates=['date'])
+
+    df_with_school_holidays = pd.merge(df, df_school_holidays, on=[
+                                       'region_id', 'date'], how='left', suffixes=['_data', '_school'])
+    print df_with_school_holidays.head()
+    return df_with_school_holidays
