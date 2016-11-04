@@ -83,7 +83,7 @@ def get_sites_dict(df_sites):
 
 
 def regularize(datastore):
-    df = datastore.data
+    df = datastore.training_data
     df = df.reset_index()
     df.set_index(['idbldsite'])
 

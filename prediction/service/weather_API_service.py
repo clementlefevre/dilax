@@ -4,10 +4,9 @@ import json
 from pandas.io.json import json_normalize
 
 import db_service
-import config
 
 
-def get_weather(lat, lon):
+def get_weather(predictor):
     response = urllib2.urlopen(
         config.WEATHER_URL + "lat=" + lat + "&lon=" + lon)
     data = json.loads(response.read())

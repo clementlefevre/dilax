@@ -14,21 +14,6 @@ region = pd.read_csv('data/region_germany.csv')
 holidays.head()
 
 
-def create_holidays_df():
-    pattern = re.compile("\.(?!\d)")
-    holidays['from'] = holidays.Von.replace(pattern, "").str.slice(0, 5)
-    holidays['to'] = holidays.Bis.replace(pattern, "").str.slice(0, 5)
-    holidays.year = holidays.year.map(str)
-    holidays['from_date'] = holidays[['from', 'year']].apply(
-        lambda x: '.'.join(x), axis=1)
-    holidays['to_date'] = holidays[['to', 'year']].apply(
-        lambda x: '.'.join(x), axis=1)
-    holidays['from_date_format'] = pd.to_datetime(holidays.from_date)
-    holidays['to_date_format'] = pd.to_datetime(holidays.to_date)
-    df = add_region_id()
-    df.to_csv('data/school_holidays/holidays_germany_df.csv', index=0)
-
-
 def add_region_id():
     df = pd.merge(holidays[['from_date', 'to_date', 'Bundesland']],
                   region, left_on='Bundesland', right_on='region_name')

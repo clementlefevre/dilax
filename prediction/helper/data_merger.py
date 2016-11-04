@@ -16,12 +16,12 @@ def merge_tables(datastore):
         TYPE: Description
     """
     if datastore.period == 'D':
-        datastore.data = merge_with_weather_day(datastore)
-        datastore.data = merge_with_counts(datastore)
-        datastore.data = merge_with_public_holidays(datastore)
-        datastore.data = merge_with_regions(datastore)
-        datastore.data = merge_with_school_holidays(datastore)
-        return datastore.data
+        datastore.training_data = merge_with_weather_day(datastore)
+        datastore.training_data = merge_with_counts(datastore)
+        datastore.training_data = merge_with_public_holidays(datastore)
+        datastore.training_data = merge_with_regions(datastore)
+        datastore.training_data = merge_with_school_holidays(datastore)
+        return datastore.training_data
     else:
         print "merge_tables not implemented for intraday"
 
@@ -66,7 +66,7 @@ def merge_with_counts(datastore):
     df_counts = df_counts.reset_index()
     df_counts = df_counts[['idbldsite', 'compensatedin', 'date']]
 
-    df_counts_sites_weather_day = pd.merge(df_counts, datastore.data, how='left', left_on=[
+    df_counts_sites_weather_day = pd.merge(df_counts, datastore.training_data, how='left', left_on=[
         'idbldsite', 'date'], right_on=['idbldsite', 'date'], suffixes=['counts_', 'weather_'])
 
     return df_counts_sites_weather_day
@@ -84,7 +84,7 @@ def merge_with_public_holidays(datastore):
     df_holidays = datastore.db.public_holidays
     df_holidays = df_holidays[['idbldsite', 'day']]
 
-    df_with_public_holidays = pd.merge(datastore.data, df_holidays, left_on=[
+    df_with_public_holidays = pd.merge(datastore.training_data, df_holidays, left_on=[
         'idbldsite', 'date'], right_on=['idbldsite', 'day'], how='left', suffixes=['_counts', '_holidays'])
     df_with_public_holidays[
         'is_public_holiday'] = ~df_with_public_holidays.day.isnull() * 1
@@ -104,7 +104,7 @@ def merge_with_regions(datastore):
     df_regions = create_regions_df(datastore)
 
     df_with_regions = pd.merge(
-        datastore.data, df_regions, on='idbldsite')
+        datastore.training_data, df_regions, on='idbldsite')
     return df_with_regions
 
 
@@ -117,4 +117,4 @@ def merge_with_school_holidays(datastore):
     Returns:
         TYPE: Description
     """
-    return add_school_holidays(datastore.data)
+    return add_school_holidays(datastore.training_data)

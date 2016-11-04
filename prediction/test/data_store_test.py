@@ -6,7 +6,7 @@ import pytest
 
 @pytest.fixture(autouse=True, scope="module")
 def store():
-    return Data_store(Predictor("DWE_CLOSED"))
+    return Data_store(Predictor("DWE_CLOSED_2013", create=True))
 
 
 def test_create_data_store(store):
@@ -21,8 +21,8 @@ def test_sites_query(store):
 
 
 def test_data_content(store):
-    assert store.data.shape[0] > 0
+    assert store.training_data.shape[0] > 0
 
 
 def test_geocoding(store):
-    assert store.data['region_id'].shape[0] > 0
+    assert store.training_data['region_id'].shape[0] > 0

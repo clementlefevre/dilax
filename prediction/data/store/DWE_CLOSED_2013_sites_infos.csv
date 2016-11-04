@@ -1,0 +1,13 @@
+,idbldsite,sname,latitude,longitude,coord,region,region_id
+0,12,Stuttgart,48.7766305,9.1763305,48.78;9.18,Baden-Württemberg,0
+1,1,Hamburg City,53.550842,9.995385,53.55;10.0,Hamburg,5
+2,2,Hamburg AEZ,53.654227,10.091736,53.65;10.09,Hamburg,5
+3,3,Muenchen Damen,48.142641,11.576903,48.14;11.58,Bayern,1
+4,4,Muenchen Herren,48.142641,11.576903,48.14;11.58,Bayern,1
+5,5,Duesseldorf Herren,51.224403,6.774598,51.22;6.77,Nordrhein-Westfalen,9
+6,6,Duesseldorf Damen,51.224403,6.774598,51.22;6.77,Nordrhein-Westfalen,9
+7,7,Wiesbaden,50.081434,8.244644,50.08;8.24,Hessen,6
+8,8,Bikini Berlin,52.505482,13.335294,52.51;13.34,Berlin,2
+9,9,Osnabrueck,52.276045,8.043023,52.28;8.04,Niedersachsen,8
+10,10,Nuernberg,49.452291,11.074521,49.45;11.07,Bayern,1
+11,11,Frankfurt MTZ,50.1109221,8.6821267,50.11;8.68,Hessen,6

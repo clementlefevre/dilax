@@ -11,7 +11,6 @@ class Predictor(object):
         self.db_name = db_name
         self.period = period
         self.create = create
-        print "self", self
         self.datastore = Data_store(self)
 
     def _set_dates(self, date_from, date_to):
@@ -28,5 +27,8 @@ class Predictor(object):
     def __repr__(self):
         return self.db_name
 
-    def create_predictors(self):
-        create_forecasts_data(self)
+    def create_forecasts(self):
+        predictor.datastore.forecasts = create_forecasts_data(self)
+        predictor.datastore.forecasts.to_csv(
+            predictor.datastore.config.data_store_settings[
+                'path'] + '/' + predictor.datastore.config.DB['db_name'] + '_forecasts_' + predictor.period + '.csv', encoding='utf-8')
