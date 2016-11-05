@@ -30,7 +30,8 @@ class Data_store(object):
             self.db = DB_manager(self.db_params)
             self.training_data = merge_tables(self)
             self.training_data = add_calendar_fields(self.training_data)
-            self.training_data = regularize(self)
+            self.training_data = regularize(
+                self, self.training_data)
             self.training_data.to_csv(
                 self.file_names['training_set'], encoding='utf-8')
             self.sites_infos.to_csv(

@@ -82,15 +82,31 @@ def get_sites_dict(df_sites):
     return sites_dict
 
 
-def regularize(datastore):
-    df = datastore.training_data
-    df = df.reset_index()
-    df.set_index(['idbldsite'])
+def regularize_forecasts():
+    pass
 
+
+def regularize(datastore, df, is_forecast=False):
+
+    df = df.reset_index()
+    print df.columns.tolist()
     for col in df.columns.tolist():
         if datastore.config.features[col]:
-            df[col + "_reg"] = df.groupby('idbldsite')[col].transform(
-                lambda x: (x - x.mean()) / x.std())
+            if not is_forecast:
+
+                df[col + "_reg"] = df.groupby('idbldsite')[col].transform(
+                    lambda x: (x - x.mean()) / x.std())
+
+            else:
+                x_mean = datastore.training_data.groupby('idbldsite')[
+                    col].mean()
+
+                x_std = datastore.training_data.groupby('idbldsite')[
+                    col].std()
+                df[col + "_reg"] = df.apply(lambda x:
+                                            (x[col] - x_mean.ix[x['idbldsite']]
+                                             ) / x_std.ix[x['idbldsite']],
+                                            axis=1)
 
     df = df.fillna(0)
     return df

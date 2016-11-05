@@ -1,7 +1,7 @@
 import pandas as pd
 from service.holidays_service import add_school_holidays
 from weather_API_service import add_weather_forecasts
-from helper.data_helper import add_calendar_fields
+from helper.data_helper import add_calendar_fields, regularize
 
 
 def create_forecasts_data(datastore):
@@ -39,4 +39,8 @@ def create_forecasts_data(datastore):
 
         df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
 
-        return df_forecasts
+    # wrong, it should regularize on the training_set values !!!
+    df_forecasts = regularize(
+        datastore, df_forecasts, is_forecast=True)
+
+    return df_forecasts

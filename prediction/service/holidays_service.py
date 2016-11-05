@@ -43,5 +43,4 @@ def add_school_holidays(df):
 
     df_with_school_holidays = pd.merge(df, df_school_holidays, on=[
                                        'region_id', 'date'], how='left', suffixes=['_data', '_school'])
-    print df_with_school_holidays.head()
     return df_with_school_holidays

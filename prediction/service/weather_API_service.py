@@ -11,14 +11,15 @@ def add_weather_forecasts(datastore, df):
     coordinates = (site_infos['latitude'], site_infos['longitude'])
     df_weather = get_weather_forecasts(
         datastore.config.weather_API, *coordinates)
-    # print df.info()
-    # print "--------------------------------------------------"
-    # print df_weather.info()
-
     df = pd.merge(
-        df, df_weather[['date', 'ne', 'tn', 'tx', 'ww']], on='date', how='left')
-    df = df.rename(columns={'tn': 'mintemperature', 'tx': 'maxtemperature',
-                            'ww': 'weathersituation', 'ne': 'cloudamount'})
+        df, df_weather[['date', 'ne', 'tn', 'tx', 'ww']],
+        on='date', how='left')
+
+    df.rename(columns={'tn': 'mintemperature',
+                       'tx': 'maxtemperature',
+                       'ww': 'weathersituation',
+                       'ne': 'cloudamount'},
+              inplace=True)
 
     return df
 
