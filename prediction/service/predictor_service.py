@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 from service.holidays_service import add_school_holidays
 from weather_API_service import add_weather_forecasts
@@ -22,8 +20,6 @@ def create_forecasts_data(datastore):
         ['idbldsite', 'region_id']].values
 
     for site_id, region_id in [tuple(x) for x in site_region]:
-        print site_id, region_id
-
         df_forecasts_site = pd.DataFrame(pd.date_range(
             datastore.date_from, datastore.date_to,
             freq=datastore.period), columns=['date'])
@@ -33,12 +29,13 @@ def create_forecasts_data(datastore):
 
         df_forecasts_site = add_school_holidays(df_forecasts_site)
 
-        # No API working for the time being
+        # !!!! No API working for the time being !!!
         df_forecasts_site['is_public_holiday'] = 0
 
         df_forecasts_site = add_calendar_fields(df_forecasts_site)
 
-        # df_forecasts_site = add_weather_forecasts(df_forecasts_site)
+        df_forecasts_site = add_weather_forecasts(
+            datastore, df_forecasts_site)
 
         df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
 

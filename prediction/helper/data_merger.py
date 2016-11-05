@@ -1,7 +1,7 @@
 """Summary
 """
 from data_helper import round_coordinates
-from service.geocoding_service import create_regions_df
+from service.geocoding_API_service import create_regions_df
 from helper import pd
 from service.holidays_service import add_school_holidays
 

@@ -21,6 +21,7 @@ class Data_store(object):
 
         self._set_file_names()
         self._training_set_(predictor.create)
+        self.create_sites_dict()
 
     def _training_set_(self, create):
 
@@ -38,7 +39,7 @@ class Data_store(object):
         else:
             try:
                 self.training_data = pd.read_csv(
-                    self.file_names['training_set'])
+                    self.file_names['training_set'], parse_dates=['date'])
 
             except IOError as e:
                 print "error by reading the csv file : {0}".\
@@ -52,6 +53,10 @@ class Data_store(object):
                     format(self.file_names['sites_info'])
                 print e.args
             print "finished reading training set"
+
+    def create_sites_dict(self):
+        self.sites_infos_dict = self.sites_infos.set_index(
+            'idbldsite').T.to_dict()
 
     def create_forecasts(self):
         self.forecasts = create_forecasts_data(self)

@@ -1,42 +1,44 @@
 import pandas as pd
 import urllib2
+import urllib
 import json
 from pandas.io.json import json_normalize
 
-import db_service
+
+def add_weather_forecasts(datastore, df):
+    site_id = df.idbldsite.unique()[0]
+    site_infos = (datastore.sites_infos_dict[site_id])
+    coordinates = (site_infos['latitude'], site_infos['longitude'])
+    df_weather = get_weather_forecasts(
+        datastore.config.weather_API, *coordinates)
+    # print df.info()
+    # print "--------------------------------------------------"
+    # print df_weather.info()
+
+    df = pd.merge(
+        df, df_weather[['date', 'ne', 'tn', 'tx', 'ww']], on='date', how='left')
+    df = df.rename(columns={'tn': 'mintemperature', 'tx': 'maxtemperature',
+                            'ww': 'weathersituation', 'ne': 'cloudamount'})
+
+    return df
 
 
-def add_weather_forecasts(df):
-    pass
+def get_weather_forecasts(config_weather, latitude, longitude):
+    url_params = dict([('customer', config_weather['customer']),
+                       ('hash', config_weather['hash']),
+                       ('locsearchtype',
+                        config_weather['locsearchtype']),
+                       ('lat', latitude), ('lon', longitude)])
 
-
-def get_weather(predictor):
     response = urllib2.urlopen(
-        config.WEATHER_URL + "lat=" + lat + "&lon=" + lon)
+        config_weather['url_base'] + urllib.urlencode(url_params))
     data = json.loads(response.read())
     df_weather = json_normalize(data['LocationWeather']['forecast']['days'])
-    df_weather.date = pd.to_datetime(df_weather.date).dt.date
+    df_weather.date = pd.to_datetime(df_weather.date)
 
     last_update = json_normalize(data['LocationWeather']['latestobservation'][
-                                 'latests'][0])['dateTime'].values[0]
+        'latests'][0])['dateTime'].values[0]
 
     df_weather['lastUpdate'] = pd.to_datetime(last_update)
+
     return df_weather
-
-
-def get_weather_forecasts():
-    sites_dict = db_service.get_sites_dict()
-    df_weather = pd.DataFrame()
-
-    for site_id in sites_dict:
-        sname = sites_dict[site_id][0]
-        lat = str(sites_dict[site_id][1])
-        lon = str(sites_dict[site_id][2])
-
-        df_weather_site = get_weather(lat, lon)
-        df_weather_site['idbldsite'] = site_id
-        df_weather_site['sname'] = sname
-        df_weather = pd.concat([df_weather, df_weather_site], axis=0)
-    df_weather = df_weather.rename(
-        columns={'tx': 'maxtemperature', 'tn': 'mintemperature'})
-    df_weather.to_csv('data/weather_forecasts.csv', index=0)

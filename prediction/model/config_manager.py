@@ -11,6 +11,7 @@ class Config_manager(object):
         self.DB = config._sections['db_settings']
         self.data_store_settings = config._sections['data_store_settings']
         self.weather_API = config._sections['weather_API']
+        self.geocoding_API = config._sections['geocoding_API']
         self.features = config._sections['features_settings']
 
         self.features = self._convert_to_boolean()

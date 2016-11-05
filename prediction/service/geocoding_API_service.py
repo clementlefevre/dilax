@@ -8,11 +8,7 @@ import json
 import pandas as pd
 
 
-MAPS_URL = "https://maps.googleapis.com/maps/api/geocode/json?latlng="
-KEY = "AIzaSyBH1L-yhFultlbnz9TeD1LZnZk2s85GIy0"
-
-
-def get_region(latitude, longitude):
+def get_region(datastore, latitude, longitude):
     """retrieve the local name of the region for a given coordinate.
 
     Args:
@@ -22,6 +18,10 @@ def get_region(latitude, longitude):
     Returns:
         str: local name of the region
     """
+
+    MAPS_URL = datastore.config.geocoding_API['maps_url']
+    KEY = datastore.config.geocoding_API['key']
+
     coord_str = str(latitude) + "," + str(longitude)
     try:
         response = urllib2.urlopen(
@@ -31,11 +31,10 @@ def get_region(latitude, longitude):
 
         region = [x for x in address_components if 'administrative_area_level_1' in x[
             'types']][0]['long_name'].encode('utf-8)')
-
         return region
     except Exception as e:
         print e.message
-        print data
+
         print "Could not retrieve the region name for :" + coord_str
         raise
 
@@ -49,9 +48,10 @@ def create_regions_df(datastore):
     Returns:
         DataFrame: sites-regions
     """
+
     df_sites = datastore.db.sites
     df_sites['region'] = df_sites.apply(
-        lambda row: get_region(row['latitude'], row['longitude']), axis=1)
+        lambda row: get_region(datastore, row['latitude'], row['longitude']), axis=1)
 
     df_region_id = pd.read_csv('data/region_germany.csv')
     df_sites = pd.merge(df_sites, df_region_id, on='region', how='left')

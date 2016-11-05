@@ -1,8 +1,16 @@
 from collections import namedtuple
-from service.geocoding_service import get_region
+import pytest
+from model.data_store import Data_store
+from model.predictor import Predictor
+from service.geocoding_API_service import get_region
 
 
-def test_get_region():
+@pytest.fixture(autouse=True, scope="module")
+def store():
+    return Data_store(Predictor("DWE_CLOSED_2013", create=False))
+
+
+def test_get_region(store):
     Site = namedtuple(
         'Site', ['idbldsite', 'site_name', 'latitude', 'longitude', 'region'])
     sites = [Site(idbldsite=12, site_name='Stuttgart', latitude=48.776630499999996,
@@ -33,4 +41,4 @@ def test_get_region():
     for site in sites:
 
         assert site.region.decode(
-            'utf-8') == get_region(site.latitude, site.longitude).decode('utf-8')
+            'utf-8') == get_region(store, site.latitude, site.longitude).decode('utf-8')

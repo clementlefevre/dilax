@@ -75,19 +75,3 @@ def regularize_forecast(df_forecast, dataset_past_dict):
         df_forecast[col] = 0
 
     return df_forecast
-
-
-def add_weather_forecasts(df):
-    df_weather = pd.read_csv(
-        'data/weather_forecasts.csv', parse_dates=['date'])
-    df = pd.merge(df, df_weather, on=['idbldsite', 'date'], how='left')
-
-    return df
-
-
-def add_holidays(df):
-    pass
-
-
-def create_baseline(df):
-    pass
