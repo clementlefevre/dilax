@@ -10,11 +10,12 @@ class Config_manager(object):
         config.read('config.ini')
         self.DB = config._sections['db_settings']
         self.data_store_settings = config._sections['data_store_settings']
+        self.weather_API = config._sections['weather_API']
         self.features = config._sections['features_settings']
 
-        self.features = self.__convert_to_boolean()
+        self.features = self._convert_to_boolean()
 
-    def __convert_to_boolean(self):
+    def _convert_to_boolean(self):
         features = {}
         for k, v in self.features.items():
             features[k] = bool(int(v))

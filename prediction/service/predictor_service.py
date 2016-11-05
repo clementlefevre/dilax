@@ -6,7 +6,7 @@ from weather_API_service import add_weather_forecasts
 from helper.data_helper import add_calendar_fields
 
 
-def create_forecasts_data(predictor):
+def create_forecasts_data(datastore):
     """Summary
 
     Args:
@@ -18,15 +18,15 @@ def create_forecasts_data(predictor):
 
     df_forecasts = pd.DataFrame()
 
-    site_region = predictor.datastore.sites_infos[
+    site_region = datastore.sites_infos[
         ['idbldsite', 'region_id']].values
 
     for site_id, region_id in [tuple(x) for x in site_region]:
         print site_id, region_id
 
         df_forecasts_site = pd.DataFrame(pd.date_range(
-            predictor.date_from, predictor.date_to,
-            freq=predictor.period), columns=['date'])
+            datastore.date_from, datastore.date_to,
+            freq=datastore.period), columns=['date'])
 
         df_forecasts_site['idbldsite'] = site_id
         df_forecasts_site['region_id'] = region_id
@@ -38,7 +38,7 @@ def create_forecasts_data(predictor):
 
         df_forecasts_site = add_calendar_fields(df_forecasts_site)
 
-        df_forecasts_site = add_weather_forecasts(df_forecasts_site)
+        # df_forecasts_site = add_weather_forecasts(df_forecasts_site)
 
         df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
 

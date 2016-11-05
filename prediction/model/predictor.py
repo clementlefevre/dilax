@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
 from model.data_store import Data_store
-from service.predictor_service import create_forecasts_data
 
 
 class Predictor(object):
@@ -26,9 +25,3 @@ class Predictor(object):
 
     def __repr__(self):
         return self.db_name
-
-    def create_forecasts(self):
-        predictor.datastore.forecasts = create_forecasts_data(self)
-        predictor.datastore.forecasts.to_csv(
-            predictor.datastore.config.data_store_settings[
-                'path'] + '/' + predictor.datastore.config.DB['db_name'] + '_forecasts_' + predictor.period + '.csv', encoding='utf-8')

@@ -18,5 +18,5 @@ def test_datastore_create_forecasts(predictor):
     date_from = datetime.now().date()
     date_to = date_from + timedelta(days=60)
 
-    predictor.create_forecasts()
+    predictor.datastore.create_forecasts()
     assert predictor.datastore.forecasts.shape[0] > 0

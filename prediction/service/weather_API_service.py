@@ -6,6 +6,10 @@ from pandas.io.json import json_normalize
 import db_service
 
 
+def add_weather_forecasts(df):
+    pass
+
+
 def get_weather(predictor):
     response = urllib2.urlopen(
         config.WEATHER_URL + "lat=" + lat + "&lon=" + lon)
