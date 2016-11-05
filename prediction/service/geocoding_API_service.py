@@ -57,7 +57,7 @@ def create_regions_df(datastore):
     df_sites = pd.merge(df_sites, df_region_id, on='region', how='left')
 
     df_sites = df_sites[['idbldsite', 'sname', 'latitude', 'longitude',
-                         'coord', 'region', 'region_id']]
+                         'region', 'region_id']]
     datastore.sites_infos = df_sites
 
     return df_sites[['idbldsite', 'region', 'region_id']]

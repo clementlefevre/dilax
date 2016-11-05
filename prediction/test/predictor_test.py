@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 @pytest.fixture(autouse=True, scope="module")
 def predictor():
-    return Predictor("DWE_CLOSED_2013", create=False)
+    return Predictor("DWE_CLOSED_2013", create=True)
 
 
 def test_predictor_period(predictor):

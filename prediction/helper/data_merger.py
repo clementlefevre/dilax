@@ -1,6 +1,6 @@
 """Summary
 """
-from data_helper import round_coordinates
+from data_helper import get_closest
 from service.geocoding_API_service import create_regions_df
 from helper import pd
 from service.holidays_service import add_school_holidays
@@ -35,18 +35,29 @@ def merge_with_weather_day(datastore):
     Returns:
         TYPE: Description
     """
-    df_weather_day = round_coordinates(datastore.db.weather_day)
-    df_sites = round_coordinates(datastore.db.sites)
+    df_weather_day = datastore.db.weather_day
+    df_sites = datastore.db.sites
+    df_sites['latitude_closest'] = df_sites.latitude.apply(
+        lambda x: get_closest(x, df_weather_day.latitude))
+
+    df_sites['longitude_closest'] = df_sites.longitude.apply(
+        lambda x: get_closest(x, df_weather_day.longitude))
+
     df_weather_day = df_weather_day[['maxtemperature', 'mintemperature',
                                      'weathersituation',
-                                     'cloudamount', 'day', 'coord']]
-    df_sites = df_sites[['idbldsite', 'coord', 'sname']]
+                                     'cloudamount', 'day', 'latitude','longitude']]
+    df_sites = df_sites[['idbldsite', 'latitude_closest','longitude_closest', 'sname']]
 
     df_sites_weather_day = pd.merge(df_weather_day, df_sites,
-                                    on='coord',
-                                    how='left', suffixes=['_weather', '_sites'])
+                                    left_on=['latitude','longitude'],
+                                    right_on=['latitude_closest',
+                                              'longitude_closest'],
+                                    how='left',
+                                    suffixes=['_weather', '_sites'])
 
     df_sites_weather_day.rename(columns={'day': 'date'}, inplace=True)
+    df_sites_weather_day = df_sites_weather_day.drop(
+        ['latitude_closest', 'longitude_closest'], 1)
     return df_sites_weather_day
 
 
@@ -66,8 +77,12 @@ def merge_with_counts(datastore):
     df_counts = df_counts.reset_index()
     df_counts = df_counts[['idbldsite', 'compensatedin', 'date']]
 
-    df_counts_sites_weather_day = pd.merge(df_counts, datastore.training_data, how='left', left_on=[
-        'idbldsite', 'date'], right_on=['idbldsite', 'date'], suffixes=['counts_', 'weather_'])
+    df_counts_sites_weather_day = pd.merge(df_counts,
+                                           datastore.training_data,
+                                           how='left',
+                                           left_on=['idbldsite', 'date'],
+                                           right_on=['idbldsite', 'date'],
+                                           suffixes=['counts_', 'weather_'])
 
     return df_counts_sites_weather_day
 
