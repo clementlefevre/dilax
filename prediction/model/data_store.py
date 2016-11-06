@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime, timedelta
-
+from model import logging
 from db_manager import DB_manager
 from config_manager import Config_manager
 from helper.data_merger import merge_tables
@@ -30,7 +30,7 @@ class Data_store(object):
     def _training_set_(self):
 
         if self.create:
-            print "prepare new training set..."
+            logging.info(self, "prepare new training set...")
             self.db = DB_manager(self.db_params)
             self.training_data = merge_tables(self)
             self.training_data = add_calendar_fields(self.training_data)
@@ -40,24 +40,24 @@ class Data_store(object):
                 self.file_names['training_set'], encoding='utf-8')
             self.sites_infos.to_csv(
                 self.file_names['sites_info'], encoding='utf-8')
-            print "finished preparing training set"
+            logging.info(self, "finished preparing training set")
         else:
             try:
                 self.training_data = pd.read_csv(
                     self.file_names['training_set'], parse_dates=['date'])
 
             except IOError as e:
-                print "error by reading the csv file : {0}".\
-                    format(self.file_names['training_set'])
-                print e.args
+                logging.error("error by reading the csv file : {0}".
+                              format(self.file_names['training_set']))
+                logging.error(e.message)
 
             try:
                 self.sites_infos = pd.read_csv(self.file_names['sites_info'])
             except IOError as e:
-                print "error by reading the csv file : {0}".\
-                    format(self.file_names['sites_info'])
-                print e.args
-            print "finished reading training set"
+                logging.error("error by reading the csv file : {0}".
+                              format(self.file_names['sites_info']))
+                logging.error(e.message)
+            logging.info("finished reading training set")
 
     def create_sites_dict(self):
         self.sites_infos_dict = self.sites_infos.set_index(
@@ -69,19 +69,15 @@ class Data_store(object):
             self.file_names['forecasts_set'], encoding='utf-8')
 
     def _set_file_names(self):
-        training_set = config_manager.data_store_settings['path'] +\
-            '/' + self.name + \
-            '_training_set_' + \
-            self.period + '.csv'
+        training_set = config_manager.data_store_settings[
+            'path'] + '/' + self.name + '_training_set_' + self.period + '.csv'
 
         sites_infos_file = config_manager.data_store_settings[
-            'path'] + '/' + self.name +\
-            '_sites_infos' + '.csv'
+            'path'] + '/' + self.name + '_sites_infos' + '.csv'
 
-        forecasts_set = config_manager.data_store_settings['path'] +\
-            '/' + self.name + \
-            '_forecasts_set_' + \
-            self.period + '.csv'
+        forecasts_set = config_manager.data_store_settings[
+            'path'] + '/' + self.name +\
+            '_forecasts_set_' + self.period + '.csv'
 
         self.file_names = dict(training_set=training_set,
                                forecasts_set=forecasts_set,

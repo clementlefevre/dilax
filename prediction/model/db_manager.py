@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from model import pd
+from model import pd, logging
 
 
 class DB_manager(object):
@@ -19,7 +19,7 @@ class DB_manager(object):
 
     def _create_connection(self):
         self.engine = create_engine(self._db_address())
-        print "engine created" + str(self.engine)
+        logging.info("engine created" + str(self.engine))
 
     def _query(self, table):
         return pd.read_sql_query("select * from " + '"' + table + '"',

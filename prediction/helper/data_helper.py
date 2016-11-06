@@ -1,9 +1,21 @@
 
 import numpy as np
 from model.config_manager import Config_manager
-
+from helper import logging
 
 config_manager = Config_manager()
+
+
+def alert_missing_data(df, x_only, f_name):
+    logging.info("Hello")
+    df = df[
+        df._merge == "x_only"]
+    if df.shape[0] == 0:
+        logging.info("No missing data after {}".format(f_name))
+    else:
+        sites_missing = df.groupby('idbldsite')._merge.count()
+        logging.warning("While merging with {}, No data found for: {} ".format(
+            f_name, sites_missing))
 
 
 def get_nearest_coordinate(site_coordinate, weather_coordinates):
@@ -89,7 +101,9 @@ def regularize(datastore, df, is_forecast=False):
 
                 df[col + "_reg"] = df.groupby('idbldsite')[col].apply(
                     lambda x: (x - x.mean()) / x.std())
-                print col + "has been regularized for training set"
+                logging.info("datastore: % s: column % s has been regularized for training set",
+                             datastore, col
+                             )
 
             else:
                 training_set_groupy = datastore.training_data.\
@@ -101,6 +115,8 @@ def regularize(datastore, df, is_forecast=False):
                                             (x[col] - x_mean.ix[x['idbldsite']]
                                              ) / x_std.ix[x['idbldsite']],
                                             axis=1)
-
+                logging.info("datastore: % s: column % s has been regularized for forecasts set",
+                             datastore, col
+                             )
     df = df.fillna(0)
     return df

@@ -3,11 +3,14 @@ from mock import Mock
 import pytest
 from helper.data_merger import merge_with_weather_day
 from model.db_manager import DB_manager
+from model.config_manager import Config_manager
 from helper.data_helper import get_nearest_coordinate
+import logging
 
 
 @pytest.fixture(autouse=True, scope="module")
 def datastore():
+
     db_params = {'db_user': 'dwe-arcadia', 'db_name': 'DWE_ARCADIA_2015',
                  'db_port': '5432', 'db_pwd': 'VtJ5Cw3PKuOi4i3b',
                  'db_url': 'localhost'}
@@ -18,9 +21,7 @@ def datastore():
 
 
 def test_log_if_missing_weather_data(datastore):
-    print datastore.db.sites
     df = merge_with_weather_day(datastore)
-    print df.head()
     assert df.shape[0] > 1
 
 

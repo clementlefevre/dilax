@@ -6,6 +6,7 @@ Attributes:
 import urllib2
 import json
 import pandas as pd
+import logging
 from model.config_manager import Config_manager
 
 
@@ -37,8 +38,8 @@ def get_region(latitude, longitude):
             'types']][0]['long_name'].encode('utf-8)')
         return region
     except (AttributeError, IndexError) as e:
-        print e.message
-        print "Could not retrieve the region name for :" + coord_str
+        logging.error("Could not retrieve the region name for :" + coord_str)
+        logging.error(e.message)
 
 
 def create_regions_df(datastore):
