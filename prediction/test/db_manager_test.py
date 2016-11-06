@@ -1,6 +1,5 @@
 import pytest
 from model.db_manager import DB_manager
-from config import *
 
 
 @pytest.fixture(autouse=True, scope="module")

@@ -1,9 +1,8 @@
+"""This module use the holidays API. 
+It is only valid for 2017.
+"""
 # coding: utf-8
-
-
-from sqlalchemy import create_engine
 import datetime
-import numpy as np
 import pandas as pd
 import urllib2
 import urllib
@@ -11,11 +10,16 @@ import json
 
 from pandas.io.json import json_normalize
 
-from config import *
+
 import db_service
 
 
 def get_sites_with_address():
+    """Summary
+
+    Returns:
+        TYPE: Description
+    """
     df_sites = db_service.get_sites()
     df_address = db_service.get_address()
     df_sites = pd.merge(df_sites[['idbldsite', 'sname']], df_address[
@@ -24,6 +28,11 @@ def get_sites_with_address():
 
 
 def holidays_API_ids():
+    """Summary
+
+    Returns:
+        TYPE: Description
+    """
     df_sites = get_sites_with_address()
     response = urllib2.urlopen(
         HOLIDAYS_API_ROOT_URL + 'geo.php?pw=' + HOLIDAYS_API_PWD + '&geo=all&child=1')
@@ -41,12 +50,29 @@ def holidays_API_ids():
 
 
 def create_year_range(year_start):
+    """Summary
+
+    Args:
+        year_start (TYPE): Description
+
+    Returns:
+        TYPE: Description
+    """
     year_end = datetime.datetime.now().year
     year_range = range(year_start, year_end + 1, 1)
     return year_range
 
 
 def create_holidays_table(list_API_ids, year_start=2012):
+    """Summary
+
+    Args:
+        list_API_ids (TYPE): Description
+        year_start (int, optional): Description
+
+    Returns:
+        TYPE: Description
+    """
     year_range = create_year_range(year_start)
     df_public_holidays = pd.DataFrame()
     df_school_holidays = pd.DataFrame()
@@ -78,6 +104,11 @@ def create_holidays_table(list_API_ids, year_start=2012):
 
 
 def get_holidays():
+    """Summary
+
+    Returns:
+        TYPE: Description
+    """
     holidays_API_id_list = holidays_API_ids()
     print holidays_API_id_list
     create_holidays_table(holidays_API_id_list)

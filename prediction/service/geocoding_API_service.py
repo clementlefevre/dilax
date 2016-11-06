@@ -6,6 +6,10 @@ Attributes:
 import urllib2
 import json
 import pandas as pd
+from model.config_manager import Config_manager
+
+
+config_manager = Config_manager()
 
 
 def get_region(datastore, latitude, longitude):
@@ -19,8 +23,8 @@ def get_region(datastore, latitude, longitude):
         str: local name of the region
     """
 
-    MAPS_URL = datastore.config.geocoding_API['maps_url']
-    KEY = datastore.config.geocoding_API['key']
+    MAPS_URL = config_manager.geocoding_API['maps_url']
+    KEY = config_manager.geocoding_API['key']
 
     coord_str = str(latitude) + "," + str(longitude)
     try:
@@ -53,7 +57,7 @@ def create_regions_df(datastore):
     df_sites['region'] = df_sites.apply(
         lambda row: get_region(datastore, row['latitude'], row['longitude']), axis=1)
 
-    df_region_id = pd.read_csv('data/region_germany.csv')
+    df_region_id = pd.read_csv('data/regions_countries.csv')
     df_sites = pd.merge(df_sites, df_region_id, on='region', how='left')
 
     df_sites = df_sites[['idbldsite', 'sname', 'latitude', 'longitude',

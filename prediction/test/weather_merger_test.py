@@ -3,7 +3,7 @@ from mock import MagicMock
 
 from model.config_manager import Config_manager
 from model.db_manager import DB_manager
-from helper.data_helper import get_closest
+from helper.data_helper import get_nearest_coordinate
 
 
 def test_find_weather_infos_for_site_1():
@@ -14,8 +14,8 @@ def test_find_weather_infos_for_site_1():
     df_sites = db_manager.sites
 
     df_sites['latitude_closest'] = df_sites.latitude.apply(
-        lambda x: get_closest(x,
-                              df_weather_day.latitude))
+        lambda x: get_nearest_coordinate(x,
+                                         df_weather_day.latitude))
 
     df_weather_day = df_weather_day[['maxtemperature', 'mintemperature',
                                      'weathersituation',
@@ -23,7 +23,9 @@ def test_find_weather_infos_for_site_1():
     df_sites = df_sites[['idbldsite', 'latitude_closest', 'sname']]
 
     df_sites_weather_day = pd.merge(df_weather_day, df_sites,
-                                    left_on='latitude', right_on='latitude_closest',
-                                    how='left', suffixes=['_weather', '_sites'])
+                                    left_on='latitude',
+                                    right_on='latitude_closest',
+                                    how='left',
+                                    suffixes=['_weather', '_sites'])
     assert df_sites_weather_day[
         df_sites_weather_day.idbldsite == 1].maxtemperature.max() > 1

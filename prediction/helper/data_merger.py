@@ -1,6 +1,6 @@
 """Summary
 """
-from data_helper import get_closest
+from data_helper import get_nearest_coordinate
 from service.geocoding_API_service import create_regions_df
 from helper import pd
 from service.holidays_service import add_school_holidays
@@ -38,18 +38,19 @@ def merge_with_weather_day(datastore):
     df_weather_day = datastore.db.weather_day
     df_sites = datastore.db.sites
     df_sites['latitude_closest'] = df_sites.latitude.apply(
-        lambda x: get_closest(x, df_weather_day.latitude))
+        lambda x: get_nearest_coordinate(x, df_weather_day.latitude))
 
     df_sites['longitude_closest'] = df_sites.longitude.apply(
-        lambda x: get_closest(x, df_weather_day.longitude))
+        lambda x: get_nearest_coordinate(x, df_weather_day.longitude))
 
     df_weather_day = df_weather_day[['maxtemperature', 'mintemperature',
                                      'weathersituation',
-                                     'cloudamount', 'day', 'latitude','longitude']]
-    df_sites = df_sites[['idbldsite', 'latitude_closest','longitude_closest', 'sname']]
+                                     'cloudamount', 'day', 'latitude', 'longitude']]
+    df_sites = df_sites[
+        ['idbldsite', 'latitude_closest', 'longitude_closest', 'sname']]
 
     df_sites_weather_day = pd.merge(df_weather_day, df_sites,
-                                    left_on=['latitude','longitude'],
+                                    left_on=['latitude', 'longitude'],
                                     right_on=['latitude_closest',
                                               'longitude_closest'],
                                     how='left',

@@ -1,9 +1,21 @@
-"""Summary
-"""
+
 import numpy as np
+from model.config_manager import Config_manager
 
 
-def get_closest(site_coordinate, weather_coordinates):
+config_manager = Config_manager()
+
+
+def get_nearest_coordinate(site_coordinate, weather_coordinates):
+    """Allows the matching of site with other data based on coordinates.
+
+    Args:
+        site_coordinate (TYPE): Description
+        weather_coordinates (TYPE): Description
+
+    Returns:
+        TYPE: Nearest point of a list of coordinates
+    """
     return min(weather_coordinates,
                key=lambda x: abs(x - site_coordinate))
 
@@ -59,11 +71,20 @@ def get_sites_dict(df_sites):
 
 
 def regularize(datastore, df, is_forecast=False):
+    """Summary
 
+    Args:
+        datastore (TYPE): Description
+        df (TYPE): Description
+        is_forecast (bool, optional): Description
+
+    Returns:
+        TYPE: Description
+    """
     df = df.reset_index()
 
     for col in df.columns.tolist():
-        if datastore.config.features[col]:
+        if config_manager.features[col]:
             if not is_forecast:
 
                 df[col + "_reg"] = df.groupby('idbldsite')[col].apply(

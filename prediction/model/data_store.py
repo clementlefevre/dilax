@@ -6,13 +6,15 @@ from helper.data_merger import merge_tables
 from helper.data_helper import add_calendar_fields, regularize
 from service.predictor_service import create_forecasts_data
 
+config_manager = Config_manager()
+
 
 class Data_store(object):
     def __init__(self, predictor, db_params={}):
         self.db_name = predictor.db_name
-        self.config = Config_manager()
+
         if not db_params:
-            self.db_params = self.config.DB
+            self.db_params = config_manager.DB
         else:
             self.db_params = db_params
         self.period = predictor.period
@@ -65,17 +67,17 @@ class Data_store(object):
             self.file_names['forecasts_set'], encoding='utf-8')
 
     def _set_file_names(self):
-        training_set = self.config.data_store_settings['path'] +\
-            '/' + self.config.DB['db_name'] + \
+        training_set = config_manager.data_store_settings['path'] +\
+            '/' + config_manager.DB['db_name'] + \
             '_training_set_' + \
             self.period + '.csv'
 
-        sites_infos_file = self.config.data_store_settings[
-            'path'] + '/' + self.config.DB['db_name'] +\
+        sites_infos_file = config_manager.data_store_settings[
+            'path'] + '/' + config_manager.DB['db_name'] +\
             '_sites_infos' + '.csv'
 
-        forecasts_set = self.config.data_store_settings['path'] +\
-            '/' + self.config.DB['db_name'] + \
+        forecasts_set = config_manager.data_store_settings['path'] +\
+            '/' + config_manager.DB['db_name'] + \
             '_forecasts_set_' + \
             self.period + '.csv'
 

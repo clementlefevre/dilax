@@ -3,6 +3,10 @@ import urllib2
 import urllib
 import json
 from pandas.io.json import json_normalize
+from model.config_manager import Config_manager
+
+
+config_manager = Config_manager()
 
 
 def add_weather_forecasts(datastore, df):
@@ -10,7 +14,7 @@ def add_weather_forecasts(datastore, df):
     site_infos = (datastore.sites_infos_dict[site_id])
     coordinates = (site_infos['latitude'], site_infos['longitude'])
     df_weather = get_weather_forecasts(
-        datastore.config.weather_API, *coordinates)
+        config_manager.weather_API, *coordinates)
     df = pd.merge(
         df, df_weather[['date', 'ne', 'tn', 'tx', 'ww']],
         on='date', how='left')
