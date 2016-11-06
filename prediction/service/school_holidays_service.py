@@ -1,20 +1,30 @@
-
-# coding: utf-8
+"""This module handle functions related to the school holidays.
+"""
 import pandas as pd
 from datetime import date
 
 
 def dateparse(x):
+    """Summary
+    
+    Args:
+        x (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     return pd.datetime.strptime(x, '%d.%m.%Y')
 
 
-holidays = pd.read_csv("data/school_holidays.csv",
-                       date_parser=dateparse)
-
-region = pd.read_csv('data/regions_countries.csv')
-
-
 def add_new_country_schedule(filename):
+    """Summary
+    
+    Args:
+        filename (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
     df_holidays = reindex_holidays(filename)
     df_holidays = add_region_id(df_holidays)
     df_current_school_holidays = pd.read_csv(
@@ -25,12 +35,30 @@ def add_new_country_schedule(filename):
 
 
 def add_region_id():
+    """Merge region with school holidays.
+    
+    Returns:
+        TYPE: DataFrame
+    """
+    region = pd.read_csv('data/regions_countries.csv')
+    holidays = pd.read_csv("data/school_holidays.csv",
+                           date_parser=dateparse)
     df = pd.merge(holidays[['from_date', 'to_date', 'region_name']],
                   region, on='region_name')
     return df[['region_id', 'from_date', 'to_date']]
 
 
 def reindex_holidays(filename):
+    """Convert a holiday planning file with
+    columns "from" & "to" into a list of dates
+    with a boolean column "is_holiday"
+    
+    Args:
+        filename (TYPE): the csv for,at file with field region_id, from, to.
+    
+    Returns:
+        TYPE: Description
+    """
     df_school = pd.read_csv('data/school_holidays/' + filename + '.csv',
                             parse_dates=['from_date', 'to_date'],
                             date_parser=dateparse)
@@ -48,7 +76,14 @@ def reindex_holidays(filename):
 
 
 def add_school_holidays(df):
-
+    """Add school holidays column to a dataframe, by matching on the region_id
+    
+    Args:
+        df (TYPE): DataFrame
+    
+    Returns:
+        TYPE: DataFrame
+    """
     df_school_holidays = pd.read_csv(
         'data/school_holidays.csv', parse_dates=['date'])
 

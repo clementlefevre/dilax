@@ -1,17 +1,22 @@
+"""This service handles the creation of a new Forecasts dataframe
+to compute prediction on target values (visitors, turn-over)
+"""
 import pandas as pd
-from service.holidays_service import add_school_holidays
+from service.school_holidays_service import add_school_holidays
 from weather_API_service import add_weather_forecasts
 from helper.data_helper import add_calendar_fields, regularize
 
 
 def create_forecasts_data(datastore):
-    """Summary
-
+    """From a given datastore,
+    create a DataFrame with all available predictors
+    (holidays, weather, etc...)
+    
     Args:
-        predictor (TYPE): Description
-
+        datastore (TYPE): Data_store
+    
     Returns:
-        TYPE: Description
+        TYPE: DataFrame
     """
 
     df_forecasts = pd.DataFrame()
@@ -39,7 +44,6 @@ def create_forecasts_data(datastore):
 
         df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
 
-    # wrong, it should regularize on the training_set values !!!
     df_forecasts = regularize(
         datastore, df_forecasts, is_forecast=True)
 

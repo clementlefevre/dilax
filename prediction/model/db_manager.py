@@ -4,7 +4,7 @@ from model import pd
 
 class DB_manager(object):
 
-    def __init__(self, db_params={}):
+    def __init__(self, db_params):
         self.params = db_params
         self._create_connection()
         self._init_data()

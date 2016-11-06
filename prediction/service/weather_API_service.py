@@ -35,15 +35,20 @@ def get_weather_forecasts(config_weather, latitude, longitude):
                         config_weather['locsearchtype']),
                        ('lat', latitude), ('lon', longitude)])
 
-    response = urllib2.urlopen(
-        config_weather['url_base'] + urllib.urlencode(url_params))
-    data = json.loads(response.read())
-    df_weather = json_normalize(data['LocationWeather']['forecast']['days'])
-    df_weather.date = pd.to_datetime(df_weather.date)
+    try:
+        response = urllib2.urlopen(
+            config_weather['url_base'] + urllib.urlencode(url_params))
+        data = json.loads(response.read())
+        df_weather = json_normalize(
+            data['LocationWeather']['forecast']['days'])
+        df_weather.date = pd.to_datetime(df_weather.date)
 
-    last_update = json_normalize(data['LocationWeather']['latestobservation'][
-        'latests'][0])['dateTime'].values[0]
+        last_update = json_normalize(data['LocationWeather']['latestobservation'][
+            'latests'][0])['dateTime'].values[0]
 
-    df_weather['lastUpdate'] = pd.to_datetime(last_update)
+        df_weather['lastUpdate'] = pd.to_datetime(last_update)
 
-    return df_weather
+        return df_weather
+    except Exception as e:
+        print e.message
+        print "Could not retrieve weather data for :{};{}".format(latitude, longitude)

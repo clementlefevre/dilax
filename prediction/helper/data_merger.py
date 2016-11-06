@@ -3,7 +3,7 @@
 from data_helper import get_nearest_coordinate
 from service.geocoding_API_service import create_regions_df
 from helper import pd
-from service.holidays_service import add_school_holidays
+from service.school_holidays_service import add_school_holidays
 
 
 def merge_tables(datastore):
@@ -54,7 +54,7 @@ def merge_with_weather_day(datastore):
                                     right_on=['latitude_closest',
                                               'longitude_closest'],
                                     how='left',
-                                    suffixes=['_weather', '_sites'])
+                                    suffixes=['_weather', '_sites'], indicator=True)
 
     df_sites_weather_day.rename(columns={'day': 'date'}, inplace=True)
     df_sites_weather_day = df_sites_weather_day.drop(

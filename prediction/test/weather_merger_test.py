@@ -1,17 +1,33 @@
 import pandas as pd
-from mock import MagicMock
-
-from model.config_manager import Config_manager
+from mock import Mock
+import pytest
+from helper.data_merger import merge_with_weather_day
 from model.db_manager import DB_manager
 from helper.data_helper import get_nearest_coordinate
 
 
-def test_find_weather_infos_for_site_1():
-    config_manager = Config_manager()
-    db_manager = DB_manager(config_manager.DB)
+@pytest.fixture(autouse=True, scope="module")
+def datastore():
+    db_params = {'db_user': 'dwe-arcadia', 'db_name': 'DWE_ARCADIA_2015',
+                 'db_port': '5432', 'db_pwd': 'VtJ5Cw3PKuOi4i3b',
+                 'db_url': 'localhost'}
+    db_manager = DB_manager(db_params)
+    datastore = Mock()
+    datastore.db = db_manager
+    return datastore
 
-    df_weather_day = db_manager.weather_day
-    df_sites = db_manager.sites
+
+def test_log_if_missing_weather_data(datastore):
+    print datastore.db.sites
+    df = merge_with_weather_day(datastore)
+    print df.head()
+    assert df.shape[0] > 1
+
+
+def test_find_weather_infos_for_site_1(datastore):
+
+    df_weather_day = datastore.db.weather_day
+    df_sites = datastore.db.sites
 
     df_sites['latitude_closest'] = df_sites.latitude.apply(
         lambda x: get_nearest_coordinate(x,

@@ -12,7 +12,7 @@ from model.config_manager import Config_manager
 config_manager = Config_manager()
 
 
-def get_region(datastore, latitude, longitude):
+def get_region(latitude, longitude):
     """retrieve the local name of the region for a given coordinate.
 
     Args:
@@ -36,11 +36,9 @@ def get_region(datastore, latitude, longitude):
         region = [x for x in address_components if 'administrative_area_level_1' in x[
             'types']][0]['long_name'].encode('utf-8)')
         return region
-    except Exception as e:
+    except (AttributeError, IndexError) as e:
         print e.message
-
         print "Could not retrieve the region name for :" + coord_str
-        raise
 
 
 def create_regions_df(datastore):
@@ -55,7 +53,7 @@ def create_regions_df(datastore):
 
     df_sites = datastore.db.sites
     df_sites['region'] = df_sites.apply(
-        lambda row: get_region(datastore, row['latitude'], row['longitude']), axis=1)
+        lambda row: get_region(row['latitude'], row['longitude']), axis=1)
 
     df_region_id = pd.read_csv('data/regions_countries.csv')
     df_sites = pd.merge(df_sites, df_region_id, on='region', how='left')
