@@ -3331,3 +3331,409 @@ Name: _merge, dtype: int64
 14    1
 Name: _merge, dtype: int64 
 
+2016-11-07 19:56:46,318 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 19:56:46,344 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 19:56:52,121 [INFO ]  No missing data after merge_with_counts
+2016-11-07 19:57:05,593 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64 
+
+2016-11-07 19:57:16,558 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 19:57:16,669 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column latitude has been regularized for training set
+2016-11-07 19:57:16,680 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column longitude has been regularized for training set
+2016-11-07 19:57:16,691 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column compensatedin has been regularized for training set
+2016-11-07 19:57:16,701 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for training set
+2016-11-07 19:57:16,711 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for training set
+2016-11-07 19:57:16,721 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for training set
+2016-11-07 19:57:16,730 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for training set
+2016-11-07 19:57:17,065 [INFO ]  DWE_ARCADIA_2015- period : D : finished preparing training set
+2016-11-07 19:58:13,548 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 19:58:13,650 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 19:58:23,229 [WARNI]  After create_regions_df, No data found for: idbldsite
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:01:07,113 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 20:07:04,117 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:07:04,231 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 20:07:15,093 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:07:38,067 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:09:06,879 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:10:10,943 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:12:22,984 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:13:08,038 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 20:20:59,630 [WARNI]  after create_regions_df : No data found for :
+2016-11-07 20:20:59,630 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-07 20:20:59,639 [WARNI]  Fo
+2016-11-07 20:23:05,107 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 20:23:05,125 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 20:23:10,768 [INFO ]  No missing data after merge_with_counts
+2016-11-07 20:23:24,203 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-07 20:23:24,203 [WARNI]  idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64
+2016-11-07 20:23:29,667 [WARNI]  after create_regions_df : No data found for :
+2016-11-07 20:23:29,667 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-07 20:23:29,774 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column latitude has been regularized for training set
+2016-11-07 20:23:29,784 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column longitude has been regularized for training set
+2016-11-07 20:23:29,793 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column compensatedin has been regularized for training set
+2016-11-07 20:23:29,804 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for training set
+2016-11-07 20:23:29,812 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for training set
+2016-11-07 20:23:29,821 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for training set
+2016-11-07 20:23:29,831 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for training set
+2016-11-07 20:23:30,091 [INFO ]  DWE_ARCADIA_2015- period : D : finished preparing training set
+2016-11-07 20:23:44,023 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for forecasts set
+2016-11-07 20:23:44,145 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for forecasts set
+2016-11-07 20:23:44,260 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for forecasts set
+2016-11-07 20:23:44,374 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for forecasts set
+2016-11-07 20:28:56,856 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 20:28:56,874 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 20:29:02,622 [INFO ]  No missing data after merge_with_counts
+2016-11-07 20:29:16,041 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-07 20:29:16,042 [WARNI]  idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64
+2016-11-07 20:29:23,670 [WARNI]  after create_regions_df : No data found for :
+2016-11-07 20:29:23,670 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-07 20:29:23,789 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column latitude has been regularized for training set
+2016-11-07 20:29:23,799 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column longitude has been regularized for training set
+2016-11-07 20:29:23,810 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column compensatedin has been regularized for training set
+2016-11-07 20:29:23,820 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for training set
+2016-11-07 20:29:23,830 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for training set
+2016-11-07 20:29:23,840 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for training set
+2016-11-07 20:29:23,849 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for training set
+2016-11-07 20:29:24,113 [INFO ]  DWE_ARCADIA_2015- period : D : finished preparing training set
+2016-11-07 20:29:28,117 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for forecasts set
+2016-11-07 20:29:28,131 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for forecasts set
+2016-11-07 20:29:28,142 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for forecasts set
+2016-11-07 20:29:28,152 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for forecasts set
+2016-11-07 20:31:44,838 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 20:31:44,855 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 20:31:50,602 [INFO ]  No missing data after merge_with_counts
+2016-11-07 20:32:04,243 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-07 20:32:04,243 [WARNI]  idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64
+2016-11-07 20:32:11,336 [WARNI]  after create_regions_df : No data found for :
+2016-11-07 20:32:11,337 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-07 20:32:11,457 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column latitude has been regularized for training set
+2016-11-07 20:32:11,468 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column longitude has been regularized for training set
+2016-11-07 20:32:11,479 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column compensatedin has been regularized for training set
+2016-11-07 20:32:11,488 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for training set
+2016-11-07 20:32:11,498 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for training set
+2016-11-07 20:32:11,509 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for training set
+2016-11-07 20:32:11,517 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for training set
+2016-11-07 20:32:11,778 [INFO ]  DWE_ARCADIA_2015- period : D : finished preparing training set
+2016-11-07 20:32:16,415 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for forecasts set
+2016-11-07 20:32:16,669 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for forecasts set
+2016-11-07 20:32:16,922 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for forecasts set
+2016-11-07 20:32:17,178 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for forecasts set
+2016-11-07 20:54:38,820 [INFO ]  DWE_CLOSED_2013- period : D prepare new training set...
+2016-11-07 20:54:38,838 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-07 20:54:50,259 [INFO ]  No missing data after merge_with_counts
+2016-11-07 20:55:20,640 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-07 20:55:20,641 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-07 20:55:24,299 [INFO ]  No missing data after create_regions_df
+2016-11-07 20:55:24,410 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column latitude has been regularized for training set
+2016-11-07 20:55:24,419 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column longitude has been regularized for training set
+2016-11-07 20:55:24,428 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column compensatedin has been regularized for training set
+2016-11-07 20:55:24,436 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column maxtemperature has been regularized for training set
+2016-11-07 20:55:24,444 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column mintemperature has been regularized for training set
+2016-11-07 20:55:24,451 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column weathersituation has been regularized for training set
+2016-11-07 20:55:24,459 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column cloudamount has been regularized for training set
+2016-11-07 20:55:24,807 [INFO ]  DWE_CLOSED_2013- period : D : finished preparing training set
+2016-11-07 20:55:33,124 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column cloudamount has been regularized for forecasts set
+2016-11-07 20:55:33,309 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column mintemperature has been regularized for forecasts set
+2016-11-07 20:55:33,493 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column maxtemperature has been regularized for forecasts set
+2016-11-07 20:55:33,675 [INFO ]  datastore: DWE_CLOSED_2013- period : D: column weathersituation has been regularized for forecasts set

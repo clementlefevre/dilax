@@ -7,17 +7,19 @@ from helper import logging
 config_manager = Config_manager()
 
 
-def check_missing_data(df, x_only, f_name):
+def check_missing_data(df, x_only, f_name, drop_missing=True):
     df_missing = df[df._merge == x_only]
 
     if df_missing.shape[0] == 0:
         logging.info("No missing data after {}".format(f_name))
     else:
         sites_missing = df_missing.groupby('idbldsite')._merge.count()
-        logging.warning("After {}, No data found for: {} \n".format(
-            f_name, sites_missing))
 
-    df = df[df._merge == "both"]
+        logging.warning("after {} : No data found for :".format(f_name))
+        logging.warning(sites_missing)
+
+    if drop_missing:
+        df = df[df._merge == "both"]
     df = df.drop("_merge", 1)
     return df
 

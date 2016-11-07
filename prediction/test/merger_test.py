@@ -43,3 +43,13 @@ def test_merge_with_regions(datastore, caplog):
     datastore.training_data = merge_with_regions(datastore)
     print datastore.training_data
     assert datastore.training_data.shape[0] > 0
+
+
+def test_merge_with_regions_no_data(datastore, caplog):
+    datastore.db.sites = pd.read_csv(
+        'test/data/sites_sample2.csv', sep=';')
+
+    df_regions = create_regions_df(datastore)
+
+    assert df_regions.idbldsite.unique().tolist(
+    ) == datastore.db.sites.idbldsite.unique().tolist()

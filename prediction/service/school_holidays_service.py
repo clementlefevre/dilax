@@ -6,10 +6,10 @@ from datetime import date
 
 def dateparse(x):
     """Summary
-    
+
     Args:
         x (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
@@ -18,10 +18,10 @@ def dateparse(x):
 
 def add_new_country_schedule(filename):
     """Summary
-    
+
     Args:
         filename (TYPE): Description
-    
+
     Returns:
         TYPE: Description
     """
@@ -36,7 +36,7 @@ def add_new_country_schedule(filename):
 
 def add_region_id():
     """Merge region with school holidays.
-    
+
     Returns:
         TYPE: DataFrame
     """
@@ -52,10 +52,10 @@ def reindex_holidays(filename):
     """Convert a holiday planning file with
     columns "from" & "to" into a list of dates
     with a boolean column "is_holiday"
-    
+
     Args:
         filename (TYPE): the csv for,at file with field region_id, from, to.
-    
+
     Returns:
         TYPE: Description
     """
@@ -77,10 +77,10 @@ def reindex_holidays(filename):
 
 def add_school_holidays(df):
     """Add school holidays column to a dataframe, by matching on the region_id
-    
+
     Args:
         df (TYPE): DataFrame
-    
+
     Returns:
         TYPE: DataFrame
     """

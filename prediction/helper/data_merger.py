@@ -148,7 +148,7 @@ def merge_with_regions(datastore):
     df_regions = create_regions_df(datastore)
     print df_regions
     df_with_regions = pd.merge(
-        datastore.training_data, df_regions, on='idbldsite')
+        datastore.training_data, df_regions, on='idbldsite', how='left')
     return df_with_regions
 
 

@@ -92,4 +92,4 @@ class Data_store(object):
         if date_to is None:
             self.date_to = datetime.now().date() + timedelta(days=30)
         else:
-            self.date_to = datetime.strptime(date_from, '%Y-%M-%d')
+            self.date_to = datetime.strptime(date_to, '%Y-%M-%d')
