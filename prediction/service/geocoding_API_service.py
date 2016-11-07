@@ -7,7 +7,9 @@ import urllib2
 import json
 import pandas as pd
 import logging
+import inspect
 from model.config_manager import Config_manager
+from helper.data_helper import check_missing_data
 
 
 config_manager = Config_manager()
@@ -34,8 +36,9 @@ def get_region(latitude, longitude):
         data = json.loads(response.read())
         address_components = data['results'][0]['address_components']
 
-        region = [x for x in address_components if 'administrative_area_level_1' in x[
-            'types']][0]['long_name'].encode('utf-8)')
+        region = [x for x in address_components
+                  if 'administrative_area_level_1' in x[
+                      'types']][0]['long_name'].encode('utf-8)')
         return region
     except (AttributeError, IndexError) as e:
         logging.error("Could not retrieve the region name for :" + coord_str)
@@ -57,7 +60,12 @@ def create_regions_df(datastore):
         lambda row: get_region(row['latitude'], row['longitude']), axis=1)
 
     df_region_id = pd.read_csv('data/regions_countries.csv')
-    df_sites = pd.merge(df_sites, df_region_id, on='region', how='left')
+    df_sites = pd.merge(df_sites, df_region_id, on='region', how='left',
+                        indicator=True)
+
+    df_sites = check_missing_data(df_sites,
+                                  "left_only",
+                                  inspect.currentframe().f_code.co_name)
 
     df_sites = df_sites[['idbldsite', 'sname', 'latitude', 'longitude',
                          'region', 'region_id']]

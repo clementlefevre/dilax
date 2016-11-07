@@ -72,3 +72,3262 @@
 2016-11-06 20:02:14,305 [INFO ]  Hello
 2016-11-06 20:02:14,306 [INFO ]  No missing data after merge_with_weather_day
 2016-11-06 20:02:14,306 [INFO ]  cols : [u'maxtemperature', u'mintemperature', u'weathersituation', u'cloudamount', u'day', u'latitude', u'longitude', u'idbldsite', 'latitude_closest', 'longitude_closest', u'sname', '_merge']
+2016-11-07 09:54:27,171 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 09:55:35,039 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 09:55:39,444 [INFO ]  Hello
+2016-11-07 09:55:39,446 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 09:56:18,305 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 09:56:22,708 [INFO ]  Hello
+2016-11-07 09:56:22,709 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 09:56:32,282 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 09:56:36,696 [INFO ]  Hello
+2016-11-07 09:56:36,697 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 09:57:17,260 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 09:57:21,719 [INFO ]  Hello
+2016-11-07 09:57:21,720 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 09:59:10,200 [INFO ]  Hello
+2016-11-07 09:59:10,201 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 09:59:40,969 [INFO ]  Hello
+2016-11-07 09:59:40,970 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:00:54,381 [INFO ]  Hello
+2016-11-07 10:00:54,383 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:01:22,690 [INFO ]  Hello
+2016-11-07 10:01:22,691 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:02:55,780 [INFO ]  Hello
+2016-11-07 10:02:55,781 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:05:47,611 [INFO ]  Hello
+2016-11-07 10:05:47,613 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:06:00,833 [INFO ]  Hello
+2016-11-07 10:06:00,835 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:06:15,003 [INFO ]  Hello
+2016-11-07 10:06:15,005 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:06:26,579 [INFO ]  Hello
+2016-11-07 10:06:26,580 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:07:06,261 [INFO ]  Hello
+2016-11-07 10:07:06,263 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:08:02,809 [INFO ]  Hello
+2016-11-07 10:08:02,811 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:09:26,558 [INFO ]  Hello
+2016-11-07 10:09:26,559 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:09:42,598 [INFO ]  Hello
+2016-11-07 10:09:42,600 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:10:02,465 [INFO ]  Hello
+2016-11-07 10:10:02,467 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:10:15,187 [INFO ]  Hello
+2016-11-07 10:10:15,188 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:10:43,620 [INFO ]  Hello
+2016-11-07 10:10:43,622 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:11:20,438 [INFO ]  Hello
+2016-11-07 10:11:20,440 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:11:49,076 [INFO ]  Hello
+2016-11-07 10:11:49,077 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:12:09,050 [INFO ]  Hello
+2016-11-07 10:12:09,051 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:13:44,578 [INFO ]  Hello
+2016-11-07 10:13:44,579 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:15:44,313 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:16:25,438 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:16:54,740 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:17:14,273 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:17:52,768 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:29:02,973 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-07 10:30:31,831 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 10:31:18,543 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 11:28:39,680 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-07 11:44:21,490 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-07 11:57:20,298 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:42:11,131 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:44:25,584 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:47:42,690 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:48:43,277 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:49:17,899 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:49:32,820 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:49:59,132 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:50:26,103 [INFO ]  No missing data after merge_with_counts
+2016-11-07 12:51:03,408 [WARNI]  While merging with merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+12    2
+Name: _merge, dtype: int64 
+2016-11-07 12:52:10,120 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+12    2
+Name: _merge, dtype: int64 
+2016-11-07 12:52:47,904 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+12    2
+Name: _merge, dtype: int64 
+2016-11-07 12:53:25,658 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+12    2
+Name: _merge, dtype: int64 
+2016-11-07 12:54:08,788 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+12    1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 12:55:18,308 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+12    1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 12:55:59,282 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+12    1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 12:57:10,277 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:04:28,887 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:08:17,716 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:08:34,683 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:11:55,323 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:11:55,340 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:14:34,516 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:17:08,669 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:17:08,730 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:17:08,771 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:18:47,397 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:18:47,458 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:18:47,500 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:21:15,813 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:21:15,877 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:21:15,919 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:30:05,216 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:30:05,279 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:33:32,872 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:33:32,936 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:34:34,313 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:34:34,377 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:35:01,159 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:35:01,223 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:35:48,978 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:36:24,248 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:37:18,450 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:37:37,283 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:38:06,960 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:38:30,494 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:39:08,268 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:39:44,962 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:39:45,039 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:40:15,156 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:40:26,694 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:40:26,758 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:41:16,672 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:41:16,789 [INFO ]  No missing data after merge_with_weather_day
+2016-11-07 13:41:28,076 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:41:28,194 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:41:34,379 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:41:34,450 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+2016-11-07 13:42:40,288 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+2016-11-07 13:42:40,387 [WARNI]  After merge_with_weather_day, No data found for:      idbldsite  latitude_weather  longitude_weather  latitude_closest  \
+28          12         48.776630           9.176330            48.776   
+29          12         48.776630           9.176330            48.776   
+30          12         48.776630           9.176330            48.776   
+31          12         48.776630           9.176330            48.776   
+32          12         48.776630           9.176330            48.776   
+33          12         48.776630           9.176330            48.776   
+34          12         48.776630           9.176330            48.776   
+35          12         48.776630           9.176330            48.776   
+36           1         53.550842           9.995385            53.550   
+37           2         53.654227          10.091736            53.654   
+38           3         48.142641          11.576903            48.142   
+39           4         48.142641          11.576903            48.142   
+40           5         51.224403           6.774598            51.224   
+41           6         51.224403           6.774598            51.224   
+42           7         50.081434           8.244644            50.081   
+43           8         52.505482          13.335294            52.505   
+72           9         52.276045           8.043023            52.276   
+73           9         52.276045           8.043023            52.276   
+74           9         52.276045           8.043023            52.276   
+75           9         52.276045           8.043023            52.276   
+76           9         52.276045           8.043023            52.276   
+77           9         52.276045           8.043023            52.276   
+78           9         52.276045           8.043023            52.276   
+79           9         52.276045           8.043023            52.276   
+108         10         49.452291          11.074521            49.452   
+109         10         49.452291          11.074521            49.452   
+110         10         49.452291          11.074521            49.452   
+111         10         49.452291          11.074521            49.452   
+112         10         49.452291          11.074521            49.452   
+113         10         49.452291          11.074521            49.452   
+114         10         49.452291          11.074521            49.452   
+115         10         49.452291          11.074521            49.452   
+116         13         50.110922           8.682127            50.110   
+
+     longitude_closest               sname  compensatedin       date  \
+28               9.176           Stuttgart          126.0 2016-09-21   
+29               9.176           Stuttgart          104.0 2016-09-22   
+30               9.176           Stuttgart          136.0 2016-09-23   
+31               9.176           Stuttgart          205.0 2016-09-24   
+32               9.176           Stuttgart            0.0 2016-09-25   
+33               9.176           Stuttgart          105.0 2016-09-26   
+34               9.176           Stuttgart           83.0 2016-09-27   
+35               9.176           Stuttgart          108.0 2016-09-28   
+36               9.995        Hamburg City            NaN        NaT   
+37              10.091         Hamburg AEZ            NaN        NaT   
+38              11.576      Muenchen Damen            NaN        NaT   
+39              11.576     Muenchen Herren            NaN        NaT   
+40               6.774  Duesseldorf Herren            NaN        NaT   
+41               6.774   Duesseldorf Damen            NaN        NaT   
+42               8.244           Wiesbaden            NaN        NaT   
+43              13.335       Bikini Berlin            NaN        NaT   
+72               8.042          Osnabrueck           43.0 2016-09-21   
+73               8.042          Osnabrueck           54.0 2016-09-22   
+74               8.042          Osnabrueck           58.0 2016-09-23   
+75               8.042          Osnabrueck          102.0 2016-09-24   
+76               8.042          Osnabrueck            0.0 2016-09-25   
+77               8.042          Osnabrueck           40.0 2016-09-26   
+78               8.042          Osnabrueck           41.0 2016-09-27   
+79               8.042          Osnabrueck           48.0 2016-09-28   
+108             11.074           Nuernberg           60.0 2016-09-21   
+109             11.074           Nuernberg           38.0 2016-09-22   
+110             11.074           Nuernberg           68.0 2016-09-23   
+111             11.074           Nuernberg          129.0 2016-09-24   
+112             11.074           Nuernberg           53.0 2016-09-25   
+113             11.074           Nuernberg           47.0 2016-09-26   
+114             11.074           Nuernberg           62.0 2016-09-27   
+115             11.074           Nuernberg           83.0 2016-09-28   
+116              8.682       Frankfurt MTZ            NaN        NaT   
+
+     maxtemperature  mintemperature  weathersituation  cloudamount  \
+28              NaN             NaN               NaN          NaN   
+29              NaN             NaN               NaN          NaN   
+30              NaN             NaN               NaN          NaN   
+31              NaN             NaN               NaN          NaN   
+32              NaN             NaN               NaN          NaN   
+33              NaN             NaN               NaN          NaN   
+34              NaN             NaN               NaN          NaN   
+35              NaN             NaN               NaN          NaN   
+36              NaN             NaN               NaN          NaN   
+37              NaN             NaN               NaN          NaN   
+38              NaN             NaN               NaN          NaN   
+39              NaN             NaN               NaN          NaN   
+40              NaN             NaN               NaN          NaN   
+41              NaN             NaN               NaN          NaN   
+42              NaN             NaN               NaN          NaN   
+43              NaN             NaN               NaN          NaN   
+72              NaN             NaN               NaN          NaN   
+73              NaN             NaN               NaN          NaN   
+74              NaN             NaN               NaN          NaN   
+75              NaN             NaN               NaN          NaN   
+76              NaN             NaN               NaN          NaN   
+77              NaN             NaN               NaN          NaN   
+78              NaN             NaN               NaN          NaN   
+79              NaN             NaN               NaN          NaN   
+108             NaN             NaN               NaN          NaN   
+109             NaN             NaN               NaN          NaN   
+110             NaN             NaN               NaN          NaN   
+111             NaN             NaN               NaN          NaN   
+112             NaN             NaN               NaN          NaN   
+113             NaN             NaN               NaN          NaN   
+114             NaN             NaN               NaN          NaN   
+115             NaN             NaN               NaN          NaN   
+116             NaN             NaN               NaN          NaN   
+
+     latitude_sites  longitude_sites     _merge  
+28              NaN              NaN  left_only  
+29              NaN              NaN  left_only  
+30              NaN              NaN  left_only  
+31              NaN              NaN  left_only  
+32              NaN              NaN  left_only  
+33              NaN              NaN  left_only  
+34              NaN              NaN  left_only  
+35              NaN              NaN  left_only  
+36              NaN              NaN  left_only  
+37              NaN              NaN  left_only  
+38              NaN              NaN  left_only  
+39              NaN              NaN  left_only  
+40              NaN              NaN  left_only  
+41              NaN              NaN  left_only  
+42              NaN              NaN  left_only  
+43              NaN              NaN  left_only  
+72              NaN              NaN  left_only  
+73              NaN              NaN  left_only  
+74              NaN              NaN  left_only  
+75              NaN              NaN  left_only  
+76              NaN              NaN  left_only  
+77              NaN              NaN  left_only  
+78              NaN              NaN  left_only  
+79              NaN              NaN  left_only  
+108             NaN              NaN  left_only  
+109             NaN              NaN  left_only  
+110             NaN              NaN  left_only  
+111             NaN              NaN  left_only  
+112             NaN              NaN  left_only  
+113             NaN              NaN  left_only  
+114             NaN              NaN  left_only  
+115             NaN              NaN  left_only  
+116             NaN              NaN  left_only   
+2016-11-07 13:43:17,702 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:43:17,797 [WARNI]  After merge_with_weather_day, No data found for:      idbldsite  latitude_weather  longitude_weather  latitude_closest  \
+28          12         48.776630           9.176330            48.776   
+29          12         48.776630           9.176330            48.776   
+30          12         48.776630           9.176330            48.776   
+31          12         48.776630           9.176330            48.776   
+32          12         48.776630           9.176330            48.776   
+33          12         48.776630           9.176330            48.776   
+34          12         48.776630           9.176330            48.776   
+35          12         48.776630           9.176330            48.776   
+36           1         53.550842           9.995385            53.550   
+37           2         53.654227          10.091736            53.654   
+38           3         48.142641          11.576903            48.142   
+39           4         48.142641          11.576903            48.142   
+40           5         51.224403           6.774598            51.224   
+41           6         51.224403           6.774598            51.224   
+42           7         50.081434           8.244644            50.081   
+43           8         52.505482          13.335294            52.505   
+72           9         52.276045           8.043023            52.276   
+73           9         52.276045           8.043023            52.276   
+74           9         52.276045           8.043023            52.276   
+75           9         52.276045           8.043023            52.276   
+76           9         52.276045           8.043023            52.276   
+77           9         52.276045           8.043023            52.276   
+78           9         52.276045           8.043023            52.276   
+79           9         52.276045           8.043023            52.276   
+108         10         49.452291          11.074521            49.452   
+109         10         49.452291          11.074521            49.452   
+110         10         49.452291          11.074521            49.452   
+111         10         49.452291          11.074521            49.452   
+112         10         49.452291          11.074521            49.452   
+113         10         49.452291          11.074521            49.452   
+114         10         49.452291          11.074521            49.452   
+115         10         49.452291          11.074521            49.452   
+116         13         50.110922           8.682127            50.110   
+
+     longitude_closest               sname  compensatedin       date  \
+28               9.176           Stuttgart          126.0 2016-09-21   
+29               9.176           Stuttgart          104.0 2016-09-22   
+30               9.176           Stuttgart          136.0 2016-09-23   
+31               9.176           Stuttgart          205.0 2016-09-24   
+32               9.176           Stuttgart            0.0 2016-09-25   
+33               9.176           Stuttgart          105.0 2016-09-26   
+34               9.176           Stuttgart           83.0 2016-09-27   
+35               9.176           Stuttgart          108.0 2016-09-28   
+36               9.995        Hamburg City            NaN        NaT   
+37              10.091         Hamburg AEZ            NaN        NaT   
+38              11.576      Muenchen Damen            NaN        NaT   
+39              11.576     Muenchen Herren            NaN        NaT   
+40               6.774  Duesseldorf Herren            NaN        NaT   
+41               6.774   Duesseldorf Damen            NaN        NaT   
+42               8.244           Wiesbaden            NaN        NaT   
+43              13.335       Bikini Berlin            NaN        NaT   
+72               8.042          Osnabrueck           43.0 2016-09-21   
+73               8.042          Osnabrueck           54.0 2016-09-22   
+74               8.042          Osnabrueck           58.0 2016-09-23   
+75               8.042          Osnabrueck          102.0 2016-09-24   
+76               8.042          Osnabrueck            0.0 2016-09-25   
+77               8.042          Osnabrueck           40.0 2016-09-26   
+78               8.042          Osnabrueck           41.0 2016-09-27   
+79               8.042          Osnabrueck           48.0 2016-09-28   
+108             11.074           Nuernberg           60.0 2016-09-21   
+109             11.074           Nuernberg           38.0 2016-09-22   
+110             11.074           Nuernberg           68.0 2016-09-23   
+111             11.074           Nuernberg          129.0 2016-09-24   
+112             11.074           Nuernberg           53.0 2016-09-25   
+113             11.074           Nuernberg           47.0 2016-09-26   
+114             11.074           Nuernberg           62.0 2016-09-27   
+115             11.074           Nuernberg           83.0 2016-09-28   
+116              8.682       Frankfurt MTZ            NaN        NaT   
+
+     maxtemperature  mintemperature  weathersituation  cloudamount  \
+28              NaN             NaN               NaN          NaN   
+29              NaN             NaN               NaN          NaN   
+30              NaN             NaN               NaN          NaN   
+31              NaN             NaN               NaN          NaN   
+32              NaN             NaN               NaN          NaN   
+33              NaN             NaN               NaN          NaN   
+34              NaN             NaN               NaN          NaN   
+35              NaN             NaN               NaN          NaN   
+36              NaN             NaN               NaN          NaN   
+37              NaN             NaN               NaN          NaN   
+38              NaN             NaN               NaN          NaN   
+39              NaN             NaN               NaN          NaN   
+40              NaN             NaN               NaN          NaN   
+41              NaN             NaN               NaN          NaN   
+42              NaN             NaN               NaN          NaN   
+43              NaN             NaN               NaN          NaN   
+72              NaN             NaN               NaN          NaN   
+73              NaN             NaN               NaN          NaN   
+74              NaN             NaN               NaN          NaN   
+75              NaN             NaN               NaN          NaN   
+76              NaN             NaN               NaN          NaN   
+77              NaN             NaN               NaN          NaN   
+78              NaN             NaN               NaN          NaN   
+79              NaN             NaN               NaN          NaN   
+108             NaN             NaN               NaN          NaN   
+109             NaN             NaN               NaN          NaN   
+110             NaN             NaN               NaN          NaN   
+111             NaN             NaN               NaN          NaN   
+112             NaN             NaN               NaN          NaN   
+113             NaN             NaN               NaN          NaN   
+114             NaN             NaN               NaN          NaN   
+115             NaN             NaN               NaN          NaN   
+116             NaN             NaN               NaN          NaN   
+
+     latitude_sites  longitude_sites     _merge  
+28              NaN              NaN  left_only  
+29              NaN              NaN  left_only  
+30              NaN              NaN  left_only  
+31              NaN              NaN  left_only  
+32              NaN              NaN  left_only  
+33              NaN              NaN  left_only  
+34              NaN              NaN  left_only  
+35              NaN              NaN  left_only  
+36              NaN              NaN  left_only  
+37              NaN              NaN  left_only  
+38              NaN              NaN  left_only  
+39              NaN              NaN  left_only  
+40              NaN              NaN  left_only  
+41              NaN              NaN  left_only  
+42              NaN              NaN  left_only  
+43              NaN              NaN  left_only  
+72              NaN              NaN  left_only  
+73              NaN              NaN  left_only  
+74              NaN              NaN  left_only  
+75              NaN              NaN  left_only  
+76              NaN              NaN  left_only  
+77              NaN              NaN  left_only  
+78              NaN              NaN  left_only  
+79              NaN              NaN  left_only  
+108             NaN              NaN  left_only  
+109             NaN              NaN  left_only  
+110             NaN              NaN  left_only  
+111             NaN              NaN  left_only  
+112             NaN              NaN  left_only  
+113             NaN              NaN  left_only  
+114             NaN              NaN  left_only  
+115             NaN              NaN  left_only  
+116             NaN              NaN  left_only   
+
+2016-11-07 13:44:37,215 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:46:24,634 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:47:08,272 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:47:38,230 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:49:21,066 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:50:25,349 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:51:09,726 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:52:31,228 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:52:31,418 [WARNI]  After merge_with_weather_day, No data found for:      idbldsite  latitude_weather  longitude_weather  latitude_closest  \
+28          12         48.776630           9.176330            48.776   
+29          12         48.776630           9.176330            48.776   
+30          12         48.776630           9.176330            48.776   
+31          12         48.776630           9.176330            48.776   
+32          12         48.776630           9.176330            48.776   
+33          12         48.776630           9.176330            48.776   
+34          12         48.776630           9.176330            48.776   
+35          12         48.776630           9.176330            48.776   
+36           1         53.550842           9.995385            53.550   
+37           2         53.654227          10.091736            53.654   
+38           3         48.142641          11.576903            48.142   
+39           4         48.142641          11.576903            48.142   
+40           5         51.224403           6.774598            51.224   
+41           6         51.224403           6.774598            51.224   
+42           7         50.081434           8.244644            50.081   
+43           8         52.505482          13.335294            52.505   
+72           9         52.276045           8.043023            52.276   
+73           9         52.276045           8.043023            52.276   
+74           9         52.276045           8.043023            52.276   
+75           9         52.276045           8.043023            52.276   
+76           9         52.276045           8.043023            52.276   
+77           9         52.276045           8.043023            52.276   
+78           9         52.276045           8.043023            52.276   
+79           9         52.276045           8.043023            52.276   
+108         10         49.452291          11.074521            49.452   
+109         10         49.452291          11.074521            49.452   
+110         10         49.452291          11.074521            49.452   
+111         10         49.452291          11.074521            49.452   
+112         10         49.452291          11.074521            49.452   
+113         10         49.452291          11.074521            49.452   
+114         10         49.452291          11.074521            49.452   
+115         10         49.452291          11.074521            49.452   
+116         13         50.110922           8.682127            50.110   
+
+     longitude_closest               sname  compensatedin       date  \
+28               9.176           Stuttgart          126.0 2016-09-21   
+29               9.176           Stuttgart          104.0 2016-09-22   
+30               9.176           Stuttgart          136.0 2016-09-23   
+31               9.176           Stuttgart          205.0 2016-09-24   
+32               9.176           Stuttgart            0.0 2016-09-25   
+33               9.176           Stuttgart          105.0 2016-09-26   
+34               9.176           Stuttgart           83.0 2016-09-27   
+35               9.176           Stuttgart          108.0 2016-09-28   
+36               9.995        Hamburg City            NaN        NaT   
+37              10.091         Hamburg AEZ            NaN        NaT   
+38              11.576      Muenchen Damen            NaN        NaT   
+39              11.576     Muenchen Herren            NaN        NaT   
+40               6.774  Duesseldorf Herren            NaN        NaT   
+41               6.774   Duesseldorf Damen            NaN        NaT   
+42               8.244           Wiesbaden            NaN        NaT   
+43              13.335       Bikini Berlin            NaN        NaT   
+72               8.042          Osnabrueck           43.0 2016-09-21   
+73               8.042          Osnabrueck           54.0 2016-09-22   
+74               8.042          Osnabrueck           58.0 2016-09-23   
+75               8.042          Osnabrueck          102.0 2016-09-24   
+76               8.042          Osnabrueck            0.0 2016-09-25   
+77               8.042          Osnabrueck           40.0 2016-09-26   
+78               8.042          Osnabrueck           41.0 2016-09-27   
+79               8.042          Osnabrueck           48.0 2016-09-28   
+108             11.074           Nuernberg           60.0 2016-09-21   
+109             11.074           Nuernberg           38.0 2016-09-22   
+110             11.074           Nuernberg           68.0 2016-09-23   
+111             11.074           Nuernberg          129.0 2016-09-24   
+112             11.074           Nuernberg           53.0 2016-09-25   
+113             11.074           Nuernberg           47.0 2016-09-26   
+114             11.074           Nuernberg           62.0 2016-09-27   
+115             11.074           Nuernberg           83.0 2016-09-28   
+116              8.682       Frankfurt MTZ            NaN        NaT   
+
+     maxtemperature  mintemperature  weathersituation  cloudamount  \
+28              NaN             NaN               NaN          NaN   
+29              NaN             NaN               NaN          NaN   
+30              NaN             NaN               NaN          NaN   
+31              NaN             NaN               NaN          NaN   
+32              NaN             NaN               NaN          NaN   
+33              NaN             NaN               NaN          NaN   
+34              NaN             NaN               NaN          NaN   
+35              NaN             NaN               NaN          NaN   
+36              NaN             NaN               NaN          NaN   
+37              NaN             NaN               NaN          NaN   
+38              NaN             NaN               NaN          NaN   
+39              NaN             NaN               NaN          NaN   
+40              NaN             NaN               NaN          NaN   
+41              NaN             NaN               NaN          NaN   
+42              NaN             NaN               NaN          NaN   
+43              NaN             NaN               NaN          NaN   
+72              NaN             NaN               NaN          NaN   
+73              NaN             NaN               NaN          NaN   
+74              NaN             NaN               NaN          NaN   
+75              NaN             NaN               NaN          NaN   
+76              NaN             NaN               NaN          NaN   
+77              NaN             NaN               NaN          NaN   
+78              NaN             NaN               NaN          NaN   
+79              NaN             NaN               NaN          NaN   
+108             NaN             NaN               NaN          NaN   
+109             NaN             NaN               NaN          NaN   
+110             NaN             NaN               NaN          NaN   
+111             NaN             NaN               NaN          NaN   
+112             NaN             NaN               NaN          NaN   
+113             NaN             NaN               NaN          NaN   
+114             NaN             NaN               NaN          NaN   
+115             NaN             NaN               NaN          NaN   
+116             NaN             NaN               NaN          NaN   
+
+     latitude_sites  longitude_sites     _merge  
+28              NaN              NaN  left_only  
+29              NaN              NaN  left_only  
+30              NaN              NaN  left_only  
+31              NaN              NaN  left_only  
+32              NaN              NaN  left_only  
+33              NaN              NaN  left_only  
+34              NaN              NaN  left_only  
+35              NaN              NaN  left_only  
+36              NaN              NaN  left_only  
+37              NaN              NaN  left_only  
+38              NaN              NaN  left_only  
+39              NaN              NaN  left_only  
+40              NaN              NaN  left_only  
+41              NaN              NaN  left_only  
+42              NaN              NaN  left_only  
+43              NaN              NaN  left_only  
+72              NaN              NaN  left_only  
+73              NaN              NaN  left_only  
+74              NaN              NaN  left_only  
+75              NaN              NaN  left_only  
+76              NaN              NaN  left_only  
+77              NaN              NaN  left_only  
+78              NaN              NaN  left_only  
+79              NaN              NaN  left_only  
+108             NaN              NaN  left_only  
+109             NaN              NaN  left_only  
+110             NaN              NaN  left_only  
+111             NaN              NaN  left_only  
+112             NaN              NaN  left_only  
+113             NaN              NaN  left_only  
+114             NaN              NaN  left_only  
+115             NaN              NaN  left_only  
+116             NaN              NaN  left_only   
+
+2016-11-07 13:52:54,494 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:52:54,591 [WARNI]  After merge_with_weather_day, No data found for:      idbldsite  latitude_weather  longitude_weather  latitude_closest  \
+28          12         48.776630           9.176330            48.776   
+29          12         48.776630           9.176330            48.776   
+30          12         48.776630           9.176330            48.776   
+31          12         48.776630           9.176330            48.776   
+32          12         48.776630           9.176330            48.776   
+33          12         48.776630           9.176330            48.776   
+34          12         48.776630           9.176330            48.776   
+35          12         48.776630           9.176330            48.776   
+36           1         53.550842           9.995385            53.550   
+37           2         53.654227          10.091736            53.654   
+38           3         48.142641          11.576903            48.142   
+39           4         48.142641          11.576903            48.142   
+40           5         51.224403           6.774598            51.224   
+41           6         51.224403           6.774598            51.224   
+42           7         50.081434           8.244644            50.081   
+43           8         52.505482          13.335294            52.505   
+72           9         52.276045           8.043023            52.276   
+73           9         52.276045           8.043023            52.276   
+74           9         52.276045           8.043023            52.276   
+75           9         52.276045           8.043023            52.276   
+76           9         52.276045           8.043023            52.276   
+77           9         52.276045           8.043023            52.276   
+78           9         52.276045           8.043023            52.276   
+79           9         52.276045           8.043023            52.276   
+108         10         49.452291          11.074521            49.452   
+109         10         49.452291          11.074521            49.452   
+110         10         49.452291          11.074521            49.452   
+111         10         49.452291          11.074521            49.452   
+112         10         49.452291          11.074521            49.452   
+113         10         49.452291          11.074521            49.452   
+114         10         49.452291          11.074521            49.452   
+115         10         49.452291          11.074521            49.452   
+116         13         50.110922           8.682127            50.110   
+
+     longitude_closest               sname  compensatedin       date  \
+28               9.176           Stuttgart          126.0 2016-09-21   
+29               9.176           Stuttgart          104.0 2016-09-22   
+30               9.176           Stuttgart          136.0 2016-09-23   
+31               9.176           Stuttgart          205.0 2016-09-24   
+32               9.176           Stuttgart            0.0 2016-09-25   
+33               9.176           Stuttgart          105.0 2016-09-26   
+34               9.176           Stuttgart           83.0 2016-09-27   
+35               9.176           Stuttgart          108.0 2016-09-28   
+36               9.995        Hamburg City            NaN        NaT   
+37              10.091         Hamburg AEZ            NaN        NaT   
+38              11.576      Muenchen Damen            NaN        NaT   
+39              11.576     Muenchen Herren            NaN        NaT   
+40               6.774  Duesseldorf Herren            NaN        NaT   
+41               6.774   Duesseldorf Damen            NaN        NaT   
+42               8.244           Wiesbaden            NaN        NaT   
+43              13.335       Bikini Berlin            NaN        NaT   
+72               8.042          Osnabrueck           43.0 2016-09-21   
+73               8.042          Osnabrueck           54.0 2016-09-22   
+74               8.042          Osnabrueck           58.0 2016-09-23   
+75               8.042          Osnabrueck          102.0 2016-09-24   
+76               8.042          Osnabrueck            0.0 2016-09-25   
+77               8.042          Osnabrueck           40.0 2016-09-26   
+78               8.042          Osnabrueck           41.0 2016-09-27   
+79               8.042          Osnabrueck           48.0 2016-09-28   
+108             11.074           Nuernberg           60.0 2016-09-21   
+109             11.074           Nuernberg           38.0 2016-09-22   
+110             11.074           Nuernberg           68.0 2016-09-23   
+111             11.074           Nuernberg          129.0 2016-09-24   
+112             11.074           Nuernberg           53.0 2016-09-25   
+113             11.074           Nuernberg           47.0 2016-09-26   
+114             11.074           Nuernberg           62.0 2016-09-27   
+115             11.074           Nuernberg           83.0 2016-09-28   
+116              8.682       Frankfurt MTZ            NaN        NaT   
+
+     maxtemperature  mintemperature  weathersituation  cloudamount  \
+28              NaN             NaN               NaN          NaN   
+29              NaN             NaN               NaN          NaN   
+30              NaN             NaN               NaN          NaN   
+31              NaN             NaN               NaN          NaN   
+32              NaN             NaN               NaN          NaN   
+33              NaN             NaN               NaN          NaN   
+34              NaN             NaN               NaN          NaN   
+35              NaN             NaN               NaN          NaN   
+36              NaN             NaN               NaN          NaN   
+37              NaN             NaN               NaN          NaN   
+38              NaN             NaN               NaN          NaN   
+39              NaN             NaN               NaN          NaN   
+40              NaN             NaN               NaN          NaN   
+41              NaN             NaN               NaN          NaN   
+42              NaN             NaN               NaN          NaN   
+43              NaN             NaN               NaN          NaN   
+72              NaN             NaN               NaN          NaN   
+73              NaN             NaN               NaN          NaN   
+74              NaN             NaN               NaN          NaN   
+75              NaN             NaN               NaN          NaN   
+76              NaN             NaN               NaN          NaN   
+77              NaN             NaN               NaN          NaN   
+78              NaN             NaN               NaN          NaN   
+79              NaN             NaN               NaN          NaN   
+108             NaN             NaN               NaN          NaN   
+109             NaN             NaN               NaN          NaN   
+110             NaN             NaN               NaN          NaN   
+111             NaN             NaN               NaN          NaN   
+112             NaN             NaN               NaN          NaN   
+113             NaN             NaN               NaN          NaN   
+114             NaN             NaN               NaN          NaN   
+115             NaN             NaN               NaN          NaN   
+116             NaN             NaN               NaN          NaN   
+
+     latitude_sites  longitude_sites     _merge  
+28              NaN              NaN  left_only  
+29              NaN              NaN  left_only  
+30              NaN              NaN  left_only  
+31              NaN              NaN  left_only  
+32              NaN              NaN  left_only  
+33              NaN              NaN  left_only  
+34              NaN              NaN  left_only  
+35              NaN              NaN  left_only  
+36              NaN              NaN  left_only  
+37              NaN              NaN  left_only  
+38              NaN              NaN  left_only  
+39              NaN              NaN  left_only  
+40              NaN              NaN  left_only  
+41              NaN              NaN  left_only  
+42              NaN              NaN  left_only  
+43              NaN              NaN  left_only  
+72              NaN              NaN  left_only  
+73              NaN              NaN  left_only  
+74              NaN              NaN  left_only  
+75              NaN              NaN  left_only  
+76              NaN              NaN  left_only  
+77              NaN              NaN  left_only  
+78              NaN              NaN  left_only  
+79              NaN              NaN  left_only  
+108             NaN              NaN  left_only  
+109             NaN              NaN  left_only  
+110             NaN              NaN  left_only  
+111             NaN              NaN  left_only  
+112             NaN              NaN  left_only  
+113             NaN              NaN  left_only  
+114             NaN              NaN  left_only  
+115             NaN              NaN  left_only  
+116             NaN              NaN  left_only   
+
+2016-11-07 13:53:13,919 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:54:04,473 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:54:26,633 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:54:26,821 [WARNI]  After merge_with_weather_day, No data found for:      idbldsite  latitude_weather  longitude_weather  latitude_closest  \
+28          12         48.776630           9.176330            48.776   
+29          12         48.776630           9.176330            48.776   
+30          12         48.776630           9.176330            48.776   
+31          12         48.776630           9.176330            48.776   
+32          12         48.776630           9.176330            48.776   
+33          12         48.776630           9.176330            48.776   
+34          12         48.776630           9.176330            48.776   
+35          12         48.776630           9.176330            48.776   
+36           1         53.550842           9.995385            53.550   
+37           2         53.654227          10.091736            53.654   
+38           3         48.142641          11.576903            48.142   
+39           4         48.142641          11.576903            48.142   
+40           5         51.224403           6.774598            51.224   
+41           6         51.224403           6.774598            51.224   
+42           7         50.081434           8.244644            50.081   
+43           8         52.505482          13.335294            52.505   
+72           9         52.276045           8.043023            52.276   
+73           9         52.276045           8.043023            52.276   
+74           9         52.276045           8.043023            52.276   
+75           9         52.276045           8.043023            52.276   
+76           9         52.276045           8.043023            52.276   
+77           9         52.276045           8.043023            52.276   
+78           9         52.276045           8.043023            52.276   
+79           9         52.276045           8.043023            52.276   
+108         10         49.452291          11.074521            49.452   
+109         10         49.452291          11.074521            49.452   
+110         10         49.452291          11.074521            49.452   
+111         10         49.452291          11.074521            49.452   
+112         10         49.452291          11.074521            49.452   
+113         10         49.452291          11.074521            49.452   
+114         10         49.452291          11.074521            49.452   
+115         10         49.452291          11.074521            49.452   
+116         13         50.110922           8.682127            50.110   
+
+     longitude_closest               sname  compensatedin       date  \
+28               9.176           Stuttgart          126.0 2016-09-21   
+29               9.176           Stuttgart          104.0 2016-09-22   
+30               9.176           Stuttgart          136.0 2016-09-23   
+31               9.176           Stuttgart          205.0 2016-09-24   
+32               9.176           Stuttgart            0.0 2016-09-25   
+33               9.176           Stuttgart          105.0 2016-09-26   
+34               9.176           Stuttgart           83.0 2016-09-27   
+35               9.176           Stuttgart          108.0 2016-09-28   
+36               9.995        Hamburg City            NaN        NaT   
+37              10.091         Hamburg AEZ            NaN        NaT   
+38              11.576      Muenchen Damen            NaN        NaT   
+39              11.576     Muenchen Herren            NaN        NaT   
+40               6.774  Duesseldorf Herren            NaN        NaT   
+41               6.774   Duesseldorf Damen            NaN        NaT   
+42               8.244           Wiesbaden            NaN        NaT   
+43              13.335       Bikini Berlin            NaN        NaT   
+72               8.042          Osnabrueck           43.0 2016-09-21   
+73               8.042          Osnabrueck           54.0 2016-09-22   
+74               8.042          Osnabrueck           58.0 2016-09-23   
+75               8.042          Osnabrueck          102.0 2016-09-24   
+76               8.042          Osnabrueck            0.0 2016-09-25   
+77               8.042          Osnabrueck           40.0 2016-09-26   
+78               8.042          Osnabrueck           41.0 2016-09-27   
+79               8.042          Osnabrueck           48.0 2016-09-28   
+108             11.074           Nuernberg           60.0 2016-09-21   
+109             11.074           Nuernberg           38.0 2016-09-22   
+110             11.074           Nuernberg           68.0 2016-09-23   
+111             11.074           Nuernberg          129.0 2016-09-24   
+112             11.074           Nuernberg           53.0 2016-09-25   
+113             11.074           Nuernberg           47.0 2016-09-26   
+114             11.074           Nuernberg           62.0 2016-09-27   
+115             11.074           Nuernberg           83.0 2016-09-28   
+116              8.682       Frankfurt MTZ            NaN        NaT   
+
+     maxtemperature  mintemperature  weathersituation  cloudamount  \
+28              NaN             NaN               NaN          NaN   
+29              NaN             NaN               NaN          NaN   
+30              NaN             NaN               NaN          NaN   
+31              NaN             NaN               NaN          NaN   
+32              NaN             NaN               NaN          NaN   
+33              NaN             NaN               NaN          NaN   
+34              NaN             NaN               NaN          NaN   
+35              NaN             NaN               NaN          NaN   
+36              NaN             NaN               NaN          NaN   
+37              NaN             NaN               NaN          NaN   
+38              NaN             NaN               NaN          NaN   
+39              NaN             NaN               NaN          NaN   
+40              NaN             NaN               NaN          NaN   
+41              NaN             NaN               NaN          NaN   
+42              NaN             NaN               NaN          NaN   
+43              NaN             NaN               NaN          NaN   
+72              NaN             NaN               NaN          NaN   
+73              NaN             NaN               NaN          NaN   
+74              NaN             NaN               NaN          NaN   
+75              NaN             NaN               NaN          NaN   
+76              NaN             NaN               NaN          NaN   
+77              NaN             NaN               NaN          NaN   
+78              NaN             NaN               NaN          NaN   
+79              NaN             NaN               NaN          NaN   
+108             NaN             NaN               NaN          NaN   
+109             NaN             NaN               NaN          NaN   
+110             NaN             NaN               NaN          NaN   
+111             NaN             NaN               NaN          NaN   
+112             NaN             NaN               NaN          NaN   
+113             NaN             NaN               NaN          NaN   
+114             NaN             NaN               NaN          NaN   
+115             NaN             NaN               NaN          NaN   
+116             NaN             NaN               NaN          NaN   
+
+     latitude_sites  longitude_sites     _merge  
+28              NaN              NaN  left_only  
+29              NaN              NaN  left_only  
+30              NaN              NaN  left_only  
+31              NaN              NaN  left_only  
+32              NaN              NaN  left_only  
+33              NaN              NaN  left_only  
+34              NaN              NaN  left_only  
+35              NaN              NaN  left_only  
+36              NaN              NaN  left_only  
+37              NaN              NaN  left_only  
+38              NaN              NaN  left_only  
+39              NaN              NaN  left_only  
+40              NaN              NaN  left_only  
+41              NaN              NaN  left_only  
+42              NaN              NaN  left_only  
+43              NaN              NaN  left_only  
+72              NaN              NaN  left_only  
+73              NaN              NaN  left_only  
+74              NaN              NaN  left_only  
+75              NaN              NaN  left_only  
+76              NaN              NaN  left_only  
+77              NaN              NaN  left_only  
+78              NaN              NaN  left_only  
+79              NaN              NaN  left_only  
+108             NaN              NaN  left_only  
+109             NaN              NaN  left_only  
+110             NaN              NaN  left_only  
+111             NaN              NaN  left_only  
+112             NaN              NaN  left_only  
+113             NaN              NaN  left_only  
+114             NaN              NaN  left_only  
+115             NaN              NaN  left_only  
+116             NaN              NaN  left_only   
+
+2016-11-07 13:55:12,367 [WARNI]  After merge_with_counts, No data found for:      Unnamed: 0  idbldsite               sname  imaxoccupancy  iwarnoccupancy  \
+36            1          1        Hamburg City            NaN             NaN   
+37            2          2         Hamburg AEZ            NaN             NaN   
+38            3          3      Muenchen Damen            NaN             NaN   
+39            4          4     Muenchen Herren            NaN             NaN   
+40            5          5  Duesseldorf Herren            NaN             NaN   
+41            6          6   Duesseldorf Damen            NaN             NaN   
+42            7          7           Wiesbaden            NaN             NaN   
+43            8          8       Bikini Berlin            NaN             NaN   
+116          11         13       Frankfurt MTZ            NaN             NaN   
+
+          timezone   latitude  longitude  shopnumber haswifi    ...      \
+36   Europe/Berlin  53.550842   9.995385           7   False    ...       
+37   Europe/Berlin  53.654227  10.091736           6   False    ...       
+38   Europe/Berlin  48.142641  11.576903           2   False    ...       
+39   Europe/Berlin  48.142641  11.576903           3   False    ...       
+40   Europe/Berlin  51.224403   6.774598          18   False    ...       
+41   Europe/Berlin  51.224403   6.774598          17   False    ...       
+42   Europe/Berlin  50.081434   8.244644          22   False    ...       
+43   Europe/Berlin  52.505482  13.335294          20   False    ...       
+116  Europe/Berlin  50.110922   8.682127          26   False    ...       
+
+    hasbuyingcouple resettime  datagapsalarm  zone42r_region zone42r_store  \
+36            False       180          False             NaN           NaN   
+37            False       180          False             NaN           NaN   
+38            False       180          False             NaN           NaN   
+39            False       180          False             NaN           NaN   
+40            False       180          False             NaN           NaN   
+41            False       180          False             NaN           NaN   
+42            False       180          False             NaN           NaN   
+43            False       180          False             NaN           NaN   
+116           False       180          False             NaN           NaN   
+
+    compensation_at_reset_time zone42r_region_passersby compensatedin  date  \
+36                       False                      NaN           NaN   NaT   
+37                       False                      NaN           NaN   NaT   
+38                       False                      NaN           NaN   NaT   
+39                       False                      NaN           NaN   NaT   
+40                       False                      NaN           NaN   NaT   
+41                       False                      NaN           NaN   NaT   
+42                       False                      NaN           NaN   NaT   
+43                       False                      NaN           NaN   NaT   
+116                      False                      NaN           NaN   NaT   
+
+        _merge  
+36   left_only  
+37   left_only  
+38   left_only  
+39   left_only  
+40   left_only  
+41   left_only  
+42   left_only  
+43   left_only  
+116  left_only  
+
+[9 rows x 31 columns] 
+
+2016-11-07 13:55:12,552 [WARNI]  After merge_with_weather_day, No data found for:      idbldsite  latitude_weather  longitude_weather  latitude_closest  \
+28          12         48.776630           9.176330            48.776   
+29          12         48.776630           9.176330            48.776   
+30          12         48.776630           9.176330            48.776   
+31          12         48.776630           9.176330            48.776   
+32          12         48.776630           9.176330            48.776   
+33          12         48.776630           9.176330            48.776   
+34          12         48.776630           9.176330            48.776   
+35          12         48.776630           9.176330            48.776   
+36           1         53.550842           9.995385            53.550   
+37           2         53.654227          10.091736            53.654   
+38           3         48.142641          11.576903            48.142   
+39           4         48.142641          11.576903            48.142   
+40           5         51.224403           6.774598            51.224   
+41           6         51.224403           6.774598            51.224   
+42           7         50.081434           8.244644            50.081   
+43           8         52.505482          13.335294            52.505   
+72           9         52.276045           8.043023            52.276   
+73           9         52.276045           8.043023            52.276   
+74           9         52.276045           8.043023            52.276   
+75           9         52.276045           8.043023            52.276   
+76           9         52.276045           8.043023            52.276   
+77           9         52.276045           8.043023            52.276   
+78           9         52.276045           8.043023            52.276   
+79           9         52.276045           8.043023            52.276   
+108         10         49.452291          11.074521            49.452   
+109         10         49.452291          11.074521            49.452   
+110         10         49.452291          11.074521            49.452   
+111         10         49.452291          11.074521            49.452   
+112         10         49.452291          11.074521            49.452   
+113         10         49.452291          11.074521            49.452   
+114         10         49.452291          11.074521            49.452   
+115         10         49.452291          11.074521            49.452   
+116         13         50.110922           8.682127            50.110   
+
+     longitude_closest               sname  compensatedin       date  \
+28               9.176           Stuttgart          126.0 2016-09-21   
+29               9.176           Stuttgart          104.0 2016-09-22   
+30               9.176           Stuttgart          136.0 2016-09-23   
+31               9.176           Stuttgart          205.0 2016-09-24   
+32               9.176           Stuttgart            0.0 2016-09-25   
+33               9.176           Stuttgart          105.0 2016-09-26   
+34               9.176           Stuttgart           83.0 2016-09-27   
+35               9.176           Stuttgart          108.0 2016-09-28   
+36               9.995        Hamburg City            NaN        NaT   
+37              10.091         Hamburg AEZ            NaN        NaT   
+38              11.576      Muenchen Damen            NaN        NaT   
+39              11.576     Muenchen Herren            NaN        NaT   
+40               6.774  Duesseldorf Herren            NaN        NaT   
+41               6.774   Duesseldorf Damen            NaN        NaT   
+42               8.244           Wiesbaden            NaN        NaT   
+43              13.335       Bikini Berlin            NaN        NaT   
+72               8.042          Osnabrueck           43.0 2016-09-21   
+73               8.042          Osnabrueck           54.0 2016-09-22   
+74               8.042          Osnabrueck           58.0 2016-09-23   
+75               8.042          Osnabrueck          102.0 2016-09-24   
+76               8.042          Osnabrueck            0.0 2016-09-25   
+77               8.042          Osnabrueck           40.0 2016-09-26   
+78               8.042          Osnabrueck           41.0 2016-09-27   
+79               8.042          Osnabrueck           48.0 2016-09-28   
+108             11.074           Nuernberg           60.0 2016-09-21   
+109             11.074           Nuernberg           38.0 2016-09-22   
+110             11.074           Nuernberg           68.0 2016-09-23   
+111             11.074           Nuernberg          129.0 2016-09-24   
+112             11.074           Nuernberg           53.0 2016-09-25   
+113             11.074           Nuernberg           47.0 2016-09-26   
+114             11.074           Nuernberg           62.0 2016-09-27   
+115             11.074           Nuernberg           83.0 2016-09-28   
+116              8.682       Frankfurt MTZ            NaN        NaT   
+
+     maxtemperature  mintemperature  weathersituation  cloudamount  \
+28              NaN             NaN               NaN          NaN   
+29              NaN             NaN               NaN          NaN   
+30              NaN             NaN               NaN          NaN   
+31              NaN             NaN               NaN          NaN   
+32              NaN             NaN               NaN          NaN   
+33              NaN             NaN               NaN          NaN   
+34              NaN             NaN               NaN          NaN   
+35              NaN             NaN               NaN          NaN   
+36              NaN             NaN               NaN          NaN   
+37              NaN             NaN               NaN          NaN   
+38              NaN             NaN               NaN          NaN   
+39              NaN             NaN               NaN          NaN   
+40              NaN             NaN               NaN          NaN   
+41              NaN             NaN               NaN          NaN   
+42              NaN             NaN               NaN          NaN   
+43              NaN             NaN               NaN          NaN   
+72              NaN             NaN               NaN          NaN   
+73              NaN             NaN               NaN          NaN   
+74              NaN             NaN               NaN          NaN   
+75              NaN             NaN               NaN          NaN   
+76              NaN             NaN               NaN          NaN   
+77              NaN             NaN               NaN          NaN   
+78              NaN             NaN               NaN          NaN   
+79              NaN             NaN               NaN          NaN   
+108             NaN             NaN               NaN          NaN   
+109             NaN             NaN               NaN          NaN   
+110             NaN             NaN               NaN          NaN   
+111             NaN             NaN               NaN          NaN   
+112             NaN             NaN               NaN          NaN   
+113             NaN             NaN               NaN          NaN   
+114             NaN             NaN               NaN          NaN   
+115             NaN             NaN               NaN          NaN   
+116             NaN             NaN               NaN          NaN   
+
+     latitude_sites  longitude_sites     _merge  
+28              NaN              NaN  left_only  
+29              NaN              NaN  left_only  
+30              NaN              NaN  left_only  
+31              NaN              NaN  left_only  
+32              NaN              NaN  left_only  
+33              NaN              NaN  left_only  
+34              NaN              NaN  left_only  
+35              NaN              NaN  left_only  
+36              NaN              NaN  left_only  
+37              NaN              NaN  left_only  
+38              NaN              NaN  left_only  
+39              NaN              NaN  left_only  
+40              NaN              NaN  left_only  
+41              NaN              NaN  left_only  
+42              NaN              NaN  left_only  
+43              NaN              NaN  left_only  
+72              NaN              NaN  left_only  
+73              NaN              NaN  left_only  
+74              NaN              NaN  left_only  
+75              NaN              NaN  left_only  
+76              NaN              NaN  left_only  
+77              NaN              NaN  left_only  
+78              NaN              NaN  left_only  
+79              NaN              NaN  left_only  
+108             NaN              NaN  left_only  
+109             NaN              NaN  left_only  
+110             NaN              NaN  left_only  
+111             NaN              NaN  left_only  
+112             NaN              NaN  left_only  
+113             NaN              NaN  left_only  
+114             NaN              NaN  left_only  
+115             NaN              NaN  left_only  
+116             NaN              NaN  left_only   
+
+2016-11-07 13:55:26,002 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:55:26,170 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:55:56,239 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:55:56,310 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:56:25,356 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:57:21,973 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:57:22,044 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:57:49,203 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 13:59:47,140 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 14:00:23,514 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 14:01:16,908 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 14:02:00,036 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 14:02:19,155 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 14:02:37,975 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:28:23,057 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:29:05,700 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:29:05,810 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:29:56,434 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:29:56,532 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:30:35,300 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:30:35,390 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:32:20,159 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:33:16,505 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:33:29,813 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:35:15,215 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:35:21,467 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:35:21,528 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:35:21,612 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:36:23,910 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:36:24,024 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:37:11,808 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:37:11,953 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     8
+10    8
+12    8
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:37:57,321 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:39:52,136 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:49:24,901 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:59:30,466 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 16:59:30,594 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:00:19,868 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:00:27,186 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:01:30,538 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:02:14,270 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:03:19,196 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:03:25,951 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:04:30,011 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:05:26,612 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:06:32,141 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:06:49,818 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:07:49,628 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:07:57,185 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:07:57,266 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:08:07,101 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:08:07,186 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:21:23,401 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:21:23,484 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:22:01,422 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:22:01,507 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:36:31,377 [WARNI]  After create_regions_df, No data found for: idbldsite
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:40:07,071 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:40:12,907 [INFO ]  No missing data after merge_with_counts
+2016-11-07 17:41:03,650 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:41:09,547 [INFO ]  No missing data after merge_with_counts
+2016-11-07 17:41:21,601 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:41:27,648 [INFO ]  No missing data after merge_with_counts
+2016-11-07 17:42:47,248 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:47:45,075 [INFO ]  coucou prepare new training set...
+2016-11-07 17:47:45,093 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:48:59,287 [INFO ]  DWE_ARCADIA_2015D2016-11-072016-12-07 prepare new training set...
+2016-11-07 17:48:59,305 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:49:04,888 [INFO ]  No missing data after merge_with_counts
+2016-11-07 17:49:23,709 [INFO ]  DWE_ARCADIA_2015D prepare new training set...
+2016-11-07 17:49:23,728 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:49:29,446 [INFO ]  No missing data after merge_with_counts
+2016-11-07 17:49:43,215 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64 
+
+2016-11-07 17:49:49,958 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:52:44,908 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:54:07,289 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:54:07,393 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:55:23,923 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:55:24,031 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:02,315 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:02,418 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:14,925 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:15,027 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:27,449 [INFO ]  DWE_ARCADIA_2015D prepare new training set...
+2016-11-07 17:58:27,467 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 17:58:33,423 [INFO ]  No missing data after merge_with_counts
+2016-11-07 17:58:47,064 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:52,826 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 17:58:52,931 [INFO ]  datastore: DWE_ARCADIA_2015D: column latitude has been regularized for training set
+2016-11-07 17:58:52,933 [INFO ]  datastore: DWE_ARCADIA_2015D: column longitude has been regularized for training set
+2016-11-07 17:58:52,935 [INFO ]  datastore: DWE_ARCADIA_2015D: column compensatedin has been regularized for training set
+2016-11-07 17:58:52,937 [INFO ]  datastore: DWE_ARCADIA_2015D: column maxtemperature has been regularized for training set
+2016-11-07 17:58:52,939 [INFO ]  datastore: DWE_ARCADIA_2015D: column mintemperature has been regularized for training set
+2016-11-07 17:58:52,941 [INFO ]  datastore: DWE_ARCADIA_2015D: column weathersituation has been regularized for training set
+2016-11-07 17:58:52,944 [INFO ]  datastore: DWE_ARCADIA_2015D: column cloudamount has been regularized for training set
+2016-11-07 18:02:28,710 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 18:02:28,729 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 18:02:34,460 [INFO ]  No missing data after merge_with_counts
+2016-11-07 18:02:48,037 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64 
+
+2016-11-07 18:02:52,627 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 18:02:52,745 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column latitude has been regularized for training set
+2016-11-07 18:02:52,747 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column longitude has been regularized for training set
+2016-11-07 18:02:52,749 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column compensatedin has been regularized for training set
+2016-11-07 18:02:52,751 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for training set
+2016-11-07 18:02:52,753 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for training set
+2016-11-07 18:02:52,756 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for training set
+2016-11-07 18:02:52,759 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for training set
+2016-11-07 18:03:46,947 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 18:03:46,965 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 18:03:52,722 [INFO ]  No missing data after merge_with_counts
+2016-11-07 18:04:06,083 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+1     6
+2     9
+3     1
+4     7
+5     8
+6     4
+7     5
+8     7
+9     9
+10    9
+11    7
+12    3
+13    3
+14    3
+15    6
+16    5
+Name: _merge, dtype: int64 
+
+2016-11-07 18:04:13,005 [WARNI]  After create_regions_df, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64 
+
+2016-11-07 18:04:13,112 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column latitude has been regularized for training set
+2016-11-07 18:04:13,114 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column longitude has been regularized for training set
+2016-11-07 18:04:13,116 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column compensatedin has been regularized for training set
+2016-11-07 18:04:13,118 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column maxtemperature has been regularized for training set
+2016-11-07 18:04:13,120 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column mintemperature has been regularized for training set
+2016-11-07 18:04:13,122 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column weathersituation has been regularized for training set
+2016-11-07 18:04:13,124 [INFO ]  datastore: DWE_ARCADIA_2015- period : D: column cloudamount has been regularized for training set
+2016-11-07 18:07:28,145 [WARNI]  After create_regions_df, No data found for: idbldsite
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 18:10:46,734 [INFO ]  DWE_ARCADIA_2015- period : D prepare new training set...
+2016-11-07 18:10:46,756 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-07 18:10:52,391 [WARNI]  After merge_with_counts, No data found for: idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64 
+
+2016-11-07 18:10:52,492 [WARNI]  After merge_with_weather_day, No data found for: idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64 
+
+2016-11-07 18:10:56,087 [WARNI]  After create_regions_df, No data found for: idbldsite
+14    1
+Name: _merge, dtype: int64 
+

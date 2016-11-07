@@ -21,7 +21,7 @@ class Data_store(object):
         self._set_file_names()
 
     def __repr__(self):
-        return self.name, self.period, self.date_from, self.date_to
+        return (self.name + "- period : " + self.period)
 
     def get_data(self):
         self._training_set_()
@@ -30,7 +30,7 @@ class Data_store(object):
     def _training_set_(self):
 
         if self.create:
-            logging.info(self, "prepare new training set...")
+            logging.info("{} prepare new training set...".format(self))
             self.db = DB_manager(self.db_params)
             self.training_data = merge_tables(self)
             self.training_data = add_calendar_fields(self.training_data)
@@ -40,7 +40,7 @@ class Data_store(object):
                 self.file_names['training_set'], encoding='utf-8')
             self.sites_infos.to_csv(
                 self.file_names['sites_info'], encoding='utf-8')
-            logging.info(self, "finished preparing training set")
+            logging.info("{} : finished preparing training set".format(self))
         else:
             try:
                 self.training_data = pd.read_csv(
