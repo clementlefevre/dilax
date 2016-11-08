@@ -1,10 +1,11 @@
 """Summary
 """
 import inspect
+from datetime import datetime
 from data_helper import match_coordinates
 from service.geocoding_API_service import create_regions_df
 from helper import pd, logging
-from helper.data_helper import check_missing_data
+from helper.data_helper import check_missing_data, round_to_nearest_hour
 from service.school_holidays_service import add_school_holidays
 
 
@@ -17,19 +18,19 @@ def merge_tables(datastore):
     Returns:
         TYPE: Description
     """
-    if datastore.period == 'D':
-        datastore.training_data = merge_with_counts(datastore)
-        datastore.training_data = merge_with_weather_day(datastore)
-        print datastore.training_data.shape
-        datastore.training_data = merge_with_public_holidays(datastore)
-        print datastore.training_data.shape
-        datastore.training_data = merge_with_regions(datastore)
-        print datastore.training_data.shape
-        datastore.training_data = merge_with_school_holidays(datastore)
-        print datastore.training_data.shape
-        return datastore.training_data
-    else:
-        logging.warning("merge_tables not yet implemented for intraday")
+
+    datastore.training_data = merge_with_counts(datastore)
+    print datastore.training_data.shape
+    print datastore.training_data.head()
+    datastore.training_data = merge_with_weather_day(datastore)
+    print datastore.training_data.shape
+    datastore.training_data = merge_with_public_holidays(datastore)
+    print datastore.training_data.shape
+    datastore.training_data = merge_with_regions(datastore)
+    print datastore.training_data.shape
+    datastore.training_data = merge_with_school_holidays(datastore)
+    print datastore.training_data.shape
+    return datastore.training_data
 
 
 def merge_with_counts(datastore):
@@ -45,18 +46,42 @@ def merge_with_counts(datastore):
     df_counts = datastore.db.counts
 
     df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)
-    df_counts = df_counts.groupby(['idbldsite', 'date']).sum()
+
+    if datastore.period == 'H':
+        df_counts['date_time'] = df_counts['timestamp'].apply(
+            lambda ts: round_to_nearest_hour(ts))
+
+        df_counts = df_counts.groupby(['idbldsite', 'date_time']).sum()
+
+    if datastore.period == 'D':
+        df_counts = df_counts.groupby(['idbldsite', 'date']).sum()
+
     df_counts = df_counts.reset_index()
-    df_counts = df_counts[['idbldsite', 'compensatedin', 'date']]
+
+    if datastore.period == 'H':
+
+        df_counts['date'] = df_counts['date_time'].apply(lambda dt:
+                                                         datetime(dt.year,
+                                                                  dt.month,
+                                                                  dt.day))
+    if datastore.period == 'D':
+        df_counts['date_time'] = df_counts['date']
+
+    df_counts = df_counts[['idbldsite',
+                           'compensatedin', 'date',
+                           'date_time']]
 
     df_counts_sites = pd.merge(df_sites, df_counts,
                                on=['idbldsite'],
                                suffixes=['sites_', 'counts'],
                                indicator=True, how='left')
-    df_counts_sites = check_missing_data(df_counts_sites,
-                                         "left_only", inspect.currentframe().f_code.co_name)
 
-    return df_counts_sites[['idbldsite', 'compensatedin', 'date', 'latitude', 'longitude']]
+    df_counts_sites = check_missing_data(df_counts_sites,
+                                         "left_only",
+                                         inspect.currentframe().f_code.co_name)
+
+    return df_counts_sites[['idbldsite',
+                            'compensatedin', 'date', 'date_time', 'latitude', 'longitude']]
 
 
 def merge_with_weather_day(datastore):
@@ -85,7 +110,8 @@ def merge_with_weather_day(datastore):
          'longitude',
          'latitude_closest',
          'longitude_closest',
-         'compensatedin', 'date']]
+         'compensatedin',
+         'date', 'date_time']]
 
     df_sites_counts_weather_day = pd.merge(datastore.training_data,
                                            df_weather_day,

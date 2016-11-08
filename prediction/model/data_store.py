@@ -21,16 +21,22 @@ class Data_store(object):
         self._set_file_names()
 
     def __repr__(self):
-        return (self.name + "- period : " + self.period)
+        return "{0.name} - period : {0.period}\
+         [{0.date_from} to {0.date_to}]".format(self)
 
     def get_data(self):
         self._training_set_()
         self.create_sites_dict()
 
+    def create_forecasts(self):
+        self.forecasts = create_forecasts_data(self)
+        self.forecasts.to_csv(
+            self.file_names['forecasts_set'], encoding='utf-8')
+
     def _training_set_(self):
 
         if self.create:
-            logging.info("{} prepare new training set...".format(self))
+            logging.info("{0} prepare new training set...".format(self))
             self.db = DB_manager(self.db_params)
             self.training_data = merge_tables(self)
             self.training_data = add_calendar_fields(self.training_data)
@@ -40,7 +46,7 @@ class Data_store(object):
                 self.file_names['training_set'], encoding='utf-8')
             self.sites_infos.to_csv(
                 self.file_names['sites_info'], encoding='utf-8')
-            logging.info("{} : finished preparing training set".format(self))
+            logging.info("{0} : finished preparing training set".format(self))
         else:
             try:
                 self.training_data = pd.read_csv(
@@ -62,11 +68,6 @@ class Data_store(object):
     def create_sites_dict(self):
         self.sites_infos_dict = self.sites_infos.set_index(
             'idbldsite').T.to_dict()
-
-    def create_forecasts(self):
-        self.forecasts = create_forecasts_data(self)
-        self.forecasts.to_csv(
-            self.file_names['forecasts_set'], encoding='utf-8')
 
     def _set_file_names(self):
         training_set = config_manager.data_store_settings[
@@ -92,4 +93,4 @@ class Data_store(object):
         if date_to is None:
             self.date_to = datetime.now().date() + timedelta(days=30)
         else:
-            self.date_to = datetime.strptime(date_to, '%Y-%M-%d')
+            self.date_to = datetime.strptime(date_to, '%Y-%M-%d').date()

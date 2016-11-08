@@ -47,3 +47,4 @@ def test_predictor_period(store):
 def test_datastore_create_forecasts(store):
     store.create_forecasts()
     assert store.forecasts.shape[0] > 0
+

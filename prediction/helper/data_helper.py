@@ -1,6 +1,7 @@
 
 import numpy as np
 from math import radians, cos, sin, asin, sqrt
+import datetime
 from model.config_manager import Config_manager
 from helper import logging
 
@@ -164,3 +165,10 @@ def regularize(datastore, df, is_forecast=False):
                              )
     df = df.fillna(0)
     return df
+
+
+def round_to_nearest_hour(ts):
+    dt = datetime.datetime(ts.year, ts.month, ts.day, ts.hour)
+    minutes_to_hour = round(float(ts.minute) / 60, 0)
+    dt = dt + datetime.timedelta(hours=minutes_to_hour)
+    return dt

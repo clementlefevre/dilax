@@ -10,6 +10,8 @@ from service.geocoding_API_service import create_regions_df
 def datastore():
     datastore = Mock()
 
+    datastore.period = 'H'
+
     datastore.db.sites = pd.read_csv(
         'test/data/sites_sample1.csv', sep=';')
 
@@ -33,7 +35,7 @@ def test_merge_with_weather_day(datastore, caplog):
     df_merged = merge_with_weather_day(datastore)
 
     log = caplog.text()
-    assert 'After merge_with_weather_day, No data found for:' in log
+    assert 'after merge_with_weather_day : No data found for :' in log
 
 
 def test_merge_with_regions(datastore, caplog):
@@ -41,7 +43,7 @@ def test_merge_with_regions(datastore, caplog):
     datastore.training_data = merge_with_weather_day(datastore)
 
     datastore.training_data = merge_with_regions(datastore)
-    print datastore.training_data
+
     assert datastore.training_data.shape[0] > 0
 
 
