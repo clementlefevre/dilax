@@ -60,7 +60,35 @@ def match_coordinates(datastore, df):
     sites_weather_too_far = datastore.training_data[
         datastore.training_data.distance_site_to_weather > 20].idbldsite.unique()
 
+    logging.warning("Those sites are too far from weather coordinate for matching :{}".format(
+        sites_weather_too_far))
+
     return datastore
+
+
+def reindex_weather_intraday(df_weather_hour):
+    date_range = pd.date_range(df_weather_hour.timestamp.min(
+    ), df_weather_hour.timestamp.max(), freq='H')
+
+    df_weather_hour['coord'] = df_weather_hour.latitude.map(
+        str) + ";" + df_weather_hour.longitude.map(str)
+
+    date_range = pd.date_range(df_weather_hour.timestamp.min(
+    ), df_weather_hour.timestamp.max(), freq='H')
+    print date_range
+    print df_weather_hour.shape
+    df_weather_hour_clean = df_weather_hour.drop_duplicates()
+    df_weather_hour_clean.shape
+
+    groupy = df_weather_hour_clean.groupby(['coord'])
+    df = pd.DataFrame()
+    for name, group in groupy:
+        group = group.set_index('timestamp').sort_index()
+        group = group[~group.index.duplicated()]
+        group = group.reindex(date_range, method='ffill')
+        df = pd.concat([df, group], axis=0)
+
+    df = df.sort_index()
 
 
 def get_nearest_coordinate(site_coordinate, weather_coordinates):

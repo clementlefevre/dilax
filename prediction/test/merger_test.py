@@ -33,15 +33,14 @@ def test_merge_with_counts(datastore, caplog):
 def test_merge_with_weather_day(datastore, caplog):
     datastore.training_data = merge_with_counts(datastore)
     df_merged = merge_with_weather_day(datastore)
-
     log = caplog.text()
+
     assert 'after merge_with_weather_day : No data found for :' in log
 
 
 def test_merge_with_regions(datastore, caplog):
     datastore.training_data = merge_with_counts(datastore)
     datastore.training_data = merge_with_weather_day(datastore)
-
     datastore.training_data = merge_with_regions(datastore)
 
     assert datastore.training_data.shape[0] > 0

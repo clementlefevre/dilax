@@ -20,16 +20,10 @@ def merge_tables(datastore):
     """
 
     datastore.training_data = merge_with_counts(datastore)
-    print datastore.training_data.shape
-    print datastore.training_data.head()
-    datastore.training_data = merge_with_weather_day(datastore)
-    print datastore.training_data.shape
+    datastore.training_data = merge_with_weather(datastore)
     datastore.training_data = merge_with_public_holidays(datastore)
-    print datastore.training_data.shape
     datastore.training_data = merge_with_regions(datastore)
-    print datastore.training_data.shape
     datastore.training_data = merge_with_school_holidays(datastore)
-    print datastore.training_data.shape
     return datastore.training_data
 
 
@@ -84,7 +78,7 @@ def merge_with_counts(datastore):
                             'compensatedin', 'date', 'date_time', 'latitude', 'longitude']]
 
 
-def merge_with_weather_day(datastore):
+def merge_with_weather(datastore):
     """Summary
 
     Args:
@@ -93,6 +87,69 @@ def merge_with_weather_day(datastore):
     Returns:
         TYPE: Description
     """
+
+    if datastore.period == 'H':
+        return merge_with_weather_hour(datastore)
+
+    if datastore.period == 'D':
+        return merge_with_weather_day(datastore)
+
+
+def merge_with_weather_hour(datastore):
+
+    df_weather_hour = datastore.db.weather_intraday
+
+    df_weather_day = datastore.db.weather_day
+
+    df_weather_hour = pd.merge(df_weather_hour,
+                               df_weather_day[['id', 'latitude', 'longitude']],
+                               left_on='idparent',
+                               right_on='id')
+
+    df_weather_hour[['timestamp', 'temperature',
+                     'cloudamount', 'weathersituation',
+                     'latitude', 'longitude']]
+
+    df_weather_hour = reindex_weather_intraday(df_weather_hour)
+
+    datastore = match_coordinates(datastore, df_weather_hour)
+
+    datastore.training_data = datastore.training_data[
+        ['idbldsite',
+         'latitude',
+         'longitude',
+         'latitude_closest',
+         'longitude_closest',
+         'compensatedin',
+         'date', 'date_time']]
+
+    df_sites_counts_weather_day = pd.merge(datastore.training_data,
+                                           df_weather_day,
+                                           left_on=['latitude_closest',
+                                                    'longitude_closest',
+                                                    'date_hour'],
+                                           right_on=['latitude',
+                                                     'longitude', 'date_hour'],
+                                           how='left',
+                                           suffixes=['_sites', '_weather'],
+                                           indicator=True)
+
+    df_sites_counts_weather_day = check_missing_data(df_sites_counts_weather_day,
+                                                     "left_only",
+                                                     inspect.currentframe().f_code.co_name)
+
+    df_sites_counts_weather_day = df_sites_counts_weather_day.drop(
+        ['latitude_closest', 'longitude_closest', 'latitude_weather', 'longitude_weather'], 1)
+
+    df_sites_counts_weather_day.rename(columns={'latitude_sites': 'latitude',
+                                                'longitude_sites': 'longitude'}, inplace=True)
+
+    print df_sites_counts_weather_day.columns
+    return df_sites_counts_weather_day
+
+
+def merge_with_weather_day(datastore):
+
     df_weather_day = datastore.db.weather_day
 
     df_weather_day = df_weather_day[['maxtemperature', 'mintemperature',
