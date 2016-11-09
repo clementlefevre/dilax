@@ -29,4 +29,5 @@ def add_conversion_day(datastore):
     merged = pd.merge(datastore.training_data, df_conversion_day, left_on=['idbldsite', 'date'],
                       right_on=['idbldsite', 'date'], how='left')
     merged = merged.drop('id', 1)
+    merged.to_csv("data/conversion_day.csv")
     return merged
