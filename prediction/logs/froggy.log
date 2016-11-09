@@ -8401,3 +8401,686 @@ Name: _merge, dtype: int64
 2016-11-09 11:19:40,059 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
 2016-11-09 11:19:40,060 [INFO ]  Start regularizing weathersituation
 2016-11-09 11:19:44,217 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set
+2016-11-09 12:55:36,633 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 12:55:36,651 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 12:55:55,276 [INFO ]  No missing data after merge_with_counts
+2016-11-09 12:55:55,592 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 12:55:56,956 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 12:55:56,957 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 12:56:01,476 [INFO ]  No missing data after create_regions_df
+2016-11-09 12:56:01,691 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',        u'temperature',        u'cloudamount',
+         u'weathersituation',     u'mintemperature',     u'maxtemperature',
+        u'is_public_holiday',             u'region',          u'region_id',
+        u'is_school_holiday',        u'day_of_week',       u'day_of_month',
+              u'day_of_year',              u'month',               u'year',
+                    u'day_0',              u'day_1',              u'day_2',
+                    u'day_3',              u'day_4',              u'day_5',
+                    u'day_6',            u'month_1',            u'month_2',
+                  u'month_3',            u'month_4',            u'month_5',
+                  u'month_6',            u'month_7',            u'month_8',
+                  u'month_9',           u'month_10',           u'month_11',
+                 u'month_12',     u'public_holiday', u'not_public_holiday',
+           u'school_holiday', u'not_school_holiday'],
+      dtype='object')
+2016-11-09 12:56:01,692 [INFO ]  Start regularizing compensatedin
+2016-11-09 12:56:01,735 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 12:56:01,735 [INFO ]  Start regularizing temperature
+2016-11-09 12:56:01,763 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column temperature has been regularized for training set
+2016-11-09 12:56:01,764 [INFO ]  Start regularizing cloudamount
+2016-11-09 12:56:01,791 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 12:56:01,791 [INFO ]  Start regularizing weathersituation
+2016-11-09 12:56:01,818 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 12:56:01,819 [INFO ]  Start regularizing mintemperature
+2016-11-09 12:56:01,845 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 12:56:01,845 [INFO ]  Start regularizing maxtemperature
+2016-11-09 12:56:01,881 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 12:56:10,557 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] : finished preparing training set
+2016-11-09 12:56:17,733 [INFO ]  is_forecast : True : columns before reg : Index([u'index', u'date', u'date_time', u'idbldsite', u'region_id',
+       u'is_school_holiday', u'is_public_holiday', u'day_of_week',
+       u'day_of_month', u'day_of_year', u'month', u'year', u'day_0', u'day_1',
+       u'day_2', u'day_3', u'day_4', u'day_5', u'day_6', u'month_1',
+       u'month_2', u'month_3', u'month_4', u'month_5', u'month_6', u'month_7',
+       u'month_8', u'month_9', u'month_10', u'month_11', u'month_12',
+       u'public_holiday', u'not_public_holiday', u'school_holiday',
+       u'not_school_holiday', u'cloudamount', u'mintemperature',
+       u'maxtemperature', u'weathersituation'],
+      dtype='object')
+2016-11-09 12:56:17,734 [INFO ]  Start regularizing cloudamount
+2016-11-09 12:56:22,055 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for forecasts set
+2016-11-09 12:56:22,056 [INFO ]  Start regularizing mintemperature
+2016-11-09 12:56:26,269 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for forecasts set
+2016-11-09 12:56:26,269 [INFO ]  Start regularizing maxtemperature
+2016-11-09 12:56:30,568 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
+2016-11-09 12:56:30,568 [INFO ]  Start regularizing weathersituation
+2016-11-09 12:56:35,003 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set
+2016-11-09 12:56:35,903 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 12:56:35,904 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 12:56:47,397 [INFO ]  No missing data after merge_with_counts
+2016-11-09 12:56:47,463 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 12:56:47,489 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 12:56:47,489 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 12:56:51,021 [INFO ]  No missing data after create_regions_df
+2016-11-09 12:56:51,113 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',     u'maxtemperature',     u'mintemperature',
+         u'weathersituation',        u'cloudamount',  u'is_public_holiday',
+                   u'region',          u'region_id',  u'is_school_holiday',
+              u'day_of_week',       u'day_of_month',        u'day_of_year',
+                    u'month',               u'year',              u'day_0',
+                    u'day_1',              u'day_2',              u'day_3',
+                    u'day_4',              u'day_5',              u'day_6',
+                  u'month_1',            u'month_2',            u'month_3',
+                  u'month_4',            u'month_5',            u'month_6',
+                  u'month_7',            u'month_8',            u'month_9',
+                 u'month_10',           u'month_11',           u'month_12',
+           u'public_holiday', u'not_public_holiday',     u'school_holiday',
+       u'not_school_holiday'],
+      dtype='object')
+2016-11-09 12:56:51,114 [INFO ]  Start regularizing compensatedin
+2016-11-09 12:56:51,124 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 12:56:51,124 [INFO ]  Start regularizing maxtemperature
+2016-11-09 12:56:51,133 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 12:56:51,133 [INFO ]  Start regularizing mintemperature
+2016-11-09 12:56:51,142 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 12:56:51,142 [INFO ]  Start regularizing weathersituation
+2016-11-09 12:56:51,150 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 12:56:51,151 [INFO ]  Start regularizing cloudamount
+2016-11-09 12:56:51,158 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 12:56:51,517 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] : finished preparing training set
+2016-11-09 12:56:54,249 [INFO ]  is_forecast : True : columns before reg : Index([u'index', u'date', u'idbldsite', u'region_id', u'is_school_holiday',
+       u'is_public_holiday', u'day_of_week', u'day_of_month', u'day_of_year',
+       u'month', u'year', u'day_0', u'day_1', u'day_2', u'day_3', u'day_4',
+       u'day_5', u'day_6', u'month_1', u'month_2', u'month_3', u'month_4',
+       u'month_5', u'month_6', u'month_7', u'month_8', u'month_9', u'month_10',
+       u'month_11', u'month_12', u'public_holiday', u'not_public_holiday',
+       u'school_holiday', u'not_school_holiday', u'cloudamount',
+       u'mintemperature', u'maxtemperature', u'weathersituation'],
+      dtype='object')
+2016-11-09 12:56:54,250 [INFO ]  Start regularizing cloudamount
+2016-11-09 12:56:54,493 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for forecasts set
+2016-11-09 12:56:54,493 [INFO ]  Start regularizing mintemperature
+2016-11-09 12:56:54,673 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for forecasts set
+2016-11-09 12:56:54,673 [INFO ]  Start regularizing maxtemperature
+2016-11-09 12:56:54,849 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
+2016-11-09 12:56:54,849 [INFO ]  Start regularizing weathersituation
+2016-11-09 12:56:55,026 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set
+2016-11-09 12:56:55,068 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 12:57:13,168 [INFO ]  No missing data after merge_with_counts
+2016-11-09 12:57:13,228 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 12:57:13,253 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 12:57:13,254 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 12:57:17,800 [INFO ]  No missing data after create_regions_df
+2016-11-09 12:57:24,027 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 12:57:24,028 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 14:08:57,977 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:09:49,043 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:09:49,063 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:10:08,582 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:10:08,904 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:10:10,317 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 14:10:10,317 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 14:10:14,315 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:25:03,538 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:25:03,556 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:25:22,307 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:25:22,619 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:25:23,971 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 14:25:23,971 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 14:25:34,550 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:31:10,535 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:31:10,553 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:31:29,460 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:31:29,773 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:31:31,129 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 14:31:31,129 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 14:31:35,778 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:31:39,754 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',        u'temperature',        u'cloudamount',
+         u'weathersituation',     u'mintemperature',     u'maxtemperature',
+        u'is_public_holiday',             u'region',          u'region_id',
+        u'is_school_holiday',             u'volume',          u'customers',
+                 u'articles',        u'day_of_week',       u'day_of_month',
+              u'day_of_year',              u'month',               u'year',
+                    u'day_0',              u'day_1',              u'day_2',
+                    u'day_3',              u'day_4',              u'day_5',
+                    u'day_6',            u'month_1',            u'month_2',
+                  u'month_3',            u'month_4',            u'month_5',
+                  u'month_6',            u'month_7',            u'month_8',
+                  u'month_9',           u'month_10',           u'month_11',
+                 u'month_12',     u'public_holiday', u'not_public_holiday',
+           u'school_holiday', u'not_school_holiday'],
+      dtype='object')
+2016-11-09 14:31:39,796 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 14:31:39,834 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column temperature has been regularized for training set
+2016-11-09 14:31:39,876 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 14:31:39,930 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 14:31:39,988 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 14:31:40,037 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 14:32:36,445 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:32:36,463 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:32:55,412 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:32:55,723 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:32:57,082 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 14:32:57,083 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 14:33:02,356 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:33:06,315 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',        u'temperature',        u'cloudamount',
+         u'weathersituation',     u'mintemperature',     u'maxtemperature',
+        u'is_public_holiday',             u'region',          u'region_id',
+        u'is_school_holiday',             u'volume',          u'customers',
+                 u'articles',        u'day_of_week',       u'day_of_month',
+              u'day_of_year',              u'month',               u'year',
+                    u'day_0',              u'day_1',              u'day_2',
+                    u'day_3',              u'day_4',              u'day_5',
+                    u'day_6',            u'month_1',            u'month_2',
+                  u'month_3',            u'month_4',            u'month_5',
+                  u'month_6',            u'month_7',            u'month_8',
+                  u'month_9',           u'month_10',           u'month_11',
+                 u'month_12',     u'public_holiday', u'not_public_holiday',
+           u'school_holiday', u'not_school_holiday'],
+      dtype='object')
+2016-11-09 14:33:06,363 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 14:33:06,393 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column temperature has been regularized for training set
+2016-11-09 14:33:06,422 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 14:33:06,452 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 14:33:06,491 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 14:33:06,538 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 14:33:15,737 [INFO ]  DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15] : finished preparing training set
+2016-11-09 14:33:27,276 [INFO ]  is_forecast : True : columns before reg : Index([u'index', u'date', u'date_time', u'idbldsite', u'region_id',
+       u'is_school_holiday', u'is_public_holiday', u'day_of_week',
+       u'day_of_month', u'day_of_year', u'month', u'year', u'day_0', u'day_1',
+       u'day_2', u'day_3', u'day_4', u'day_5', u'day_6', u'month_1',
+       u'month_2', u'month_3', u'month_4', u'month_5', u'month_6', u'month_7',
+       u'month_8', u'month_9', u'month_10', u'month_11', u'month_12',
+       u'public_holiday', u'not_public_holiday', u'school_holiday',
+       u'not_school_holiday', u'cloudamount', u'mintemperature',
+       u'maxtemperature', u'weathersituation'],
+      dtype='object')
+2016-11-09 14:33:31,506 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for forecasts set
+2016-11-09 14:33:35,718 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for forecasts set
+2016-11-09 14:33:39,871 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
+2016-11-09 14:33:44,033 [INFO ]  datastore: DWE_CLOSED_2013 - period : H         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set
+2016-11-09 14:37:10,770 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:37:10,787 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:37:22,200 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:37:22,261 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:37:22,285 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:37:22,286 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:37:33,426 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:38:11,761 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:38:11,779 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:38:23,146 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:38:23,211 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:38:23,236 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:38:23,236 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:38:26,959 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:39:22,664 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:39:22,682 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:39:36,228 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:39:36,309 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:39:36,347 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:39:36,347 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:39:44,560 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:40:05,794 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:40:05,812 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:40:17,264 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:40:17,330 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:40:17,355 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:40:17,356 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:40:20,614 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:41:03,013 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:41:03,034 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:41:14,354 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:41:14,415 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:41:14,440 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:41:14,440 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:41:17,875 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:46:19,195 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:46:19,213 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:46:30,694 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:46:30,757 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:46:30,783 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:46:30,783 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:46:33,866 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:47:35,083 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:47:35,101 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:47:46,710 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:47:46,775 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:47:46,800 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:47:46,801 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:47:50,037 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:47:50,480 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',     u'maxtemperature',     u'mintemperature',
+         u'weathersituation',        u'cloudamount',  u'is_public_holiday',
+                   u'region',          u'region_id',  u'is_school_holiday',
+                       u'id',             u'volume',          u'customers',
+                 u'articles',        u'day_of_week',       u'day_of_month',
+              u'day_of_year',              u'month',               u'year',
+                    u'day_0',              u'day_1',              u'day_2',
+                    u'day_3',              u'day_4',              u'day_5',
+                    u'day_6',            u'month_1',            u'month_2',
+                  u'month_3',            u'month_4',            u'month_5',
+                  u'month_6',            u'month_7',            u'month_8',
+                  u'month_9',           u'month_10',           u'month_11',
+                 u'month_12',     u'public_holiday', u'not_public_holiday',
+           u'school_holiday', u'not_school_holiday'],
+      dtype='object')
+2016-11-09 14:47:50,488 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 14:47:50,496 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 14:47:50,503 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 14:47:50,510 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 14:47:50,517 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 14:48:33,399 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:48:33,417 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:48:44,982 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:48:45,046 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:48:45,072 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:48:45,072 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:49:03,759 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:49:04,221 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',     u'maxtemperature',     u'mintemperature',
+         u'weathersituation',        u'cloudamount',  u'is_public_holiday',
+                   u'region',          u'region_id',  u'is_school_holiday',
+                   u'volume',          u'customers',           u'articles',
+              u'day_of_week',       u'day_of_month',        u'day_of_year',
+                    u'month',               u'year',              u'day_0',
+                    u'day_1',              u'day_2',              u'day_3',
+                    u'day_4',              u'day_5',              u'day_6',
+                  u'month_1',            u'month_2',            u'month_3',
+                  u'month_4',            u'month_5',            u'month_6',
+                  u'month_7',            u'month_8',            u'month_9',
+                 u'month_10',           u'month_11',           u'month_12',
+           u'public_holiday', u'not_public_holiday',     u'school_holiday',
+       u'not_school_holiday'],
+      dtype='object')
+2016-11-09 14:49:04,230 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 14:49:04,237 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 14:49:04,244 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 14:49:04,250 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 14:49:04,258 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 14:49:04,638 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] : finished preparing training set
+2016-11-09 14:49:11,707 [INFO ]  is_forecast : True : columns before reg : Index([u'index', u'date', u'idbldsite', u'region_id', u'is_school_holiday',
+       u'is_public_holiday', u'day_of_week', u'day_of_month', u'day_of_year',
+       u'month', u'year', u'day_0', u'day_1', u'day_2', u'day_3', u'day_4',
+       u'day_5', u'day_6', u'month_1', u'month_2', u'month_3', u'month_4',
+       u'month_5', u'month_6', u'month_7', u'month_8', u'month_9', u'month_10',
+       u'month_11', u'month_12', u'public_holiday', u'not_public_holiday',
+       u'school_holiday', u'not_school_holiday', u'cloudamount',
+       u'mintemperature', u'maxtemperature', u'weathersituation'],
+      dtype='object')
+2016-11-09 14:49:11,970 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for forecasts set
+2016-11-09 14:49:12,151 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for forecasts set
+2016-11-09 14:49:12,328 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
+2016-11-09 14:49:12,503 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set
+2016-11-09 14:50:56,397 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 14:50:56,414 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 14:51:07,875 [INFO ]  No missing data after merge_with_counts
+2016-11-09 14:51:07,938 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 14:51:07,962 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 14:51:07,963 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 14:51:16,545 [INFO ]  No missing data after create_regions_df
+2016-11-09 14:51:17,171 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',     u'maxtemperature',     u'mintemperature',
+         u'weathersituation',        u'cloudamount',  u'is_public_holiday',
+                   u'region',          u'region_id',  u'is_school_holiday',
+                   u'volume',          u'customers',           u'articles',
+              u'day_of_week',       u'day_of_month',        u'day_of_year',
+                    u'month',               u'year',              u'day_0',
+                    u'day_1',              u'day_2',              u'day_3',
+                    u'day_4',              u'day_5',              u'day_6',
+                  u'month_1',            u'month_2',            u'month_3',
+                  u'month_4',            u'month_5',            u'month_6',
+                  u'month_7',            u'month_8',            u'month_9',
+                 u'month_10',           u'month_11',           u'month_12',
+           u'public_holiday', u'not_public_holiday',     u'school_holiday',
+       u'not_school_holiday'],
+      dtype='object')
+2016-11-09 14:51:17,179 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 14:51:17,186 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 14:51:17,193 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 14:51:17,200 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 14:51:17,207 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 14:51:17,587 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] : finished preparing training set
+2016-11-09 14:51:21,362 [INFO ]  is_forecast : True : columns before reg : Index([u'index', u'date', u'idbldsite', u'region_id', u'is_school_holiday',
+       u'is_public_holiday', u'day_of_week', u'day_of_month', u'day_of_year',
+       u'month', u'year', u'day_0', u'day_1', u'day_2', u'day_3', u'day_4',
+       u'day_5', u'day_6', u'month_1', u'month_2', u'month_3', u'month_4',
+       u'month_5', u'month_6', u'month_7', u'month_8', u'month_9', u'month_10',
+       u'month_11', u'month_12', u'public_holiday', u'not_public_holiday',
+       u'school_holiday', u'not_school_holiday', u'cloudamount',
+       u'mintemperature', u'maxtemperature', u'weathersituation'],
+      dtype='object')
+2016-11-09 14:51:21,625 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for forecasts set
+2016-11-09 14:51:21,806 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for forecasts set
+2016-11-09 14:51:21,984 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
+2016-11-09 14:51:22,163 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set
+2016-11-09 15:01:32,676 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:02:14,819 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:02:29,930 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:20:31,667 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:27:06,495 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 15:27:06,512 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:27:18,152 [INFO ]  No missing data after merge_with_counts
+2016-11-09 15:27:18,217 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 15:27:18,243 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 15:27:18,243 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 15:27:23,399 [INFO ]  No missing data after create_regions_df
+2016-11-09 15:28:13,574 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 15:28:13,595 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:28:25,191 [INFO ]  No missing data after merge_with_counts
+2016-11-09 15:28:25,253 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 15:28:25,277 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 15:28:25,277 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 15:28:28,441 [INFO ]  No missing data after create_regions_df
+2016-11-09 15:28:47,351 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] prepare new training set...
+2016-11-09 15:28:47,369 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 15:28:59,039 [INFO ]  No missing data after merge_with_counts
+2016-11-09 15:28:59,102 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 15:28:59,127 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 15:28:59,127 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-09 15:29:02,342 [INFO ]  No missing data after create_regions_df
+2016-11-09 15:29:02,801 [INFO ]  is_forecast : False : columns before reg : Index([             u'index',          u'idbldsite',           u'latitude',
+                u'longitude',      u'compensatedin',               u'date',
+                u'date_time',     u'maxtemperature',     u'mintemperature',
+         u'weathersituation',        u'cloudamount',  u'is_public_holiday',
+                   u'region',          u'region_id',  u'is_school_holiday',
+                   u'volume',          u'customers',           u'articles',
+              u'day_of_week',       u'day_of_month',        u'day_of_year',
+                    u'month',               u'year',              u'day_0',
+                    u'day_1',              u'day_2',              u'day_3',
+                    u'day_4',              u'day_5',              u'day_6',
+                  u'month_1',            u'month_2',            u'month_3',
+                  u'month_4',            u'month_5',            u'month_6',
+                  u'month_7',            u'month_8',            u'month_9',
+                 u'month_10',           u'month_11',           u'month_12',
+           u'public_holiday', u'not_public_holiday',     u'school_holiday',
+       u'not_school_holiday'],
+      dtype='object')
+2016-11-09 15:29:02,808 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column compensatedin has been regularized for training set
+2016-11-09 15:29:02,816 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for training set
+2016-11-09 15:29:02,823 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for training set
+2016-11-09 15:29:02,830 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for training set
+2016-11-09 15:29:02,838 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for training set
+2016-11-09 15:29:03,226 [INFO ]  DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15] : finished preparing training set
+2016-11-09 15:29:09,899 [INFO ]  is_forecast : True : columns before reg : Index([u'index', u'date', u'idbldsite', u'region_id', u'is_school_holiday',
+       u'is_public_holiday', u'day_of_week', u'day_of_month', u'day_of_year',
+       u'month', u'year', u'day_0', u'day_1', u'day_2', u'day_3', u'day_4',
+       u'day_5', u'day_6', u'month_1', u'month_2', u'month_3', u'month_4',
+       u'month_5', u'month_6', u'month_7', u'month_8', u'month_9', u'month_10',
+       u'month_11', u'month_12', u'public_holiday', u'not_public_holiday',
+       u'school_holiday', u'not_school_holiday', u'cloudamount',
+       u'mintemperature', u'maxtemperature', u'weathersituation'],
+      dtype='object')
+2016-11-09 15:29:10,264 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column cloudamount has been regularized for forecasts set
+2016-11-09 15:29:10,460 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column mintemperature has been regularized for forecasts set
+2016-11-09 15:29:10,637 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column maxtemperature has been regularized for forecasts set
+2016-11-09 15:29:10,816 [INFO ]  datastore: DWE_CLOSED_2013 - period : D         [2016-11-09 to 2017-01-15]: column weathersituation has been regularized for forecasts set

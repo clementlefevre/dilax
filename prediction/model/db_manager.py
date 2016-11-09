@@ -33,3 +33,4 @@ class DB_manager(object):
         self.weather_intraday = self._query(
             "dwe_ext_weather_meteogroup_intraday")
         self.public_holidays = self._query("dwe_cal_holiday")
+        self.conversion = self._query("dwe_ext_conversion")

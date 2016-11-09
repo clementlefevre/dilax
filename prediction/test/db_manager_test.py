@@ -11,6 +11,7 @@ def db_manager():
 
 def test_connection(db_manager):
     assert db_manager.engine is not None
+    db_manager.conversion.to_csv("data/test_conversion.csv", sep=";")
 
 
 def test_queries(db_manager):

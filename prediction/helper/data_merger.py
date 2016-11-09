@@ -8,6 +8,7 @@ from helper.data_helper import check_missing_data, round_to_nearest_hour,\
     reindex_weather_intraday, add_idbldsite_to_weather_data
 from service.school_holidays_service import add_school_holidays
 from service.public_holidays_service import add_public_holidays
+from service.conversion_service import merge_with_conversion
 
 
 def merge_tables(datastore):
@@ -25,6 +26,9 @@ def merge_tables(datastore):
     datastore.training_data = merge_with_public_holidays(datastore)
     datastore.training_data = merge_with_regions(datastore)
     datastore.training_data = merge_with_school_holidays(datastore)
+    datastore.training_data.to_csv("data/test_training_before_conversion", sep=";",
+                                   encoding="utf-8")
+    datastore.training_data = merge_with_conversion(datastore)
     return datastore.training_data
 
 
