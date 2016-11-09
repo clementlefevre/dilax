@@ -188,9 +188,17 @@ def regularize(datastore, df, is_forecast=False):
         TYPE: Description
     """
     df = df.reset_index()
+    logging.info("is_forecast : {0} : columns before reg : {1}".format(
+        is_forecast, df.columns))
+    try:
+        df = df.drop('level_0', 1)
+    except ValueError as e:
+        print e.args
 
     for col in df.columns.tolist():
+
         if config_manager.features[col]:
+            logging.info("Start regularizing {}".format(col))
             if not is_forecast:
 
                 df[col + "_reg"] = df.groupby('idbldsite')[col].apply(

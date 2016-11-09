@@ -31,7 +31,7 @@ class Data_store(object):
     def create_forecasts(self):
         self.forecasts = create_forecasts_data(self)
         self.forecasts.to_csv(
-            self.file_names['forecasts_set'], encoding='utf-8')
+            self.file_names['forecasts_set'], encoding='utf-8', sep=';')
 
     def _training_set_(self):
 
@@ -43,9 +43,9 @@ class Data_store(object):
             self.training_data = regularize(
                 self, self.training_data)
             self.training_data.to_csv(
-                self.file_names['training_set'], encoding='utf-8')
+                self.file_names['training_set'], encoding='utf-8', sep=';')
             self.sites_infos.to_csv(
-                self.file_names['sites_info'], encoding='utf-8')
+                self.file_names['sites_info'], encoding='utf-8', sep=';')
             logging.info("{0} : finished preparing training set".format(self))
         else:
             try:

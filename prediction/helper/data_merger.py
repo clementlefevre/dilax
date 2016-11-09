@@ -2,12 +2,12 @@
 """
 import inspect
 from datetime import datetime
-from data_helper import match_coordinates
 from service.geocoding_API_service import create_regions_df
 from helper import pd, logging
 from helper.data_helper import check_missing_data, round_to_nearest_hour,\
     reindex_weather_intraday, add_idbldsite_to_weather_data
 from service.school_holidays_service import add_school_holidays
+from service.public_holidays_service import add_public_holidays
 
 
 def merge_tables(datastore):
@@ -132,28 +132,36 @@ def merge_with_weather_hour(datastore):
     datastore.training_data[
         'date_'] = datastore.training_data['date_time'].dt.date
 
-    df_sites_counts_weather_day = pd.merge(datastore.training_data,
-                                           df_weather_hour,
-                                           left_on=['idbldsite', 'date_', 'hour'
-                                                    ],
-                                           right_on=['idbldsite',
-                                                     'date_', 'hour'],
-                                           how='left',
-                                           suffixes=['_sites', '_weather'],
-                                           indicator=True)
+    df_sites_counts_weather_hour = pd.merge(datastore.training_data,
+                                            df_weather_hour,
+                                            left_on=['idbldsite',
+                                                     'date_',
+                                                     'hour'],
+                                            right_on=['idbldsite',
+                                                      'date_', 'hour'],
+                                            how='left',
+                                            suffixes=['_sites', '_weather'],
+                                            indicator=True)
 
-    df_sites_counts_weather_day = check_missing_data(df_sites_counts_weather_day,
-                                                     "left_only",
-                                                     inspect.currentframe().f_code.co_name)
+    df_sites_counts_weather_hour = check_missing_data(df_sites_counts_weather_hour,
+                                                      "left_only",
+                                                      inspect.currentframe().f_code.co_name)
 
-    df_sites_counts_weather_day.rename(columns={'latitude_sites': 'latitude',
-                                                'longitude_sites': 'longitude'}, inplace=True)
-    df_sites_counts_weather_day = df_sites_counts_weather_day[['idbldsite', 'latitude', 'longitude',
-                                                               'compensatedin', 'date', 'date_time',
-                                                               'temperature', 'cloudamount', 'weathersituation']]
+    df_sites_counts_weather_hour.rename(columns={'latitude_sites': 'latitude',
+                                                 'longitude_sites': 'longitude'}, inplace=True)
+    df_sites_counts_weather_hour = df_sites_counts_weather_hour[['idbldsite', 'latitude', 'longitude',
+                                                                 'compensatedin', 'date', 'date_time',
+                                                                 'temperature', 'cloudamount', 'weathersituation']]
+
+    # The intraday weather data have no min/max. But the weather Forecast API
+    # does.
+    df_sites_counts_weather_hour[
+        'mintemperature'] = df_sites_counts_weather_hour.temperature
+    df_sites_counts_weather_hour[
+        'maxtemperature'] = df_sites_counts_weather_hour.temperature
 
     # df_sites_counts_weather_day.to_csv('data/test_merge_weather_hour.csv')
-    return df_sites_counts_weather_day
+    return df_sites_counts_weather_hour
 
 
 def merge_with_weather_day(datastore):
@@ -200,27 +208,10 @@ def merge_with_weather_day(datastore):
 
 
 def merge_with_public_holidays(datastore):
-    """Summary
+    datastore.training_data = add_public_holidays(
+        datastore.training_data, datastore)
 
-    Args:
-        datastore (TYPE): Description
-
-    Returns:
-        TYPE: Description
-    """
-    df_holidays = datastore.db.public_holidays
-    df_holidays = df_holidays[['idbldsite', 'day']]
-
-    df_with_public_holidays = pd.merge(datastore.training_data, df_holidays,
-                                       left_on=['idbldsite',
-                                                'date'],
-                                       right_on=['idbldsite', 'day'],
-                                       how='left',
-                                       suffixes=['_counts', '_holidays'])
-    df_with_public_holidays[
-        'is_public_holiday'] = ~df_with_public_holidays.day.isnull() * 1
-    df_with_public_holidays = df_with_public_holidays.drop('day', 1)
-    return df_with_public_holidays
+    return datastore.training_data
 
 
 def merge_with_regions(datastore):

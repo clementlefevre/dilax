@@ -13,8 +13,10 @@ def add_weather_forecasts(datastore, df):
     site_id = df.idbldsite.unique()[0]
     site_infos = (datastore.sites_infos_dict[site_id])
     coordinates = (site_infos['latitude'], site_infos['longitude'])
+
     df_weather = get_weather_forecasts(
         config_manager.weather_API, *coordinates)
+
     df = pd.merge(
         df, df_weather[['date', 'ne', 'tn', 'tx', 'ww']],
         on='date', how='left')
