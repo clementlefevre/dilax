@@ -12,7 +12,7 @@ def datastore():
 
     dateparse = lambda x: pd.datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
 
-    datastore.period = 'H'
+    datastore.period = 'D'
 
     datastore.db.sites = pd.read_csv(
         'test/data/sites_sample3.csv', sep=';')
@@ -31,20 +31,6 @@ def datastore():
         'test/data/public_holidays_sample3.csv', sep=";",
         parse_dates=['day'])
     return datastore
-
-
-def test_merge_with_counts(datastore, caplog):
-    df_merged = merge_with_counts(datastore)
-    log = caplog.text()
-    assert 'No data found for' in log
-
-
-def test_merge_with_weather_day(datastore, caplog):
-    datastore.training_data = merge_with_counts(datastore)
-    df_merged = merge_with_weather(datastore)
-    log = caplog.text()
-
-    assert 'after merge_with_weather' in log
 
 
 def test_merge(datastore, caplog):

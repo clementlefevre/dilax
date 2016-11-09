@@ -122,8 +122,6 @@ def merge_with_weather_hour(datastore):
         ['idbldsite',
          'latitude',
          'longitude',
-
-
          'compensatedin',
          'date', 'date_time']]
 
@@ -170,23 +168,19 @@ def merge_with_weather_day(datastore):
     df_weather_day.rename(
         columns={'day': 'date'}, inplace=True)
 
-    datastore = match_coordinates(datastore, df_weather_day)
+    df_weather_day = add_idbldsite_to_weather_data(datastore, df_weather_day)
     datastore.training_data = datastore.training_data[
         ['idbldsite',
          'latitude',
          'longitude',
-         'latitude_closest',
-         'longitude_closest',
          'compensatedin',
          'date', 'date_time']]
 
     df_sites_counts_weather_day = pd.merge(datastore.training_data,
                                            df_weather_day,
-                                           left_on=['latitude_closest',
-                                                    'longitude_closest',
+                                           left_on=['idbldsite',
                                                     'date'],
-                                           right_on=['latitude',
-                                                     'longitude', 'date'],
+                                           right_on=['idbldsite', 'date'],
                                            how='left',
                                            suffixes=['_sites', '_weather'],
                                            indicator=True)
@@ -195,8 +189,9 @@ def merge_with_weather_day(datastore):
                                                      "left_only",
                                                      inspect.currentframe().f_code.co_name)
 
-    df_sites_counts_weather_day = df_sites_counts_weather_day.drop(
-        ['latitude_closest', 'longitude_closest', 'latitude_weather', 'longitude_weather'], 1)
+    df_sites_counts_weather_day = df_sites_counts_weather_day[['idbldsite', 'latitude_sites', 'longitude_sites', 'compensatedin',
+                                                               'date', 'date_time', 'maxtemperature', 'mintemperature',
+                                                               'weathersituation', 'cloudamount']]
 
     df_sites_counts_weather_day.rename(columns={'latitude_sites': 'latitude',
                                                 'longitude_sites': 'longitude'}, inplace=True)
