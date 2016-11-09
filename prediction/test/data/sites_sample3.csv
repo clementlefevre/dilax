@@ -1,0 +1,13 @@
+;idbldsite;sname;imaxoccupancy;iwarnoccupancy;timezone;latitude;longitude;shopnumber;haswifi;hascapturerate;calibrationend;emailthresholdalarm;phonenumberthresholdalarm;languagethresholdalarm;hasconversionrate;logo;deactivated;companynumber;hasagegroupsensors;sqm;hasbuyingcouple;resettime;datagapsalarm;zone42r_region;zone42r_store;compensation_at_reset_time;zone42r_region_passersby
+0;12;Stuttgart;;;Europe/Berlin;48.7766305;9.1763305;23;False;False;2016-05-14;;;en;True;customer.jpg;False;;False;;False;180;False;;;False;
+1;1;Hamburg City;;;Europe/Berlin;53.550842;9.995385;7;False;False;2013-09-18;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+2;2;Hamburg AEZ;;;Europe/Berlin;53.654227;10.091736;6;False;False;2014-08-27;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+3;3;Muenchen Damen;;;Europe/Berlin;48.142641;11.576903;2;False;False;2014-09-06;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+4;4;Muenchen Herren;;;Europe/Berlin;48.142641;11.576903;3;False;False;2014-09-06;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+5;5;Duesseldorf Herren;;;Europe/Berlin;51.224403;6.774598;18;False;False;2014-09-10;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+6;6;Duesseldorf Damen;;;Europe/Berlin;51.224403;6.774598;17;False;False;2014-09-10;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+7;7;Wiesbaden;;;Europe/Berlin;50.081434;8.244644;22;False;False;2014-09-13;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+8;8;Bikini Berlin;;;Europe/Berlin;52.505482;13.335294;20;False;False;2014-09-24;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+9;9;Osnabrueck;;;Europe/Berlin;52.276045;8.043023;28;False;False;2014-09-26;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+10;10;Nuernberg;;;Europe/Berlin;49.452291;11.074521;10;False;False;2015-02-06;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;
+11;11;Frankfurt MTZ;;;Europe/Berlin;50.1109221;8.6821267;26;False;False;2015-03-31;;;de;True;customer.jpg;False;;False;;False;180;False;;;False;

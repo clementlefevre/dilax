@@ -4266,3 +4266,2457 @@ Name: _merge, dtype: int64
 15    1
 16    1
 Name: _merge, dtype: int64
+2016-11-09 02:28:23,584 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 02:42:58,882 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:42:58,883 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:42:59,128 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:42:59,128 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:00,608 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 02:43:00,630 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 02:43:00,630 [WARNI]  idbldsite
+9     193
+10    193
+12    193
+Name: _merge, dtype: int64
+2016-11-09 02:43:00,878 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:00,878 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:07,065 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 02:43:07,065 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:19,509 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:19,509 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:19,750 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:19,750 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:21,222 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 02:43:21,239 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 02:43:21,240 [WARNI]  idbldsite
+9     193
+10    193
+12    193
+Name: _merge, dtype: int64
+2016-11-09 02:43:21,476 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:21,477 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:26,146 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 02:43:26,146 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:55,673 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:55,674 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:55,928 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:55,928 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:43:56,260 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:43:56,260 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:44:02,098 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 02:44:02,098 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 02:58:12,981 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:58:12,981 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:58:13,160 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:58:13,160 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:58:13,386 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:58:13,386 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:58:19,342 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 02:58:19,342 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 02:59:31,667 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:59:31,667 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:59:31,856 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:59:31,857 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:59:32,104 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 02:59:32,105 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 02:59:38,593 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 02:59:38,593 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:00:19,924 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:00:19,924 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:00:20,204 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:00:20,205 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:00:20,545 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:00:20,545 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:00:22,204 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:00:29,156 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:00:29,157 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:03:32,455 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:03:32,455 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:03:32,632 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:03:32,632 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:03:32,862 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:03:32,862 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:03:34,058 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:03:39,469 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:03:39,470 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:07:44,715 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 03:08:09,749 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 03:08:37,668 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 03:09:49,874 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:09:49,874 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:09:50,057 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:09:50,058 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:09:50,288 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:09:50,288 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:09:51,489 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:09:56,910 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:09:56,910 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:12:08,136 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:12:08,137 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:12:08,321 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:12:08,321 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:12:08,551 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:12:08,552 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:12:09,737 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:12:15,571 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:12:15,571 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:13:17,320 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 03:15:28,843 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 03:17:12,635 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:17:12,635 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:17:12,819 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:17:12,819 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:17:13,050 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:17:13,051 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:17:14,269 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:17:14,280 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:17:14,280 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:17:20,376 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:17:20,376 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:17:25,873 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:17:25,873 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:19:23,709 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:19:23,710 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:19:23,886 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:19:23,887 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:19:25,077 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:19:25,088 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:19:25,089 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:19:25,297 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:19:25,297 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:19:26,481 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:19:26,492 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:19:26,492 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:19:30,045 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:19:30,046 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:19:34,823 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:19:34,824 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:25:18,328 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:25:18,328 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:25:18,504 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:25:18,504 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:25:19,694 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:25:19,705 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:25:19,705 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:25:19,881 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:25:19,881 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:25:21,058 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:25:21,069 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:25:21,069 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:25:26,148 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:25:26,149 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:25:31,079 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:25:31,080 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:29:29,660 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:29:29,661 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:29:29,836 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:29:29,836 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:29:31,020 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:29:31,031 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:29:31,032 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:29:31,234 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:29:31,234 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:29:32,426 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:29:32,437 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:29:32,437 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:29:36,014 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:29:36,014 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:29:40,886 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:29:40,886 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:30:34,466 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:30:34,467 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:30:34,647 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:30:34,647 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:30:35,851 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:30:35,862 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:30:35,862 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:30:36,037 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:30:36,037 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:30:37,221 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:30:37,232 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:30:37,232 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:30:44,661 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:30:44,662 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:30:49,583 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:30:49,584 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:34:17,926 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:34:17,926 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:34:18,104 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:34:18,105 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:34:19,287 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:34:19,347 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:34:19,347 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:34:19,523 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:34:19,523 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:34:20,704 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:34:20,762 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:34:20,762 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:34:32,430 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:34:32,430 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:34:37,880 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:34:37,880 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:37:25,913 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:37:25,914 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:37:26,089 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:37:26,089 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:37:27,272 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:37:27,297 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:37:27,297 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:37:27,472 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:37:27,472 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:37:28,645 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:37:28,670 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:37:28,670 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:37:32,312 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:37:32,312 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:37:45,256 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:37:45,256 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:42:29,103 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:42:29,106 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:42:29,293 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:42:29,294 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:42:30,516 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:42:30,559 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:42:30,559 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:42:30,743 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:42:30,743 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:42:31,961 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:42:32,007 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:42:32,007 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:42:36,478 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:42:36,479 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:42:41,307 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:42:41,308 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:44:13,084 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:44:13,085 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:44:13,269 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:44:13,269 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:44:14,531 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:44:14,542 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:44:14,543 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:44:14,717 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:44:14,718 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:44:15,906 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:44:15,917 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:44:15,918 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:44:20,708 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:44:20,708 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:44:28,149 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:44:28,149 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:45:20,602 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:45:20,602 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:45:20,784 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:45:20,784 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:45:21,986 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:45:21,997 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:45:21,998 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:45:22,175 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:45:22,177 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:45:23,375 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:45:23,386 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:45:23,387 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:45:29,124 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:45:29,125 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:45:34,188 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:45:34,188 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:36,846 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:47:36,846 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:37,022 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:47:37,023 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:37,297 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:47:37,297 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:42,726 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:47:42,727 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:54,888 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:47:54,888 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:55,064 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:47:55,064 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:56,188 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:47:56,199 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:47:56,199 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:47:56,375 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:47:56,375 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:47:57,494 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:47:57,506 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:47:57,506 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:48:01,169 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:48:01,170 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:48:06,009 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:48:06,010 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:51:21,067 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:51:21,067 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:51:21,131 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:51:21,131 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:51:21,229 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:51:21,238 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 03:51:21,239 [WARNI]  idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64
+2016-11-09 03:51:21,302 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:51:21,302 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:51:21,393 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:51:21,404 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-09 03:51:21,404 [WARNI]  idbldsite
+9     8
+10    8
+12    8
+Name: _merge, dtype: int64
+2016-11-09 03:51:25,432 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:51:25,432 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:51:30,881 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:51:30,881 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:52:33,084 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:52:33,084 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:52:33,269 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:52:33,269 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:52:34,465 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:52:34,493 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:52:34,493 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:52:34,688 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:52:34,689 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:52:35,904 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:52:35,934 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:52:35,935 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:52:40,084 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:52:40,085 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:52:46,251 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:52:46,252 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:58:48,959 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:58:48,960 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:58:49,141 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:58:49,141 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:58:50,261 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:58:50,273 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:58:50,273 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:58:50,450 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:58:50,450 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:58:51,571 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:58:51,583 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 03:58:51,583 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 03:58:55,464 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:58:55,464 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:59:01,066 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:59:01,067 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 03:59:53,051 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:59:53,051 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:59:53,229 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:59:53,229 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:59:54,341 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:59:54,373 [INFO ]  No missing data after merge_with_weather_hour
+2016-11-09 03:59:54,562 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 03:59:54,563 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 03:59:55,667 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 03:59:55,697 [INFO ]  No missing data after merge_with_weather_hour
+2016-11-09 03:59:59,312 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 03:59:59,312 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:00:04,138 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:00:04,139 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+11    1
+12    1
+14    1
+15    1
+16    1
+Name: _merge, dtype: int64
+2016-11-09 04:01:18,637 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:01:18,637 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:01:19,753 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:01:19,789 [INFO ]  No missing data after merge_with_weather_hour
+2016-11-09 04:01:23,424 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:01:23,425 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:03:21,932 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:03:21,932 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:03:23,059 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:03:23,102 [INFO ]  No missing data after merge_with_weather_hour
+2016-11-09 04:03:26,677 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:03:26,678 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:05:17,559 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:05:17,560 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:05:18,688 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:05:18,707 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:05:18,707 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:05:22,587 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:05:22,588 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:08:00,802 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:08:00,802 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:08:02,064 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:08:02,126 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:08:02,127 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:08:09,105 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:08:09,106 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:08:53,706 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 04:08:58,108 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 04:12:21,742 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:12:21,742 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:12:22,951 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:12:22,975 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:12:22,975 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:12:27,469 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:12:27,469 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:13:52,098 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 04:25:31,388 [INFO ]  engine createdEngine(postgresql://dwe-arcadia:***@localhost:5432/DWE_ARCADIA_2015)
+2016-11-09 04:28:12,613 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:28:12,614 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:28:13,738 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:28:26,781 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:28:26,781 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:28:27,918 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:28:27,985 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:28:27,985 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:28:33,043 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:28:33,043 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:29:54,146 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:29:54,146 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:29:55,288 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:29:55,366 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:29:55,366 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:30:01,158 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:30:01,159 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:30:07,336 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:30:07,336 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:30:08,470 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:30:08,552 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:30:08,552 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:30:12,103 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:30:12,104 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:31:49,856 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:31:49,856 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:31:51,023 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:31:51,101 [INFO ]  No missing data after merge_with_weather_hour
+2016-11-09 04:31:54,849 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:31:54,850 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:33:54,691 [WARNI]  after merge_with_counts : No data found for :
+2016-11-09 04:33:54,692 [WARNI]  idbldsite
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+13    1
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:33:55,845 [WARNI]  Those sites are too far from weather coordinate for matching :[]
+2016-11-09 04:33:55,939 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 04:33:55,939 [WARNI]  idbldsite
+9     865
+10    865
+12    865
+Name: _merge, dtype: int64
+2016-11-09 04:33:59,444 [WARNI]  after create_regions_df : No data found for :
+2016-11-09 04:33:59,445 [WARNI]  idbldsite
+14    1
+Name: _merge, dtype: int64
+2016-11-09 04:41:33,136 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 04:42:12,063 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 04:50:04,532 [INFO ]  No missing data after merge_with_counts
+2016-11-09 04:50:27,107 [INFO ]  No missing data after merge_with_counts
+2016-11-09 05:26:59,898 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:32:05,060 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:41:03,603 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:44:28,935 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:45:07,723 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:46:11,154 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:47:25,012 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 05:47:35,194 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:08:27,914 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:08:28,199 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:09:17,346 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:09:17,650 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:10:59,525 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:10:59,806 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:11:02,777 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:11:02,777 [WARNI]  idbldsite
+1     15658
+2      6612
+3      6442
+4      6441
+5      4252
+6      4252
+7      6277
+8      4236
+9      5472
+10     6750
+11     2174
+12       11
+Name: _merge, dtype: int64
+2016-11-09 06:12:34,006 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:12:34,293 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:12:37,014 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:12:37,014 [WARNI]  idbldsite
+1     15658
+2      6612
+3      6442
+4      6441
+5      4252
+6      4252
+7      6277
+8      4236
+9      5472
+10     6750
+11     2174
+12       11
+Name: _merge, dtype: int64
+2016-11-09 06:12:42,758 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:16:33,959 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:16:34,246 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:16:37,001 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:16:37,001 [WARNI]  idbldsite
+1     15658
+2      6612
+3      6442
+4      6441
+5      4252
+6      4252
+7      6277
+8      4236
+9      5472
+10     6750
+11     2174
+12       11
+Name: _merge, dtype: int64
+2016-11-09 06:16:41,245 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:18:02,924 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:18:03,206 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:18:04,636 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:18:04,636 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:18:12,276 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:21:55,946 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:21:56,318 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:21:58,371 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:21:58,372 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:25:40,323 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:25:40,681 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:25:42,241 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:25:42,242 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:25:48,996 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:28:31,143 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:28:31,427 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:28:32,820 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:28:32,820 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:29:08,837 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:29:09,116 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:29:10,483 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:29:10,483 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:29:16,094 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:31:12,648 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:31:12,928 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:31:14,306 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:31:14,307 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:31:17,624 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:33:31,900 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:33:32,180 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:33:33,542 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:33:33,542 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:34:05,058 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:34:05,343 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:34:06,724 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:34:06,724 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:37:12,768 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:37:13,048 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:37:14,419 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:37:14,419 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:37:17,988 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:38:17,188 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:38:17,466 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:38:18,826 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:38:18,826 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:38:30,150 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:42:41,522 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:42:41,807 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:42:43,196 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:42:43,197 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:42:48,522 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:48:07,242 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:48:07,518 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:48:08,883 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:48:08,883 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:48:16,361 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:50:22,640 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:50:22,955 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:50:24,441 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:50:24,441 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:50:31,866 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:51:47,216 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:51:47,498 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:51:48,926 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:51:48,926 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:51:56,394 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:54:03,818 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:54:04,098 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:54:05,492 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:54:05,493 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:54:13,011 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:55:32,109 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:55:32,389 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:55:33,753 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:55:33,754 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:55:41,100 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:56:28,205 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:56:28,484 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:56:30,121 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:56:30,121 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:56:38,180 [INFO ]  No missing data after create_regions_df
+2016-11-09 06:57:38,392 [INFO ]  No missing data after merge_with_counts
+2016-11-09 06:57:38,669 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 06:57:40,039 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 06:57:40,039 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 06:57:47,303 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:00:35,988 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:00:36,269 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:00:37,710 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:00:37,711 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:01:35,365 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:01:35,646 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:01:37,034 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:01:37,035 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:01:45,497 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:03:54,328 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:03:54,608 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:03:56,017 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:03:56,018 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:04:04,353 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:08:28,155 [INFO ]  engine createdEngine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-09 07:08:33,395 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:08:33,833 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:08:35,658 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:08:35,659 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:08:38,954 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:08:47,438 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:13:23,685 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:13:23,969 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:13:25,407 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:13:25,407 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:13:44,181 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:17:21,551 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:17:21,832 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:17:23,223 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:17:23,223 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:17:32,620 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:19:09,464 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:19:09,857 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:19:11,784 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:19:11,785 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:19:27,561 [INFO ]  No missing data after create_regions_df
+2016-11-09 07:22:38,230 [INFO ]  No missing data after merge_with_counts
+2016-11-09 07:22:38,618 [WARNI]  ("'DataFrame' object has no attribute 'idbldsite'",)
+2016-11-09 07:22:40,491 [WARNI]  after merge_with_weather_hour : No data found for :
+2016-11-09 07:22:40,492 [WARNI]  idbldsite
+1     15678
+2      6633
+3      6462
+4      6461
+5      4272
+6      4272
+7      6298
+8      4257
+9      5492
+10     6767
+11     2195
+12       25
+Name: _merge, dtype: int64
+2016-11-09 07:22:48,836 [INFO ]  No missing data after create_regions_df

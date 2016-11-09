@@ -1,5 +1,6 @@
 
 import numpy as np
+import pandas as pd
 from math import radians, cos, sin, asin, sqrt
 import datetime
 from model.config_manager import Config_manager
@@ -45,25 +46,44 @@ def haversine(lon1, lat1, lon2, lat2):
     return km
 
 
-def match_coordinates(datastore, df):
-    datastore.training_data['latitude_closest'] =\
-        datastore.training_data.latitude.apply(
+def add_idbldsite_to_weather_data(datastore, df):
+    weather_coordinates = df[['latitude', 'longitude']].drop_duplicates()
+    df_sites = datastore.db.sites
+    weather_coordinates_matched = match_coordinates(
+        weather_coordinates, df_sites)
+
+    weather_coordinates_matched_sites = pd.merge(weather_coordinates_matched, df_sites, left_on=[
+        'latitude_closest', 'longitude_closest'], right_on=['latitude', 'longitude'])
+
+    weather_coordinates_matched_sites = weather_coordinates_matched_sites[
+        ['idbldsite', 'latitude_x', 'longitude_x']]
+    df = pd.merge(df, weather_coordinates_matched_sites, left_on=['latitude', 'longitude'],
+                  right_on=['latitude_x', 'longitude_x'])
+
+    return df
+
+
+def match_coordinates(df0, df):
+
+    df0['latitude_closest'] = df0.latitude.apply(
         lambda x: get_nearest_coordinate(x, df.latitude))
 
-    datastore.training_data['longitude_closest'] =\
-        datastore.training_data.longitude.apply(
+    df0['longitude_closest'] = df0.longitude.apply(
         lambda x: get_nearest_coordinate(x, df.longitude))
 
-    datastore.training_data['distance_site_to_weather'] = datastore.training_data.apply(
+    df0['distance_site_to_weather'] = df0.apply(
         lambda x: haversine(x.latitude, x.longitude, x.latitude_closest, x.longitude_closest), axis=1)
 
-    sites_weather_too_far = datastore.training_data[
-        datastore.training_data.distance_site_to_weather > 20].idbldsite.unique()
+    try:
+        sites_weather_too_far = df0[
+            df0.distance_site_to_weather > 20].idbldsite.unique()
 
-    logging.warning("Those sites are too far from weather coordinate for matching :{}".format(
-        sites_weather_too_far))
+        logging.warning("Those sites are too far from weather coordinate for matching :{}".format(
+            sites_weather_too_far))
+    except AttributeError as e:
+        logging.warning(e.args)
 
-    return datastore
+    return df0
 
 
 def reindex_weather_intraday(df_weather_hour):
@@ -75,8 +95,7 @@ def reindex_weather_intraday(df_weather_hour):
 
     date_range = pd.date_range(df_weather_hour.timestamp.min(
     ), df_weather_hour.timestamp.max(), freq='H')
-    print date_range
-    print df_weather_hour.shape
+
     df_weather_hour_clean = df_weather_hour.drop_duplicates()
     df_weather_hour_clean.shape
 
@@ -88,7 +107,9 @@ def reindex_weather_intraday(df_weather_hour):
         group = group.reindex(date_range, method='ffill')
         df = pd.concat([df, group], axis=0)
 
-    df = df.sort_index()
+    df = df.reset_index()
+    df = df.rename(columns={"index": "timestamp"})
+    return df
 
 
 def get_nearest_coordinate(site_coordinate, weather_coordinates):
