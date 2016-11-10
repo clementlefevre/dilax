@@ -55,13 +55,3 @@ def test_merge_with_regions_no_data(datastore, caplog):
 
     assert df_regions.idbldsite.unique().tolist(
     ) == datastore.db.sites.idbldsite.unique().tolist()
-
-
-def test_merge_with_convsersion(datastore):
-
-    datastore.training_data = pd.read_csv(
-        "data/test_training_before_conversion", sep=";")
-    df_conversion = pd.read_csv(
-        "data/test_conversion", sep=";")
-
-    result =

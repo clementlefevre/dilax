@@ -20,14 +20,26 @@ def merge_tables(datastore):
     Returns:
         TYPE: Description
     """
-
+    logging.info("{} : start merging sites with counts...".format(datastore))
     datastore.training_data = merge_with_counts(datastore)
+
+    logging.info("{} : start merging sites with weather...".format(datastore))
     datastore.training_data = merge_with_weather(datastore)
+
+    logging.info(
+        "{} : start merging sites with public holidays...".format(datastore))
     datastore.training_data = merge_with_public_holidays(datastore)
+
+    logging.info(
+        "{} : start merging sites with public regions...".format(datastore))
     datastore.training_data = merge_with_regions(datastore)
+
+    logging.info(
+        "{} : start merging sites with school holidays...".format(datastore))
     datastore.training_data = merge_with_school_holidays(datastore)
-    datastore.training_data.to_csv("data/test_training_before_conversion", sep=";",
-                                   encoding="utf-8")
+
+    logging.info(
+        "{} : start merging sites with conversion...".format(datastore))
     datastore.training_data = merge_with_conversion(datastore)
     return datastore.training_data
 
@@ -212,8 +224,10 @@ def merge_with_weather_day(datastore):
 
 
 def merge_with_public_holidays(datastore):
-    datastore.training_data = add_public_holidays(
-        datastore.training_data, datastore)
+    datastore.training_data.to_csv(
+        "data/test/training_before_public_holidays.csv", sep=";")
+    datastore.training_data = add_public_holidays(datastore.training_data,
+                                                  datastore.db.public_holidays)
 
     return datastore.training_data
 
@@ -230,6 +244,9 @@ def merge_with_regions(datastore):
     df_regions = create_regions_df(datastore)
     df_with_regions = pd.merge(
         datastore.training_data, df_regions, on='idbldsite', how='left')
+
+    df_with_regions = df_with_regions.drop(['latitude',
+                                            'longitude', 'region'], 1)
 
     return df_with_regions
 

@@ -13,7 +13,7 @@ def check_missing_data(df, x_only, f_name, drop_missing=True):
     df_missing = df[df._merge == x_only]
 
     if df_missing.shape[0] == 0:
-        logging.info("No missing data after {}".format(f_name))
+        logging.info("No missing data after {}.".format(f_name))
     else:
         sites_missing = df_missing.groupby('idbldsite')._merge.count()
 
@@ -153,7 +153,7 @@ def add_calendar_fields(df):
     data['not_public_holiday'] = np.where(data.is_public_holiday == 0, 1, 0)
     data['school_holiday'] = np.where(data.is_school_holiday != 0, 1, 0)
     data['not_school_holiday'] = np.where(data.is_school_holiday == 0, 1, 0)
-    data.drop(['is_public_holiday', 'is_school_holiday'], 1)
+    data = data.drop(['is_public_holiday', 'is_school_holiday'], 1)
 
     return data
 
@@ -188,8 +188,6 @@ def regularize(datastore, df, is_forecast=False):
         TYPE: Description
     """
     df = df.reset_index()
-    logging.info("is_forecast : {0} : columns before reg : {1}".format(
-        is_forecast, df.columns))
 
     for col in df.columns.tolist():
 
@@ -198,9 +196,8 @@ def regularize(datastore, df, is_forecast=False):
 
                 df[col + "_reg"] = df.groupby('idbldsite')[col].apply(
                     lambda x: (x - x.mean()) / x.std())
-                logging.info("datastore: % s: column % s has been regularized for training set",
-                             datastore, col
-                             )
+                logging.info("{0}:{1} has been regularized for training set".format(
+                             datastore, col))
 
             else:
                 training_set_groupy = datastore.training_data.groupby('idbldsite')[
@@ -212,9 +209,9 @@ def regularize(datastore, df, is_forecast=False):
                                             (x[col] - x_mean.ix[x['idbldsite']]
                                              ) / x_std.ix[x['idbldsite']],
                                             axis=1)
-                logging.info("datastore: % s: column % s has been regularized for forecasts set",
+                logging.info("{0}:{1} has been regularized for forecasts set".format(
                              datastore, col
-                             )
+                             ))
     df = df.fillna(0)
     return df
 

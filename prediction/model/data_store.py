@@ -19,10 +19,10 @@ class Data_store(object):
         self.period = period
         self._set_dates(date_from, date_to)
         self._set_file_names()
+        self.db = DB_manager(self.db_params)
 
     def __repr__(self):
-        return "{0.name} - period : {0.period}\
-         [{0.date_from} to {0.date_to}]".format(self)
+        return "{0.name}:period:{0.period}:[{0.date_from} to {0.date_to}]".format(self)
 
     def get_data(self):
         self._training_set_()
@@ -32,20 +32,20 @@ class Data_store(object):
         self.forecasts = create_forecasts_data(self)
         self.forecasts.to_csv(
             self.file_names['forecasts_set'], encoding='utf-8', sep=';')
+        logging.info("{0} : forecasts_set saved to : {1}".format(
+            self, self.file_names['forecasts_set']))
 
     def _training_set_(self):
 
         if self.create:
             logging.info("{0} prepare new training set...".format(self))
-            self.db = DB_manager(self.db_params)
+
             self.training_data = merge_tables(self)
             self.training_data = add_calendar_fields(self.training_data)
             self.training_data = regularize(
                 self, self.training_data)
-            self.training_data.to_csv(
-                self.file_names['training_set'], encoding='utf-8', sep=';')
-            self.sites_infos.to_csv(
-                self.file_names['sites_info'], encoding='utf-8', sep=';')
+            self._save_training_set()
+
             logging.info("{0} : finished preparing training set".format(self))
         else:
             try:
@@ -53,17 +53,17 @@ class Data_store(object):
                     self.file_names['training_set'], parse_dates=['date'])
 
             except IOError as e:
-                logging.error("error by reading the csv file : {0}".
-                              format(self.file_names['training_set']))
+                logging.error("{0} : error by reading the csv file : {1}".
+                              format(self, self.file_names['training_set']))
                 logging.error(e.message)
 
             try:
                 self.sites_infos = pd.read_csv(self.file_names['sites_info'])
             except IOError as e:
-                logging.error("error by reading the csv file : {0}".
-                              format(self.file_names['sites_info']))
+                logging.error("{0} : error by reading the csv file : {1}".
+                              format(self, self.file_names['sites_info']))
                 logging.error(e.message)
-            logging.info("finished reading training set")
+            logging.info("{} : finished reading training set".format(self))
 
     def create_sites_dict(self):
         self.sites_infos_dict = self.sites_infos.set_index(
@@ -94,3 +94,14 @@ class Data_store(object):
             self.date_to = datetime.now().date() + timedelta(days=30)
         else:
             self.date_to = datetime.strptime(date_to, '%Y-%M-%d').date()
+
+    def _save_training_set(self):
+        self.training_data.to_csv(
+            self.file_names['training_set'], encoding='utf-8', sep=';')
+        self.sites_infos.to_csv(
+            self.file_names['sites_info'], encoding='utf-8', sep=';')
+
+        logging.info("{0} : training_set saved to : {1}".format(
+            self, self.file_names['training_set']))
+        logging.info("{0} : sites_infos saved to : {1}".format(
+            self, self.file_names['sites_info']))

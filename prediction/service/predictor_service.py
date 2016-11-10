@@ -44,7 +44,8 @@ def create_forecasts_data(datastore):
         df_forecasts_site = add_school_holidays(df_forecasts_site)
 
         # !!!!  API working for the time being !!!
-        df_forecasts_site = add_public_holidays(df_forecasts_site, datastore)
+        df_forecasts_site = add_public_holidays(
+            df_forecasts_site, datastore.db.public_holidays)
 
         df_forecasts_site = add_calendar_fields(df_forecasts_site)
 
