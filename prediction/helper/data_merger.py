@@ -48,7 +48,7 @@ def merge_with_counts(datastore):
     """Summary
 
     Args:
-        datastore (TYPE): Data_store
+        datastore (TYPE): datastore
 
     Returns:
         TYPE: DataFrame
@@ -224,10 +224,9 @@ def merge_with_weather_day(datastore):
 
 
 def merge_with_public_holidays(datastore):
-    datastore.training_data.to_csv(
-        "data/test/training_before_public_holidays.csv", sep=";")
+
     datastore.training_data = add_public_holidays(datastore.training_data,
-                                                  datastore.db.public_holidays)
+                                                  datastore.public_holidays)
 
     return datastore.training_data
 

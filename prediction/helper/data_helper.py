@@ -81,7 +81,7 @@ def match_coordinates(df0, df):
         logging.warning("Those sites are too far from weather coordinate for matching :{}".format(
             sites_weather_too_far))
     except AttributeError as e:
-        logging.warning(e.args)
+        logging.info("All sites are less than 20km from weather data.")
 
     return df0
 
@@ -142,6 +142,8 @@ def add_calendar_fields(df):
     data['day_of_year'] = data.date.dt.dayofyear
     data['month'] = data.date.dt.month
     data['year'] = data.date.dt.year
+    if 'date_time' in data.columns:
+        data['hour'] = data.date_time.dt.hour
 
     for day in range(0, 7):
         data['day_' + str(day)] = np.where(data.day_of_week == day, 1, 0)
@@ -191,12 +193,12 @@ def regularize(datastore, df, is_forecast=False):
 
     for col in df.columns.tolist():
 
-        if config_manager.features[col]:
+        if config_manager.features[col].regularize:
             if not is_forecast:
 
                 df[col + "_reg"] = df.groupby('idbldsite')[col].apply(
                     lambda x: (x - x.mean()) / x.std())
-                logging.info("{0}:{1} has been regularized for training set".format(
+                logging.info("{0} : {1} has been regularized for training set".format(
                              datastore, col))
 
             else:
@@ -209,7 +211,7 @@ def regularize(datastore, df, is_forecast=False):
                                             (x[col] - x_mean.ix[x['idbldsite']]
                                              ) / x_std.ix[x['idbldsite']],
                                             axis=1)
-                logging.info("{0}:{1} has been regularized for forecasts set".format(
+                logging.info("{0} : {1} has been regularized for forecasts set".format(
                              datastore, col
                              ))
     df = df.fillna(0)

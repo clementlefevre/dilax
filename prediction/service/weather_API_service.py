@@ -52,5 +52,6 @@ def get_weather_forecasts(config_weather, latitude, longitude):
 
         return df_weather
     except Exception as e:
-        print e.message
-        print "Could not retrieve weather data for :{};{}".format(latitude, longitude)
+        logging.error(e.message)
+        logging.error("Could not retrieve weather data for :{0};{1}".format(
+            latitude, longitude))

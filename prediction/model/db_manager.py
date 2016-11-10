@@ -19,7 +19,7 @@ class DB_manager(object):
 
     def _create_connection(self):
         self.engine = create_engine(self._db_address())
-        logging.info("engine created" + str(self.engine))
+        logging.info("engine created : " + str(self.engine))
 
     def _query(self, table):
         return pd.read_sql_query("select * from " + '"' + table + '"',
@@ -33,4 +33,5 @@ class DB_manager(object):
         self.weather_intraday = self._query(
             "dwe_ext_weather_meteogroup_intraday")
         self.public_holidays = self._query("dwe_cal_holiday")
+        self.public_holidays.to_csv("data/store/"+self.params['db_name']+"_public_holidays.csv",sep=";",encoding="utf-8")
         self.conversion = self._query("dwe_ext_conversion")

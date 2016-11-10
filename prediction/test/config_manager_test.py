@@ -9,5 +9,6 @@ def config_manager():
 
 def test_config_params(config_manager):
 
-    assert not config_manager.features['month_12']
-    assert config_manager.features['compensatedin']
+    assert not config_manager.features['month_12'].regularize
+    assert not config_manager.features['compensatedin'].is_predictor
+    assert config_manager.features['maxtemperature'].is_predictor

@@ -1,7 +1,4 @@
 from collections import namedtuple
-import pytest
-from model.data_store import Data_store
-
 from service.geocoding_API_service import get_region
 
 

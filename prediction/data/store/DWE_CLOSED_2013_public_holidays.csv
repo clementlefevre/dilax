@@ -1,0 +1,424 @@
+;id;idbldsite;day;name_en;name_de;name_fr;name_ru
+0;595;5;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+1;596;9;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+2;597;10;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+3;598;6;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+4;599;10;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+5;600;3;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+6;601;2;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+7;602;11;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+8;603;1;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+9;604;3;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+10;605;5;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+11;606;10;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+12;607;8;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+13;608;4;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+14;609;3;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+15;610;11;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+16;611;1;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+17;612;4;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+18;613;9;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+19;614;2;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+20;615;5;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+21;616;2;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+22;617;10;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+23;618;11;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+24;619;5;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+25;620;2;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+26;621;1;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+27;622;9;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+28;623;2;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+29;624;1;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+30;625;4;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+31;626;6;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+32;627;8;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+33;628;1;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+34;629;9;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+35;630;7;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+36;631;5;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+37;632;10;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+38;633;9;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+39;634;6;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+40;635;6;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+41;636;1;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+42;637;8;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+43;638;11;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+44;639;1;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+45;640;11;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+46;641;6;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+47;642;10;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+48;643;1;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+49;644;7;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+50;645;3;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+51;646;11;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+52;647;7;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+53;648;11;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+54;649;5;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+55;650;4;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+56;651;6;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+57;652;5;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+58;653;11;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+59;654;6;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+60;655;7;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+61;656;2;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+62;657;10;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+63;658;3;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+64;659;9;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+65;660;8;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+66;661;7;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+67;662;7;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+68;663;9;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+69;664;6;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+70;665;4;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+71;666;8;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+72;667;2;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+73;668;9;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+74;669;7;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+75;670;3;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+76;671;4;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+77;672;2;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+78;673;8;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+79;674;10;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+80;675;11;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+81;676;8;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+82;677;8;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+83;678;10;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+84;679;5;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+85;680;9;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+86;681;8;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+87;682;4;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+88;683;4;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+89;684;3;2018-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+90;685;4;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+91;686;1;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+92;687;3;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+93;688;3;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+94;689;7;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+95;690;7;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+96;691;6;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+97;692;5;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+98;693;2;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+99;694;12;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+100;695;12;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+101;696;12;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+102;697;12;2018-03-30;Good Friday;Karfreitag;Vendredi saint;Good Friday
+103;698;12;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+104;699;12;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+105;700;12;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+106;701;12;2018-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+107;702;12;2018-05-10;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+108;703;12;2016-12-26;Boxing Day;Zweiter Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+109;704;12;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+110;705;12;2018-12-25;Christmas Day;Weihnachten;Noël;Рождество
+111;706;12;2018-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+112;707;12;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+113;708;12;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+114;709;12;2018-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+115;710;12;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+116;711;12;2018-12-26;Boxing Day;Zweiter Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+117;712;12;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+118;713;12;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+119;714;12;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+120;715;12;2018-04-02;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+121;716;12;2018-05-21;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+122;717;12;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+123;718;12;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+124;719;12;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+125;720;12;2017-12-26;Boxing Day;Zweiter Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+126;298;6;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+127;299;5;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+128;300;8;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+129;301;8;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+130;302;3;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+131;303;5;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+132;304;2;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+133;305;8;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+134;306;11;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+135;307;3;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+136;308;5;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+137;309;2;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+138;310;5;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+139;311;11;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+140;312;6;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+141;313;1;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+142;314;6;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+143;315;3;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+144;316;4;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+145;317;8;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+146;318;6;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+147;319;7;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+148;320;8;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+149;321;7;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+150;322;4;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+151;323;3;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+152;324;3;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+153;325;5;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+154;326;5;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+155;327;4;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+156;328;7;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+157;329;6;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+158;330;11;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+159;331;10;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+160;332;1;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+161;333;8;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+162;334;6;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+163;335;4;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+164;336;8;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+165;337;9;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+166;338;9;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+167;339;3;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+168;340;10;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+169;341;7;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+170;342;2;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+171;343;11;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+172;344;3;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+173;345;7;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+174;346;3;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+175;347;7;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+176;348;8;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+177;349;8;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+178;350;4;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+179;351;11;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+180;352;1;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+181;353;3;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+182;354;3;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+183;355;8;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+184;356;1;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+185;357;9;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+186;358;6;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+187;359;9;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+188;360;7;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+189;361;8;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+190;362;5;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+191;363;11;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+192;364;1;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+193;365;7;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+194;366;4;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+195;367;3;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+196;368;10;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+197;369;4;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+198;370;2;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+199;371;11;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+200;372;8;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+201;373;3;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+202;374;7;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+203;375;9;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+204;376;11;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+205;377;8;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+206;378;4;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+207;379;7;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+208;380;11;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+209;381;9;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+210;382;7;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+211;383;3;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+212;384;4;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+213;385;10;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+214;386;4;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+215;387;11;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+216;388;10;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+217;389;11;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+218;390;9;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+219;391;2;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+220;392;7;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+221;393;6;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+222;394;10;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+223;395;5;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+224;396;10;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+225;397;7;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+226;398;3;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+227;399;2;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+228;400;7;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+229;401;8;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+230;402;10;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+231;403;9;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+232;404;6;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+233;405;10;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+234;406;2;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+235;407;2;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+236;408;5;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+237;409;5;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+238;410;6;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+239;411;1;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+240;412;4;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+241;413;1;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+242;414;6;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+243;415;2;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+244;416;10;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+245;417;6;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+246;418;7;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+247;419;11;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+248;420;8;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+249;421;7;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+250;422;5;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+251;423;5;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+252;424;1;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+253;425;3;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+254;426;7;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+255;427;1;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+256;428;1;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+257;429;10;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+258;430;9;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+259;431;3;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+260;432;4;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+261;433;2;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+262;434;9;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+263;435;6;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+264;436;6;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+265;437;8;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+266;438;1;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+267;439;8;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+268;440;6;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+269;441;1;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+270;442;3;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+271;443;4;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+272;444;7;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+273;445;8;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+274;446;4;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+275;447;6;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+276;448;10;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+277;449;7;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+278;450;8;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+279;451;6;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+280;452;2;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+281;453;11;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+282;454;10;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+283;455;9;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+284;456;4;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+285;457;11;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+286;458;1;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+287;459;8;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+288;460;1;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+289;461;9;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+290;462;4;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+291;463;4;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+292;464;5;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+293;465;5;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+294;466;1;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+295;467;4;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+296;468;9;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+297;469;1;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+298;470;11;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+299;471;10;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+300;472;7;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+301;473;9;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+302;474;10;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+303;475;1;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+304;476;2;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+305;477;1;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+306;478;9;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+307;479;8;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+308;480;6;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+309;481;5;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+310;482;11;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+311;483;1;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+312;484;2;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+313;485;11;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+314;486;1;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+315;487;1;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+316;488;9;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+317;489;2;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+318;490;9;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+319;491;11;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+320;492;9;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+321;493;1;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+322;494;5;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+323;495;11;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+324;496;9;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+325;497;5;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+326;498;3;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+327;499;4;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+328;500;1;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+329;501;5;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+330;502;2;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+331;503;5;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+332;504;10;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+333;505;4;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+334;506;2;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+335;507;2;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+336;508;11;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+337;509;10;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+338;510;10;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+339;511;6;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+340;512;2;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+341;513;5;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+342;514;1;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+343;515;10;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+344;516;4;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+345;517;8;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+346;518;8;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+347;519;7;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+348;520;4;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+349;521;6;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+350;522;6;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+351;523;11;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+352;524;5;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+353;525;3;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+354;526;11;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+355;527;5;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+356;528;3;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+357;529;6;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+358;530;9;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+359;531;5;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+360;532;4;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+361;533;7;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+362;534;5;2017-05-25;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+363;535;2;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+364;536;9;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+365;537;10;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+366;538;8;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+367;539;11;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+368;540;2;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+369;541;11;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+370;542;4;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+371;543;1;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+372;544;3;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+373;545;10;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+374;546;3;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+375;547;6;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+376;548;4;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+377;549;10;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+378;550;9;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+379;551;5;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+380;552;8;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+381;553;10;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+382;554;9;2016-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+383;555;6;2017-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+384;556;7;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+385;557;1;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+386;558;10;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+387;559;7;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+388;560;2;2015-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+389;561;2;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+390;562;5;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+391;563;8;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+392;564;9;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+393;565;9;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+394;566;3;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+395;567;10;2016-03-28;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+396;568;11;2015-12-25;Christmas Day;Weihnachten;Noël;Рождество
+397;569;4;2015-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+398;570;2;2015-04-06;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+399;571;3;2016-12-25;Christmas Day;Weihnachten;Noël;Рождество
+400;572;11;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+401;573;2;2016-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+402;574;2;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+403;575;11;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+404;576;9;2015-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+405;577;4;2017-06-05;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+406;578;2;2016-05-05;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+407;579;3;2017-05-01;May Day;Tag der Arbeit;La fête du Travail;May Day
+408;580;6;2016-10-03;Day of German Unity;Tag der Deutschen Einheit;Day of German Unity;Day of German Unity
+409;581;2;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+410;582;5;2016-03-25;Good Friday;Karfreitag;Vendredi saint;Good Friday
+411;583;9;2015-04-03;Good Friday;Karfreitag;Vendredi saint;Good Friday
+412;584;1;2017-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+413;585;7;2016-05-16;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday
+414;586;10;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+415;587;7;2017-04-14;Good Friday;Karfreitag;Vendredi saint;Good Friday
+416;588;7;2017-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+417;589;3;2015-12-26;Boxing Day;2. Weihnachtsfeiertag/Stephanstag;le lendemain de Noël;Boxing Day
+418;590;8;2017-12-25;Christmas Day;Weihnachten;Noël;Рождество
+419;591;6;2016-01-01;New Year's Day;Neujahrstag;Le Jour de l'An;Новый Год
+420;592;10;2017-04-17;Easter Monday;Ostermontag;Le lundi de Pâques;Easter Monday
+421;593;3;2015-05-14;Ascension Day;Christi Himmelfahrt;L'Ascension;Ascension Day
+422;594;6;2015-05-25;Whit Monday;Pfingstmontag;Le lundi de Pentecôte;Whit Monday

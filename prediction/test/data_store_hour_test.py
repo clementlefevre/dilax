@@ -1,8 +1,8 @@
 import pytest
-from model.data_store import Data_store
+from model.datastore import Datastore
 
 
-@pytest.fixture(autouse=True, scope="module")
+@pytest.fixture(autouse=True, scope="function")
 def store():
 
     db_params_1 = {'db_user': 'dwe-arcadia', 'db_name': 'DWE_ARCADIA_2015',
@@ -12,10 +12,10 @@ def store():
     db_params_2 = {'db_user': 'dwe-closed', 'db_name': 'DWE_CLOSED_2013',
                    'db_port': '5432', 'db_pwd': '6EVAqWxOsX2Ao', 'db_url': 'localhost'}
 
-    data_store = Data_store(db_params_1, period='H',
-                            create=True, date_to='2017-01-15')
-    data_store.get_data()
-    return data_store
+    datastore = Datastore(db_params_2, period='H',
+                          create=True, dt_to='2017-01-15')
+    datastore.get_data()
+    return datastore
 
 
 def test_datastore_hour(store):

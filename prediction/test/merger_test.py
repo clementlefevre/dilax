@@ -6,7 +6,7 @@ from helper.data_merger import *
 from service.geocoding_API_service import create_regions_df
 
 
-@pytest.fixture(autouse=True, scope="module")
+@pytest.fixture(autouse=True, scope="function")
 def datastore():
     datastore = Mock()
 
@@ -27,7 +27,7 @@ def datastore():
         'test/data/weather_intraday_sample3.csv', sep=';',
         parse_dates=['timestamp'], date_parser=dateparse)
 
-    datastore.db.public_holidays = pd.read_csv(
+    datastore.public_holidays = pd.read_csv(
         'test/data/public_holidays_sample3.csv', sep=";",
         parse_dates=['day'])
     return datastore
@@ -36,14 +36,12 @@ def datastore():
 def test_merge(datastore, caplog):
     datastore.training_data = merge_with_counts(datastore)
     datastore.training_data = merge_with_weather(datastore)
-    print "after merge_with_weather", datastore.training_data.head()
-    datastore.training_data.to_csv('data/test_merge_region_hour.csv')
+
     datastore.training_data = merge_with_public_holidays(datastore)
-    datastore.training_data.to_csv('data/test_merge_public_holidays_hour.csv')
+
     datastore.training_data = merge_with_regions(datastore)
     datastore.training_data = merge_with_school_holidays(datastore)
-    print "after merge :", datastore.training_data.head()
-    datastore.training_data.to_csv('data/test_merge_hour.csv')
+
     assert datastore.training_data.shape[0] > 0
 
 

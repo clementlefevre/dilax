@@ -1,11 +1,11 @@
 from datetime import datetime, timedelta
-from model.data_store import Data_store
+from model.datastore import Datastore
 
 import pandas as pd
 import pytest
 
 
-@pytest.fixture(autouse=True, scope="module")
+@pytest.fixture(autouse=True, scope="function")
 def store():
     db_params_1 = {'db_user': 'dwe-arcadia', 'db_name': 'DWE_ARCADIA_2015',
                    'db_port': '5432', 'db_pwd': 'VtJ5Cw3PKuOi4i3b',
@@ -14,12 +14,12 @@ def store():
     db_params_2 = {'db_user': 'dwe-closed', 'db_name': 'DWE_CLOSED_2013',
                    'db_port': '5432', 'db_pwd': '6EVAqWxOsX2Ao', 'db_url': 'localhost'}
 
-    data_store = Data_store(db_params_1, create=True, date_to='2017-01-15')
-    data_store.get_data()
-    return data_store
+    datastore = Datastore(db_params_2, create=True, dt_to='2017-01-15')
+    datastore.get_data()
+    return datastore
 
 
-def test_create_data_store(store):
+def test_create_datastore(store):
     assert store.db.engine is not None
 
 

@@ -1,6 +1,3 @@
-import pytest
-from model.data_store import Data_store
-
 from service.weather_API_service import get_weather_forecasts
 from model.config_manager import Config_manager
 

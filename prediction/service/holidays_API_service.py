@@ -110,5 +110,5 @@ def get_holidays():
         TYPE: Description
     """
     holidays_API_id_list = holidays_API_ids()
-    print holidays_API_id_list
+
     create_holidays_table(holidays_API_id_list)
