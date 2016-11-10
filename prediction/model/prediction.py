@@ -87,6 +87,9 @@ class Prediction(object):
         self.forecast_predictors.to_csv("data/store/" + self.name +
                                         "_predictions_" + self.datastore.period
                                         + "_" + label + ".csv", sep=";")
+        self.forecast_predictors.to_json("data/store/" + self.name +
+                                        "_predictions_" + self.datastore.period
+                                        + "_" + label + ".json")
 
     def export_to_json(self):
         pass

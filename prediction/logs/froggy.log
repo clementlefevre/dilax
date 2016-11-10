@@ -14019,3 +14019,4 @@ Name: _merge, dtype: int64
 2016-11-10 21:28:49,401 [INFO ]  DWE_CLOSED_2013:period:H:[2016-11-10 to 2016-11-30] : finished reading training set
 2016-11-10 21:32:30,163 [INFO ]  DWE_CLOSED_2013:period:H:[2016-11-10 to 2016-11-30] : finished reading training set
 2016-11-10 21:35:15,358 [INFO ]  DWE_CLOSED_2013:period:H:[2016-11-10 to 2016-11-30] : finished reading training set
+2016-11-10 21:41:44,513 [INFO ]  DWE_CLOSED_2013:period:H:[2016-11-10 to 2016-11-30] : finished reading training set
