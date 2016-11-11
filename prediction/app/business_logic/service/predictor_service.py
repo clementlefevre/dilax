@@ -4,10 +4,10 @@ to compute prediction on target values (visitors, turn-over)
 import pandas as pd
 import logging
 from datetime import datetime
-from service.school_holidays_service import add_school_holidays
-from service.public_holidays_service import add_public_holidays
+from ..service.school_holidays_service import add_school_holidays
+from ..service.public_holidays_service import add_public_holidays
 from weather_API_service import add_weather_forecasts
-from helper.data_helper import add_calendar_fields, regularize
+from ..helper.data_helper import add_calendar_fields, regularize
 
 
 def create_forecasts_data(datastore):
@@ -60,8 +60,9 @@ def create_forecasts_data(datastore):
         df_forecasts_site = add_weather_forecasts(
             datastore, df_forecasts_site)
 
-        df_forecasts_site['temperature'] = (
-            df_forecasts_site.mintemperature + df_forecasts_site.maxtemperature) / 2
+        if datastore.period == 'H':
+            df_forecasts_site['temperature'] = (
+                df_forecasts_site.mintemperature + df_forecasts_site.maxtemperature) / 2
 
         df_forecasts = pd.concat([df_forecasts, df_forecasts_site], axis=0)
 

@@ -1,13 +1,16 @@
+import os
 import pandas as pd
 from datetime import datetime, timedelta
-from model import logging
+from ..model import logging
 from db_manager import DB_manager
 from config_manager import Config_manager
-from helper.data_merger import merge_tables
-from helper.data_helper import add_calendar_fields, regularize
-from service.predictor_service import create_forecasts_data
+from ..helper.data_merger import merge_tables
+from ..helper.data_helper import add_calendar_fields, regularize
+from ..helper.file_helper import get_file_path
+from ..service.predictor_service import create_forecasts_data
 
 config_manager = Config_manager()
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Datastore(object):
@@ -21,7 +24,8 @@ class Datastore(object):
         self._set_file_names()
 
     def __repr__(self):
-        return "{0.name}:period:{0.period}:[{0.date_from} to {0.date_to}]".format(self)
+        return "{0.name}:period:{0.period}:[{0.date_from} to\
+         {0.date_to}]".format(self)
 
     def get_data(self):
         self._training_set_()
@@ -30,13 +34,17 @@ class Datastore(object):
     def create_forecasts(self):
         if self.create:
             self.forecasts = create_forecasts_data(self)
-            self.forecasts.to_csv(
-                self.file_names['forecasts_set'], encoding='utf-8', sep=';')
+            self.forecasts.to_csv(get_file_path(
+                self.file_names['forecasts_set'], fileDir),
+                encoding='utf-8', sep=';')
             logging.info("{0} : forecasts_set saved to : {1}".format(
                 self, self.file_names['forecasts_set']))
         else:
+            forecasts_path = get_file_path(
+                "data/store/" + self.name + "_forecasts_set_" +
+                self.period + ".csv", fileDir)
             self.forecasts = pd.read_csv(
-                "data/store/" + self.name + "_forecasts_set_" + self.period + ".csv", sep=";", parse_dates=['date', 'date_time'])
+                forecasts_path, sep=";", parse_dates=['date', 'date_time'])
 
     def get_training_set(self, site_id):
         return self.training_data[self.training_data.idbldsite == site_id]
@@ -58,13 +66,20 @@ class Datastore(object):
 
             logging.info("{0} : finished preparing training set".format(self))
         else:
+
             try:
 
                 self.training_data = pd.read_csv(
-                    self.file_names['training_set'], sep=";", parse_dates=['date', 'date_time'])
+                    get_file_path(self.file_names['training_set'],
+                                  fileDir), sep=";",
+                    parse_dates=['date', 'date_time'])
 
+                holidays_file = get_file_path(
+                    'data/store/' +
+                    self.db_params['db_name'] + '_public_holidays.csv',
+                    fileDir)
                 self.public_holidays = pd.read_csv(
-                    'data/store/' + self.db_params['db_name'] + '_public_holidays.csv', parse_dates=['day'], sep=";")
+                    holidays_file, parse_dates=['day'], sep=";")
 
             except IOError as e:
                 logging.error("{0} : error by reading the csv file : {1}".
@@ -72,8 +87,8 @@ class Datastore(object):
                 logging.error(e.message)
 
             try:
-                self.sites_infos = pd.read_csv(
-                    self.file_names['sites_info'], sep=";")
+                self.sites_infos = pd.read_csv(get_file_path(
+                    self.file_names['sites_info'], fileDir), sep=";")
             except IOError as e:
                 logging.error("{0} : error by reading the csv file : {1}".
                               format(self, self.file_names['sites_info']))
@@ -84,8 +99,9 @@ class Datastore(object):
         if self.create:
             sites_infos = self.sites_infos
         else:
-            sites_infos = pd.read_csv(
-                "data/store/" + self.name + "_sites_infos.csv", sep=";")
+            filename = get_file_path(self.file_names['sites_info'], fileDir)
+            sites_infos = pd.read_csv(filename, sep=";")
+            print sites_infos.head()
 
         self.sites_infos_dict = sites_infos.set_index(
             'idbldsite').T.to_dict()
@@ -117,10 +133,10 @@ class Datastore(object):
             self.date_to = datetime.strptime(date_to, '%Y-%m-%d').date()
 
     def _save_training_set(self):
-        self.training_data.to_csv(
-            self.file_names['training_set'], encoding='utf-8', sep=';')
-        self.sites_infos.to_csv(
-            self.file_names['sites_info'], encoding='utf-8', sep=';')
+        self.training_data.to_csv(get_file_path(
+            self.file_names['training_set'], fileDir), encoding='utf-8', sep=';')
+        self.sites_infos.to_csv(get_file_path(
+            self.file_names['sites_info'], fileDir), encoding='utf-8', sep=';')
 
         logging.info("{0} : training_set saved to : {1}".format(
             self, self.file_names['training_set']))

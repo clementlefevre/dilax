@@ -1,5 +1,9 @@
+import os
 from sqlalchemy import create_engine
-from model import pd, logging
+from ..model import pd, logging
+from ..helper.file_helper import get_file_path
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 class DB_manager(object):
@@ -33,5 +37,9 @@ class DB_manager(object):
         self.weather_intraday = self._query(
             "dwe_ext_weather_meteogroup_intraday")
         self.public_holidays = self._query("dwe_cal_holiday")
-        self.public_holidays.to_csv("data/store/"+self.params['db_name']+"_public_holidays.csv",sep=";",encoding="utf-8")
+        filename = get_file_path(
+            "data/store/" + self.params['db_name'] + "_public_holidays.csv", fileDir)
+        filename = os.path.abspath(os.path.realpath(filename))
+
+        self.public_holidays.to_csv(filename, sep=";", encoding="utf-8")
         self.conversion = self._query("dwe_ext_conversion")

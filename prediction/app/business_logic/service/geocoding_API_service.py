@@ -3,16 +3,20 @@
 Attributes:
     MAPS_URL (TYPE): Description
 """
+import os
 import urllib2
 import json
 import pandas as pd
 import logging
 import inspect
-from model.config_manager import Config_manager
-from helper.data_helper import check_missing_data
+from ..model.config_manager import Config_manager
+from ..helper.data_helper import check_missing_data
+from ..helper.file_helper import get_file_path
 
 
 config_manager = Config_manager()
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 def get_region(latitude, longitude):
@@ -58,7 +62,8 @@ def create_regions_df(datastore):
     df_sites = datastore.db.sites
     df_sites['region'] = df_sites.apply(
         lambda row: get_region(row['latitude'], row['longitude']), axis=1)
-    df_region_id = pd.read_csv('data/regions_countries.csv')
+    df_region_id = pd.read_csv(get_file_path(
+        'data/regions_countries.csv', fileDir))
 
     df_sites = pd.merge(df_sites, df_region_id, on='region', how='left',
                         indicator=True)

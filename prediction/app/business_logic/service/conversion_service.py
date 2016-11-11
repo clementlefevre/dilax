@@ -1,5 +1,9 @@
+import os
 import pandas as pd
 from datetime import datetime
+from ..helper.file_helper import get_file_path
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 def merge_with_conversion(datastore):
@@ -29,5 +33,5 @@ def add_conversion_day(datastore):
     merged = pd.merge(datastore.training_data, df_conversion_day, left_on=['idbldsite', 'date'],
                       right_on=['idbldsite', 'date'], how='left')
     merged = merged.drop('id', 1)
-    merged.to_csv("data/conversion_day.csv")
+    merged.to_csv(get_file_path("data/conversion_day.csv", fileDir))
     return merged

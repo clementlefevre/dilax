@@ -2,13 +2,13 @@
 """
 import inspect
 from datetime import datetime
-from service.geocoding_API_service import create_regions_df
-from helper import pd, logging
-from helper.data_helper import check_missing_data, round_to_nearest_hour,\
+from ..service.geocoding_API_service import create_regions_df
+from ..helper import pd, logging
+from ..helper.data_helper import check_missing_data, round_to_nearest_hour,\
     reindex_weather_intraday, add_idbldsite_to_weather_data
-from service.school_holidays_service import add_school_holidays
-from service.public_holidays_service import add_public_holidays
-from service.conversion_service import merge_with_conversion
+from ..service.school_holidays_service import add_school_holidays
+from ..service.public_holidays_service import add_public_holidays
+from ..service.conversion_service import merge_with_conversion
 
 
 def merge_tables(datastore):

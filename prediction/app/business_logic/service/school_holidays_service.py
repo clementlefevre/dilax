@@ -2,6 +2,11 @@
 """
 import pandas as pd
 from datetime import date
+from ..helper.file_helper import get_file_path
+import os
+
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 def dateparse(x):
@@ -27,8 +32,8 @@ def add_new_country_schedule(filename):
     """
     df_holidays = reindex_holidays(filename)
     df_holidays = add_region_id(df_holidays)
-    df_current_school_holidays = pd.read_csv(
-        'data/school_holidays.csv', parse_dates=['date'])
+    df_current_school_holidays = pd.read_csv(get_file_path(
+        'data/school_holidays.csv', fileDir), parse_dates=['date'])
     df_current_school_holidays = pd.concate(
         [df_holidays, df_current_school_holidays], axis=0)
     df_current_school_holidays.to_csv('data/school_holidays.csv')
@@ -40,8 +45,8 @@ def add_region_id():
     Returns:
         TYPE: DataFrame
     """
-    region = pd.read_csv('data/regions_countries.csv')
-    holidays = pd.read_csv("data/school_holidays.csv",
+    region = pd.read_csv(get_file_path('data/regions_countries.csv', fileDir))
+    holidays = pd.read_csv(get_file_path("data/school_holidays.csv", fileDir),
                            date_parser=dateparse)
     df = pd.merge(holidays[['from_date', 'to_date', 'region_name']],
                   region, on='region_name')
@@ -59,7 +64,9 @@ def reindex_holidays(filename):
     Returns:
         TYPE: Description
     """
-    df_school = pd.read_csv('data/school_holidays/' + filename + '.csv',
+    df_school = pd.read_csv(get_file_path('data/school_holidays/' +
+                                          filename + '.csv',
+                                          fileDir),
                             parse_dates=['from_date', 'to_date'],
                             date_parser=dateparse)
     date_range = pd.date_range(date(2013, 1, 1), date(2017, 1, 10))
@@ -84,8 +91,8 @@ def add_school_holidays(df):
     Returns:
         TYPE: DataFrame
     """
-    df_school_holidays = pd.read_csv(
-        'data/school_holidays.csv', parse_dates=['date'])
+    df_school_holidays = pd.read_csv(get_file_path(
+        'data/school_holidays.csv', fileDir), parse_dates=['date'])
 
     df_with_school_holidays = pd.merge(df, df_school_holidays,
                                        on=['region_id', 'date'],

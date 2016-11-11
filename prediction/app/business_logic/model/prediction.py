@@ -1,11 +1,13 @@
-
-from sklearn.ensemble.forest import RandomForestRegressor
-from service.prediction_service import do_classify, cv_optimize
-
-
+import os
 import pandas as pd
-from model.config_manager import Config_manager
+import json
+from sklearn.ensemble.forest import RandomForestRegressor
+from ..service.prediction_service import do_classify, cv_optimize
+from ..model.config_manager import Config_manager
+from ..helper.file_helper import get_file_path
 cm = Config_manager()
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Prediction(object):
@@ -84,14 +86,17 @@ class Prediction(object):
             prediction, index=self.forecast_predictors.index)
         # print self.forecast_predictors.tail(100)
 
-        self.forecast_predictors.to_csv("data/store/" + self.name +
-                                        "_predictions_" + self.datastore.period
-                                        + "_" + label + ".csv", sep=";")
+        self.forecast_predictors.to_csv(get_file_path("data/store/" +
+                                                      self.name +
+                                                      "_predictions_" +
+                                                      self.datastore.period +
+                                                      "_" +
+                                                      label + ".csv",
+                                                      fileDir), sep=";")
 
     def export_to_json(self, label):
         s = self.forecast_predictors[
             ['date_time', label]].to_json(orient='split')
         d = json.loads(s)
         d = [{"index": int(data[0]), "value": data[1]} for data in d['data']]
-        with open('demo.json', 'w') as outfile:
-            json.dump(d, outfile)
+        return d

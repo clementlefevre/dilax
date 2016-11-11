@@ -9,6 +9,7 @@ from service.geocoding_API_service import create_regions_df
 @pytest.fixture(autouse=True, scope="function")
 def datastore():
     datastore = Mock()
+    print "coucou mocky pytest"
 
     dateparse = lambda x: pd.datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
 

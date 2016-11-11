@@ -3,7 +3,7 @@ import urllib2
 import urllib
 import json
 from pandas.io.json import json_normalize
-from model.config_manager import Config_manager
+from ..model.config_manager import Config_manager
 
 
 config_manager = Config_manager()
