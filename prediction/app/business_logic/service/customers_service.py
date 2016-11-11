@@ -16,8 +16,8 @@ def sites(json_req):
     key = json_req['db_name'] + 'D'
     if key not in global_predictions:
 
-        datastore_D = Datastore(db_params=json_req, create=True, period='D')
-        datastore_H = Datastore(db_params=json_req, create=True, period='H')
+        datastore_D = Datastore(db_params=json_req, create=False, period='D')
+        datastore_H = Datastore(db_params=json_req, create=False, period='H')
 
         datastore_D.get_data()
         datastore_D.create_forecasts()
@@ -45,6 +45,6 @@ def get_prediction(json_req):
 
     prediction.make_prediction(
         json_req['site']['idbldsite'], json_req['label'])
-    prediction_data = prediction.export_to_json("compensatedin")
+    prediction_data = prediction.export_to_json(json_req['label'])
     print prediction_data
     return jsonify(result=prediction_data)

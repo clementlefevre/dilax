@@ -43,6 +43,7 @@ froggyApp.controller('chartController', function ($scope,$http) {
       closeLoading();
       $scope.prediction_data = data.result;
       console.log( $scope.prediction_data);
+
       chart.setData($scope.prediction_data);
 
 
@@ -57,13 +58,13 @@ froggyApp.controller('chartController', function ($scope,$http) {
 
 
   $(document).ready(function() {
-
     chart = Morris.Line({
       element: 'prediction_chart',
       data: [],
       xkey: 'index',
       ykeys: ['value'],
-      labels: ['Value']
+      labels: ['Value'],
+      pointSize : $scope.pointSize
     });
 
   });
@@ -77,8 +78,9 @@ froggyApp.controller('chartController', function ($scope,$http) {
   $scope.customers = get_customers();
   $scope.customer = {"db_name": "Select a customer"};
   $scope.site = {"sname": "Select a site"};
-  $scope.period = 'D'
-  $scope.label = "compensatedin"
+  $scope.period = 'D';
+  $scope.label = "compensatedin";
+  $scope.pointSize = 3;
 
 
 

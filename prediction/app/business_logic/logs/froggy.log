@@ -16384,3 +16384,103 @@ Name: _merge, dtype: int64
 2016-11-11 17:09:42,610 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:09:42] "POST /predictions/create_prediction HTTP/1.1" 200 -
 2016-11-11 17:10:08,682 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:10:08] "POST /predictions/create_prediction HTTP/1.1" 200 -
 2016-11-11 17:13:25,976 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:13:25] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:29:31,519 [INFO ]   * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2016-11-11 17:29:31,520 [INFO ]   * Restarting with stat
+2016-11-11 17:29:32,168 [WARNI]   * Debugger is active!
+2016-11-11 17:29:32,169 [INFO ]   * Debugger pin code: 106-218-713
+2016-11-11 17:29:35,204 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:29:35] "GET / HTTP/1.1" 200 -
+2016-11-11 17:29:35,735 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:29:35] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:29:38,685 [INFO ]  DWE_ARCADIA_2015:period:D:[2016-11-11 to         2016-12-11] : finished reading training set
+2016-11-11 17:29:39,564 [INFO ]  DWE_ARCADIA_2015:period:H:[2016-11-11 to         2016-12-11] : finished reading training set
+2016-11-11 17:29:39,647 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:29:39] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:29:53,159 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:29:53] "POST /predictions/create_prediction HTTP/1.1" 500 -
+2016-11-11 17:30:59,153 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:30:59] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:31:51,408 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:31:51] "POST /predictions/create_prediction HTTP/1.1" 500 -
+2016-11-11 17:32:16,601 [INFO ]   * Detected change in '/home/ramon/workspace/dilax/prediction/app/business_logic/service/customers_service.py', reloading
+2016-11-11 17:32:16,682 [INFO ]   * Restarting with stat
+2016-11-11 17:32:17,390 [WARNI]   * Debugger is active!
+2016-11-11 17:32:17,391 [INFO ]   * Debugger pin code: 106-218-713
+2016-11-11 17:32:24,644 [INFO ]   * Detected change in '/home/ramon/workspace/dilax/prediction/app/business_logic/service/customers_service.py', reloading
+2016-11-11 17:32:24,740 [INFO ]   * Restarting with stat
+2016-11-11 17:32:25,477 [WARNI]   * Debugger is active!
+2016-11-11 17:32:25,478 [INFO ]   * Debugger pin code: 106-218-713
+2016-11-11 17:32:36,156 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:32:36] "GET / HTTP/1.1" 200 -
+2016-11-11 17:32:36,629 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:32:36] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:32:40,244 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:32:40] "GET / HTTP/1.1" 200 -
+2016-11-11 17:32:40,627 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:32:40] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:32:48,545 [INFO ]  DWE_ARCADIA_2015:period:D:[2016-11-11 to         2016-12-11] : finished reading training set
+2016-11-11 17:32:49,400 [INFO ]  DWE_ARCADIA_2015:period:H:[2016-11-11 to         2016-12-11] : finished reading training set
+2016-11-11 17:32:49,485 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:32:49] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:33:01,090 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:33:01] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:33:10,566 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:33:10] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:33:42,866 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:33:42] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:34:57,500 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:34:57] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:35:51,751 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:35:51] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:38:29,383 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:29] "GET / HTTP/1.1" 200 -
+2016-11-11 17:38:29,894 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:29] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:38:33,070 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET / HTTP/1.1" 200 -
+2016-11-11 17:38:33,159 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET /static/js/ui-bootstrap-2.2.0.min.js HTTP/1.1" 200 -
+2016-11-11 17:38:33,162 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET /static/js/bootbox.min.js HTTP/1.1" 200 -
+2016-11-11 17:38:33,164 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET /static/js/app.js HTTP/1.1" 200 -
+2016-11-11 17:38:33,167 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET /static/js/controller/chart_controller.js HTTP/1.1" 200 -
+2016-11-11 17:38:33,169 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2016-11-11 17:38:33,670 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:33] "GET /static/partials/chart.html HTTP/1.1" 200 -
+2016-11-11 17:38:49,316 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:49] "GET / HTTP/1.1" 200 -
+2016-11-11 17:38:49,417 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:49] "GET /static/js/ui-bootstrap-2.2.0.min.js HTTP/1.1" 200 -
+2016-11-11 17:38:49,430 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:49] "GET /static/js/bootbox.min.js HTTP/1.1" 200 -
+2016-11-11 17:38:49,434 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:49] "GET /static/js/app.js HTTP/1.1" 200 -
+2016-11-11 17:38:49,436 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:49] "GET /static/js/controller/chart_controller.js HTTP/1.1" 200 -
+2016-11-11 17:38:49,438 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2016-11-11 17:38:50,017 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:50] "GET /static/partials/chart.html HTTP/1.1" 200 -
+2016-11-11 17:38:50,150 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:50] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:38:54,144 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:38:54] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:39:05,427 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:39:05] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:39:50,604 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:39:50] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:41:12,453 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:12] "GET / HTTP/1.1" 200 -
+2016-11-11 17:41:12,580 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:12] "GET /static/js/ui-bootstrap-2.2.0.min.js HTTP/1.1" 200 -
+2016-11-11 17:41:12,584 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:12] "GET /static/js/bootbox.min.js HTTP/1.1" 200 -
+2016-11-11 17:41:12,588 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:12] "GET /static/js/app.js HTTP/1.1" 200 -
+2016-11-11 17:41:12,590 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:12] "GET /static/js/controller/chart_controller.js HTTP/1.1" 200 -
+2016-11-11 17:41:12,592 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:12] "GET /static/css/style.css HTTP/1.1" 200 -
+2016-11-11 17:41:13,535 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:13] "GET /static/partials/chart.html HTTP/1.1" 200 -
+2016-11-11 17:41:13,667 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:13] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:41:16,673 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:41:16] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:42:00,979 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:42:00] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:42:14,163 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:42:14] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:43:45,040 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET / HTTP/1.1" 200 -
+2016-11-11 17:43:45,184 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET /static/js/ui-bootstrap-2.2.0.min.js HTTP/1.1" 200 -
+2016-11-11 17:43:45,187 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET /static/js/bootbox.min.js HTTP/1.1" 200 -
+2016-11-11 17:43:45,191 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET /static/js/app.js HTTP/1.1" 200 -
+2016-11-11 17:43:45,194 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET /static/js/controller/chart_controller.js HTTP/1.1" 200 -
+2016-11-11 17:43:45,198 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET /static/css/style.css HTTP/1.1" 200 -
+2016-11-11 17:43:45,998 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:45] "GET /static/partials/chart.html HTTP/1.1" 200 -
+2016-11-11 17:43:46,113 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:46] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:43:49,860 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:43:49] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:44:00,157 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:44:00] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:44:08,854 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:44:08] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:44:16,562 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:44:16] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:44:24,039 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:44:24] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:44:37,222 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:44:37] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:47:24,892 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:24] "GET / HTTP/1.1" 200 -
+2016-11-11 17:47:25,013 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:25] "GET /static/js/ui-bootstrap-2.2.0.min.js HTTP/1.1" 200 -
+2016-11-11 17:47:25,018 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:25] "GET /static/js/bootbox.min.js HTTP/1.1" 200 -
+2016-11-11 17:47:25,023 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:25] "GET /static/js/app.js HTTP/1.1" 200 -
+2016-11-11 17:47:25,040 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:25] "GET /static/js/controller/chart_controller.js HTTP/1.1" 200 -
+2016-11-11 17:47:25,044 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:25] "GET /static/css/style.css HTTP/1.1" 200 -
+2016-11-11 17:47:26,096 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:26] "GET /static/partials/chart.html HTTP/1.1" 200 -
+2016-11-11 17:47:26,214 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:26] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:47:28,848 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:28] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:47:38,385 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:38] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:47:47,056 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:47:47] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:48:06,706 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:06] "GET / HTTP/1.1" 200 -
+2016-11-11 17:48:06,760 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:06] "GET /static/js/ui-bootstrap-2.2.0.min.js HTTP/1.1" 200 -
+2016-11-11 17:48:06,763 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:06] "GET /static/js/bootbox.min.js HTTP/1.1" 200 -
+2016-11-11 17:48:06,769 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:06] "GET /static/js/app.js HTTP/1.1" 200 -
+2016-11-11 17:48:06,784 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:06] "GET /static/js/controller/chart_controller.js HTTP/1.1" 200 -
+2016-11-11 17:48:06,787 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2016-11-11 17:48:07,742 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:07] "GET /static/partials/chart.html HTTP/1.1" 200 -
+2016-11-11 17:48:07,859 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:07] "GET /predictions/customers/list HTTP/1.1" 200 -
+2016-11-11 17:48:10,000 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:09] "POST /predictions/customers/sites HTTP/1.1" 200 -
+2016-11-11 17:48:18,389 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:18] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:48:26,682 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:26] "POST /predictions/create_prediction HTTP/1.1" 200 -
+2016-11-11 17:48:34,291 [INFO ]  127.0.0.1 - - [11/Nov/2016 17:48:34] "POST /predictions/create_prediction HTTP/1.1" 200 -
