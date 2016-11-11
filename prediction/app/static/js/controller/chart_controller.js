@@ -35,14 +35,15 @@ froggyApp.controller('chartController', function ($scope,$http) {
   $scope.createPrediction = function(){
     predictor = {'db_params':$scope.customer,
     'period' : $scope.period,
-    'site': $scope.site}
+    'site': $scope.site,
+    'label': $scope.label}
 
     loadingDatas();
     $http.post('/predictions/create_prediction', predictor).success(function (data) {
       closeLoading();
       $scope.prediction_data = data.result;
       console.log( $scope.prediction_data);
-     chart2.setData($scope.prediction_data);
+      chart.setData($scope.prediction_data);
 
 
     }).error(function (data, status) {
@@ -53,34 +54,19 @@ froggyApp.controller('chartController', function ($scope,$http) {
   }
 
 
-    new Morris.Line({
-  // ID of the element in which to draw the chart.
-  element: 'myfirstchart',
-  // Chart data records -- each entry in this array corresponds to a point on
-  // the chart.
-  data:$scope.predictions_data,
 
-  // The name of the data record attribute that contains x-values.
-  xkey: 'index',
-  // A list of names of data record attributes that contain y-values.
-  ykeys: ['value'],
-  // Labels for the ykeys -- will be displayed when you hover over the
-  // chart.
-  labels: ['Value'],
-  pointSize : 0
-});
 
-    $(document).ready(function() {
-    
-        chart2 = Morris.Line({
-          element: 'LastIncome',
-          data: [],
-          xkey: 'index',
-          ykeys: ['value'],
-          labels: ['Value']
-        });
- 
-});
+  $(document).ready(function() {
+
+    chart = Morris.Line({
+      element: 'prediction_chart',
+      data: [],
+      xkey: 'index',
+      ykeys: ['value'],
+      labels: ['Value']
+    });
+
+  });
 
   
 
@@ -92,6 +78,7 @@ froggyApp.controller('chartController', function ($scope,$http) {
   $scope.customer = {"db_name": "Select a customer"};
   $scope.site = {"sname": "Select a site"};
   $scope.period = 'D'
+  $scope.label = "compensatedin"
 
 
 

@@ -31,8 +31,14 @@
 
 
 <div class="btn-group">
-    <label class="btn btn-primary" ng-model="period" uib-btn-radio="'Hourly'">Hourly</label>
-    <label class="btn btn-primary" ng-model="period" uib-btn-radio="'Daily'">Daily</label>
+    <label class="btn btn-primary" ng-model="period" uib-btn-radio="'H'">Hourly</label>
+    <label class="btn btn-primary" ng-model="period" uib-btn-radio="'D'">Daily</label>
+
+</div>
+
+<div class="btn-group">
+    <label class="btn btn-primary" ng-model="label" uib-btn-radio="'compensatedin'">Compensated In</label>
+    <label class="btn btn-primary" ng-model="label" uib-btn-radio="'volume'">Volume $</label>
 
 </div>
 
@@ -42,5 +48,4 @@
 
 </form>
 
-<div id="LastIncome" style="height: 350px;"></div>
-<div id="myfirstchart" style="height: 350px;"></div>
+<div id="prediction_chart" style="height: 350px;"></div>

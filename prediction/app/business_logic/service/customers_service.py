@@ -13,13 +13,25 @@ def customers():
 
 def sites(json_req):
     global global_predictions
-    datastore = Datastore(db_params=json_req, create=False)
-    datastore.get_data()
-    datastore.create_forecasts()
+    key = json_req['db_name'] + 'D'
+    if key not in global_predictions:
 
-    prediction = Prediction(datastore)
-    global_predictions[json_req['db_name']] = prediction
-    sites = prediction.datastore.sites_infos
+        datastore_D = Datastore(db_params=json_req, create=True, period='D')
+        datastore_H = Datastore(db_params=json_req, create=True, period='H')
+
+        datastore_D.get_data()
+        datastore_D.create_forecasts()
+
+        datastore_H.get_data()
+        datastore_H.create_forecasts()
+
+        prediction_D = Prediction(datastore_D)
+        prediction_H = Prediction(datastore_H)
+
+        global_predictions[json_req['db_name'] + 'D'] = prediction_D
+        global_predictions[json_req['db_name'] + 'H'] = prediction_H
+
+    sites = global_predictions[json_req['db_name'] + 'D'].datastore.sites_infos
     json_ = sites.to_json(orient='records')
     json_array = json.loads(json_)
     return jsonify(result=json_array)
@@ -28,9 +40,11 @@ def sites(json_req):
 def get_prediction(json_req):
     global global_predictions
     print json_req
-    prediction = global_predictions[json_req['db_params']['db_name']]
+    prediction = global_predictions[
+        json_req['db_params']['db_name'] + json_req['period']]
 
-    prediction.make_prediction(json_req['site']['idbldsite'], "compensatedin")
+    prediction.make_prediction(
+        json_req['site']['idbldsite'], json_req['label'])
     prediction_data = prediction.export_to_json("compensatedin")
     print prediction_data
     return jsonify(result=prediction_data)
