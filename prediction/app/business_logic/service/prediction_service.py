@@ -1,5 +1,12 @@
+import os
+import json
 from sklearn.cross_validation import train_test_split
 from sklearn.grid_search import GridSearchCV
+import pandas as pd
+from ..helper.file_helper import get_file_path
+
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 def cv_optimize(clf, parameters, X, y, n_jobs=1, n_folds=5, score_func=None):
@@ -33,9 +40,17 @@ def do_classify(clf, parameters, X, y,
     print "Accuracy on test data:     %0.2f" % (test_accuracy)
     print "########################################################"
     print "Features importance : ", clf.feature_importances_
-    try:
-        print pd.DataFrame(zip(clf.feature_importances_, fields))
-    except Exception as e:
-        print "no feature_importance"
-    print "########################################################"
-    return clf, Xtrain, ytrain, Xtest, ytest
+    return clf, Xtrain, ytrain, Xtest, ytest, test_accuracy
+
+
+def get_features_importance(clf, features):
+    features_weighted = zip(features, clf.feature_importances_)
+    features_weighted.sort(key=lambda tup: tup[1], reverse=True)
+
+    feat_list = []
+    for name, weight in features_weighted:
+        feat_dict = {"name": name, "weight": weight}
+        feat_list.append(feat_dict)
+
+    print feat_list
+    return feat_list

@@ -48,4 +48,34 @@
 
 </form>
 
-<div id="prediction_chart" style="height: 350px;"></div>
+<div class="col-xs-12" style="height:50px;"></div>
+
+<h1>R2 = {{ r2 }}</h1>
+<div class="row">
+  <div class="col-md-6">
+  <div id="prediction_chart" style="height: 350px;">
+      
+  </div>
+</div>
+  <div class="col-md-6"><div id="features_weight" >
+     <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Weight</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="feature in features">
+    <td>{{ feature.name }}</td>
+    <td>{{ feature.weight | number:2}}%</td>
+  </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+</div>
+
+

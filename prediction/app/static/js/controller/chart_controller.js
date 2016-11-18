@@ -42,6 +42,10 @@ froggyApp.controller('chartController', function ($scope,$http) {
     $http.post('/predictions/create_prediction', predictor).success(function (data) {
       closeLoading();
       $scope.prediction_data = data.result;
+      $scope.features = data.features;
+      $scope.r2 = data.r2;
+      
+
       console.log( $scope.prediction_data);
 
       chart.setData($scope.prediction_data);

@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 from sklearn.ensemble.forest import RandomForestRegressor
-from ..service.prediction_service import do_classify, cv_optimize
+from ..service.prediction_service import do_classify, get_features_importance
 from ..model.config_manager import Config_manager
 from ..helper.file_helper import get_file_path
 cm = Config_manager()
@@ -24,7 +24,7 @@ class Prediction(object):
         self.X_training, self.y, self.training_date = self._to_X_y(
             self.training_predictors, label)
         print "test :"
-        self.X_test, _, self.predicition_date = self._to_X_y(
+        self.X_test, _, self.prediction_date = self._to_X_y(
             self.forecast_predictors)
 
     def _get_features(self):
@@ -57,14 +57,7 @@ class Prediction(object):
 
         features = self._get_features()
 
-        print "----------START-data[predictors] ---------"
-        print data[features].values.shape
-        print "---------END-----------"
-
         if label:
-            print "----------START-data[label]---------"
-            print data[label].values.shape
-            print "---------END-----------"
             return data[features].values, data[label].values, data['date'].values
         else:
             return data[features].values, 0, data['date'].values
@@ -76,15 +69,19 @@ class Prediction(object):
 
         clf = clf_RDM['clf']
         params = clf_RDM['params']
-        clf_rdm, Xtrain, ytrain, Xtest, ytest = \
+        clf_rdm, Xtrain, ytrain, Xtest, ytest, r2 = \
             do_classify(clf, params, self.X_training, self.y)
 
         prediction = clf_rdm.predict(self.X_test)
-        print prediction[-100:]
+        self.r2 = r2
 
         self.forecast_predictors[label] = pd.Series(
             prediction, index=self.forecast_predictors.index)
-        # print self.forecast_predictors.tail(100)
+
+        self.features_weighted = get_features_importance(
+            clf_rdm, self._get_features())
+
+        print self.features_weighted
 
         self.forecast_predictors.to_csv(get_file_path("data/store/" +
                                                       self.name +
