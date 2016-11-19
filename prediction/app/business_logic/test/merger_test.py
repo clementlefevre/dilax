@@ -2,8 +2,8 @@ import pandas as pd
 from mock import Mock
 import pytest
 
-from helper.data_merger import *
-from service.geocoding_API_service import create_regions_df
+from ..helper.data_merger import *
+from ..service.geocoding_API_service import create_regions_df
 
 
 @pytest.fixture(autouse=True, scope="function")

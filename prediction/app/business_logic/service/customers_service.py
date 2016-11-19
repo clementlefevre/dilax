@@ -47,4 +47,4 @@ def get_prediction(json_req):
         json_req['site']['idbldsite'], json_req['label'])
     prediction_data = prediction.export_to_json(json_req['label'])
 
-    return jsonify(result=prediction_data, features=prediction.features_weighted, r2=[prediction.r2])
+    return jsonify(result=prediction_data, features=prediction.features_weighted, r2=prediction.r2)

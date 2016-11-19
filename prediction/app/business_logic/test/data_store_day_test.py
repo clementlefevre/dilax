@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from model.datastore import Datastore
+from ..model.datastore import Datastore
 
 import pandas as pd
 import pytest

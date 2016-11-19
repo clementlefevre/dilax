@@ -1,6 +1,6 @@
 import pytest
-from model.prediction import Prediction
-from model.datastore import Datastore
+from ..model.prediction import Prediction
+from ..model.datastore import Datastore
 
 db_params = {'db_user': 'dwe-closed', 'db_name': 'DWE_CLOSED_2013',
              'db_port': '5432', 'db_pwd': '6EVAqWxOsX2Ao', 'db_url': 'localhost'}
@@ -38,7 +38,7 @@ def datastore_H():
 def test_predictors_H(datastore_H):
 
     predictor = Prediction(datastore_H)
-    predictor.create_X_Y_per_site(2, "volume")
+    predictor._create_X_Y_per_site(2, "volume")
     assert datastore_H.get_training_set(2).shape[0] > 0
 
 

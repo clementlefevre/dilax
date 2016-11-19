@@ -1,3 +1,10 @@
 {
-  "": true
+  "app/business_logic/test/data_store_day_test.py": true, 
+  "app/business_logic/test/data_store_hour_test.py": true, 
+  "app/business_logic/test/db_manager_test.py": true, 
+  "app/business_logic/test/geocoding_API_test.py": true, 
+  "app/business_logic/test/merger_test.py": true, 
+  "app/business_logic/test/prediction_test.py::test_prediction_H": true, 
+  "app/business_logic/test/prediction_test.py::test_predictors_H": true, 
+  "app/business_logic/test/weather_API_test.py": true
 }

@@ -48,7 +48,9 @@ froggyApp.controller('chartController', function ($scope,$http) {
 
       console.log( $scope.prediction_data);
 
-      chart.setData($scope.prediction_data);
+      chart_day.setData($scope.prediction_data);
+      chart_hour.setData($scope.prediction_data);
+
 
 
     }).error(function (data, status) {
@@ -62,8 +64,8 @@ froggyApp.controller('chartController', function ($scope,$http) {
 
 
   $(document).ready(function() {
-    chart = Morris.Line({
-      element: 'prediction_chart',
+    chart_day = Morris.Line({
+      element: 'prediction_chart_day',
       data: [],
       xkey: 'index',
       ykeys: ['value'],
@@ -72,6 +74,18 @@ froggyApp.controller('chartController', function ($scope,$http) {
     });
 
   });
+
+   $(document).ready(function() {
+    chart_hour = Morris.Bar({
+      element: 'prediction_chart_hour',
+      data: [],
+      xkey: 'index',
+      ykeys: ['value'],
+      labels: ['Value'],
+    });
+
+  });
+
 
   
 

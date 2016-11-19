@@ -1,5 +1,5 @@
 import pytest
-from model.datastore import Datastore
+from ..model.datastore import Datastore
 
 
 @pytest.fixture(autouse=True, scope="function")

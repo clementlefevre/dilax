@@ -1,5 +1,5 @@
 from service.weather_API_service import get_weather_forecasts
-from model.config_manager import Config_manager
+from ..model.config_manager import Config_manager
 
 
 config_manager = Config_manager()

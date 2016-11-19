@@ -23,11 +23,11 @@ def cv_optimize(clf, parameters, X, y, n_jobs=1, n_folds=5, score_func=None):
 
 
 def do_classify(clf, parameters, X, y,
-                mask=None, score_func=None, n_folds=5, n_jobs=1):
+                mask=None, score_func=None, n_folds=10, n_jobs=1):
     # remove index and idbldsite
 
     Xtrain, Xtest, ytrain, ytest = train_test_split(X, y,
-                                                    test_size=0.3)
+                                                    test_size=0.2)
     clf = cv_optimize(clf, parameters, Xtrain, ytrain,
                       n_jobs=n_jobs, n_folds=n_folds,
                       score_func=score_func)
@@ -52,5 +52,4 @@ def get_features_importance(clf, features):
         feat_dict = {"name": name, "weight": weight}
         feat_list.append(feat_dict)
 
-    print feat_list
-    return feat_list
+    return feat_list[:10]

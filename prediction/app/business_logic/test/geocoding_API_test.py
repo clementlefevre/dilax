@@ -1,5 +1,5 @@
 from collections import namedtuple
-from service.geocoding_API_service import get_region
+from ..service.geocoding_API_service import get_region
 
 
 def test_get_region():

@@ -1,5 +1,5 @@
 import pytest
-from model.db_manager import DB_manager
+from ..model.db_manager import DB_manager
 
 
 @pytest.fixture(autouse=True, scope="function")

@@ -127,8 +127,10 @@ class Datastore(object):
         else:
             self.date_from = datetime.strptime(date_from, '%Y-%m-%d')
 
-        if date_to is None:
+        if date_to is None and self.period == 'D':
             self.date_to = datetime.now().date() + timedelta(days=30)
+        elif date_to is None and self.period == 'H':
+            self.date_to = datetime.now().date() + timedelta(days=7)
         else:
             self.date_to = datetime.strptime(date_to, '%Y-%m-%d').date()
 
