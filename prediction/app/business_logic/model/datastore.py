@@ -8,6 +8,8 @@ from ..helper.data_merger import merge_tables
 from ..helper.data_helper import add_calendar_fields, regularize
 from ..helper.file_helper import get_file_path
 from ..service.predictor_service import create_forecasts_data
+from ..service.conversion_service import get_conversion
+from ..service.counts_service import get_counts
 
 config_manager = Config_manager()
 fileDir = os.path.dirname(os.path.abspath(__file__))
@@ -15,21 +17,24 @@ fileDir = os.path.dirname(os.path.abspath(__file__))
 
 class Datastore(object):
     def __init__(self, db_params, dt_from=None, dt_to=None,
-                 period='D', create=False):
+                 period='D', create=False, retrocheck=False):
         self.name = db_params['db_name']
-        self.create = create
         self.db_params = db_params
         self.period = period
         self._set_dates(dt_from, dt_to)
+        self.create = create
+        self.retrocheck = retrocheck
         self._set_file_names()
 
     def __repr__(self):
-        return "{0.name}:period:{0.period}:[{0.date_from} to\
+        return "{0.name}:period:{0.period}:retrocheck:{0.retrocheck}[{0.date_from} to\
          {0.date_to}]".format(self)
 
     def get_data(self):
         self._training_set_()
         self.create_sites_dict()
+        if self.retrocheck:
+            self.observed = self._get_observed_target()
 
     def create_forecasts(self):
         if self.create:
@@ -125,7 +130,7 @@ class Datastore(object):
         if date_from is None:
             self.date_from = datetime.now().date()
         else:
-            self.date_from = datetime.strptime(date_from, '%Y-%m-%d')
+            self.date_from = datetime.strptime(date_from, '%Y-%m-%d').date()
 
         if date_to is None and self.period == 'D':
             self.date_to = datetime.now().date() + timedelta(days=30)
@@ -144,3 +149,22 @@ class Datastore(object):
             self, self.file_names['training_set']))
         logging.info("{0} : sites_infos saved to : {1}".format(
             self, self.file_names['sites_info']))
+
+    def _get_observed_target(self):
+        self.observed_targets = {}
+        print "self.date_from, self.date_to", self.date_from, self.date_to
+        counts = get_counts(self, [self.date_from, self.date_to])
+        conversions = get_conversion(self)
+        if self.period == 'D':
+
+            print conversions.info()
+            conversions = conversions[(conversions.date.dt.date >=
+                                       self.date_from) & (conversions.date.dt.date <= self.date_to)]
+
+        elif period == 'H':
+            conversions.rename(columns={'timefrom': 'date_time'}, inplace=True)
+            conversions = conversions[(conversions.date_time.dt.date >=
+                                       self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
+
+        self.observed_targets['conversion'] = conversions
+        self.observed_targets['counts'] = counts

@@ -1,6 +1,3 @@
 {
-  "geocoding_API_test.py": true, 
-  "merger_test.py::test_merge": true, 
-  "merger_test.py::test_merge_with_regions_no_data": true, 
-  "weather_API_test.py": true
+  "weatherstore_test.py": true
 }

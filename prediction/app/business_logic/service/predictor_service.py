@@ -70,3 +70,6 @@ def create_forecasts_data(datastore):
         datastore, df_forecasts, is_forecast=True)
 
     return df_forecasts
+
+
+

@@ -9,6 +9,7 @@ from ..helper.data_helper import check_missing_data, round_to_nearest_hour,\
 from ..service.school_holidays_service import add_school_holidays
 from ..service.public_holidays_service import add_public_holidays
 from ..service.conversion_service import merge_with_conversion
+from ..service.counts_service import get_counts
 
 
 def merge_tables(datastore):
@@ -54,33 +55,7 @@ def merge_with_counts(datastore):
         TYPE: DataFrame
     """
     df_sites = datastore.db.sites
-    df_counts = datastore.db.counts
-
-    df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)
-
-    if datastore.period == 'H':
-        df_counts['date_time'] = df_counts['timestamp'].apply(
-            lambda ts: round_to_nearest_hour(ts))
-
-        df_counts = df_counts.groupby(['idbldsite', 'date_time']).sum()
-
-    if datastore.period == 'D':
-        df_counts = df_counts.groupby(['idbldsite', 'date']).sum()
-
-    df_counts = df_counts.reset_index()
-
-    if datastore.period == 'H':
-
-        df_counts['date'] = df_counts['date_time'].apply(lambda dt:
-                                                         datetime(dt.year,
-                                                                  dt.month,
-                                                                  dt.day))
-    if datastore.period == 'D':
-        df_counts['date_time'] = df_counts['date']
-
-    df_counts = df_counts[['idbldsite',
-                           'compensatedin', 'date',
-                           'date_time']]
+    df_counts = get_counts(datastore)
 
     df_counts_sites = pd.merge(df_sites, df_counts,
                                on=['idbldsite'],

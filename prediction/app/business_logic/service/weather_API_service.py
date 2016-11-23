@@ -4,12 +4,23 @@ import urllib
 import json
 from pandas.io.json import json_normalize
 from ..model.config_manager import Config_manager
+import weatherstore_service
 
 
 config_manager = Config_manager()
 
 
 def add_weather_forecasts(datastore, df):
+
+    if datastore.retrocheck:
+        df = add_weather_forecasts_weatherstore(datastore, df)
+    else:
+        df = add_weather_forecasts_API(datastore, df)
+
+    return df
+
+
+def add_weather_forecasts_API(datastore, df):
     site_id = df.idbldsite.unique()[0]
     site_infos = (datastore.sites_infos_dict[site_id])
     coordinates = (site_infos['latitude'], site_infos['longitude'])
@@ -26,7 +37,6 @@ def add_weather_forecasts(datastore, df):
                        'ww': 'weathersituation',
                        'ne': 'cloudamount'},
               inplace=True)
-
     return df
 
 
@@ -55,3 +65,25 @@ def get_weather_forecasts(config_weather, latitude, longitude):
         logging.error(e.message)
         logging.error("Could not retrieve weather data for :{0};{1}".format(
             latitude, longitude))
+
+
+def add_weather_forecasts_weatherstore(datastore, df):
+    if datastore.period == "H":
+        raise Error(
+            "Retrocheck not implemented for hourly forecasts because not yet available in the Weather API.")
+
+    df_weather = weatherstore_service.get_weather_forecasts(datastore, df)
+
+    df = pd.merge(
+        df, df_weather[['dateTime', 'ne', 'tn', 'tx', 'ww', 'rrr', 'prrr']],
+        left_on='date', right_on='dateTime', how='left')
+
+    df.rename(columns={'tn': 'mintemperature',
+                       'tx': 'maxtemperature',
+                       'ww': 'weathersituation',
+                       'ne': 'cloudamount',
+                       'rrr': "precipipation_mm",
+                       'prrr': 'precipipation_probability'},
+              inplace=True)
+    df = df.drop('dateTime', 1)
+    return df

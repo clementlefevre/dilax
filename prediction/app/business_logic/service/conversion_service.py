@@ -23,15 +23,29 @@ def add_conversion_hour(datastore):
 
 
 def add_conversion_day(datastore):
+    df_conversion_day = get_conversion_day(datastore)
+    merged = pd.merge(datastore.training_data, df_conversion_day, left_on=['idbldsite', 'date'],
+                      right_on=['idbldsite', 'date'], how='left')
+    merged = merged.drop('id', 1)
+    merged.to_csv(get_file_path("data/conversion_day.csv", fileDir))
+    return merged
+
+
+def get_conversion(datastore):
+    df_conversion = pd.DataFrame()
+    if datastore.period == 'D':
+        df_conversion = get_conversion_day(datastore)
+    elif datastore.period == 'H':
+        df_conversion = datastore.db.conversion
+
+    return df_conversion
+
+
+def get_conversion_day(datastore):
     df_conversion_day = datastore.db.conversion
     df_conversion_day['date'] = df_conversion_day['timefrom'].apply(
         lambda dt: datetime(dt.year, dt.month, dt.day))
     df_conversion_day = df_conversion_day.groupby(
         ['idbldsite', 'date']).sum()
     df_conversion_day = df_conversion_day.reset_index()
-
-    merged = pd.merge(datastore.training_data, df_conversion_day, left_on=['idbldsite', 'date'],
-                      right_on=['idbldsite', 'date'], how='left')
-    merged = merged.drop('id', 1)
-    merged.to_csv(get_file_path("data/conversion_day.csv", fileDir))
-    return merged
+    return df_conversion_day

@@ -18210,3 +18210,763 @@ Name: _merge, dtype: int64
 2016-11-18 15:47:08,563 [INFO ]  DWE_CLOSED_2013:period:H:[2016-11-18 to         2016-11-30] : finished reading training set
 2016-11-18 15:50:19,676 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
 2016-11-18 15:50:28,844 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 13:32:23,960 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] prepare new training set...
+2016-11-23 13:32:24,001 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 13:32:33,145 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : start merging sites with counts...
+2016-11-23 13:32:36,693 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 13:32:36,700 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : start merging sites with weather...
+2016-11-23 13:32:36,771 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 13:32:36,797 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 13:32:36,797 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 13:32:36,879 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : start merging sites with public holidays...
+2016-11-23 13:32:36,887 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : start merging sites with public regions...
+2016-11-23 13:32:39,448 [INFO ]  No missing data after create_regions_df.
+2016-11-23 13:32:39,456 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : start merging sites with school holidays...
+2016-11-23 13:32:39,484 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : start merging sites with conversion...
+2016-11-23 13:32:39,831 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : compensatedin has been regularized for training set
+2016-11-23 13:32:39,841 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : maxtemperature has been regularized for training set
+2016-11-23 13:32:39,852 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : mintemperature has been regularized for training set
+2016-11-23 13:32:39,862 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : weathersituation has been regularized for training set
+2016-11-23 13:32:39,873 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : cloudamount has been regularized for training set
+2016-11-23 13:32:40,230 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 13:32:40,230 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 13:32:40,230 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-12-23] : finished preparing training set
+2016-11-23 13:33:26,581 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 13:33:26,600 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 13:33:35,526 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 13:33:39,029 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 13:33:39,036 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 13:33:39,106 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 13:33:39,133 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 13:33:39,133 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 13:33:39,216 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 13:33:39,223 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 13:33:41,463 [INFO ]  No missing data after create_regions_df.
+2016-11-23 13:33:41,471 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 13:33:41,500 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 13:33:41,846 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 13:33:41,856 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 13:33:41,866 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 13:33:41,877 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 13:33:41,888 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 13:33:42,248 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 13:33:42,248 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 13:33:42,248 [INFO ]  DWE_CLOSED_2013:period:D:[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 13:35:22,715 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 13:35:22,734 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 13:35:31,588 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 13:35:35,083 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 13:35:35,089 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 13:35:35,164 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 13:35:35,191 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 13:35:35,191 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 13:35:35,270 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 13:35:35,279 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 13:35:37,672 [INFO ]  No missing data after create_regions_df.
+2016-11-23 13:35:37,679 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 13:35:37,707 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 13:35:38,060 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 13:35:38,070 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 13:35:38,081 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 13:35:38,091 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 13:35:38,102 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 13:35:38,460 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 13:35:38,460 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 13:35:38,460 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 13:36:10,848 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 13:36:10,867 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 13:36:19,806 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 13:36:23,286 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 13:36:23,292 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 13:36:23,364 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 13:36:23,391 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 13:36:23,391 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 13:36:23,467 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 13:36:23,475 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 13:36:25,731 [INFO ]  No missing data after create_regions_df.
+2016-11-23 13:36:25,738 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 13:36:25,766 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 13:36:26,110 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 13:36:26,121 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 13:36:26,131 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 13:36:26,142 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 13:36:26,152 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 13:36:26,507 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 13:36:26,507 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 13:36:26,507 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 13:36:54,891 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 13:36:54,909 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 13:37:03,743 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 13:37:07,437 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 13:37:07,443 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 13:37:07,516 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 13:37:07,542 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 13:37:07,542 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 13:37:07,620 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 13:37:07,628 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 13:37:09,896 [INFO ]  No missing data after create_regions_df.
+2016-11-23 13:37:09,904 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 13:37:09,932 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 13:37:10,304 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 13:37:10,313 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 13:37:10,324 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 13:37:10,334 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 13:37:10,344 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 13:37:10,711 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 13:37:10,712 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 13:37:10,712 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 13:37:10,714 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 14:20:59,522 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 14:20:59,541 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 14:21:08,352 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 14:21:11,796 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 14:21:11,803 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 14:21:11,873 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 14:21:11,899 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 14:21:11,899 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 14:21:11,967 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 14:21:11,976 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 14:22:08,968 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 14:22:08,987 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 14:22:17,804 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 14:22:21,244 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 14:22:21,251 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 14:22:21,325 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 14:22:21,353 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 14:22:21,353 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 14:22:21,430 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 14:22:21,438 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 14:22:24,221 [INFO ]  No missing data after create_regions_df.
+2016-11-23 14:22:24,228 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 14:22:24,256 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 14:22:24,598 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 14:22:24,607 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 14:22:24,618 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 14:22:24,628 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 14:22:24,638 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 14:22:24,997 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 14:22:24,997 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 14:22:24,997 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 14:22:24,999 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 14:23:00,899 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 14:23:00,918 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 14:23:09,769 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 14:23:13,242 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 14:23:13,248 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 14:23:13,317 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 14:23:13,344 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 14:23:13,344 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 14:23:13,414 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 14:23:13,422 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 14:23:15,852 [INFO ]  No missing data after create_regions_df.
+2016-11-23 14:23:15,859 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 14:23:15,888 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 14:23:16,251 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 14:23:16,261 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 14:23:16,271 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 14:23:16,281 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 14:23:16,292 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 14:23:16,653 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 14:23:16,653 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 14:23:16,653 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 14:23:16,655 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:06:15,475 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 15:06:15,494 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 15:06:24,524 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 15:06:27,731 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 15:06:27,738 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 15:06:27,813 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 15:06:27,840 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 15:06:27,840 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 15:06:27,926 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 15:06:27,935 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 15:06:31,121 [INFO ]  No missing data after create_regions_df.
+2016-11-23 15:06:31,128 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 15:06:31,155 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 15:06:31,481 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 15:06:31,491 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 15:06:31,501 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 15:06:31,512 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 15:06:31,522 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 15:06:31,875 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 15:06:31,875 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 15:06:31,876 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 15:06:31,878 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:06:58,866 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 15:06:58,885 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 15:07:07,880 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 15:07:11,394 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 15:07:11,400 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 15:07:11,470 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 15:07:11,497 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 15:07:11,497 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 15:07:11,569 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 15:07:11,578 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 15:07:13,951 [INFO ]  No missing data after create_regions_df.
+2016-11-23 15:07:13,958 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 15:07:13,986 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 15:07:14,350 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 15:07:14,360 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 15:07:14,371 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 15:07:14,382 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 15:07:14,392 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 15:07:14,746 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 15:07:14,746 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 15:07:14,746 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 15:07:14,748 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:08:57,634 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 15:08:57,653 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 15:09:06,650 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 15:09:09,824 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 15:09:09,831 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 15:09:09,902 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 15:09:09,928 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 15:09:09,928 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 15:09:10,005 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 15:09:10,013 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 15:09:12,273 [INFO ]  No missing data after create_regions_df.
+2016-11-23 15:09:12,280 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 15:09:12,307 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 15:09:12,631 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 15:09:12,641 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 15:09:12,651 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 15:09:12,661 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 15:09:12,671 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 15:09:13,020 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 15:09:13,020 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 15:09:13,020 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 15:09:13,022 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:09:14,336 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for forecasts set
+2016-11-23 15:09:14,358 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for forecasts set
+2016-11-23 15:09:14,379 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for forecasts set
+2016-11-23 15:09:14,401 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for forecasts set
+2016-11-23 15:09:39,666 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 15:09:39,685 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 15:09:48,798 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 15:09:52,289 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 15:09:52,295 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 15:09:52,365 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 15:09:52,392 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 15:09:52,392 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 15:09:52,470 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 15:09:52,477 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 15:09:54,713 [INFO ]  No missing data after create_regions_df.
+2016-11-23 15:09:54,720 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 15:09:54,749 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 15:09:55,106 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 15:09:55,116 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 15:09:55,127 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 15:09:55,137 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 15:09:55,148 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 15:09:55,507 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 15:09:55,507 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 15:09:55,507 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 15:09:55,510 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:09:56,893 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for forecasts set
+2016-11-23 15:09:56,915 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for forecasts set
+2016-11-23 15:09:56,938 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for forecasts set
+2016-11-23 15:09:56,960 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for forecasts set
+2016-11-23 15:11:37,363 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 15:11:37,383 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 15:11:46,385 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 15:11:49,581 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 15:11:49,588 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 15:11:49,658 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 15:11:49,684 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 15:11:49,684 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 15:11:49,761 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 15:11:49,769 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 15:11:52,241 [INFO ]  No missing data after create_regions_df.
+2016-11-23 15:11:52,249 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 15:11:52,276 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 15:11:52,600 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 15:11:52,610 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 15:11:52,621 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 15:11:52,631 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 15:11:52,641 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 15:11:53,002 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 15:11:53,002 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 15:11:53,002 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 15:11:53,004 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:11:54,328 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for forecasts set
+2016-11-23 15:11:54,350 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for forecasts set
+2016-11-23 15:11:54,372 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for forecasts set
+2016-11-23 15:11:54,394 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for forecasts set
+2016-11-23 15:11:54,399 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : forecasts_set saved to : data/store/DWE_CLOSED_2013_forecasts_set_D.csv
+2016-11-23 15:12:17,426 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 15:12:17,444 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 15:12:26,499 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 15:12:29,698 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 15:12:29,704 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 15:12:29,777 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 15:12:29,803 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 15:12:29,804 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 15:12:29,881 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 15:12:29,888 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 15:12:32,368 [INFO ]  No missing data after create_regions_df.
+2016-11-23 15:12:32,375 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 15:12:32,402 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 15:12:32,731 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 15:12:32,740 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 15:12:32,751 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 15:12:32,761 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 15:12:32,772 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 15:12:33,124 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 15:12:33,124 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 15:12:33,125 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 15:12:33,127 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 15:12:34,421 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for forecasts set
+2016-11-23 15:12:34,443 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for forecasts set
+2016-11-23 15:12:34,465 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for forecasts set
+2016-11-23 15:12:34,487 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for forecasts set
+2016-11-23 15:12:34,492 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : forecasts_set saved to : data/store/DWE_CLOSED_2013_forecasts_set_D.csv
+2016-11-23 16:31:54,156 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:31:54,176 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:32:03,397 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:37:33,987 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:37:34,010 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:37:43,353 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:38:15,600 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:38:15,620 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:38:24,806 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:40:30,861 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:40:30,879 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:40:40,021 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:40:55,512 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:40:55,531 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:41:04,598 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:41:40,916 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:41:40,935 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:41:49,957 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:42:59,893 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:42:59,918 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:43:08,757 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:43:11,945 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:43:11,952 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:43:12,025 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:43:12,051 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:43:12,051 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:43:12,130 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:43:12,138 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:43:15,012 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:43:15,019 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:43:15,048 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:43:15,377 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:43:15,387 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:43:15,398 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:43:15,408 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:43:15,418 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:43:15,770 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:43:15,770 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:43:15,770 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:43:34,239 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:43:34,258 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:43:43,114 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:43:46,263 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:43:46,269 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:43:46,338 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:43:46,365 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:43:46,365 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:43:46,434 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:43:46,442 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:43:48,906 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:43:48,913 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:43:48,942 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:43:49,264 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:43:49,274 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:43:49,284 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:43:49,294 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:43:49,304 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:43:49,656 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:43:49,656 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:43:49,656 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:44:48,123 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:44:48,143 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:44:57,131 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:45:00,649 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:45:00,655 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:45:00,728 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:45:00,757 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:45:00,757 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:45:00,842 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:45:00,851 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:45:03,245 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:45:03,252 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:45:03,281 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:45:03,630 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:45:03,640 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:45:03,651 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:45:03,662 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:45:03,673 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:45:04,039 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:45:04,039 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:45:04,039 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:45:37,498 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:45:37,517 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:45:46,441 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:45:49,745 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:45:49,752 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:45:49,824 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:45:49,850 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:45:49,850 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:45:49,925 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:45:49,932 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:45:52,727 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:45:52,734 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:45:52,763 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:45:53,094 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:45:53,103 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:45:53,114 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:45:53,124 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:45:53,134 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:45:53,506 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:45:53,506 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:45:53,506 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:46:00,568 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:46:00,587 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:46:09,480 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:46:12,959 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:46:12,965 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:46:13,033 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:46:13,060 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:46:13,060 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:46:13,141 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:46:13,149 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:46:15,857 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:46:15,864 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:46:15,898 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:46:16,290 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:46:16,300 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:46:16,311 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:46:16,323 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:46:16,334 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:46:16,702 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:46:16,702 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:46:16,703 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:47:38,393 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:47:38,412 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:47:47,318 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:47:50,536 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:47:50,542 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:47:50,617 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:47:50,645 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:47:50,645 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:47:50,722 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:47:50,730 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:47:53,778 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:47:53,786 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:47:53,814 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:47:54,146 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:47:54,157 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:47:54,167 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:47:54,177 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:47:54,188 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:47:54,538 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:47:54,538 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:47:54,539 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:47:57,742 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 16:47:59,052 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for forecasts set
+2016-11-23 16:47:59,073 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for forecasts set
+2016-11-23 16:47:59,096 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for forecasts set
+2016-11-23 16:47:59,118 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for forecasts set
+2016-11-23 16:47:59,123 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : forecasts_set saved to : data/store/DWE_CLOSED_2013_forecasts_set_D.csv
+2016-11-23 16:49:00,872 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] prepare new training set...
+2016-11-23 16:49:00,891 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-23 16:49:09,841 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with counts...
+2016-11-23 16:49:13,152 [INFO ]  No missing data after merge_with_counts.
+2016-11-23 16:49:13,159 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with weather...
+2016-11-23 16:49:13,234 [INFO ]  All sites are less than 20km from weather data.
+2016-11-23 16:49:13,259 [WARNI]  after merge_with_weather_day : No data found for :
+2016-11-23 16:49:13,259 [WARNI]  idbldsite
+1     653
+2     276
+3     269
+4     269
+5     182
+6     182
+7     262
+8     177
+9     229
+10    282
+11     91
+12      1
+Name: _merge, dtype: int64
+2016-11-23 16:49:13,327 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public holidays...
+2016-11-23 16:49:13,336 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with public regions...
+2016-11-23 16:49:16,058 [INFO ]  No missing data after create_regions_df.
+2016-11-23 16:49:16,065 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with school holidays...
+2016-11-23 16:49:16,094 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start merging sites with conversion...
+2016-11-23 16:49:16,423 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : compensatedin has been regularized for training set
+2016-11-23 16:49:16,433 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for training set
+2016-11-23 16:49:16,443 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for training set
+2016-11-23 16:49:16,453 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for training set
+2016-11-23 16:49:16,464 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for training set
+2016-11-23 16:49:16,815 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : training_set saved to : data/store/DWE_CLOSED_2013_training_set_D.csv
+2016-11-23 16:49:16,815 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
+2016-11-23 16:49:16,815 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : finished preparing training set
+2016-11-23 16:49:20,085 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : start creating forecasts...
+2016-11-23 16:49:21,417 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : cloudamount has been regularized for forecasts set
+2016-11-23 16:49:21,439 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : mintemperature has been regularized for forecasts set
+2016-11-23 16:49:21,460 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : maxtemperature has been regularized for forecasts set
+2016-11-23 16:49:21,482 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : weathersituation has been regularized for forecasts set
+2016-11-23 16:49:21,487 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:True[2016-11-18 to         2016-11-23] : forecasts_set saved to : data/store/DWE_CLOSED_2013_forecasts_set_D.csv
