@@ -183,15 +183,16 @@ class Datastore(object):
                     print ("self.observed_targets*******************")
                     print self.observed_targets
 
-            elif self.period == 'H':
-                if self.conversion:
-                    conversions.rename(
-                        columns={'timefrom': 'date_time'}, inplace=True)
-                    conversions = conversions[(conversions.date_time.dt.date >=
-                                               self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
-                    self.observed_targets = pd.merge(
-                        counts, conversions, on=['date_time', 'idbldsite'], how='left')
-
+                elif self.period == 'H':
+                    if self.conversion:
+                        conversions.rename(
+                            columns={'timefrom': 'date_time'}, inplace=True)
+                        conversions = conversions[(conversions.date_time.dt.date >=
+                                                   self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
+                        self.observed_targets = pd.merge(
+                            counts, conversions, on=['date_time', 'idbldsite'], how='left')
+            else:
+                self.observed_targets = counts
             self.observed_targets.to_csv(get_file_path(
                 self.file_names['observed_set'], fileDir), encoding='utf-8', sep=';')
 

@@ -190,20 +190,8 @@ def regularize(datastore, df, is_forecast=False):
         TYPE: Description
     """
     df = df.reset_index()
-    print datastore.no_weatherstore_sites
+    
     df = df[~df.idbldsite.isin(datastore.no_weatherstore_sites)]
-
-    def standardize(x, col, x_mean, x_std):
-        print x['idbldsite']
-        print x_mean.ix[x['idbldsite']]
-        print x_std.ix[x['idbldsite']]
-        if x_std.ix[x['idbldsite']] != 0:
-            standardized = (x[col] - x_mean.ix[x['idbldsite']]
-                            ) / x_std.ix[x['idbldsite']]
-        else:
-            standardized = 0
-
-        return standardized
 
     for col in df.columns.tolist():
 
@@ -222,17 +210,34 @@ def regularize(datastore, df, is_forecast=False):
 
                 x_std = training_set_groupy.std()
 
-                print "col**************************", col
-                try:
-                    df[col + "_reg"] = df.apply(lambda x: standardize(x, col, x_mean, x_std),
-                                                axis=1)
-                except Exception as e:
-                    logging.error(e.message)
-                    logging.error(e.args)
+                def standardize(row):
+                    
+                   
+
+                    if row['idbldsite'] in x_mean.index  and row['idbldsite'] in x_std.index:
+
+                        if x_std.ix[row['idbldsite']] != 0:
+                            standardized = (row[col] - x_mean.ix[row['idbldsite']]
+                                            ) / x_std.ix[row['idbldsite']]
+                        else:
+                            standardized = 0
+                    else:
+
+                        standardized = 0
+                        logging.error("not weather data in training set found for {}".format(row['idbldsite']))
+                   
+                    return standardized
+
+                
+
+                df[col + "_reg"] = df.apply(standardize,
+                                            axis=1)
+
                 logging.info("{0} : {1} has been regularized for forecasts set".format(
                              datastore, col
                              ))
     df = df.fillna(0)
+  
     return df
 
 

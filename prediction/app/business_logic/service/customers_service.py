@@ -21,7 +21,7 @@ def sites(json_req):
         # datastore_H = Datastore(db_params=json_req, create=False, period='H')
 
         datastore_D_retro = Datastore(db_params=json_req, create=True, period='D', retrocheck=True,
-                                      dt_from="2016-11-17", dt_to="2016-11-23")
+                                      dt_from="2016-11-18", dt_to="2016-11-24")
 
         # datastore_D.get_data()
         # datastore_D.create_forecasts()

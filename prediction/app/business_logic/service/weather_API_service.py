@@ -75,7 +75,8 @@ def add_weather_forecasts_weatherstore(datastore, df):
 
     df_weather = weatherstore_service.get_weatherstore_forecasts(datastore, df)
 
-    if df_weather is not None:
+    if df_weather.shape[0] > 0:
+
         df = pd.merge(
             df, df_weather[
                 ['dateTime', 'ne', 'tn', 'tx', 'ww', 'rrr', 'prrr']],

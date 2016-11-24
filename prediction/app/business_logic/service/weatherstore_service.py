@@ -23,18 +23,19 @@ def get_weatherstore_forecasts(datastore, df):
 
     if weather_site_id is not None:
 
-        df = retrieve_forecasts(weather_site_id)
-        df = df[df.updated.dt.date == (
+        df_weatherstore = retrieve_forecasts(weather_site_id)
+        df_weatherstore = df_weatherstore[df_weatherstore.updated.dt.date == (
             datastore.date_from - timedelta(days=1))]
 
         period = convert_period(datastore)
 
-        df = df[(df.data_type == "forecast") & (df.period == period)]
-        return df
+        df_weatherstore = df_weatherstore[
+            (df_weatherstore.data_type == "forecast") & (df_weatherstore.period == period)]
+        return df_weatherstore
     else:
         datastore.no_weatherstore_sites.append(site_id)
-        print "datastore.no_weatherstore_sites", datastore.no_weatherstore_sites
-        return None
+        logging.error("datastore.no_weatherstore_sites : {}".format(datastore.no_weatherstore_sites))
+        return pd.DataFrame()
 
 
 def get_weather_site_id(site_id, db_user):
