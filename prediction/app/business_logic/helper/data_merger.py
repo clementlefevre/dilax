@@ -39,9 +39,10 @@ def merge_tables(datastore):
         "{} : start merging sites with school holidays...".format(datastore))
     datastore.training_data = merge_with_school_holidays(datastore)
 
-    logging.info(
-        "{} : start merging sites with conversion...".format(datastore))
-    datastore.training_data = merge_with_conversion(datastore)
+    if datastore.conversion:
+        logging.info(
+            "{} : start merging sites with conversion...".format(datastore))
+        datastore.training_data = merge_with_conversion(datastore)
     return datastore.training_data
 
 

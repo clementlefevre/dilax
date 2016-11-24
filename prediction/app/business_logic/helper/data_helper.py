@@ -190,6 +190,20 @@ def regularize(datastore, df, is_forecast=False):
         TYPE: Description
     """
     df = df.reset_index()
+    print datastore.no_weatherstore_sites
+    df = df[~df.idbldsite.isin(datastore.no_weatherstore_sites)]
+
+    def standardize(x, col, x_mean, x_std):
+        print x['idbldsite']
+        print x_mean.ix[x['idbldsite']]
+        print x_std.ix[x['idbldsite']]
+        if x_std.ix[x['idbldsite']] != 0:
+            standardized = (x[col] - x_mean.ix[x['idbldsite']]
+                            ) / x_std.ix[x['idbldsite']]
+        else:
+            standardized = 0
+
+        return standardized
 
     for col in df.columns.tolist():
 
@@ -205,12 +219,16 @@ def regularize(datastore, df, is_forecast=False):
                 training_set_groupy = datastore.training_data.groupby('idbldsite')[
                     col]
                 x_mean = training_set_groupy.mean()
+
                 x_std = training_set_groupy.std()
 
-                df[col + "_reg"] = df.apply(lambda x:
-                                            (x[col] - x_mean.ix[x['idbldsite']]
-                                             ) / x_std.ix[x['idbldsite']],
-                                            axis=1)
+                print "col**************************", col
+                try:
+                    df[col + "_reg"] = df.apply(lambda x: standardize(x, col, x_mean, x_std),
+                                                axis=1)
+                except Exception as e:
+                    logging.error(e.message)
+                    logging.error(e.args)
                 logging.info("{0} : {1} has been regularized for forecasts set".format(
                              datastore, col
                              ))

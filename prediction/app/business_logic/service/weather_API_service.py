@@ -73,18 +73,20 @@ def add_weather_forecasts_weatherstore(datastore, df):
         raise Error(
             "Retrocheck not implemented for hourly forecasts because not yet available in the Weather API.")
 
-    df_weather = weatherstore_service.get_weather_forecasts(datastore, df)
+    df_weather = weatherstore_service.get_weatherstore_forecasts(datastore, df)
 
-    df = pd.merge(
-        df, df_weather[['dateTime', 'ne', 'tn', 'tx', 'ww', 'rrr', 'prrr']],
-        left_on='date', right_on='dateTime', how='left')
+    if df_weather is not None:
+        df = pd.merge(
+            df, df_weather[
+                ['dateTime', 'ne', 'tn', 'tx', 'ww', 'rrr', 'prrr']],
+            left_on='date', right_on='dateTime', how='left')
 
-    df.rename(columns={'tn': 'mintemperature',
-                       'tx': 'maxtemperature',
-                       'ww': 'weathersituation',
-                       'ne': 'cloudamount',
-                       'rrr': "precipipation_mm",
-                       'prrr': 'precipipation_probability'},
-              inplace=True)
-    df = df.drop('dateTime', 1)
+        df.rename(columns={'tn': 'mintemperature',
+                           'tx': 'maxtemperature',
+                           'ww': 'weathersituation',
+                           'ne': 'cloudamount',
+                           'rrr': "precipitation_mm",
+                           'prrr': 'precipitation_probability'},
+                  inplace=True)
+        df = df.drop('dateTime', 1)
     return df

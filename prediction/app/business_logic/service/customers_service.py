@@ -72,10 +72,14 @@ def get_prediction(json_req):
         predicted_and_observed = pd.merge(prediction.forecast_predictors[
             ['date_time', label]],
             observed, on='date_time', suffixes=["_predicted", '_observed'])
+        print predicted_and_observed.columns
+        predicted_and_observed.columns = [
+            'date_time', 'predicted', 'idbldsite', 'observed']
         json_ = predicted_and_observed.to_json(orient='records')
         json_array = json.loads(json_)
         prediction_data = json_array
         print predicted_and_observed.head()
+
         rmse, accuracy = prediction.RMSE(predicted_and_observed, label)
 
     else:

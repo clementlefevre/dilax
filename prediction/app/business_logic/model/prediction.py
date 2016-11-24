@@ -93,8 +93,8 @@ class Prediction(object):
                                                       fileDir), sep=";")
 
     def RMSE(self, df, label):
-        predicted = label + '_predicted'
-        observed = label + '_observed'
+        predicted = 'predicted'
+        observed = 'observed'
         df['error'] = df[observed] - df[predicted]
         df.error = np.square(df.error)
         total_error = np.sum(np.sqrt(df.error))

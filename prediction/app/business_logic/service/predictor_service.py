@@ -28,6 +28,10 @@ def create_forecasts_data(datastore):
         ['idbldsite', 'region_id']].values
 
     for site_id, region_id in [tuple(x) for x in site_region]:
+
+        if site_id in datastore.no_weatherstore_sites:
+            continue
+
         df_forecasts_site = pd.DataFrame(pd.date_range(
             datastore.date_from, datastore.date_to,
             freq=datastore.period), columns=['date'])
@@ -46,7 +50,6 @@ def create_forecasts_data(datastore):
 
         df_forecasts_site = add_school_holidays(df_forecasts_site)
 
-        # !!!!  API working for the time being !!!
         try:
             df_forecasts_site = add_public_holidays(
                 df_forecasts_site, datastore.public_holidays)
@@ -70,6 +73,3 @@ def create_forecasts_data(datastore):
         datastore, df_forecasts, is_forecast=True)
 
     return df_forecasts
-
-
-

@@ -24,7 +24,9 @@ class Datastore(object):
         self._set_dates(dt_from, dt_to)
         self.create = create
         self.retrocheck = retrocheck
+        self.conversion = db_params['conversion']
         self.observed_targets = pd.DataFrame()
+        self.no_weatherstore_sites = []
         self._set_file_names()
 
     def __repr__(self):
@@ -166,22 +168,29 @@ class Datastore(object):
 
             counts = get_counts(self, date_from=self.date_from,
                                 date_to=self.date_to)
-            conversions = get_conversion(self)
-            if self.period == 'D':
+            if self.conversion:
+                conversions = get_conversion(self)
+                if self.period == 'D':
 
-                conversions = conversions[(conversions.date.dt.date >=
-                                           self.date_from) & (conversions.date.dt.date <= self.date_to)]
+                    conversions = conversions[(conversions.date.dt.date >=
+                                               self.date_from) & (conversions.date.dt.date <= self.date_to)]
+                    print ("counts*******************")
+                    print counts
+                    print ("conversions*******************")
+                    print conversions
+                    self.observed_targets = pd.merge(
+                        counts, conversions, on=['date', 'idbldsite'], how='left')
+                    print ("self.observed_targets*******************")
+                    print self.observed_targets
 
-                self.observed_targets = pd.merge(
-                    counts, conversions, on=['date', 'idbldsite'])
-
-            elif period == 'H':
-                conversions.rename(
-                    columns={'timefrom': 'date_time'}, inplace=True)
-                conversions = conversions[(conversions.date_time.dt.date >=
-                                           self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
-                self.observed_targets = pd.merge(
-                    counts, conversions, on=['date_time', 'idbldsite'])
+            elif self.period == 'H':
+                if self.conversion:
+                    conversions.rename(
+                        columns={'timefrom': 'date_time'}, inplace=True)
+                    conversions = conversions[(conversions.date_time.dt.date >=
+                                               self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
+                    self.observed_targets = pd.merge(
+                        counts, conversions, on=['date_time', 'idbldsite'], how='left')
 
             self.observed_targets.to_csv(get_file_path(
                 self.file_names['observed_set'], fileDir), encoding='utf-8', sep=';')

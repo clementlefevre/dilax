@@ -1,6 +1,7 @@
 from datetime import timedelta
 from sqlalchemy import create_engine
 import pandas as pd
+import logging
 
 from ..model.config_manager import Config_manager
 
@@ -15,30 +16,40 @@ address = config_manager.weatherstore['drivername']\
     'port'] + '/' + config_manager.weatherstore['database']
 
 
-def get_weather_forecasts(datastore, df):
+def get_weatherstore_forecasts(datastore, df):
     site_id = df.idbldsite.unique()[0]
     db_user = datastore.db_params['db_user']
     weather_site_id = get_weather_site_id(site_id, db_user)
 
-    df = retrieve_forecasts(weather_site_id)
-    print datastore.date_from
+    if weather_site_id is not None:
 
-    df = df[df.updated.dt.date == (
-        datastore.date_from - timedelta(days=1))]
+        df = retrieve_forecasts(weather_site_id)
+        df = df[df.updated.dt.date == (
+            datastore.date_from - timedelta(days=1))]
 
-    period = convert_period(datastore)
+        period = convert_period(datastore)
 
-    df = df[(df.data_type == "forecast") & (df.period == period)]
-    return df
+        df = df[(df.data_type == "forecast") & (df.period == period)]
+        return df
+    else:
+        datastore.no_weatherstore_sites.append(site_id)
+        print "datastore.no_weatherstore_sites", datastore.no_weatherstore_sites
+        return None
 
 
 def get_weather_site_id(site_id, db_user):
-    engine = create_engine(address)
-    id = pd.read_sql_query("SELECT id FROM sites WHERE idbldsite=" + str(site_id) + " AND customer = \'" + db_user + "\'",
-                           con=engine)
-    engine.dispose()
+    try:
+        engine = create_engine(address)
 
-    return id.id.values[0]
+        id = pd.read_sql_query("SELECT id FROM sites WHERE idbldsite=" + str(site_id) + " AND customer = \'" + db_user + "\'",
+                               con=engine)
+        engine.dispose()
+
+        return id.id.values[0]
+    except IndexError as e:
+        logging.error(
+            "This idbldsite :{0} was not found in weather store ".format(site_id))
+        return None
 
 
 def retrieve_forecasts(weather_site_id):

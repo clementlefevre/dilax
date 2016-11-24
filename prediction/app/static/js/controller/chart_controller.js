@@ -72,9 +72,9 @@ froggyApp.controller('chartController', function ($scope,$http) {
       element: 'prediction_chart_day',
       data: [],
       xkey: 'date_time',
-      ykeys: ['compensatedin_observed','compensatedin_predicted'],
-      labels: ['compensatedin_observed','compensatedin_predicted'],
-      pointSize : $scope.pointSize
+      ykeys: ['observed','predicted'],
+      labels: ['observed','predicted'],
+   
     });
 
   });
