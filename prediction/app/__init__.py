@@ -6,6 +6,6 @@ def create_app():
 
     from controller import predictions as predictions_blueprint
     app.register_blueprint(predictions_blueprint, url_prefix='/predictions')
-    print "hello"
+    
 
     return app

@@ -24,6 +24,7 @@ class Datastore(object):
         self._set_dates(dt_from, dt_to)
         self.create = create
         self.retrocheck = retrocheck
+        self.observed_targets = {}
         self._set_file_names()
 
     def __repr__(self):
@@ -122,6 +123,8 @@ class Datastore(object):
             'path'] + '/' + self.name +\
             '_forecasts_set_' + self.period + '.csv'
 
+
+
         self.file_names = dict(training_set=training_set,
                                forecasts_set=forecasts_set,
                                sites_info=sites_infos_file)
@@ -151,7 +154,7 @@ class Datastore(object):
             self, self.file_names['sites_info']))
 
     def _get_observed_target(self):
-        self.observed_targets = {}
+        
         print "self.date_from, self.date_to", self.date_from, self.date_to
         counts = get_counts(self, [self.date_from, self.date_to])
         conversions = get_conversion(self)
@@ -168,3 +171,6 @@ class Datastore(object):
 
         self.observed_targets['conversion'] = conversions
         self.observed_targets['counts'] = counts
+        conversions.to_csv("conversion.csv",sep=';')
+        counts.to_csv("counts.csv",sep=';')
+

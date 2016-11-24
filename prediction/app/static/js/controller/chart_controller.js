@@ -36,12 +36,13 @@ froggyApp.controller('chartController', function ($scope,$http) {
     predictor = {'db_params':$scope.customer,
     'period' : $scope.period,
     'site': $scope.site,
-    'label': $scope.label}
+    'label': $scope.label,
+    'retrocheck':$scope.retrocheck}
 
     loadingDatas();
     $http.post('/predictions/create_prediction', predictor).success(function (data) {
       closeLoading();
-      $scope.prediction_data = data.result;
+      $scope.prediction_data = data.prediction;
       $scope.features = data.features;
       $scope.r2 = data.r2;
       
@@ -67,9 +68,9 @@ froggyApp.controller('chartController', function ($scope,$http) {
     chart_day = Morris.Line({
       element: 'prediction_chart_day',
       data: [],
-      xkey: 'index',
-      ykeys: ['value'],
-      labels: ['Value'],
+      xkey: 'date_time',
+      ykeys: ['compensatedin_predicted','compensatedin_observed'],
+      labels: ['compensatedin_predicted','compensatedin_observed'],
       pointSize : $scope.pointSize
     });
 
@@ -99,6 +100,7 @@ froggyApp.controller('chartController', function ($scope,$http) {
   $scope.period = 'D';
   $scope.label = "compensatedin";
   $scope.pointSize = 3;
+  $scope.retrocheck= false;
 
 
 

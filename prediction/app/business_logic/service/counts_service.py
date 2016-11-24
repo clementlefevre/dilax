@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from datetime import datetime
 from ..helper.file_helper import get_file_path
+from ..helper.data_helper import round_to_nearest_hour
 
 
 def get_counts(datastore, interval=None):

@@ -21,9 +21,11 @@ def get_weather_forecasts(datastore, df):
     weather_site_id = get_weather_site_id(site_id, db_user)
 
     df = retrieve_forecasts(weather_site_id)
+    print datastore.date_from
 
     df = df[df.updated.dt.date == (
         datastore.date_from - timedelta(days=1))]
+
 
     period = convert_period(datastore)
 

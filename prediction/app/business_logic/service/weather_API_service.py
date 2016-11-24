@@ -2,6 +2,7 @@ import pandas as pd
 import urllib2
 import urllib
 import json
+import logging
 from pandas.io.json import json_normalize
 from ..model.config_manager import Config_manager
 import weatherstore_service

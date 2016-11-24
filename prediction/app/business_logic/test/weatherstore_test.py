@@ -2,15 +2,13 @@ import pytest
 from mock import Mock, MagicMock
 import datetime
 
-import pandas as pd
 from ..service.weatherstore_service import get_weather_forecasts
-from ..service.weather_API_service import add_weather_forecasts_weatherstore
 
 
 @pytest.fixture(autouse=True, scope="function")
 def datastore():
     datastore = Mock()
-    datastore.date_from = datetime.datetime(2016, 11, 18)
+    datastore.date_from = datetime.date(2016, 11, 18)
     datastore.period = "D"
 
     datastore.db_params = {}
