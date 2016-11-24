@@ -24,7 +24,7 @@ class Datastore(object):
         self._set_dates(dt_from, dt_to)
         self.create = create
         self.retrocheck = retrocheck
-        self.observed_targets = {}
+        self.observed_targets = pd.DataFrame()
         self._set_file_names()
 
     def __repr__(self):
@@ -68,6 +68,7 @@ class Datastore(object):
             self.training_data = add_calendar_fields(self.training_data)
             self.training_data = regularize(
                 self, self.training_data)
+            print self.training_data.tail()
             self._save_training_set()
 
             logging.info("{0} : finished preparing training set".format(self))
@@ -114,20 +115,26 @@ class Datastore(object):
 
     def _set_file_names(self):
         training_set = config_manager.datastore_settings[
-            'path'] + '/' + self.name + '_training_set_' + self.period + '.csv'
+            'path'] + '/' + self.name + '_training_set_' + self.period\
+            + "_retro_" + str(self.retrocheck) + '.csv'
 
         sites_infos_file = config_manager.datastore_settings[
             'path'] + '/' + self.name + '_sites_infos' + '.csv'
 
         forecasts_set = config_manager.datastore_settings[
             'path'] + '/' + self.name +\
-            '_forecasts_set_' + self.period + '.csv'
+            '_forecasts_set_' + self.period + \
+            "_retro_" + str(self.retrocheck) + '.csv'
 
-
+        observed_set = config_manager.datastore_settings[
+            'path'] + '/' + self.name +\
+            '_observed_set_' + self.period + \
+            "_retro_" + str(self.retrocheck) + '.csv'
 
         self.file_names = dict(training_set=training_set,
                                forecasts_set=forecasts_set,
-                               sites_info=sites_infos_file)
+                               sites_info=sites_infos_file,
+                               observed_set=observed_set)
 
     def _set_dates(self, date_from, date_to):
         if date_from is None:
@@ -154,23 +161,33 @@ class Datastore(object):
             self, self.file_names['sites_info']))
 
     def _get_observed_target(self):
-        
-        print "self.date_from, self.date_to", self.date_from, self.date_to
-        counts = get_counts(self, [self.date_from, self.date_to])
-        conversions = get_conversion(self)
-        if self.period == 'D':
 
-            print conversions.info()
-            conversions = conversions[(conversions.date.dt.date >=
-                                       self.date_from) & (conversions.date.dt.date <= self.date_to)]
+        if self.create:
 
-        elif period == 'H':
-            conversions.rename(columns={'timefrom': 'date_time'}, inplace=True)
-            conversions = conversions[(conversions.date_time.dt.date >=
-                                       self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
+            counts = get_counts(self, date_from=self.date_from,
+                                date_to=self.date_to)
+            conversions = get_conversion(self)
+            if self.period == 'D':
 
-        self.observed_targets['conversion'] = conversions
-        self.observed_targets['counts'] = counts
-        conversions.to_csv("conversion.csv",sep=';')
-        counts.to_csv("counts.csv",sep=';')
+                conversions = conversions[(conversions.date.dt.date >=
+                                           self.date_from) & (conversions.date.dt.date <= self.date_to)]
 
+                self.observed_targets = pd.merge(
+                    counts, conversions, on=['date', 'idbldsite'])
+
+            elif period == 'H':
+                conversions.rename(
+                    columns={'timefrom': 'date_time'}, inplace=True)
+                conversions = conversions[(conversions.date_time.dt.date >=
+                                           self.date_from) & (conversions.date_time.dt.date <= self.date_to)]
+                self.observed_targets = pd.merge(
+                    counts, conversions, on=['date_time', 'idbldsite'])
+
+            self.observed_targets.to_csv(get_file_path(
+                self.file_names['observed_set'], fileDir), encoding='utf-8', sep=';')
+
+        else:
+            self.observed_targets = pd.read_csv(
+                get_file_path(self.file_names['observed_set'],
+                              fileDir), sep=";",
+                parse_dates=['date_time'])

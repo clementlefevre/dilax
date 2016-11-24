@@ -17,20 +17,17 @@ def sites(json_req):
     key = json_req['db_name'] + 'D'
     if key not in global_predictions:
 
-
-
         # datastore_D = Datastore(db_params=json_req, create=True, period='D')
         # datastore_H = Datastore(db_params=json_req, create=False, period='H')
 
-        datastore_D_retro = Datastore(db_params=json_req, create=True, period='D', retrocheck=True, \
-            dt_from="2016-11-17", dt_to="2016-11-24")
+        datastore_D_retro = Datastore(db_params=json_req, create=True, period='D', retrocheck=True,
+                                      dt_from="2016-11-17", dt_to="2016-11-23")
 
         # datastore_D.get_data()
         # datastore_D.create_forecasts()
 
         # datastore_H.get_data()
         # datastore_H.create_forecasts()
-
 
         datastore_D_retro.get_data()
         datastore_D_retro.create_forecasts()
@@ -41,9 +38,11 @@ def sites(json_req):
 
         # global_predictions[json_req['db_name'] + 'D'] = prediction_D
         # global_predictions[json_req['db_name'] + 'H'] = prediction_H
-        global_predictions[json_req['db_name'] + 'D'+"_retro"] = prediction_D_retro
+        global_predictions[json_req['db_name'] +
+                           'D' + "_retro"] = prediction_D_retro
 
-    sites = global_predictions[json_req['db_name'] + 'D'+"_retro"].datastore.sites_infos
+    sites = global_predictions[
+        json_req['db_name'] + 'D' + "_retro"].datastore.sites_infos
     json_ = sites.to_json(orient='records')
     json_array = json.loads(json_)
     return jsonify(result=json_array)
@@ -51,34 +50,39 @@ def sites(json_req):
 
 def get_prediction(json_req):
     global global_predictions
-    print "json_req['retrocheck']",json_req['retrocheck']
+    label = json_req['label']
+    print "json_req['retrocheck']", json_req['retrocheck']
     if json_req['retrocheck']:
         retrocheck = "_retro"
 
     else:
-        retrocheck=""
-
-    
+        retrocheck = ""
 
     prediction = global_predictions[
-        json_req['db_params']['db_name'] + json_req['period']+retrocheck]
+        json_req['db_params']['db_name'] + json_req['period'] + retrocheck]
 
     prediction.make_prediction(
-        json_req['site']['idbldsite'], json_req['label'])
+        json_req['site']['idbldsite'], label)
 
     if json_req['retrocheck']:
-        observed = prediction.datastore.observed_targets['counts']
-        observed = observed[observed.idbldsite==json_req['site']['idbldsite']]
-        observed = pd.merge(prediction.forecast_predictors[
-            ['date_time', json_req['label']]], observed, on='date_time', suffixes=["_predicted",'_observed'])
-        json_ = observed.to_json(orient = 'records')
+        observed = prediction.datastore.observed_targets[
+            ['date_time', 'idbldsite', label]]
+        observed = observed[observed.idbldsite ==
+                            json_req['site']['idbldsite']]
+        predicted_and_observed = pd.merge(prediction.forecast_predictors[
+            ['date_time', label]],
+            observed, on='date_time', suffixes=["_predicted", '_observed'])
+        json_ = predicted_and_observed.to_json(orient='records')
         json_array = json.loads(json_)
-        prediction_data= json_array
+        prediction_data = json_array
+        print predicted_and_observed.head()
+        rmse, accuracy = prediction.RMSE(predicted_and_observed, label)
 
     else:
-        prediction_data = prediction.export_to_json(json_req['label'])
+        json_ = prediction.forecast_predictors[
+            ['date_time', label]].to_json(orient='records')
+        json_array = json.loads(json_)
+        prediction_data = json_array
+        rmse, accuracy = 0, 0
 
-    
-    
-
-    return jsonify(prediction=prediction_data, features=prediction.features_weighted, r2=prediction.r2)
+    return jsonify(prediction=prediction_data, features=prediction.features_weighted, r2=prediction.r2, rmse=rmse, accuracy=accuracy)

@@ -1,4 +1,5 @@
 import os
+import numpy as np
 import pandas as pd
 import json
 from sklearn.ensemble.forest import RandomForestRegressor
@@ -91,9 +92,15 @@ class Prediction(object):
                                                       label + ".csv",
                                                       fileDir), sep=";")
 
-    def export_to_json(self, label):
-        s = self.forecast_predictors[
-            ['date_time', label]].to_json(orient='split')
-        d = json.loads(s)
-        d = [{"index": int(data[0]), "value": data[1]} for data in d['data']]
-        return d
+    def RMSE(self, df, label):
+        predicted = label + '_predicted'
+        observed = label + '_observed'
+        df['error'] = df[observed] - df[predicted]
+        df.error = np.square(df.error)
+        total_error = np.sum(np.sqrt(df.error))
+        print df.error
+        rmse = np.mean(np.sqrt(df.error))
+        print "rmse", rmse
+        accuracy = 100 - total_error / df[predicted].sum() * 100
+        print "accuracy", accuracy
+        return rmse, accuracy

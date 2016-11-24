@@ -55,7 +55,13 @@ def merge_with_counts(datastore):
         TYPE: DataFrame
     """
     df_sites = datastore.db.sites
-    df_counts = get_counts(datastore)
+
+    if datastore.retrocheck:
+
+        df_counts = get_counts(datastore, date_to=datastore.date_from)
+
+    else:
+        df_counts = get_counts(datastore)
 
     df_counts_sites = pd.merge(df_sites, df_counts,
                                on=['idbldsite'],

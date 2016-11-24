@@ -45,6 +45,9 @@ froggyApp.controller('chartController', function ($scope,$http) {
       $scope.prediction_data = data.prediction;
       $scope.features = data.features;
       $scope.r2 = data.r2;
+      $scope.rmse = data.rmse;
+      $scope.accuracy = data.accuracy;
+      $scope.create_training_set = data.create_training_set;
       
 
       console.log( $scope.prediction_data);
@@ -69,8 +72,8 @@ froggyApp.controller('chartController', function ($scope,$http) {
       element: 'prediction_chart_day',
       data: [],
       xkey: 'date_time',
-      ykeys: ['compensatedin_predicted','compensatedin_observed'],
-      labels: ['compensatedin_predicted','compensatedin_observed'],
+      ykeys: ['compensatedin_observed','compensatedin_predicted'],
+      labels: ['compensatedin_observed','compensatedin_predicted'],
       pointSize : $scope.pointSize
     });
 
@@ -101,6 +104,7 @@ froggyApp.controller('chartController', function ($scope,$http) {
   $scope.label = "compensatedin";
   $scope.pointSize = 3;
   $scope.retrocheck= false;
+  $scope.create_training_set = false;
 
 
 

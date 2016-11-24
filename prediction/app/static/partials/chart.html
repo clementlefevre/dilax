@@ -49,7 +49,13 @@
     </label>
   </div>
 
-  {{retrocheck}}
+<div class="checkbox">
+  <label>
+    <input type="checkbox" ng-model="create_training_set">
+    Create training set
+  </label>
+</div>
+
 
   
             <input type="button" value="Forecasts" class="btn btn-info" ng-click="createPrediction()"/>
@@ -59,8 +65,9 @@
 
 <div class="col-xs-12" style="height:50px;"></div>
 
-<h1>R2 = {{ r2 | number:2 }}</h1>
-
+<h3>R2 = {{ r2 | number:2 }}</h3>
+<h3>RMSE = {{ rmse | number:0 }}</h3>
+<h3>Accuracy = {{ accuracy | number:0 }}%</h3>
 
 
 <div class="row">
