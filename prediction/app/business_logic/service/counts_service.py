@@ -6,7 +6,7 @@ from ..helper.data_helper import round_to_nearest_hour
 
 
 def get_counts(datastore, date_from=None, date_to=None):
-    print "date_from,date_to", date_from, date_to
+
     df_counts = datastore.db.counts
 
     df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)

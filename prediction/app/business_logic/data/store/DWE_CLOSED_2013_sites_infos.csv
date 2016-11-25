@@ -1,13 +1,13 @@
 ;idbldsite;sname;latitude;longitude;region;region_id
-0;12;Stuttgart;48.7766305;9.1763305;;
-1;1;Hamburg City;53.550842;9.995385;;
-2;2;Hamburg AEZ;53.654227;10.091736;;
-3;3;Muenchen Damen;48.142641;11.576903;;
-4;4;Muenchen Herren;48.142641;11.576903;;
-5;5;Duesseldorf Herren;51.224403;6.774598;;
-6;6;Duesseldorf Damen;51.224403;6.774598;;
-7;7;Wiesbaden;50.081434;8.244644;;
-8;8;Bikini Berlin;52.505482;13.335294;;
-9;9;Osnabrueck;52.276045;8.043023;;
-10;10;Nuernberg;49.452291;11.074521;;
-11;11;Frankfurt MTZ;50.1109221;8.6821267;;
+0;12;Stuttgart;48.7766305;9.1763305;Baden-Württemberg;0
+1;1;Hamburg City;53.550842;9.995385;Hamburg;5
+2;2;Hamburg AEZ;53.654227;10.091736;Hamburg;5
+3;3;Muenchen Damen;48.142641;11.576903;Bayern;1
+4;4;Muenchen Herren;48.142641;11.576903;Bayern;1
+5;5;Duesseldorf Herren;51.224403;6.774598;Nordrhein-Westfalen;9
+6;6;Duesseldorf Damen;51.224403;6.774598;Nordrhein-Westfalen;9
+7;7;Wiesbaden;50.081434;8.244644;Hessen;6
+8;8;Bikini Berlin;52.505482;13.335294;Berlin;2
+9;9;Osnabrueck;52.276045;8.043023;Niedersachsen;8
+10;10;Nuernberg;49.452291;11.074521;Bayern;1
+11;11;Frankfurt MTZ;50.1109221;8.6821267;Hessen;6
