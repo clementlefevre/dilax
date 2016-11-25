@@ -1,3 +1,9 @@
+# coding=utf-8
+
+"""
+The Datastore class is a base class for all data stores.
+"""
+
 import os
 import pandas as pd
 from datetime import datetime, timedelta
@@ -30,7 +36,7 @@ class Datastore(object):
         self._set_file_names()
 
     def __repr__(self):
-        return "{0.name}:period:{0.period}:retrocheck:{0.retrocheck}[{0.date_from} to\
+        return "{0.name}:period:{PERIOD}:retrocheck:{0.retrocheck}[{0.date_from} to\
          {0.date_to}]".format(self)
 
     def get_data(self):
@@ -70,7 +76,7 @@ class Datastore(object):
             self.training_data = add_calendar_fields(self.training_data)
             self.training_data = regularize(
                 self, self.training_data)
-            print self.training_data.tail()
+
             self._save_training_set()
 
             logging.info("{0} : finished preparing training set".format(self))

@@ -46,23 +46,12 @@ class Merger(object):
 
     def merge_and_clean(self):
         self._merge()
-        print "self._merge()", self.merged
         self._display_missing_data()
-        print "self._display_missing_data()", self.merged
         self._filter_on_columns()
-        print "self._filter_on_columns()", self.merged
         return self.merged
 
     def _merge(self):
-        """Summary
-
-        Returns:
-            TYPE: Description
-
-        Raises:
-            "Abstract: Description
-        """
-        raise "Abstract Class, method not implemented"
+        raise(NotImplementedError)
 
     def _display_missing_data(self):
 

@@ -22,12 +22,22 @@ class DB_manager(object):
         return address
 
     def _create_connection(self):
-        self.engine = create_engine(self._db_address())
-        logging.info("engine created : " + str(self.engine))
+        try:
+            self.engine = create_engine(self._db_address())
+            logging.info("engine created : " + str(self.engine))
+        except Exception as e:
+            logging.error(
+                "Could not create connection for {}".format(self.db_params))
+            loggin.error(e.message)
 
     def _query(self, table):
-        return pd.read_sql_query("select * from " + '"' + table + '"',
-                                 con=self.engine)
+        try:
+            result = pd.read_sql_query("select * from " + '"' + table + '"',
+                                       con=self.engine)
+        except Exception as e:
+            logging.error("Could not query db for {}".format(table))
+            loggin.error(e.message)
+        return result
 
     def _init_data(self):
         self.sites = self._query("dwe_bld_site")
@@ -43,3 +53,7 @@ class DB_manager(object):
 
         self.public_holidays.to_csv(filename, sep=";", encoding="utf-8")
         self.conversion = self._query("dwe_ext_conversion")
+
+    def has_table(self, table_name):
+
+        return self.engine.dialect.has_table(self.engine, table_name)

@@ -49743,3 +49743,18 @@ Name: _merge, dtype: int64
 2016-11-25 14:32:02,574 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:False[2016-11-25 to         2017-01-15] : sites_infos saved to : data/store/DWE_CLOSED_2013_sites_infos.csv
 2016-11-25 14:32:02,575 [INFO ]  DWE_CLOSED_2013:period:D:retrocheck:False[2016-11-25 to         2017-01-15] : finished preparing training set
 2016-11-25 14:32:05,950 [INFO ]  No missing data after count_merger.
+2016-11-25 18:05:15,736 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:05:38,499 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:06:31,517 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:07:48,591 [INFO ]  engine created : Engine(postgresql://dwe-thalia:***@localhost:5432/DWE_THALIA_2014)
+2016-11-25 18:12:17,501 [INFO ]  engine created : Engine(postgresql://dwe-thalia:***@localhost:5432/DWE_THALIA_2014)
+2016-11-25 18:26:03,388 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:26:29,865 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:27:26,447 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:30:30,293 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:30:56,751 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:31:32,999 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:33:10,401 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 18:33:56,249 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 19:05:49,812 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
+2016-11-25 19:06:15,885 [INFO ]  engine created : Engine(postgresql://dwe-closed:***@localhost:5432/DWE_CLOSED_2013)
