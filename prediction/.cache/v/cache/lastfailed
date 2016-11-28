@@ -1,1 +1,3 @@
-{}
+{
+  "app/business_logic/test/datastore/datastore_test.py::test_datastore_training_set": true
+}

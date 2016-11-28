@@ -48,33 +48,3 @@ def get_region(latitude, longitude):
         logging.error(data)
         logging.error("Could not retrieve the region name for :" + coord_str)
         logging.error(e.message)
-
-
-def create_regions_df(datastore):
-    """create a dataframe of sites with the corresponding local region name.
-
-    Args:
-        datastore (DataFrame):
-
-    Returns:
-        DataFrame: sites-regions
-    """
-
-    df_sites = datastore.db.sites
-    df_sites['region'] = df_sites.apply(
-        lambda row: get_region(row['latitude'], row['longitude']), axis=1)
-    df_region_id = pd.read_csv(get_file_path(
-        'data/regions_countries.csv', fileDir))
-
-    df_sites = pd.merge(df_sites, df_region_id, on='region', how='left',
-                        indicator=True)
-
-    df_sites = check_missing_data(df_sites,
-                                  "left_only",
-                                  inspect.currentframe().f_code.co_name, drop_missing=False)
-
-    df_sites = df_sites[['idbldsite', 'sname', 'latitude', 'longitude',
-                         'region', 'region_id']]
-    datastore.sites_infos = df_sites
-
-    return df_sites[['idbldsite', 'region', 'region_id']]

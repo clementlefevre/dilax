@@ -48,7 +48,7 @@ def haversine(lon1, lat1, lon2, lat2):
 
 def add_idbldsite_to_weather_data(datastore, df):
     weather_coordinates = df[['latitude', 'longitude']].drop_duplicates()
-    df_sites = datastore.db.sites
+    df_sites = datastore.db_manager.sites
     weather_coordinates_matched = match_coordinates(
         weather_coordinates, df_sites)
 
@@ -190,7 +190,7 @@ def regularize(datastore, df, is_forecast=False):
         TYPE: Description
     """
     df = df.reset_index()
-    
+
     df = df[~df.idbldsite.isin(datastore.no_weatherstore_sites)]
 
     for col in df.columns.tolist():
@@ -211,10 +211,8 @@ def regularize(datastore, df, is_forecast=False):
                 x_std = training_set_groupy.std()
 
                 def standardize(row):
-                    
-                   
 
-                    if row['idbldsite'] in x_mean.index  and row['idbldsite'] in x_std.index:
+                    if row['idbldsite'] in x_mean.index and row['idbldsite'] in x_std.index:
 
                         if x_std.ix[row['idbldsite']] != 0:
                             standardized = (row[col] - x_mean.ix[row['idbldsite']]
@@ -224,11 +222,10 @@ def regularize(datastore, df, is_forecast=False):
                     else:
 
                         standardized = 0
-                        logging.error("not weather data in training set found for {}".format(row['idbldsite']))
-                   
-                    return standardized
+                        logging.error(
+                            "not weather data in training set found for {}".format(row['idbldsite']))
 
-                
+                    return standardized
 
                 df[col + "_reg"] = df.apply(standardize,
                                             axis=1)
@@ -237,7 +234,7 @@ def regularize(datastore, df, is_forecast=False):
                              datastore, col
                              ))
     df = df.fillna(0)
-  
+
     return df
 
 

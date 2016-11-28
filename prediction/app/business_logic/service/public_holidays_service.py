@@ -14,6 +14,5 @@ def add_public_holidays(df_data, df_holidays):
                       suffixes=['_counts', '_holidays'])
     merged[
         'is_public_holiday'] = ~merged.day.isnull() * 1
-    merged = merged.drop('day', 1)
 
     return merged
