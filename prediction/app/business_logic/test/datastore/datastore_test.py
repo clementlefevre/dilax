@@ -29,7 +29,7 @@ def test_datastore_conversion():
 def test_datastore_training_set():
     dayDatastore = daystore.DayDatastore(db_params=db_params)
     dayDatastore.get_data()
-    assert not dayDatastore.datra.train.set.empty
+    assert not dayDatastore.data.train.set.empty
 
 
 def test_datastore_hour():

@@ -40,16 +40,12 @@ class Merger(object):
     def merge_and_clean(self, left_data):
         self._set_left_data(left_data)
         self._set_right_data()
-        print "before merging {}".format(self.name)
-        print self.right.head(2)
         self._merge()
         self._display_missing_data()
         self._custom()
         self._filter_on_columns()
         self._rename_columns()
         self._drop_columns()
-        print "ater merging {}".format(self.name)
-        print self.merged.head(2)
 
     def _merge(self):
 

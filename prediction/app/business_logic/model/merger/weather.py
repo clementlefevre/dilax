@@ -2,6 +2,23 @@ import app.business_logic.model.merger.abstract as abstract
 from app.business_logic.helper.data_helper import match_coordinates
 
 
+def add_idbldsite_to_weather_data(df, datastore):
+    weather_coordinates = df[['latitude', 'longitude']].drop_duplicates()
+    df_sites = datastore.db_manager.sites
+    weather_coordinates_matched = match_coordinates(
+        weather_coordinates, df_sites)
+
+    weather_coordinates_matched_sites = abstract.pd.merge(weather_coordinates_matched, df_sites, left_on=[
+        'latitude_closest', 'longitude_closest'], right_on=['latitude', 'longitude'])
+
+    weather_coordinates_matched_sites = weather_coordinates_matched_sites[
+        ['idbldsite', 'latitude_x', 'longitude_x']]
+    df = abstract.pd.merge(df, weather_coordinates_matched_sites, left_on=['latitude', 'longitude'],
+                           right_on=['latitude_x', 'longitude_x'])
+
+    return df
+
+
 class WeatherDayMerger(abstract.Merger):
 
     def __init__(self):
@@ -24,7 +41,7 @@ class WeatherDayMerger(abstract.Merger):
                  'latitude', 'longitude']]
         df.rename(
             columns={'day': 'date'}, inplace=True)
-        df = self.add_idbldsite_to_weather_data(df)
+        df = add_idbldsite_to_weather_data(df, self.datastore)
         self.right = df
 
 
@@ -54,7 +71,8 @@ class WeatherHourMerger(abstract.Merger):
 
         df_weather_hour = df_weather_hour[~df_weather_hour.latitude.isnull()]
 
-        df_weather_hour = self._add_idbldsite_to_weather_data(df_weather_hour)
+        df_weather_hour = add_idbldsite_to_weather_data(
+            df_weather_hour, self.datastore)
 
         df_weather_hour['hour'] = df_weather_hour['timestamp'].dt.hour
         df_weather_hour['date_'] = df_weather_hour['timestamp'].dt.date
@@ -112,20 +130,4 @@ class WeatherHourMerger(abstract.Merger):
 
         df = df.reset_index()
         df = df.rename(columns={"index": "timestamp"})
-        return df
-
-    def _add_idbldsite_to_weather_data(self, df):
-        weather_coordinates = df[['latitude', 'longitude']].drop_duplicates()
-        df_sites = self.datastore.db_manager.sites
-        weather_coordinates_matched = match_coordinates(
-            weather_coordinates, df_sites)
-
-        weather_coordinates_matched_sites = abstract.pd.merge(weather_coordinates_matched, df_sites, left_on=[
-            'latitude_closest', 'longitude_closest'], right_on=['latitude', 'longitude'])
-
-        weather_coordinates_matched_sites = weather_coordinates_matched_sites[
-            ['idbldsite', 'latitude_x', 'longitude_x']]
-        df = abstract.pd.merge(df, weather_coordinates_matched_sites, left_on=['latitude', 'longitude'],
-                               right_on=['latitude_x', 'longitude_x'])
-
         return df
