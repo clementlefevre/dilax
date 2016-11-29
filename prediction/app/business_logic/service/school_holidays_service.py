@@ -80,22 +80,3 @@ def reindex_holidays(filename):
     df = df[['date', 'is_holiday']]
 
     return df
-
-
-def add_school_holidays(df):
-    """Add school holidays column to a dataframe, by matching on the region_id
-
-    Args:
-        df (TYPE): DataFrame
-
-    Returns:
-        TYPE: DataFrame
-    """
-    df_school_holidays = pd.read_csv(get_file_path(
-        'data/school_holidays.csv', fileDir), parse_dates=['date'])
-
-    df_with_school_holidays = pd.merge(df, df_school_holidays,
-                                       on=['region_id', 'date'],
-                                       how='left',
-                                       suffixes=['_data', '_school'])
-    return df_with_school_holidays

@@ -1,7 +1,16 @@
 """Abstract Class for the table merging process
 """
+import os
 import logging
 import pandas as pd
+from app.business_logic.helper.file_helper import get_file_path
+
+from app.business_logic.model.config_manager import Config_manager
+
+
+config_manager = Config_manager()
+
+fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Merger(object):
@@ -49,9 +58,18 @@ class Merger(object):
     def merge_and_clean(self, left_data):
         self._set_left_data(left_data)
         self._set_right_data()
+        try:
+            print "before {}", format(self.name)
+            print self.left.shape
+        except Exception as e:
+            print "no pb"
         self._merge()
+        print "after {}", format(self.name)
+        print self.merged.shape
         self._display_missing_data()
+
         self._custom()
+
         self._filter_on_columns()
         self._rename_columns()
         self._drop_columns()
