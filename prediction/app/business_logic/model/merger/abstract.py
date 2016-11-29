@@ -14,27 +14,9 @@ fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Merger(object):
-    """Summary
-
-    Attributes:
-        datastore (TYPE): Description
-        drop_missing (TYPE): Description
-        how (TYPE): Description
-        left_keys (TYPE): Description
-        name (TYPE): Description
-        right_keys (TYPE): Description
-    """
 
     def __init__(self, name=None, how='left', drop_missing=True, left_keys=None, right_keys=None, suffixes=None, indicator=True):
-        """Summary
 
-        Args:
-            name (TYPE): Description
-            how (TYPE): Description
-            drop_missing (TYPE): Description
-            left_keys (TYPE): Description
-            right_keys (TYPE): Description
-        """
         self.name = name
         self.how = how
         self.left_keys = left_keys
@@ -58,21 +40,16 @@ class Merger(object):
     def merge_and_clean(self, left_data):
         self._set_left_data(left_data)
         self._set_right_data()
-        try:
-            print "before {}", format(self.name)
-            print self.left.shape
-        except Exception as e:
-            print "no pb"
+        print "before merging {}".format(self.name)
+        print self.right.head(2)
         self._merge()
-        print "after {}", format(self.name)
-        print self.merged.shape
         self._display_missing_data()
-
         self._custom()
-
         self._filter_on_columns()
         self._rename_columns()
         self._drop_columns()
+        print "ater merging {}".format(self.name)
+        print self.merged.head(2)
 
     def _merge(self):
 
@@ -95,6 +72,7 @@ class Merger(object):
 
         if self.drop_missing:
             self.merged = self.merged[self.merged._merge == "both"]
+
         self.merged = self.merged.drop("_merge", 1)
 
     def _custom(self):

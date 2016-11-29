@@ -1,7 +1,9 @@
-import app.business_logic.model.datastore.datastore as datastore
+from app.business_logic.model.datastore.abstract import Datastore
+from app.business_logic.helper.data_helper import round_to_nearest_hour
+from datetime import datetime
 
 
-class HourDatastore(datastore.Datastore):
+class HourDatastore(Datastore):
 
     PREDICT_RANGE_DAYS = 30
 

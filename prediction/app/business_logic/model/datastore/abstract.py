@@ -6,7 +6,8 @@ import pandas as pd
 import app.business_logic.model.db_manager as db_manager
 import app.business_logic.service.merge_service as merge_service
 from app.business_logic.model.config_manager import Config_manager
-from app.business_logic.helper.data_helper import add_calendar_fields
+from app.business_logic.helper.calendar import add_calendar_fields
+from app.business_logic.helper.regularizer import regularize_training
 
 
 config_manager = Config_manager()
@@ -102,10 +103,8 @@ class Datastore(object):
 
         merged = merge_service.merge_all(self)
         merged = add_calendar_fields(merged)
+        merged = regularize_training(merged)
         self.data.train.update_data(merged)
-
-        # self.training_data = regularize(
-        #     self, self.training_data)
 
         self._save_file(self.data.train)
 

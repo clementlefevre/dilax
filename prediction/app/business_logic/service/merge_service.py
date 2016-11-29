@@ -1,5 +1,5 @@
 from ..model.merger.counts import CountsMerger
-from ..model.merger.weather import WeatherDayMerger
+from ..model.merger.weather import WeatherDayMerger, WeatherHourMerger
 from ..model.merger.public_holidays import PublicHolidaysMerger
 from ..model.merger.regions import RegionsMerger
 from ..model.merger.school_holidays import SchoolHolidaysMerger
@@ -7,7 +7,10 @@ from ..model.merger.school_holidays import SchoolHolidaysMerger
 
 countsMerger = CountsMerger()
 weatherDayMerger = WeatherDayMerger()
+weatherHourMerger = WeatherHourMerger()
 publicHolidaysMerger = PublicHolidaysMerger()
+regionsMerger = RegionsMerger()
+schoolHolidaysMerger = SchoolHolidaysMerger()
 
 
 def merge_all(datastore):
@@ -27,10 +30,14 @@ def merge_with_counts(datastore):
 
 
 def merge_with_weather(datastore, merged):
-    if datastore.period == "D":
+    if datastore.period == 'D':
         weatherDayMerger.set_datastore(datastore)
         weatherDayMerger.merge_and_clean(merged)
         return weatherDayMerger.merged
+    if datastore.period == 'H':
+        weatherHourMerger.set_datastore(datastore)
+        weatherHourMerger.merge_and_clean(merged)
+        return weatherHourMerger.merged
 
 
 def merge_with_public_holidays(datastore, merged):
@@ -40,15 +47,14 @@ def merge_with_public_holidays(datastore, merged):
 
 
 def merge_with_regions(datastore, merged):
-    regionsMerger = RegionsMerger()
+
     regionsMerger.set_datastore(datastore)
     regionsMerger.merge_and_clean(merged)
     return regionsMerger.merged
 
 
 def merge_with_school_holidays(datastore, merged):
-    schoolHolidaysMerger = SchoolHolidaysMerger()
+
     schoolHolidaysMerger.set_datastore(datastore)
     schoolHolidaysMerger.merge_and_clean(merged)
-
     return schoolHolidaysMerger.merged

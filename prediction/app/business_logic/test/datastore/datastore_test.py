@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 import app.business_logic.model.datastore.day as daystore
+import app.business_logic.model.datastore.hour as hourstore
+
 import app.business_logic.customers_config
 
 
@@ -27,4 +29,10 @@ def test_datastore_conversion():
 def test_datastore_training_set():
     dayDatastore = daystore.DayDatastore(db_params=db_params)
     dayDatastore.get_data()
-    print dayDatastore.data.train.set
+    assert not dayDatastore.datra.train.set.empty
+
+
+def test_datastore_hour():
+    dayDatastore = hourstore.HourDatastore(db_params=db_params)
+    dayDatastore.get_data()
+    assert not dayDatastore.data.train.set.empty
