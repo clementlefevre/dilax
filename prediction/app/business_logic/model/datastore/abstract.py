@@ -1,13 +1,13 @@
 import os.path
 import logging
 import argparse as ap
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
 import pandas as pd
 import app.business_logic.model.db_manager as db_manager
 import app.business_logic.service.merge_service as merge_service
 from app.business_logic.model.config_manager import Config_manager
 from app.business_logic.helper.calendar import add_calendar_fields
-from app.business_logic.helper.regularizer import regularize_training
+import app.business_logic.helper.regularizer as regularizer
 
 
 config_manager = Config_manager()
@@ -28,6 +28,7 @@ class Dataset(object):
     def __init__(self, name, parse_dates=[]):
         self._name = name
         self.set = None
+        self.regularization_params = {}
         self.file_path = None
         self.parse_dates = parse_dates
 
@@ -69,14 +70,15 @@ class Datastore(object):
 
     def _init_datasets(self):
         train = Dataset('train', ['date', 'date_time'])
-        forecasts = Dataset('forecast')
+        forecasts = Dataset('forecasts')
         observed = Dataset('observed')
+        sites_infos = Dataset('sites_infos')
         self.dataset = {'train': train,
                         'forecasts': forecasts,
-                        'observed': observed}
+                        'observed': observed,
+                        'sites_infos': sites_infos}
         self._set_file_names(self.dataset)
         self.data = ap.Namespace(**self.dataset)
-        print "data.train.file_path", self.data.train.file_path
 
     def _set_file_names(self, dataset):
         for item in dataset.itervalues():
@@ -88,27 +90,51 @@ class Datastore(object):
     def get_data(self):
         self._get_set(self.data.train)
 
+        self._get_set(self.data.forecasts)
+
     def _get_set(self, dataset):
         if self.file_exists(dataset):
-            return self._read_file(dataset)
+            logging.info("File exists ! : {}".format(dataset.name))
+            dataset.set = self._read_file(dataset)
         else:
-            return self._create_data(dataset)
+            logging.info("File does not exist ! : {}".format(dataset.name))
+            self._create_data(dataset)
 
     def _create_data(self, dataset):
         if dataset.name == "train":
             self.create_training_set()
 
-    def create_training_set(self):
-        logging.info("{0} prepare new training set...".format(self))
+        if dataset.name == "forecasts":
+            self.create_forecasts_set()
 
-        merged = merge_service.merge_all(self)
+    def create_training_set(self):
+        logging.info("{0} preparing new training set...".format(self))
+
+        merged = merge_service.merge_all_training(self)
         merged = add_calendar_fields(merged)
-        merged = regularize_training(merged)
+        merged = regularizer.regularize_training(merged)
+
         self.data.train.update_data(merged)
 
         self._save_file(self.data.train)
 
         logging.info("{0} : finished preparing training set".format(self))
+
+    def create_forecasts_set(self):
+        logging.info("{0} preparing new forecasts set...".format(self))
+        merged = merge_service.merge_all_forecasts(self)
+        merged = add_calendar_fields(merged)
+        regularization_params = regularizer._set_regularization_params(
+            self.data.train.set)
+        print regularization_params['x_mean'].head
+        print regularization_params['x_std'].head
+        merged = regularizer.regularize_forecasts(
+            merged, regularization_params)
+        self.data.forecasts.update_data(merged)
+
+        self._save_file(self.data.forecasts)
+
+        logging.info("{0} : finished preparing forecasts set".format(self))
 
     def _set_ranges(self, interval):
 
@@ -134,7 +160,7 @@ class Datastore(object):
                 timedelta(days=self.PREDICT_RANGE_DAYS)
 
     def _set_dates(self, date):
-        return datetime.strptime(self.date_from, '%Y-%m-%d').date()
+        return datetime.strptime(date, '%Y-%m-%d').date()
 
     def _has_conversion(self):
         return not self.db_manager.conversion.empty
@@ -145,15 +171,17 @@ class Datastore(object):
         return path + "_" + set_name + ".csv"
 
     def file_exists(self, dataset):
-        file_path = dataset.file_path
+        file_path = get_file_path(dataset.file_path)
         file_exists = os.path.exists(file_path)
         is_file = os.path.isfile(file_path)
 
-        return file_exists and isfile
+        return file_exists and is_file
 
     def _read_file(self, dataset):
-        return pd.read_csv(dataset.file_path,
-                           parse_dates=dataset.parse_dates)
+        df = pd.read_csv(get_file_path(dataset.file_path),
+                         parse_dates=dataset.parse_dates, sep=';', index_col=0)
+
+        return df
 
     def _save_file(self, dataset):
         print get_file_path(dataset.file_path)

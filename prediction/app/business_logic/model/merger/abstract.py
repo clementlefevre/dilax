@@ -76,11 +76,20 @@ class Merger(object):
 
     def _filter_on_columns(self):
         if self.filter_columns is not None:
-            self.merged = self.merged[self.filter_columns]
+            try:
+                self.merged = self.merged[self.filter_columns]
+            except KeyError as e:
+                logging.error(
+                    "Could not filter on columns : {}".format(e.message))
 
     def _rename_columns(self):
         self.merged.rename(columns=self.rename_columns, inplace=True)
 
     def _drop_columns(self):
         for col in self.drop_columns:
-            self.merged.drop(col, 1)
+            try:
+                self.merged = self.merged.drop(col, 1)
+                logging.info("This columns has been removed :{}".format(col))
+            except (KeyError, ValueError) as e:
+                logging.warning(
+                    "This column does not exist in the datafrane and thus cannot be deleted :{}".format(col))

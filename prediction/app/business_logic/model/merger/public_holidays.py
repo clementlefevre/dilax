@@ -13,6 +13,8 @@ class PublicHolidaysMerger(abstract.Merger):
                                'date_time', 'maxtemperature', 'mintemperature',
                                'weathersituation', 'cloudamount', 'is_public_holiday']
 
+        self.drop_columns = ['day']
+
     def _set_right_data(self):
         self.right = self.datastore.db_manager.public_holidays[
             ['idbldsite', 'day']]

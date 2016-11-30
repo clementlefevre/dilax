@@ -13,6 +13,7 @@ class RegionsMerger(abstract.Merger):
         df_sites = self.datastore.db_manager.sites
         df_sites['customer'] = self.datastore.name
         df_sites = add_region(df_sites)
+        self.datastore.data.sites_infos.update_data(df_sites)
 
         self.right = df_sites[['idbldsite', 'region', 'region_id']]
 

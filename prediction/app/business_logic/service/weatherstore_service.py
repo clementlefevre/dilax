@@ -6,55 +6,60 @@ import logging
 from ..model.config_manager import Config_manager
 
 config_manager = Config_manager()
+conf = config_manager.weatherstore
 
-address = config_manager.weatherstore['drivername']\
-    + "://"\
-    + config_manager.weatherstore['username']\
-    + ":"\
-    + config_manager.weatherstore['password']\
-    + '@' + config_manager.weatherstore['host'] + ':' + config_manager.weatherstore[
-    'port'] + '/' + config_manager.weatherstore['database']
+address = conf['drivername'] + "://" + conf['username'] + ":" \
+    + conf['password'] + '@' + conf['host'] + ':' \
+    + conf['port'] + '/' + conf['database']
 
 
 def get_weatherstore_forecasts(datastore, df):
-    site_id = df.idbldsite.unique()[0]
     db_user = datastore.db_params['db_user']
-    weather_site_id = get_weather_site_id(site_id, db_user)
+    idbldsite_list = df.idbldsite.unique().tolist()
 
-    if weather_site_id is not None:
+    all_sites_id_list = get_weather_site_id(idbldsite_list, db_user)
+    weather_site_id_list = [id[1] for id in all_sites_id_list]
 
-        df_weatherstore = retrieve_forecasts(weather_site_id)
-        df_weatherstore = df_weatherstore[df_weatherstore.updated.dt.date == (
-            datastore.date_from - timedelta(days=1))]
+    df_weatherstore = retrieve_forecasts(weather_site_id_list)
 
-        period = convert_period(datastore)
+    df_weatherstore = add_idbdsite(df_weatherstore, all_sites_id_list)
 
-        df_weatherstore = df_weatherstore[
-            (df_weatherstore.data_type == "forecast") & (df_weatherstore.period == period)]
-        return df_weatherstore
-    else:
-        datastore.no_weatherstore_sites.append(site_id)
-        logging.error("datastore.no_weatherstore_sites : {}".format(datastore.no_weatherstore_sites))
-        return pd.DataFrame()
+    df_weatherstore = df_weatherstore[df_weatherstore.updated.dt.date == (
+        datastore.predict_from - timedelta(days=1))]
 
+    period = convert_period(datastore)
 
-def get_weather_site_id(site_id, db_user):
-    try:
-        engine = create_engine(address)
+    df_weatherstore = df_weatherstore[
+        (df_weatherstore.data_type == "forecast") & (df_weatherstore.period == period)]
 
-        id = pd.read_sql_query("SELECT id FROM sites WHERE idbldsite=" + str(site_id) + " AND customer = \'" + db_user + "\'",
-                               con=engine)
-        engine.dispose()
-
-        return id.id.values[0]
-    except IndexError as e:
-        logging.error(
-            "This idbldsite :{0} was not found in weather store ".format(site_id))
-        return None
+    return df_weatherstore
 
 
-def retrieve_forecasts(weather_site_id):
-    query = "select * from weather_data where site_id=" + str(weather_site_id)
+def get_weather_site_id(idbldsite_list, db_user):
+    weather_site_id_list = []
+    engine = create_engine(address)
+    for idbldsite in idbldsite_list:
+        try:
+
+            query = "SELECT id FROM sites WHERE idbldsite= {0} AND customer = '{1}'".format(
+                str(idbldsite), db_user)
+            id = pd.read_sql_query(query, con=engine)
+            weather_site_id_list.append((idbldsite, id.id.values[0]))
+        except IndexError:
+            logging.error(
+                "This idbldsite :{0} for customer : {1} was not found in weather store ".format(idbldsite[0], idbldsite[1]))
+    engine.dispose()
+    return weather_site_id_list
+
+
+def retrieve_forecasts(weatherstore_site_id_list):
+    refinedList = ",".join(str(site_id)
+                           for site_id in weatherstore_site_id_list)
+
+    query = "SELECT * FROM weather_data WHERE site_id in ({0})".format(
+        refinedList)
+
+    print query
 
     engine = create_engine(address)
     df_weatherstore = pd.read_sql_query(query,
@@ -64,5 +69,17 @@ def retrieve_forecasts(weather_site_id):
     return df_weatherstore
 
 
+def add_idbdsite(df_weatherstore, weatherstore_site_id_list):
+    df_id_sites = pd.DataFrame(weatherstore_site_id_list, columns={
+                               'idbldsite', 'site_id'})
+
+    return pd.merge(df_weatherstore, df_id_sites, on='site_id')
+
+
 def convert_period(datastore):
-    return 'day' if datastore.period == "D" else "hour"
+    if datastore.period == 'D':
+        return 'day'
+    elif datastore.period == "H":
+        return "hour"
+    else:
+        raise (NotImplementedError)

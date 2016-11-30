@@ -21,7 +21,7 @@ def create_forecasts_data(datastore):
     Returns:
         TYPE: DataFrame
     """
-    logging.info("{0} : start creating forecasts...".format(datastore))
+    
     df_forecasts = pd.DataFrame()
 
     site_region = datastore.sites_infos[
