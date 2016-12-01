@@ -53,7 +53,7 @@ def get_prediction(json_req):
 
         predicted_and_observed = pd.merge(prediction.forecast_predictors[
             ['date_time', label, label + "_xgboost"]],
-            observed, on='date_time', suffixes=["_predicted", '_observed'])
+            observed, on='date_time', suffixes=["_predicted", '_observed'], how='left')
 
         predicted_and_observed.columns = [
             'date_time', 'predicted_rfr', 'predicted_xgb', 'idbldsite', 'observed']
