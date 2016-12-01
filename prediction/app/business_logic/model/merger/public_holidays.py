@@ -5,8 +5,8 @@ class PublicHolidaysMerger(abstract.Merger):
 
     def __init__(self):
         super(PublicHolidaysMerger, self).__init__(name="public_holidays",
-                                                   left_keys=['idbldsite',
-                                                              'date'], right_keys=['idbldsite', 'day'],
+                                                   left_on=['idbldsite',
+                                                              'date'], right_on=['idbldsite', 'day'],
                                                    how='left', suffixes=['_counts', '_holidays'],
                                                    drop_missing=False)
         self.filter_columns = ['idbldsite', 'compensatedin', 'date',

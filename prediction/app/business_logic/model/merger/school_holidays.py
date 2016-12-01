@@ -5,11 +5,11 @@ class SchoolHolidaysMerger(abstract.Merger):
 
     def __init__(self):
         super(SchoolHolidaysMerger, self).__init__(name="public_holidays",
-                                                   left_keys=[
+                                                   left_on=[
                                                        'region_id', 'date'],
-                                                   right_keys=[
+                                                   right_on=[
                                                        'region_id', 'date'],
-                                                   suffixes=['_data', '_school'])
+                                                   suffixes=['_data', '_school'], how='left', drop_missing=False)
         self.filter_columns = None
 
     def _set_right_data(self):

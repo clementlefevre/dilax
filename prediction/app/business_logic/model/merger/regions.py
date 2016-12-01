@@ -6,7 +6,7 @@ class RegionsMerger(abstract.Merger):
 
     def __init__(self):
         super(RegionsMerger, self).__init__(name="regions",
-                                            left_keys=['idbldsite'], right_keys=['idbldsite'], suffixes=['', ''])
+                                            left_on=['idbldsite'], right_on=['idbldsite'], suffixes=['', ''])
         self.filter_columns = None
 
     def _set_right_data(self):
@@ -14,7 +14,7 @@ class RegionsMerger(abstract.Merger):
         df_sites['customer'] = self.datastore.name
         df_sites = add_region(df_sites)
         self.datastore.data.sites_infos.update_data(df_sites)
-
+        self.datastore._save_file(self.datastore.data.sites_infos)
         self.right = df_sites[['idbldsite', 'region', 'region_id']]
 
     def _custom(self):

@@ -6,8 +6,8 @@ class DatesMerger(abstract.Merger):
 
     def __init__(self):
         super(DatesMerger, self).__init__(name="dates",
-                                          left_keys=['idbldsite'],
-                                          right_keys=['idbldsite'],
+                                          left_on=['idbldsite'],
+                                          right_on=['idbldsite'],
                                           suffixes=['', ''])
         self.filter_columns = None
 

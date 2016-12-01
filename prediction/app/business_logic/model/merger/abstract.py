@@ -15,12 +15,12 @@ fileDir = os.path.dirname(os.path.abspath(__file__))
 
 class Merger(object):
 
-    def __init__(self, name=None, how='left', drop_missing=True, left_keys=None, right_keys=None, suffixes=None, indicator=True):
+    def __init__(self, name=None, how='left', drop_missing=True, left_on=None, right_on=None, suffixes=None, indicator=True):
 
         self.name = name
         self.how = how
-        self.left_keys = left_keys
-        self.right_keys = right_keys
+        self.left_on = left_on
+        self.right_on = right_on
         self.drop_missing = drop_missing
         self.suffixes = suffixes
         self.indicator = indicator
@@ -40,6 +40,9 @@ class Merger(object):
     def merge_and_clean(self, left_data):
         self._set_left_data(left_data)
         self._set_right_data()
+        if self.right is None:
+            self.merged = left_data
+            return
         self._merge()
         self._display_missing_data()
         self._custom()
@@ -48,9 +51,8 @@ class Merger(object):
         self._drop_columns()
 
     def _merge(self):
-
         self.merged = pd.merge(self.left, self.right,
-                               left_on=self.left_keys, right_on=self.right_keys,
+                               left_on=self.left_on, right_on=self.right_on,
                                suffixes=self.suffixes,
                                indicator=self.indicator, how=self.how)
 
@@ -92,4 +94,4 @@ class Merger(object):
                 logging.info("This columns has been removed :{}".format(col))
             except (KeyError, ValueError) as e:
                 logging.warning(
-                    "This column does not exist in the datafrane and thus cannot be deleted :{}".format(col))
+                    "This column does not exist in the dataframe and thus cannot be deleted :{}".format(col))

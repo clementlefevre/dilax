@@ -13,7 +13,7 @@ def get_customers():
 def get_sites():
     if request.method == 'POST':
 
-        if not request.json or 'db_name' not in request.json:
+        if not request.json:
             abort(400)
         return customers_service.sites(request.json)
     abort(400)

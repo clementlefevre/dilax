@@ -28,7 +28,7 @@ class DB_manager(object):
         except Exception as e:
             logging.error(
                 "Could not create connection for {}".format(self.db_params))
-            loggin.error(e.message)
+            logging.error(e.message)
 
     def _query(self, table):
         try:
@@ -36,7 +36,7 @@ class DB_manager(object):
                                        con=self.engine)
         except Exception as e:
             logging.error("Could not query db for {}".format(table))
-            loggin.error(e.message)
+            logging.error(e.message)
         return result
 
     def _init_data(self):
@@ -47,11 +47,6 @@ class DB_manager(object):
         self.weather_intraday = self._query(
             "dwe_ext_weather_meteogroup_intraday")
         self.public_holidays = self._query("dwe_cal_holiday")
-        filename = get_file_path(
-            "data/store/" + self.params['db_name'] + "_public_holidays.csv", fileDir)
-        filename = os.path.abspath(os.path.realpath(filename))
-
-        self.public_holidays.to_csv(filename, sep=";", encoding="utf-8")
         self.conversion = self._query("dwe_ext_conversion")
 
     def has_table(self, table_name):

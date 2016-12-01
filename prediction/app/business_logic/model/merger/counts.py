@@ -5,7 +5,7 @@ class CountsMerger(abstract.Merger):
 
     def __init__(self):
         super(CountsMerger, self).__init__(name="counts",
-                                           left_keys=['idbldsite'], right_keys=['idbldsite'], suffixes=['_sites', '_counts'])
+                                           left_on=['idbldsite'], right_on=['idbldsite'], suffixes=['_sites', '_counts'])
         self.filter_columns = ['idbldsite',
                                'compensatedin',
                                'date',
@@ -13,5 +13,10 @@ class CountsMerger(abstract.Merger):
                                'latitude',
                                'longitude']
 
+        self.is_observed = False
+
     def _set_right_data(self):
-        self.right = self.datastore.get_counts()
+        if self.is_observed:
+            self.right = self.datastore.get_counts_observed()
+        else:
+            self.right = self.datastore.get_counts()

@@ -5,7 +5,7 @@ import app.business_logic.model.datastore.hour as hourstore
 import app.business_logic.customers_config
 
 
-db_params = app.business_logic.customers_config.all_db_params[1]
+db_params = app.business_logic.customers_config.all_db_params['DWE_CLOSED_2013']
 
 
 def test_datastore_creation():
@@ -27,12 +27,14 @@ def test_datastore_conversion():
 
 
 def test_datastore_training_set():
-    dayDatastore = daystore.DayDatastore(db_params=db_params, intervals={'predict_from':'2016-11-21'})
+    dayDatastore = daystore.DayDatastore(db_params=db_params, intervals={
+                                         'predict_from': '2016-11-21'})
     dayDatastore.get_data()
     assert not dayDatastore.data.train.set.empty
 
 
 def test_datastore_hour():
-    dayDatastore = hourstore.HourDatastore(db_params=db_params)
+    dayDatastore = hourstore.HourDatastore(db_params=db_params, intervals={
+                                           'predict_from': '2016-11-21'})
     dayDatastore.get_data()
     assert not dayDatastore.data.train.set.empty

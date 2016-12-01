@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import pandas as pd
-import json
+import xgboost
 from sklearn.ensemble.forest import RandomForestRegressor
 from ..service.prediction_service import do_classify, get_features_importance
 from ..model.config_manager import Config_manager
@@ -21,7 +21,7 @@ class Prediction(object):
         self.training_predictors = self.datastore.get_training_set(site_id)
 
         self.forecast_predictors = self.datastore.get_forecasts_set(site_id)
-        print "training :"
+        print "training..."
         self.X_training, self.y, self.training_date = self._to_X_y(
             self.training_predictors, label)
         print "test :"
@@ -65,11 +65,15 @@ class Prediction(object):
 
     def make_prediction(self, site_id, label):
         self._create_X_Y_per_site(site_id, label)
+
+        self.xgbooster(label)
+
         clf_RDM = {'params': {'n_estimators': [300], 'bootstrap': [
             True], 'criterion': ['mse']}, 'clf': RandomForestRegressor()}
 
         clf = clf_RDM['clf']
         params = clf_RDM['params']
+
         clf_rdm, Xtrain, ytrain, Xtest, ytest, r2 = \
             do_classify(clf, params, self.X_training, self.y)
 
@@ -92,8 +96,8 @@ class Prediction(object):
                                                       label + ".csv",
                                                       fileDir), sep=";")
 
-    def RMSE(self, df, label):
-        predicted = 'predicted'
+    def RMSE(self, df, predictor):
+        predicted = predictor
         observed = 'observed'
         df['error'] = df[observed] - df[predicted]
         df.error = np.square(df.error)
@@ -104,3 +108,13 @@ class Prediction(object):
         accuracy = 100 - total_error / df[predicted].sum() * 100
         print "accuracy", accuracy
         return rmse, accuracy
+
+    def xgbooster(self, label):
+        model = xgboost.XGBRegressor()
+        model.fit(self.X_training, self.y)
+        print model
+        predictions = model.predict(self.X_test)
+        print type(predictions)
+
+        self.forecast_predictors[label + "_xgboost"] = pd.Series(
+            predictions, index=self.forecast_predictors.index)

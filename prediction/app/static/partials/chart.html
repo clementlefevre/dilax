@@ -5,11 +5,11 @@
         <button class="btn dropdown-toggle"
         data-toggle="dropdown" 
         ng-click='open=!open'>
-        {{customer.db_name}}<span class="caret"></span></button>
+        {{customer}}<span class="caret"></span></button>
         <ul class="dropdown-menu">
             <li ng-repeat="customer in customers" 
             ng-click="setCustomer(customer);$parent.open =!$parent.open">
-            <a >{{customer.db_name}}</a></li>
+            <a >{{customer}}</a></li>
         </ul>
     </div>
 </div>
@@ -65,9 +65,11 @@
 
 <div class="col-xs-12" style="height:50px;"></div>
 
-<h3>R2 = {{ r2 | number:2 }}</h3>
-<h3>RMSE = {{ rmse | number:0 }}</h3>
-<h3>Accuracy = {{ accuracy | number:0 }}%</h3>
+<p>R2 = {{ r2 | number:2 }}</p>
+<p>RMSE RFR = {{ rmse_rfr | number:0 }}</p>
+<p>Accuracy RFR= {{ accuracy_rfr | number:0 }}%</p>
+<p>RMSE XGB= {{ rmse_xgb | number:0 }}</p>
+<p>Accuracy XGB= {{ accuracy_xgb | number:0 }}%</p>
 
 
 <div class="row">

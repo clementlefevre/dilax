@@ -46,7 +46,7 @@ def get_weather_site_id(idbldsite_list, db_user):
             weather_site_id_list.append((idbldsite, id.id.values[0]))
         except IndexError:
             logging.error(
-                "This idbldsite :{0} for customer : {1} was not found in weather store ".format(idbldsite[0], idbldsite[1]))
+                "This idbldsite :{0} for customer : was not found in weather store ".format(idbldsite))
     engine.dispose()
     return weather_site_id_list
 
@@ -55,19 +55,15 @@ def retrieve_forecasts(weatherstore_site_id_list, date_range):
     refinedList = ",".join(str(site_id)
                            for site_id in weatherstore_site_id_list)
 
-    query = "SELECT * FROM weather_data WHERE site_id in ({0}) AND updated >= '{1}' AND updated < '{2}'".format(
-        refinedList, *date_range)
-
-    print "query-------------------------------------------------"
-    print query
+    query = ("SELECT * FROM weather_data WHERE site_id in ({0}) AND updated >= '{1}' AND updated < '{2}'".format(
+        refinedList, *date_range))
 
     engine = create_engine(address)
     df_weatherstore = pd.read_sql_query(query,
                                         con=engine)
     engine.dispose()
     df_weatherstore = filter_on_latest_update(df_weatherstore)
-    print "df_weatherstore************************************************************"
-    print df_weatherstore
+
     return df_weatherstore
 
 
@@ -95,8 +91,7 @@ def set_date_range(datastore):
 
 
 def filter_on_latest_update(df_weatherstore):
-    print "df_weatherstore.head()-----------------------------------------------"
-    print df_weatherstore.head()
+
     df_weatherstore_latest = df_weatherstore.groupby(
         ['site_id', 'dateTime']).last()
     return df_weatherstore_latest.reset_index()

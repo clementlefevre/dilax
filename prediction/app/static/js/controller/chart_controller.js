@@ -9,8 +9,9 @@ froggyApp.controller('chartController', function ($scope,$http) {
   };
 
   function get_sites(customer){
+    customer_object = {'customer':$scope.customer}
     loadingDatas();
-    $http.post('/predictions/customers/sites', customer).success(function (data) {
+    $http.post('/predictions/customers/sites', customer_object).success(function (data) {
       closeLoading();
       $scope.sites = data.result;
       console.log($scope.sites);
@@ -33,7 +34,7 @@ froggyApp.controller('chartController', function ($scope,$http) {
 
 
   $scope.createPrediction = function(){
-    predictor = {'db_params':$scope.customer,
+    predictor = {'customer':$scope.customer,
     'period' : $scope.period,
     'site': $scope.site,
     'label': $scope.label,
@@ -45,8 +46,10 @@ froggyApp.controller('chartController', function ($scope,$http) {
       $scope.prediction_data = data.prediction;
       $scope.features = data.features;
       $scope.r2 = data.r2;
-      $scope.rmse = data.rmse;
-      $scope.accuracy = data.accuracy;
+      $scope.rmse_rfr = data.rmse_rfr;
+      $scope.accuracy_rfr = data.accuracy_rfr;
+      $scope.rmse_xgb = data.rmse_xgb;
+      $scope.accuracy_xgb = data.accuracy_xgb;
       $scope.create_training_set = data.create_training_set;
       
 
@@ -72,8 +75,8 @@ froggyApp.controller('chartController', function ($scope,$http) {
       element: 'prediction_chart_day',
       data: [],
       xkey: 'date_time',
-      ykeys: ['observed','predicted'],
-      labels: ['observed','predicted'],
+      ykeys: ['observed','predicted_rfr','predicted_xgb'],
+      labels: ['observed','predicted_randomForest','predicted_xgboost'],
    
     });
 
@@ -91,14 +94,10 @@ froggyApp.controller('chartController', function ($scope,$http) {
   });
 
 
-  
-
-
 
   
-
   $scope.customers = get_customers();
-  $scope.customer = {"db_name": "Select a customer"};
+  $scope.customer = "Select a customer";
   $scope.site = {"sname": "Select a site"};
   $scope.period = 'D';
   $scope.label = "compensatedin";

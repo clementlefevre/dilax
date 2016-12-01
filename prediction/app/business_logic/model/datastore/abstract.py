@@ -61,9 +61,9 @@ class Datastore(object):
         self.period = self._get_period()
         self._set_ranges(intervals)
         self._init_datasets()
-        self.db_manager = db_manager.DB_manager(db_params)
+        if not self.all_files_exists():
+            self.db_manager = db_manager.DB_manager(db_params)
         self.db_params = db_params
-        self.has_conversion = self._has_conversion()
 
     def __repr__(self):
         return ("{0.name}:{0.period}:[{0.train_from} to {0.train_to}][{0.predict_from} to {0.predict_to}]".format(self))
@@ -89,35 +89,44 @@ class Datastore(object):
 
     def get_data(self):
         self._get_set(self.data.train)
-
         self._get_set(self.data.forecasts)
+        self._get_set(self.data.observed)
+        self._get_set(self.data.sites_infos)
+
+    def all_files_exists(self):
+        for _, dataset in self.dataset.items():
+            if not self.file_exists(dataset):
+                return False
+        return True
 
     def _get_set(self, dataset):
         if self.file_exists(dataset):
-            logging.info("File exists ! : {}".format(dataset.name))
+            logging.info('File exists ! : {}'.format(dataset.name))
             dataset.set = self._read_file(dataset)
         else:
-            logging.info("File does not exist ! : {}".format(dataset.name))
+            logging.info('File does not exist ! : {}'.format(dataset.name))
             self._create_data(dataset)
 
     def _create_data(self, dataset):
-        if dataset.name == "train":
+        if dataset.name == 'train':
             self.create_training_set()
 
-        if dataset.name == "forecasts":
+        if dataset.name == 'forecasts':
             self.create_forecasts_set()
+
+        if dataset.name == 'observed':
+            self.create_observed_set()
+
+        if dataset.name == 'sites_infos':
+            self.create_sites_infos_set()
 
     def create_training_set(self):
         logging.info("{0} preparing new training set...".format(self))
-
         merged = merge_service.merge_all_training(self)
         merged = add_calendar_fields(merged)
         merged = regularizer.regularize_training(merged)
-
         self.data.train.update_data(merged)
-
         self._save_file(self.data.train)
-
         logging.info("{0} : finished preparing training set".format(self))
 
     def create_forecasts_set(self):
@@ -135,6 +144,13 @@ class Datastore(object):
         self._save_file(self.data.forecasts)
 
         logging.info("{0} : finished preparing forecasts set".format(self))
+
+    def create_observed_set(self):
+        logging.info("{0} preparing new observed set...".format(self))
+        merged = merge_service.merge_all_observed(self)
+        self.data.observed.update_data(merged)
+        self._save_file(self.data.observed)
+        logging.info("{0} : finished preparing observed set".format(self))
 
     def _set_ranges(self, interval):
 
@@ -161,9 +177,6 @@ class Datastore(object):
 
     def _set_dates(self, date):
         return datetime.strptime(date, '%Y-%m-%d').date()
-
-    def _has_conversion(self):
-        return not self.db_manager.conversion.empty
 
     def get_path(self, set_name):
         path = config_manager.datastore_settings[
@@ -201,6 +214,19 @@ class Datastore(object):
                                'date_time']]
         return df_counts
 
+    def get_counts_observed(self):
+        df_counts = self.db_manager.counts
+        df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)
+
+        df_counts = self._filter_on_date(
+            df_counts, self.predict_from, self.predict_to)
+        df_counts = self._aggregate_counts(df_counts)
+
+        df_counts = df_counts[['idbldsite',
+                               'compensatedin', 'date',
+                               'date_time']]
+        return df_counts
+
     def _aggregate_counts(self, df_counts):
         raise(NotImplementedError)
 
@@ -211,3 +237,9 @@ class Datastore(object):
         if date_to is not None:
             df = df[(df.date < date_to)]
         return df
+
+    def get_training_set(self, site_id):
+        return self.data.train.set[self.data.train.set.idbldsite == site_id]
+
+    def get_forecasts_set(self, site_id):
+        return self.data.forecasts.set[self.data.forecasts.set.idbldsite == site_id]

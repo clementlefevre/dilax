@@ -26,9 +26,9 @@ class WeatherObservationsDayMerger(abstract.Merger):
 
     def __init__(self):
         super(WeatherObservationsDayMerger, self).__init__(name="weather_observations_day",
-                                                           left_keys=[
+                                                           left_on=[
                                                                'idbldsite', 'date'],
-                                                           right_keys=[
+                                                           right_on=[
                                                                'idbldsite', 'date'],
                                                            suffixes=['_sites', ''])
 
@@ -57,11 +57,11 @@ class WeatherObservationsHourMerger(abstract.Merger):
 
     def __init__(self):
         super(WeatherObservationsHourMerger, self).__init__(name="weather_observations_hour",
-                                                            left_keys=['idbldsite',
-                                                                       'date_',
-                                                                       'hour'],
-                                                            right_keys=['idbldsite',
-                                                                        'date_', 'hour'],
+                                                            left_on=['idbldsite',
+                                                                     'date_',
+                                                                     'hour'],
+                                                            right_on=['idbldsite',
+                                                                      'date_', 'hour'],
                                                             how='left',
                                                             suffixes=[
                                                                 '_sites', '_weather'],
