@@ -21,7 +21,7 @@ class DatesMerger(abstract.Merger):
         df_dates['date_time'] = df_dates.date
 
         if self.datastore.period == 'H':
-            self._add_date_column(df_dates)
+            self._add_date_time_column(df_dates)
 
         df_dates = self._add_site_id(df_dates)
         self.right = df_dates
@@ -29,7 +29,7 @@ class DatesMerger(abstract.Merger):
     def _set_left_data(self, data):
         self.left = data[['idbldsite', 'region_id']].drop_duplicates()
 
-    def _add_date_column(self, df):
+    def _add_date_time_column(self, df):
         df['date_time'].apply(lambda dt:
                               datetime(dt.year,
                                        dt.month,

@@ -105,7 +105,10 @@ class Prediction(object):
         print df.error
         rmse = np.mean(np.sqrt(df.error))
         print "rmse", rmse
-        accuracy = 100 - total_error / df[predicted].sum() * 100
+        if not df[predicted].empty:
+            accuracy = 100 - total_error / df[predicted].sum() * 100
+        else:
+            accuracy = "N/A"
         print "accuracy", accuracy
         return rmse, accuracy
 

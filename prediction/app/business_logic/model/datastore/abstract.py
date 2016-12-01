@@ -174,6 +174,9 @@ class Datastore(object):
         else:
             self.predict_to = self.predict_from + \
                 timedelta(days=self.PREDICT_RANGE_DAYS)
+        print "self+++++++++++++++++++++++++++++"
+        print self.PREDICT_RANGE_DAYS
+        print self
 
     def _set_dates(self, date):
         return datetime.strptime(date, '%Y-%m-%d').date()

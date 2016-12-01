@@ -10,7 +10,7 @@ class WeatherForecastsDayMerger(abstract.Merger):
                                                             'idbldsite', 'date'],
                                                         right_on=[
                                                             'idbldsite', 'date'],
-                                                        suffixes=['_sites', ''], how='left', drop_missing=True)
+                                                        suffixes=['_sites', ''], how='left', drop_missing=False)
 
         self.filter_columns = None
         self.drop_columns = ['id', 'period',

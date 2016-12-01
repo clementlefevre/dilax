@@ -25,7 +25,7 @@ def add_region(df_sites):
                          'latitude', 'longitude', 'customer']]
 
     if os.path.exists(file_path):
-        print "FILE EXIST*******************************"
+
         try:
             df_sites_regions = pd.read_csv(
                 file_path, sep=';', encoding='utf-8')
