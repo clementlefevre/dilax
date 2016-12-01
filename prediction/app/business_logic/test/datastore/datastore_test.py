@@ -27,7 +27,7 @@ def test_datastore_conversion():
 
 
 def test_datastore_training_set():
-    dayDatastore = daystore.DayDatastore(db_params=db_params, intervals={'predict_from':'2016-11-20'})
+    dayDatastore = daystore.DayDatastore(db_params=db_params, intervals={'predict_from':'2016-11-21'})
     dayDatastore.get_data()
     assert not dayDatastore.data.train.set.empty
 

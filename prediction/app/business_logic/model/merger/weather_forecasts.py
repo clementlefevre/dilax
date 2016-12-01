@@ -10,7 +10,7 @@ class WeatherForecastsDayMerger(abstract.Merger):
                                                             'idbldsite', 'date'],
                                                         right_keys=[
                                                             'idbldsite', 'date'],
-                                                        suffixes=['_sites', ''], how='left', drop_missing=False)
+                                                        suffixes=['_sites', ''], how='inner', drop_missing=True)
 
         self.filter_columns = None
         self.drop_columns = ['id', 'period',
@@ -24,11 +24,9 @@ class WeatherForecastsDayMerger(abstract.Merger):
 
     def _set_right_data(self):
         self.right = get_weatherstore_forecasts(self.datastore, self.left)
-        self.right.rename(columns={'dateTime': 'date'}, inplace=True)
-        print "LEFT ------------------"
-        print self.left.head()
-        print "RIGHT---------------------"
-        print self.right.head()
+        self.right = self.right.rename(columns={'dateTime': 'date'})
+        self.right.to_csv("weather_day_forecasts.csv", sep=";")
+        self.left.to_csv("merged_forecasts.csv", sep=";")
 
 
 class WeatherForecastsHourMerger(abstract.Merger):

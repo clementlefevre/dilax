@@ -20,12 +20,11 @@ def get_weatherstore_forecasts(datastore, df):
     all_sites_id_list = get_weather_site_id(idbldsite_list, db_user)
     weather_site_id_list = [id[1] for id in all_sites_id_list]
 
-    df_weatherstore = retrieve_forecasts(weather_site_id_list)
+    date_range = set_date_range(datastore)
+
+    df_weatherstore = retrieve_forecasts(weather_site_id_list, date_range)
 
     df_weatherstore = add_idbdsite(df_weatherstore, all_sites_id_list)
-
-    df_weatherstore = df_weatherstore[df_weatherstore.updated.dt.date == (
-        datastore.predict_from - timedelta(days=1))]
 
     period = convert_period(datastore)
 
@@ -52,20 +51,23 @@ def get_weather_site_id(idbldsite_list, db_user):
     return weather_site_id_list
 
 
-def retrieve_forecasts(weatherstore_site_id_list):
+def retrieve_forecasts(weatherstore_site_id_list, date_range):
     refinedList = ",".join(str(site_id)
                            for site_id in weatherstore_site_id_list)
 
-    query = "SELECT * FROM weather_data WHERE site_id in ({0})".format(
-        refinedList)
+    query = "SELECT * FROM weather_data WHERE site_id in ({0}) AND updated >= '{1}' AND updated < '{2}'".format(
+        refinedList, *date_range)
 
+    print "query-------------------------------------------------"
     print query
 
     engine = create_engine(address)
     df_weatherstore = pd.read_sql_query(query,
                                         con=engine)
     engine.dispose()
-
+    df_weatherstore = filter_on_latest_update(df_weatherstore)
+    print "df_weatherstore************************************************************"
+    print df_weatherstore
     return df_weatherstore
 
 
@@ -83,3 +85,18 @@ def convert_period(datastore):
         return "hour"
     else:
         raise (NotImplementedError)
+
+
+def set_date_range(datastore):
+    forecast_from = (datastore.predict_from - timedelta(days=1))
+    forecast_to = datastore.predict_from
+
+    return (forecast_from.strftime('%Y-%m-%d'), forecast_to.strftime('%Y-%m-%d'))
+
+
+def filter_on_latest_update(df_weatherstore):
+    print "df_weatherstore.head()-----------------------------------------------"
+    print df_weatherstore.head()
+    df_weatherstore_latest = df_weatherstore.groupby(
+        ['site_id', 'dateTime']).last()
+    return df_weatherstore_latest.reset_index()
