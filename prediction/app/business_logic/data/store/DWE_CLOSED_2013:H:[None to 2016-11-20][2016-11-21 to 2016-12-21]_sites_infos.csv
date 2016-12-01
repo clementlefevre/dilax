@@ -1,0 +1,12 @@
+;idbldsite;sname;latitude;longitude;customer;region;region_id
+0;1;Hamburg City;53.550842;9.995385;DWE_CLOSED_2013;Hamburg;5.0
+1;2;Hamburg AEZ;53.654227;10.091736;DWE_CLOSED_2013;Hamburg;5.0
+2;3;Muenchen Damen;48.142641;11.576903;DWE_CLOSED_2013;Bayern;1.0
+3;4;Muenchen Herren;48.142641;11.576903;DWE_CLOSED_2013;Bayern;1.0
+4;10;Nuernberg;49.452291;11.074521;DWE_CLOSED_2013;Bayern;1.0
+5;5;Duesseldorf Herren;51.224403;6.774598;DWE_CLOSED_2013;Nordrhein-Westfalen;9.0
+6;6;Duesseldorf Damen;51.224403;6.774598;DWE_CLOSED_2013;Nordrhein-Westfalen;9.0
+7;7;Wiesbaden;50.081434;8.244644;DWE_CLOSED_2013;Hessen;6.0
+8;11;Frankfurt MTZ;50.1109221;8.6821267;DWE_CLOSED_2013;Hessen;6.0
+9;8;Bikini Berlin;52.505482;13.335294;DWE_CLOSED_2013;Berlin;2.0
+10;9;Osnabrueck;52.276045;8.043023;DWE_CLOSED_2013;Niedersachsen;8.0
