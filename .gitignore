@@ -1,2 +1,2 @@
-froggy/*.*
 *.pyc
+prediction/app/business_logic/data/store/*.*
