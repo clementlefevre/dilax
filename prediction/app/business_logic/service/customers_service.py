@@ -1,9 +1,11 @@
-from flask import jsonify
-import pandas as pd
 import json
+
+import pandas as pd
+from flask import jsonify
+
 from ..customers_config import all_db_params
-from ..model.prediction import Prediction
 from ..model.datastore.day import DayDatastore
+from ..model.prediction import Prediction
 
 global_predictions = {}
 
@@ -47,16 +49,16 @@ def get_prediction(json_req):
 
     if json_req['retrocheck']:
         observed = prediction.datastore.data.observed.set[
-            ['date_time', 'idbldsite', label]]
+            ['date', 'idbldsite', label]]
 
         observed = observed[observed.idbldsite == idbldsite]
 
         predicted_and_observed = pd.merge(prediction.forecast_predictors[
-            ['date_time', label, label + "_xgboost"]],
-            observed, on='date_time', suffixes=["_predicted", '_observed'], how='left')
+                                              ['date', label, label + "_xgboost"]],
+                                          observed, on='date', suffixes=["_predicted", '_observed'], how='left')
 
         predicted_and_observed.columns = [
-            'date_time', 'predicted_rfr', 'predicted_xgb', 'idbldsite', 'observed']
+            'date', 'predicted_rfr', 'predicted_xgb', 'idbldsite', 'observed']
 
         json_ = predicted_and_observed.to_json(orient='records')
         json_array = json.loads(json_)
@@ -70,7 +72,7 @@ def get_prediction(json_req):
 
     else:
         json_ = prediction.forecast_predictors[
-            ['date_time', label]].to_json(orient='records')
+            ['date', label]].to_json(orient='records')
         json_array = json.loads(json_)
         prediction_data = json_array
         rmse, accuracy = 0, 0

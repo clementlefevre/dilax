@@ -1,14 +1,15 @@
-import os.path
-import logging
 import argparse as ap
+import logging
+import os.path
 from datetime import datetime, timedelta
+
 import pandas as pd
+
+import app.business_logic.helper.regularizer as regularizer
 import app.business_logic.model.db_manager as db_manager
 import app.business_logic.service.merge_service as merge_service
-from app.business_logic.model.config_manager import Config_manager
 from app.business_logic.helper.calendar import add_calendar_fields
-import app.business_logic.helper.regularizer as regularizer
-
+from app.business_logic.model.config_manager import Config_manager
 
 config_manager = Config_manager()
 
@@ -24,7 +25,6 @@ def get_file_path(store_name):
 
 
 class Dataset(object):
-
     def __init__(self, name, parse_dates=[]):
         self._name = name
         self.set = None
@@ -44,7 +44,6 @@ class Dataset(object):
 
 
 class Datastore(object):
-
     def __init__(self, db_params=None, intervals={}, sites=None):
         """Summary
 
@@ -66,10 +65,11 @@ class Datastore(object):
         self.db_params = db_params
 
     def __repr__(self):
-        return ("{0.name}:{0.period}:[{0.train_from} to {0.train_to}][{0.predict_from} to {0.predict_to}]".format(self))
+        # return ("{0.name}:{0.period}:{0.train_from}_to_{0.train_to}_{0.predict_from}_to_{0.predict_to}".format(self))
+        return ("{0.name}".format(self))
 
     def _init_datasets(self):
-        train = Dataset('train', ['date', 'date_time'])
+        train = Dataset('train', ['date'])
         forecasts = Dataset('forecasts')
         observed = Dataset('observed')
         sites_infos = Dataset('sites_infos')
@@ -85,7 +85,7 @@ class Datastore(object):
             item.file_path = self.get_path(item.name)
 
     def _get_period(self):
-        raise(NotImplementedError)
+        raise (NotImplementedError)
 
     def get_data(self):
         self._get_set(self.data.train)
@@ -173,7 +173,7 @@ class Datastore(object):
             self.predict_to = self._set_dates(interval['predict_to'])
         else:
             self.predict_to = self.predict_from + \
-                timedelta(days=self.PREDICT_RANGE_DAYS)
+                              timedelta(days=self.PREDICT_RANGE_DAYS)
         print "self+++++++++++++++++++++++++++++"
         print self.PREDICT_RANGE_DAYS
         print self
@@ -183,7 +183,7 @@ class Datastore(object):
 
     def get_path(self, set_name):
         path = config_manager.datastore_settings[
-            'path'] + '/' + self.__repr__()
+                   'path'] + '/' + self.__repr__()
         return path + "_" + set_name + ".csv"
 
     def file_exists(self, dataset):
@@ -194,6 +194,7 @@ class Datastore(object):
         return file_exists and is_file
 
     def _read_file(self, dataset):
+        print 'reading file {}'.format(get_file_path(dataset.file_path))
         df = pd.read_csv(get_file_path(dataset.file_path),
                          parse_dates=dataset.parse_dates, sep=';', index_col=0)
 
@@ -201,37 +202,39 @@ class Datastore(object):
 
     def _save_file(self, dataset):
         print get_file_path(dataset.file_path)
+        print 'saving file to {}'.format(dataset.file_path)
         dataset.set.to_csv(get_file_path(dataset.file_path),
                            encoding='utf-8', sep=';')
 
     def get_counts(self):
         df_counts = self.db_manager.counts
-        df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)
+
+        df_counts['date'] = pd.to_datetime(df_counts.day)
 
         df_counts = self._filter_on_date(
             df_counts, self.train_from, self.train_to)
         df_counts = self._aggregate_counts(df_counts)
 
         df_counts = df_counts[['idbldsite',
-                               'compensatedin', 'date',
-                               'date_time']]
+                               'compensatedtotalin', 'date',
+                               ]]
         return df_counts
 
     def get_counts_observed(self):
         df_counts = self.db_manager.counts
-        df_counts['date'] = pd.to_datetime(df_counts.timestamp.dt.date)
+        df_counts['date'] = pd.to_datetime(df_counts.day)
 
         df_counts = self._filter_on_date(
             df_counts, self.predict_from, self.predict_to)
         df_counts = self._aggregate_counts(df_counts)
 
         df_counts = df_counts[['idbldsite',
-                               'compensatedin', 'date',
-                               'date_time']]
+                               'compensatedtotalin', 'date',
+                               ]]
         return df_counts
 
     def _aggregate_counts(self, df_counts):
-        raise(NotImplementedError)
+        raise (NotImplementedError)
 
     def _filter_on_date(self, df, date_from, date_to):
         if date_from is not None:

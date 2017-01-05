@@ -1,15 +1,15 @@
 """Summary
 """
 import inspect
-from datetime import datetime
-from ..service.geocoding_API_service import create_regions_df
+
 from ..helper import pd, logging
-from ..helper.data_helper import check_missing_data, round_to_nearest_hour,\
+from ..helper.data_helper import check_missing_data, \
     reindex_weather_intraday, add_idbldsite_to_weather_data
-from ..service.school_holidays_service import add_school_holidays
-from ..service.public_holidays_service import add_public_holidays
 from ..service.conversion_service import merge_with_conversion
 from ..service.counts_service import get_counts
+from ..service.geocoding_API_service import create_regions_df
+from ..service.public_holidays_service import add_public_holidays
+from ..service.school_holidays_service import add_school_holidays
 
 
 def merge_tables(datastore):
@@ -74,7 +74,7 @@ def merge_with_counts(datastore):
                                          inspect.currentframe().f_code.co_name)
 
     return df_counts_sites[['idbldsite',
-                            'compensatedin', 'date', 'date_time', 'latitude', 'longitude']]
+                            'compensatedtotalin', 'date', 'latitude', 'longitude']]
 
 
 def merge_with_weather(datastore):
@@ -95,7 +95,6 @@ def merge_with_weather(datastore):
 
 
 def merge_with_weather_hour(datastore):
-
     df_weather_hour = datastore.db.weather_intraday
 
     df_weather_day = datastore.db.weather_day
@@ -120,8 +119,8 @@ def merge_with_weather_hour(datastore):
         ['idbldsite',
          'latitude',
          'longitude',
-         'compensatedin',
-         'date', 'date_time']]
+         'compensatedtotalin',
+         'date']]
 
     df_weather_hour['hour'] = df_weather_hour['timestamp'].dt.hour
     df_weather_hour['date_'] = df_weather_hour['timestamp'].dt.date
@@ -148,7 +147,7 @@ def merge_with_weather_hour(datastore):
     df_sites_counts_weather_hour.rename(columns={'latitude_sites': 'latitude',
                                                  'longitude_sites': 'longitude'}, inplace=True)
     df_sites_counts_weather_hour = df_sites_counts_weather_hour[['idbldsite', 'latitude', 'longitude',
-                                                                 'compensatedin', 'date', 'date_time',
+                                                                 'compensatedtotalin', 'date', 'date_time',
                                                                  'temperature', 'cloudamount', 'weathersituation']]
 
     # The intraday weather data have no min/max. But the weather Forecast API
@@ -163,7 +162,6 @@ def merge_with_weather_hour(datastore):
 
 
 def merge_with_weather_day(datastore):
-
     df_weather_day = datastore.db.weather_day
 
     df_weather_day = df_weather_day[['maxtemperature', 'mintemperature',
@@ -179,8 +177,8 @@ def merge_with_weather_day(datastore):
         ['idbldsite',
          'latitude',
          'longitude',
-         'compensatedin',
-         'date', 'date_time']]
+         'compensatedtotalin',
+         'date']]
 
     df_sites_counts_weather_day = pd.merge(datastore.training_data,
                                            df_weather_day,
@@ -195,9 +193,10 @@ def merge_with_weather_day(datastore):
                                                      "left_only",
                                                      inspect.currentframe().f_code.co_name)
 
-    df_sites_counts_weather_day = df_sites_counts_weather_day[['idbldsite', 'latitude_sites', 'longitude_sites', 'compensatedin',
-                                                               'date', 'date_time', 'maxtemperature', 'mintemperature',
-                                                               'weathersituation', 'cloudamount']]
+    df_sites_counts_weather_day = df_sites_counts_weather_day[
+        ['idbldsite', 'latitude_sites', 'longitude_sites', 'compensatedtotalin',
+         'date', 'date_time', 'maxtemperature', 'mintemperature',
+         'weathersituation', 'cloudamount']]
 
     df_sites_counts_weather_day.rename(columns={'latitude_sites': 'latitude',
                                                 'longitude_sites': 'longitude'}, inplace=True)
@@ -206,7 +205,6 @@ def merge_with_weather_day(datastore):
 
 
 def merge_with_public_holidays(datastore):
-
     datastore.training_data = add_public_holidays(datastore.training_data,
                                                   datastore.public_holidays)
 

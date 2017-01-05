@@ -9,7 +9,7 @@ class PublicHolidaysMerger(abstract.Merger):
                                                               'date'], right_on=['idbldsite', 'day'],
                                                    how='left', suffixes=['_counts', '_holidays'],
                                                    drop_missing=False)
-        self.filter_columns = ['idbldsite', 'compensatedin', 'date',
+        self.filter_columns = ['idbldsite', 'compensatedtotalin', 'date',
                                'date_time', 'maxtemperature', 'mintemperature',
                                'weathersituation', 'cloudamount', 'is_public_holiday']
 

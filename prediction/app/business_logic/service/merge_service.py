@@ -1,6 +1,7 @@
 from ..model.merger import *
 
 countsMerger = counts.CountsMerger()
+
 publicHolidaysMerger = public_holidays.PublicHolidaysMerger()
 weatherObservationsDayMerger = weather_observations.WeatherObservationsDayMerger()
 weatherObservationsHourMerger = weather_observations.WeatherObservationsHourMerger()

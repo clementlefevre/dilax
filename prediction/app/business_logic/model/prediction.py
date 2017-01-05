@@ -1,18 +1,20 @@
 import os
+
 import numpy as np
 import pandas as pd
 import xgboost
 from sklearn.ensemble.forest import RandomForestRegressor
-from ..service.prediction_service import do_classify, get_features_importance
-from ..model.config_manager import Config_manager
+
 from ..helper.file_helper import get_file_path
+from ..model.config_manager import Config_manager
+from ..service.prediction_service import do_classify, get_features_importance
+
 cm = Config_manager()
 
 fileDir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Prediction(object):
-
     def __init__(self, datastore):
         self.datastore = datastore
         self.name = datastore.name

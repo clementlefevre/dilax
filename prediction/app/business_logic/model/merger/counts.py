@@ -9,7 +9,6 @@ class CountsMerger(abstract.Merger):
         self.filter_columns = ['idbldsite',
                                'compensateditotalin',
                                'date',
-                               'date_time',
                                'latitude',
                                'longitude']
 

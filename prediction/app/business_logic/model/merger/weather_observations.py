@@ -32,8 +32,8 @@ class WeatherObservationsDayMerger(abstract.Merger):
                                                                'idbldsite', 'date'],
                                                            suffixes=['_sites', ''])
 
-        self.filter_columns = ['idbldsite', 'compensatedin',
-                               'date', 'date_time',
+        self.filter_columns = ['idbldsite', 'compensatedtotalin',
+                               'date',
                                'maxtemperature', 'mintemperature',
                                'weathersituation', 'cloudamount']
 
