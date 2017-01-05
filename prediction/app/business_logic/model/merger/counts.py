@@ -7,7 +7,7 @@ class CountsMerger(abstract.Merger):
         super(CountsMerger, self).__init__(name="counts",
                                            left_on=['idbldsite'], right_on=['idbldsite'], suffixes=['_sites', '_counts'])
         self.filter_columns = ['idbldsite',
-                               'compensatedin',
+                               'compensateditotalin',
                                'date',
                                'date_time',
                                'latitude',

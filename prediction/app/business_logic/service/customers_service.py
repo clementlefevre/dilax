@@ -24,7 +24,7 @@ def sites(json_req):
     db_params = all_db_params.get(customer)
 
     datastore_D = DayDatastore(db_params=db_params, intervals={
-        'predict_from': '2016-11-21'})
+        'predict_from': '2016-12-5', 'predict_to': '2016-12-12'})
     datastore_D.get_data()
     prediction_D = Prediction(datastore_D)
     global_predictions[customer] = prediction_D

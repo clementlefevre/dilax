@@ -41,7 +41,7 @@ class DB_manager(object):
 
     def _init_data(self):
         self.sites = self._query("dwe_bld_site")
-        self.counts = self._query("dwe_cnt_site")
+        self.counts = self._query("cnt_aggregated_totalin_site_day")
         self.addresses = self._query("dwe_bld_address")
         self.weather_day = self._query("dwe_ext_weather_meteogroup_day")
         self.weather_intraday = self._query(
